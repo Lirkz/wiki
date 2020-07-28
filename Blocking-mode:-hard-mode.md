@@ -36,7 +36,6 @@ _3rd-party filters_ pane:
 - _Peter Lowe’s Ad server list_: checked
 - _EasyPrivacy_: checked
 - _Online Malicious URL Blocklist_: checked
-- All other filter lists: unchecked
 
 _My rules_ pane:
 - Add `* * 3p block`
