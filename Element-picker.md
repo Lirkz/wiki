@@ -36,7 +36,7 @@ The _Create_ button will be enabled only if a proper filter can be created from 
 
 There may be many different reasons for this.
 
-- If this is a network filter you may need to bypass the browser cache when you reload the page -- hold down the <Shift> key when you click the reload button.
+- If this is a network filter you may need to bypass the browser cache when you reload the page -- hold down the <kbd>Shift</kbd> key when you click the reload button.
 - The URL or selector for the blocked element has variable part(s) in it, which changes each time a page is loaded.
     - If this is a network filter you may need to manually edit the filter to make use of wildcards for the parts of the URL which are variable.
     - If this is a cosmetic filter, you may have to manually craft a better [CSS selector](https://www.w3.org/TR/selectors/#overview). Sometimes this requires observing the surrounding DOM data.
