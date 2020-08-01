@@ -99,7 +99,7 @@ For the time being, only a single token is supported in a `!#if` directive (can 
 
 - `ext_ublock` -> true
 - `env_chromium` -> all Chromium based browsers
-- `env_edge` -> Edge (legacy, Trident)
+- `env_edge` -> Edge (legacy)
 - `env_firefox` -> Firefox
 - `env_mobile` -> mobile devices
 - `env_safari` -> Safari (legacy, up to 12 / macOS Mojave)
@@ -109,7 +109,7 @@ For the time being, only a single token is supported in a `!#if` directive (can 
 - `adguard` -> false, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
 - `adguard_app_windows` -> false [1.28.1b7](https://github.com/gorhill/uBlock/commit/e44a568278678e04b508c2bc1b8a94a2c54b848c)
 - `adguard_ext_chromium` -> Chromium based browsers, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
-- `adguard_ext_edge` -> Edge (legacy, Trident), added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
+- `adguard_ext_edge` -> Edge (legacy), added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
 - `adguard_ext_firefox` -> Firefox, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
 - `adguard_ext_opera` -> Chromium, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
 
