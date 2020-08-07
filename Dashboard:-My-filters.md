@@ -13,6 +13,8 @@ The following keyboard shortcuts are available during editing -- most of them ar
 
 |PC<br>`_______________`|Mac<br>`_______________`| Function<br>`_______________`|
 |----|-----|:---------|
+| <kbd>Ctrl</kbd>-<kbd>Space</kbd> | <kbd>Cmd</kbd>-<kbd>Space</kbd> | (uBO-specific) Auto-complete, whenever applicable: network filter options, cosmetic pseudo-operators, redirect and scriptlet tokens, pre-parsing directives.
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | (uBO-specific) Toggle prepending the current line or the lines in the current selection with `! ` (to quickly toggle the commenting out of filters).
 | <kbd>Ctrl</kbd>-<kbd>A</kbd> | <kbd>Cmd</kbd>-<kbd>A</kbd> | Select the whole content of the editor.
 | <kbd>Ctrl</kbd>-<kbd>D</kbd> | <kbd>Cmd</kbd>-<kbd>D</kbd> | Deletes the whole line under the cursor, including newline at the end.
 | <kbd>Ctrl</kbd>-<kbd>Z</kbd> | <kbd>Cmd</kbd>-<kbd>Z</kbd> | Undo the last change.<br>Note that, because browsers still don't make it possible for scripts to react to or customize the context menu,<br>selecting undo (or redo) from the context menu in a CodeMirror instance does not work.
@@ -37,7 +39,6 @@ The following keyboard shortcuts are available during editing -- most of them ar
 | <kbd>Ctrl</kbd>-<kbd>Delete</kbd> | <kbd>Alt</kbd>-<kbd>Delete</kbd> | Delete to the start of the group after the cursor.
 | <kbd>Ctrl</kbd>-<kbd>]</kbd> | <kbd>Cmd</kbd>-<kbd>]</kbd> | Indent the current line or selection by one indent unit.
 | <kbd>Ctrl</kbd>-<kbd>[</kbd> | <kbd>Alt</kbd>-<kbd>[</kbd> | Dedent the current line or selection by one indent unit.
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | uBO-specific: Toggle prepending the current line or the lines in the current selection with `! ` (to quickly toggle the commenting out of filters).
 | <kbd>Ctrl</kbd>-<kbd>S</kbd> | <kbd>Cmd</kbd>-<kbd>S</kbd> | Save and apply the changes, if any.
 | <kbd>Ctrl</kbd>-<kbd>F</kbd> | <kbd>Cmd</kbd>-<kbd>F</kbd> | Find a string. Wrap around `/` to search against a regular expression.
 | <kbd>Ctrl</kbd>-<kbd>G</kbd> | <kbd>Cmd</kbd>-<kbd>G</kbd> | Find next occurrence after the current cursor position.
