@@ -19,7 +19,7 @@
 ### Click the big power button
 It serves to whitelist the current web site, and its state will be remembered next time you visit the web site.
 
-![uBlock's popup](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1.png)
+![uBlock's popup](https://user-images.githubusercontent.com/585534/89903803-1caf4200-dbb6-11ea-95b2-16a807781de0.png)
 
 ### Detailed syntax
 
