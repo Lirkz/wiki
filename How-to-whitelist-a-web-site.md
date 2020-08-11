@@ -19,7 +19,10 @@
 ### Click the big power button
 It serves to whitelist the current web site, and its state will be remembered next time you visit the web site.
 
-![uBlock's popup](https://user-images.githubusercontent.com/585534/89903803-1caf4200-dbb6-11ea-95b2-16a807781de0.png)
+| uBO is enabled | uBO is disabled |
+| -------------- | --------------- |
+| ![uBO enabled](https://user-images.githubusercontent.com/585534/89903803-1caf4200-dbb6-11ea-95b2-16a807781de0.png) | ![uBO disabled](https://user-images.githubusercontent.com/585534/89904193-9fd09800-dbb6-11ea-9b29-db2506fe577f.png) |
+
 
 ### Detailed syntax
 
