@@ -4,7 +4,7 @@
 
 The purpose of the element zapper is to quickly deal with the removal of nuisance elements on a page **without** having to create one or more filters.
 
-![a](https://cloud.githubusercontent.com/assets/585534/26530837/b51a874a-43aa-11e7-8512-0927be4d8992.png)
+![a](https://user-images.githubusercontent.com/585534/90419472-9cd91a00-e084-11ea-94ef-91be749a0fdb.png)
 
 Sometimes we visit a page on a site for which we do not intend to become a regular visitor, and many sites nowadays will throw nuisance visual elements preventing you from accessing the content. However oftentimes we would rather not go through the process of creating one or more filters for just that one visit. This is where the element-zapper mode is useful: you can quickly get rid of the nuisance visual element without having to pollute your filter set for this one single visit.
 
