@@ -482,21 +482,27 @@ Parameters:
 ***
 
 ### nowoif.js /
-### window.open-defuser.js [↪](https://github.com/gorhill/uBlock/blob/b27848a060eee961e2403192097448467b3bc7b5/src/web_accessible_resources/window.open-defuser.js)
+### window.open-defuser.js [↪](https://github.com/gorhill/uBlock/blob/b98b2fc52becce75b858b0a6040328e291fdae29/src/web_accessible_resources/window.open-defuser.js)
 Prevent opening new windows by [_`window.open()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) when URL positively or negatively matches to specific string.
 
-`nowoif.js` alias available in [1.27.0](https://github.com/gorhill/uBlock/commit/6259f88598b2d3e044679d6fe0fdb6eb16f6c479).
+Improvements:
 
-Improved in 1.26.0 [one](https://github.com/gorhill/uBlock/commit/b27848a060eee961e2403192097448467b3bc7b5), [two](https://github.com/gorhill/uBlock/commit/0f33f2386d147e4930b402a07418da670524e43f):
+- [1.29.2](https://github.com/gorhill/uBlock/commit/d544543ab580930733c4def8817fbff251ad10ce), third parameter can now configure behavior of the scriptlet.
+- [1.27.0](https://github.com/gorhill/uBlock/commit/6259f88598b2d3e044679d6fe0fdb6eb16f6c479), `nowoif.js` alias is now available.
+- 1.26.0 ([one](https://github.com/gorhill/uBlock/commit/b27848a060eee961e2403192097448467b3bc7b5), [two](https://github.com/gorhill/uBlock/commit/0f33f2386d147e4930b402a07418da670524e43f)),  
+if second argument is present and a valid integer value, the defuser will return a valid window object even though no popup window is opened. The returned window object will cease to be valid after the specified number of seconds. If not present, no window will be opened and the scriptlet will return `null`.
 
-If second argument is present and a valid integer value, the defuser will return a valid window object even though no popup window is opened. The returned window object will cease to be valid after the specified number of seconds. If not present, no window will be opened and the scriptlet will return `null`.
-
-Use third parameter (set it to `-` for example) to log `window.open()` parameters, and log access to attributes of returned `window` object.
+Use third parameter (set it to `log`) to log `window.open()` parameters, and log access to attributes of returned `window` object.
 
 Parameters:
  - optional, string/_regular expression_, prefixed by `!` for negation, matching in URL parameter passed to _`window.open()`_,
  - optional, positive decimal integer, number of seconds after returned `window` object will be invalidated.
- - optional, unspecified, set it to something, for ex. `-` to enable logging
+ - optional, space-separated tokens,
+    - `log`:  
+    Cause the scriptlet to log information regarding how `window.open()` is used by the page on which the scriptlet is used. Useful only to filter creators.
+    - `obj`:  
+    Use an `object` element instead of `iframe` element (default) as a decoy to be used in place of a popup window, when the page requires a valid `window` instance to be returned.
+    - before [1.29.2](https://github.com/gorhill/uBlock/commit/d544543ab580930733c4def8817fbff251ad10ce) any value (for example `-`) was turning on logging.
 
 Parameters syntax deprecated after 1.26.0:
  - optional - defaults to "matching", nothing or `1` for "matching", `0` for "not matching",
