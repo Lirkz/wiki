@@ -7,6 +7,7 @@
     - [Style overriding](http://raymondhill.net/ublock/adbox.html)
     - [Popups](http://raymondhill.net/ublock/popup.html)
     - [ABP Test Pages](https://testpages.adblockplus.org/)
+    - [AdGuard Test Pages](https://testcases.adguard.com/)
 - [uBlock Origin tests](https://gorhill.github.io/uBlock/tests/)
     - HNTrie: tests
     - HNTrie, small (2) to medium (~1000) set: benchmarks
