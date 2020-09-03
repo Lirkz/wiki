@@ -6,7 +6,7 @@ You can access uBlock Origin's ("uBO") dashboard by ...
 - Clicking the appropriate icon in uBO's popup panel: <img src="https://user-images.githubusercontent.com/886325/49340318-7d932280-f63e-11e8-9db9-96aa84d00f3b.png" alt="Open the dashboard"> tooltip is "Open the dashboard".
 - Chromium-based browsers:
     - Clicking _Details_ button on uBO tile and then _Extension options_ link in the _Extensions_ page `chrome://extensions/` (Kebab Menu -> More tools -> Extensions); OR
-    - Right-clicking on uBO's icon in the toolbar and selecting _Options_ menu item;
+    - Right-clicking on uBO's icon in the toolbar (can be hidden under puzzle-piece icon) and selecting _Options_ menu item;
 - Firefox-based browsers:
     - With Firefox 70:
         - Selecting _Preferences_ entry from `•••` ("meatballs") menu in uBO's tile in the `about:addons` page (Hamburger Menu -> Add-ons); OR
