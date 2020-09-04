@@ -19,6 +19,12 @@ Currently mostly useful for users who checked _"I am an advanced user"_ (see bel
 
 ***
 
+### Enable cloud storage support
+
+See [Cloud storage](./Cloud-storage) documentation.
+
+***
+
 ### I am an advanced user
 
 If you check this, this will enable [uBlock's dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBlock's popup UI.
