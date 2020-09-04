@@ -1,5 +1,6 @@
 - Back to [Wiki home](./)
 - Back to [Dashboard](./Dashboard)
+- Back to [Dashboard: Settings](./Dashboard:-Settings)
 
 ***
 
@@ -15,7 +16,7 @@ In uBlock Origin, cloud storage support must be explicitly enabled by the user, 
 
 Once you enable cloud storage support, a new UI widget will be available in the dashboard for panes which support the export/import of settings to/from cloud storage:
 
-![screenshot](https://user-images.githubusercontent.com/585534/42420095-9521526a-828e-11e8-8715-21678f1bd708.png)
+![screenshot](https://user-images.githubusercontent.com/585534/92239074-6410b180-ee88-11ea-8bb6-b8ecb2f121d3.png)
 
 > ***
 > **Important:**
