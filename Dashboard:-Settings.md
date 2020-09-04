@@ -3,7 +3,7 @@
 
 ***
 
-![Figure 1](https://user-images.githubusercontent.com/585534/46023045-c3b58e00-c0b1-11e8-9610-fb073a7c2ca9.png)
+![Figure 1](https://user-images.githubusercontent.com/585534/92238602-92da5800-ee87-11ea-96ca-042fd9a6a7f7.png)
 
 ## General
 
