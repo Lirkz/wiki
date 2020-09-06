@@ -600,6 +600,8 @@ font, image, media, object, script, stylesheet, subdocument, xmlhttprequest
 	- ~noopmp3-0.1s~ noop-0.1s.mp3 `audio/mp3;base64` `$media` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-0.1s.mp3)
 	- ~noopmp4-1s~ noop-1s.mp4 `video/mp4;base64` `$media` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-1s.mp4)
 
+Special, reserved token `none` can be used to disable specific redirect filters.
+
 Example rule:
 
 `||ad.server.com/$script,redirect=noop.js,domain=www.google.com`
