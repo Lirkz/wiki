@@ -418,7 +418,7 @@ The filter syntax for `redirect=` filter option is a subset of ABP-compatible fi
     ||example.com/path/to/image$image,redirect=2x2-transparent.png,domain=github.com
     ||example.com/$script,redirect=noopjs,first-party
 
-A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname.
+A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).
 
 <sub>__*__ redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)</sub>
 
