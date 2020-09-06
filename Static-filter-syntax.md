@@ -97,21 +97,30 @@ Support for pre-processor directives are the result of discussion with AdGuard d
 
 For the time being, only a single token is supported in a `!#if` directive (can be negated using `!`), and uBO supports only the following tokens, anything else will be ignored:
 
-- `ext_ublock` -> true
-- `env_chromium` -> all Chromium based browsers
-- `env_edge` -> Edge (legacy)
-- `env_firefox` -> Firefox
-- `env_mobile` -> mobile devices
-- `env_safari` -> Safari (legacy, up to 12 / macOS Mojave)
-- `false` -> always false, added in [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad918d02cc74796d5aa5e974b184)
-- `cap_html_filtering` -> supports [HTML filtering](#html-filters)
-- `cap_user_stylesheet` -> Firefox, Chromium 66+, supports style injection by [`tabs.insertCSS`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- `adguard` -> false, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
-- `adguard_app_windows` -> false [1.28.1b7](https://github.com/gorhill/uBlock/commit/e44a568278678e04b508c2bc1b8a94a2c54b848c)
-- `adguard_ext_chromium` -> Chromium based browsers, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
-- `adguard_ext_edge` -> Edge (legacy), added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
-- `adguard_ext_firefox` -> Firefox, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
-- `adguard_ext_opera` -> Chromium, added in [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef)
+
+| Token | Value | Introduced in |
+| ----- | ----- | ------------- |
+| `ext_abp`                | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
+| `ext_ublock`             | **true**  |
+| `env_chromium`           | _true_ on all Chromium based browsers |
+| `env_edge`               | _true_ on Edge (legacy) |
+| `env_firefox`            | _true_ on Firefox |
+| `env_mobile`             | _true_ on mobile devices |
+| `env_safari`             | _true_ on Safari (legacy, up to 12 / macOS Mojave) |
+| `false`                  | **false** | [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad918d02cc74796d5aa5e974b184) |
+| `cap_html_filtering`     | _true_ when browser supports [HTML filtering](#html-filters) |
+| `cap_user_stylesheet`    | _true_ on Firefox, Chromium 66+, supports style injection by [`tabs.insertCSS`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) |
+| `adguard`                | **false** | [1.29.0](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef) |
+| `adguard_app_android`    | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
+| `adguard_app_ios`        | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
+| `adguard_app_mac`        | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
+| `adguard_app_windows`    | **false** | [1.29.0](https://github.com/gorhill/uBlock/commit/e44a568278678e04b508c2bc1b8a94a2c54b848c) |
+| `adguard_ext_android_cb` | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
+| `adguard_ext_chromium`   | _true_ on Chromium based browsers | [1.28.1b6](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef) |
+| `adguard_ext_edge`       | _true_ on Edge (legacy) | [1.29.0](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef) |
+| `adguard_ext_firefox`    | _true_ on Firefox | [1.29.0](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef) |
+| `adguard_ext_opera`      | _true_ on Chromium | [1.29.0](https://github.com/gorhill/uBlock/commit/83c01fb3525bbede86c54fe06caa3eb8bc8eb0ef) |
+| `adguard_ext_safari`     | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
 
 Starting from [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad918d02cc74796d5aa5e974b184) you can use `!#if false` directive to disable a large block of your filters without having to remove them. 
 
