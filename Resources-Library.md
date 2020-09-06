@@ -341,7 +341,7 @@ Examples:
 ***
 
 ### set.js /
-### set-constant.js [↪](https://github.com/gorhill/uBlock/blob/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce/assets/resources/scriptlets.js#L478)
+### set-constant.js [↪](https://github.com/gorhill/uBlock/blob/8275690e93744556d93b3569e3d5befc96e30aaa/assets/resources/scriptlets.js#L588)
 Creates _property_ and initializes it to predefined value from set of available properties.
 
 Scriptlet will succeed only when:
