@@ -552,11 +552,13 @@ AdGuard's cosmetic filter syntax `{ remove: true; }` will be converted to uBO's 
 
 - Description: _action operator_, applies specified style to selected elements in DOM tree.
 - Chainable: No, _action operator_ can only be used at the end of the root chain.
-- _subject_: only native, plain CSS selectors are supported, see [#382](https://github.com/uBlockOrigin/uBlock-issues/issues/382).
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter after [1.29.3b10](https://github.com/gorhill/uBlock/commit/35aefed92616cbfb75f12f37c7ea7fb3a3cc3369). Before, only native, plain CSS selectors were supported, see [#382](https://github.com/uBlockOrigin/uBlock-issues/issues/382).
 - _arg_: one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax), separated by the standard `;`. Property values with `url(...)` are forbidden.
 - Examples:
     - `example.com##h1:style(background-color: blue !important)`
     - `motobanda.pl###mvideo:style(z-index: 1!important)`
+
+After [1.29.3b10](https://github.com/gorhill/uBlock/commit/35aefed92616cbfb75f12f37c7ea7fb3a3cc3369) procedural selectors are also supported.
 
 Related issue [Support cosmetic filters with explicit style properties](https://github.com/gorhill/uBlock/issues/781) and [example](https://github.com/uBlockOrigin/uAssets/issues/71#issuecomment-229503444) where it's useful.
 
