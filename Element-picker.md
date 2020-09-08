@@ -9,7 +9,7 @@ If there is an element on a web page you wish to remove forever, open the extens
 ![Element picker](https://user-images.githubusercontent.com/585534/76684433-69c8c100-65e2-11ea-9588-60417dc00781.png)
 <!-- ![Element picker](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/ss-element-picker.png) -->
 
-Once in element-picker mode, you have to point and click on the element you wish to remove. Holding <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on Mac) while selecting an element will cause similar elements on the page to be also selected <sup>[1.17.5rc0+](https://github.com/gorhill/uBlock/commit/91144c4edcda0207aaf23d61ae47011515d7b8cb#diff-a65f6e6abc235a14e93548d8bf53b81eL1220)</sup>.
+Once in element-picker mode, you have to point and click on the element you wish to remove. Holding <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on Mac) while selecting an element will cause similar elements on the page to be also selected <sup>[1.18.0+](https://github.com/gorhill/uBlock/commit/91144c4edcda0207aaf23d61ae47011515d7b8cb#diff-a65f6e6abc235a14e93548d8bf53b81eL1220)</sup>.
 
 Once you click on the element, you will be presented with a modal dialog box which allows you to select, and optionally edit and create a filter for the element(s) you wish to remove from the web page.
 
@@ -17,7 +17,7 @@ Once you click on the element, you will be presented with a modal dialog box whi
 > ***
 > **Tip:**
 >
-> You can easily move element picker dialog using mouse, by grabbing and dragging by empty space between buttons<sup>New in [1.23.1b17](https://github.com/gorhill/uBlock/commit/d1995778ff5908a4709c51dd30a08e2478c59251)</sup>
+> You can easily move element picker dialog using mouse, by grabbing and dragging by empty space between buttons<sup>New in [1.24.0](https://github.com/gorhill/uBlock/commit/d1995778ff5908a4709c51dd30a08e2478c59251)</sup>
 > ***
 
 If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. The top most cosmetic filter is the most specific which could be derived from the element you clicked. The bottom-most is the broadest, the least specific. Pick the one which matches best what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
@@ -31,6 +31,12 @@ You may manually edit the filter. However the result needs to be a valid filter,
 You may quit the interactive element picker by clicking the _Quit_ button (or press _Esc_). You may close the modal dialog and go pick an element again by clicking the _Pick_ button.
 
 The _Create_ button will be enabled only if a proper filter can be created from the content of the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure the filter apply **only** to the current web site, will add it to your custom list of filters and save it.
+
+On touch screen devices:
+- swipe right to exit element-picker mode
+- when dialog is visible, swiping right will hide element-picker dialog (will make it dimmed and transparent)
+- when dialog is hidden, swipe right again to exit element-picker mode
+- swipe left to make dialog visible again
 
 ### Element picker does not work, removed element reappears when you reload the page?
 
