@@ -21,6 +21,7 @@
     - [Report block count in benchmark()](https://github.com/gorhill/uBlock/commit/d2cb0f17eadd8cccde8aa80e503dbb6a5e17bd9e)
     - [Improve usefulness of FilterContainer.benchmark()](https://github.com/gorhill/uBlock/commit/92c5f17b78e5056340f462b049c1871ae0467220)
     - [Add benchmark method to cosmetic filtering engine](https://github.com/gorhill/uBlock/commit/1e40f50eb3c1347afea251dce603f432e2199606)
+    - See also [`benchmarkDatasetURL`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Advanced-settings#benchmarkdataseturl) advanced setting
 - [Static filter parser checklist](https://github.com/gorhill/uBlock/blob/master/docs/tests/static-filtering-parser-checklist.txt)
 - [Page load speed](http://www.raymondhill.net/ublock/pageloadspeed.html)
 - [HAR parser: find out what is NOT blocked](http://raymondhill.net/httpsb/har-parser.html)
