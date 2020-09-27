@@ -36,7 +36,7 @@ There are many benefits to strict blocking. For example, there is no good reason
 
 Sometimes, the strict-blocked URL contains a [query string component](https://en.wikipedia.org/wiki/Query_string) which uBO can parse and decompose into detailed query parameters. Oftentimes, once decomposed, the query parameters will show you information which can be useful.
 
-A top example of this is when a redirection URL is strict blocked, you will often find in the query parameters the destination URL which you intended to visit when you clicked a link, which makes it possible to bypass the redirection URL -- typically used for tracking purpose -- and navigate directly to the intended destination URL by just licking on it.
+A top example of this is when a redirection URL is strict blocked, you will often find in the query parameters the destination URL which you intended to visit when you clicked a link, which makes it possible to bypass the redirection URL -- typically used for tracking purpose -- and navigate directly to the intended destination URL by just clicking on it.
 
 Example:
 
