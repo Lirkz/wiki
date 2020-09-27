@@ -520,7 +520,7 @@ uBO [1.28.0](https://github.com/gorhill/uBlock/commit/9f7e5b621dc5e7a3e0fed0daa5
 
 Allow to bypass uBO's default CSS styles in case they are causing issues to specific users. It is the responsibility of the user to ensure the value of `uiStyles` contains valid CSS property declarations. uBO will assign the value to `document.body.style.cssText`.
 
-For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface.
+For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface. Another example is [issue #1254](https://github.com/uBlockOrigin/uBlock-issues/issues/1254) where in [uBO v1.30.0](https://github.com/gorhill/uBlock/commit/1cdffea6186af8965d722575ed8fa74b0a6e193c) will be possible to adjust width of popup panels.
 
 ***
 
