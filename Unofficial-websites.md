@@ -1,2 +1,2 @@
-- https://getublock.com/
-- https://ublockorigin.com/
+- ~`https://getublock.com/`~ Page is down.
+- `https://ublockorigin.com/`
