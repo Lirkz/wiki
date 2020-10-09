@@ -21,7 +21,7 @@
  - "regular expression" parameter means JavaScript [regular expression literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Writing_a_regular_expression_pattern)
  - mime type is `application/javascript` if not present
  - You can use the short alias form when available for scriptlet name
- - You can omit the `.js` from the scriptlet name (eventually in some future this will be the official way to do this)
+ - You should omit the `.js` from the scriptlet name in scriptlet injection filters (eventually in some future this will be the official way to do this)
      - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
  - crossed out resources are deprecated/removed.
  
