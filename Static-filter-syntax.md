@@ -383,7 +383,7 @@ Generic cosmetic filters, are hiding filters which apply to all pages - `##.ad-c
 
 The filter option `important` means to ignore all _exception_ filters (those prefixed with `@@`). It will allow you to block specific network requests with 100% certainty.
 
-**It applies only to network _block_ filters** (specifically to the blocking part of the filter). It does not make a filter more _important_ in any other way and does not override any other filter options (including negated domains in `domain` option).
+**It applies only to network _block_ filters**
 
 Example: `||google-analytics.com^$important,third-party` will block all network requests to `google-analytics.com`, disregarding any existing network _exception_ filters. Another example: `||twitter.com^$important,third-party`. Etc.
 
