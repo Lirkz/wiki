@@ -385,7 +385,7 @@ The filter option `important` means to ignore all _exception_ filters (those pre
 
 **It applies only to network _block_ filters**
 
-Example: `||google-analytics.com^$important,third-party` will block all network requests to `google-analytics.com`, disregarding any existing network _exception_ filters. Another example: `||twitter.com^$important,third-party`. Etc.
+Example: `||google-analytics.com^$important,third-party` will block all network requests to `google-analytics.com`, disregarding any existing network _exception_ filters.
 
 ***
 
