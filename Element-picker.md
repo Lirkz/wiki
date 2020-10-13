@@ -4,12 +4,14 @@
 
 The element picker's purpose is to assist the user in the creation of network or cosmetic filters.
 
-If there is an element on a web page you wish to remove forever, open the extension's popup menu, and click the small ["eye-dropper" icon](http://fontawesome.io/icon/eyedropper/). You will enter the interactive element picker mode.
+![eye dropper highlighted in row of tool buttons](https://user-images.githubusercontent.com/886325/95906120-fd8d8600-0d99-11eb-9a91-84585e4c5739.png)
+
+If there is an element on a web page you wish to remove forever, open the extension's popup menu, and click the small "eye-dropper" icon. You will enter the interactive element picker mode.
 
 ![Element picker](https://user-images.githubusercontent.com/585534/76684433-69c8c100-65e2-11ea-9588-60417dc00781.png)
 <!-- ![Element picker](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/ss-element-picker.png) -->
 
-Once in element-picker mode, you have to point and click on the element you wish to remove. Holding <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on Mac) while selecting an element will cause similar elements on the page to be also selected <sup>[1.18.0+](https://github.com/gorhill/uBlock/commit/91144c4edcda0207aaf23d61ae47011515d7b8cb#diff-a65f6e6abc235a14e93548d8bf53b81eL1220)</sup>.
+Once in element-picker mode, you have to point and click on the element you wish to remove.
 
 Once you click on the element, you will be presented with a modal dialog box which allows you to select, and optionally edit and create a filter for the element(s) you wish to remove from the web page.
 
@@ -23,8 +25,6 @@ Once you click on the element, you will be presented with a modal dialog box whi
 If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. The top most cosmetic filter is the most specific which could be derived from the element you clicked. The bottom-most is the broadest, the least specific. Pick the one which matches best what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
 
 When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
-
-If you hold <kbd>Ctrl</kbd> while clicking on one of the suggested cosmetic filters in the list, only the selector of the entry itself will be used, rather than the full path of selectors -- this will cause similar elements on the page to be also selected.
 
 You may manually edit the filter. However the result needs to be a valid filter, otherwise you won't be allowed to create a filter out of it. A valid filter in the context of the element picker is one which matches at least one element on the web page.
 
