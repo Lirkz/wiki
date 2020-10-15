@@ -13,6 +13,9 @@ For **Firefox-legacy**, the `adminSettings` entry must be added to `about:config
 
 For **Chrome**, `adminSettings` must be an entry part of the policy for the extension. See <http://www.chromium.org/administrators/configuring-policy-for-extensions>.
 
+For managing **Chrome** via **Google Workspace** you can use this apps-script to generate a policy JSON that will modify Trusted Sites for all designated users.
+<https://github.com/Landsil/apps_script--GSuite_API/blob/master/uBlock_Origin_GSuite_policy.gs>
+
 This is still a work in progress, there are limitations. For example, it is not possible to merge an admin's settings with the user's ones -- a setting can only be overwritten. Hopefully I will address this limitation eventually, as time permit. (See https://github.com/gorhill/uBlock/issues/832#issuecomment-248138558).
 
 The content of `adminSettings` is pretty straightforward: configure uBO as you wish for your users, then create a backup using the _"Backup to file"_ in the _Settings_ pane. Now open this backup file using a text editor, and remove all entries you do not want to overwrite, while taking care to end up with a valid JSON file (mind trailing commas, etc.). All the entries left are the ones which will be overwritten on the user's side.
