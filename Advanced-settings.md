@@ -40,21 +40,20 @@ The number of seconds after which uBO throws an error when a remote server fails
 
 #### `autoCommentFilterTemplate`
 
-Default value is `{{date}} {{origin}}`.
+Default: `{{date}} {{origin}}`.
 
 uBO 1.17.7b2 and above.
 
-Placeholders are identified by `{{...}}`. There are currently
-only three placeholders supported:
+Template used to create comments in My filters, when new filter is created by Element Picker or from The Logger.
+
+Placeholders are identified by `{{...}}`. Currently supported placeholders:
 
 - `{{date}}`: will be replaced with current date
 - `{{time}}`: will be replaced with current time
-- `{{origin}}`: will be replaced with site information on which
-  the filter(s) was created
+- `{{origin}}`: will be replaced by origin part of the address for which the filter(s) was created
+- `{{url}}`: new in [1.30.3b6](https://github.com/gorhill/uBlock/commit/46ec9694115d79ef3b380f366a8332ead267ef49), will be replaced by full URL of the page for which a filter is created in Element Picker. For filters added from The Logger, replaced by origin part of the URL.
 
-If no placeholder is found in `autoCommentFilterTemplate`, this
-will disable auto-commenting. So one can use `-` or `none` to disable
-auto-commenting.
+If no placeholder is found in `autoCommentFilterTemplate`, this will disable auto-commenting. So one can use `-` or `none` to disable auto-commenting.
 
 ***
 
