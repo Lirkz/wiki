@@ -529,7 +529,7 @@ Default: `false`
 
 With [1.22.0](https://github.com/gorhill/uBlock/commit/048bfd251c9b8eeafce020b4f894d736044d6a6f) and above.
 
-If set to `true`, uBO will ensure the browser cache is bypassed when fetching a remote resource.
+If set to `true`, uBO will ensure the browser cache is bypassed when manually<sup>[1.27.0](https://github.com/gorhill/uBlock/commit/4687c60bf9cec5b68e5a007d740af93f4119a79e)</sup> fetching a remote resource.
 
 This is for the convenience of filter list maintainers who may want to test the latest version of their lists when fetched from their remote location.
 
