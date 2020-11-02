@@ -32,7 +32,7 @@ testpilot.firefox.com
     - Set `extensions.webextensions.restrictedDomains` to be an empty string.<sup>4</sup>
     - Set `privacy.resistFingerprinting.block_mozAddonManager` to `true`.<sup>5</sup> 
         - **Firefox 60** - **Firefox 70**: must be manually created by right clicking and selecting _New > Boolean_<sup>3</sup>
-        - **Firefox 71** and newest<sup>6</sup>: paste preference name in search bar > in 2nd column set Boolean from single-choice list > click <kbd>+</kbd> button in  3rd column.
+        - **Firefox 71** and newest<sup>6</sup>: paste preference name in search bar > in 2nd column set Boolean from single-choice list > click <kbd>➕</kbd> button in  3rd column.
 
 ***
 
