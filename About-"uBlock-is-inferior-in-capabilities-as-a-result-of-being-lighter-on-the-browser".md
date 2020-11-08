@@ -23,6 +23,9 @@ Features |  ABP  |  uBO
 [multi-stage filtering engine](./Overview-of-uBlock's-network-filtering-engine)<br><sup>ability for users to easily override filters in 3rd-party filter lists on a per-site basis</sup> |     | yes
 `@@...$document` | yes | [no](./Static-filter-syntax#not-supported)
 can read hosts files |     | yes
+CNAME uncloaking |    | [yes](./Static-filter-syntax#cname)
+`denyallow` |    | [yes](./Static-filter-syntax#denyallow)
+`domain` with entity-matching |    | [yes](./Static-filter-syntax#domain)
 `inline-script`<br><sup>to prevent execution of inline javascript</sup> | [no](https://issues.adblockplus.org/ticket/748) | [yes](./Static-filter-syntax#inline-script)
 `important`<br><sup>to be able to override exception filters</sup> |     | [yes](./Static-filter-syntax#important)
 `popunder` | [no](https://issues.adblockplus.org/ticket/2095) | yes
@@ -38,9 +41,11 @@ entity-based filters |     | [yes](./Static-filter-syntax#entity-based-cosmetic-
 `:has` | ~~[not yet](https://issues.adblockplus.org/ticket/2360)~~ yes (`:-abp-has`) | yes
 `:has-text` | [yes](https://issues.adblockplus.org/ticket/5249) (`-abp-contains`) | yes
 `:if` `:if-not`<br>`:matches-css` `:matches-css-before` `:matches-css-after`<br>`:xpath` |     | yes
+`:remove` |    | yes
 `:style` | [no](https://issues.adblockplus.org/ticket/756) | yes
-`script:contains` |     | yes
-`script:inject`<br><sup>key to counter anti-blockers</sup> |     | yes
+`:upward` |    | yes
+**Scriptlet filtering**
+`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |     | [yes](./Static-filter-syntax#scriptlet-injection)
 **HTML filtering**
 Ability to modify response data on the fly<br><sup>WebExtensions uBO 1.15+</sup> |     | [yes](./Static-filter-syntax#html-filters)
 **privacy**
