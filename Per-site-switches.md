@@ -79,7 +79,7 @@ If the media elements do not have `Content-Length` header present, then this swi
 
 ## No cosmetic filtering
 
-"Cosmetic filtering" in uBO is what is known as ["element hiding"](https://adblockplus.org/filters#elemhide) in Adblock Plus.
+["Cosmetic filtering" in uBO](https://github.com/gorhill/uBlock/wiki/Does-uBlock-block-ads-or-just-hide-them%3F#cosmetic-filters) is what is known as "element hiding" in Adblock Plus. Purpose of these filters is to hide content of the page that cannot be blocked by network filters. 
 
 You can easily toggle on/off cosmetic filtering for a given site:
 
