@@ -2,7 +2,7 @@
 
 ***
 
-"Blacklist mode" can be achieved in UBO [Advanced users](./Advanced-user-features) mode in following way:
+"Blocklist mode" can be achieved in UBO [Advanced users](./Advanced-user-features) mode in following way:
 
 - global allow `all` cell
     - "global" = 1st column
@@ -13,7 +13,7 @@
 
 Nothing will be blocked, static filtering is completely bypassed: "green" means "allow unconditionally".
 
-To "blacklist" a specific site:
+To "blocklist" a specific site:
 
 - local noop `all` cell
     - "local" = 2nd column

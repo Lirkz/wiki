@@ -26,11 +26,11 @@ Amount of visible information can be adjusted by clicking on "More" and "Less" b
 
 ![large blue power button](https://user-images.githubusercontent.com/886325/85211203-1d122600-b347-11ea-8271-a60449a57c8b.png)
 
-Click the large power button to turn off uBlock **for the current site** (a.k.a. _whitelist_ the current site). This will be remembered the next time you visit the site.
+Click the large power button to turn off uBlock **for the current site** (add current site to _Trusted sites_ list). This will be remembered the next time you visit the site.
 
 Alternatively, you can also <kbd>Ctrl</kbd>-click to turn off uBlock only for the current page (<kbd>Cmd</kbd>-click on Mac).
 
-For more advanced whitelisting control, see ["How to whitelist a web site"](./How-to-whitelist-a-web-site).
+For more advanced control, see ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted).
 
 ***
 

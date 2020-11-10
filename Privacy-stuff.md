@@ -64,4 +64,4 @@ It's unclear if, and how much this breaks things. But will prevent your browsing
 
 But this applies to any domain which is ubiquitous enough, `gravatar.com` is just one example among so many. 
 
-To deal with this easily, [uMatrix](https://github.com/gorhill/uMatrix) is the best tool, as to blacklist a ubiquitous domain with 100% certainty is simply a matter of point and click.
+To deal with this easily, [uMatrix](https://github.com/gorhill/uMatrix) is the best tool, as to blocklist a ubiquitous domain with 100% certainty is simply a matter of point and click.

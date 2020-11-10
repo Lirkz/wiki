@@ -72,7 +72,7 @@ Just like type-based rules, a hostname-based rule can apply only when visiting a
 A matching rule can do one of three things:
 
 - `block`: matching network request will be blocked.
-    - `block` dynamic filter rules override any existing [static exception filters](https://adblockplus.org/en/filters#whitelist).
+    - `block` dynamic filter rules override any existing static exception filters.
     - Thus you can use them to block with 100% certainty (unless you set another overriding dynamic filter rule).
 - `allow`: matching network request will be allowed.
     - `allow` dynamic filters rules override any existing static and dynamic block filters.

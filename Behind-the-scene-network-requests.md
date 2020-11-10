@@ -6,7 +6,7 @@ This wiki page is out of date and in need of revision. When this documentation w
 
 Since then things have changed: uBO no longer can see network requests from other extensions, and behind-the-scene network requests are now quite less frequent. Furthermore, the webRequest API now provides more context to event listeners, such that it is often possible to still filter properly even when it's not possible to know from which exact tab a network request originates.
 
-Because of this (and other reasons which will eventually come to light - the ["Who Left Open The Cookie Jar?"](https://github.com/ghacksuserjs/ghacks-user.js/issues/489) vulnerability), starting with uBO 1.15.20, the `behind-the-scene` scope will no longer be whitelisted by default, meaning network requests from the behind-the-scene scope will be subject to filtering by default.
+Because of this (and other reasons which will eventually come to light - the ["Who Left Open The Cookie Jar?"](https://github.com/ghacksuserjs/ghacks-user.js/issues/489) vulnerability), starting with uBO 1.15.20, the `behind-the-scene` scope will no longer be on trusted sites list by default, meaning network requests from the behind-the-scene scope will be subject to filtering by default.
 
 ***
 
@@ -16,7 +16,7 @@ The filtering of behind-the-scene network request is available to [advanced user
 
 _Behind-the-scene_ network requests are network requests which uBlock cannot associate with a specific tab in your browser: these requests come from _somewhere_, but uBlock is missing information to report exactly from where.
 
-All network requests without a specific origin are classified as _behind-the-scene_. Typically, all blockers will ignore and automatically whitelist behind-the-scene network requests.
+All network requests without a specific origin are classified as _behind-the-scene_. Typically, all blockers will ignore and automatically allow behind-the-scene network requests.
 
 For the Chromium browser, examples of _behind-the-scene_ network requests:
 
@@ -49,7 +49,7 @@ The ability to inspect behind-the-scene network requests is available to all use
 
 The ability to filter _behind-the-scene_ network requests is only available when _"Advanced user"_ is enabled in the uBlock options.
 
-The _behind-the-scene_ virtual tab is whitelisted by default.  No filtering will occur even after you enable _"Advanced user"_ mode.
+The _behind-the-scene_ virtual tab is on _Trusted sites_ list by default.  No filtering will occur even after you enable _"Advanced user"_ mode.
 
 To access the filtering settings for _behind-the-scene_ network requests, simply open the popup UI in the network request logger while the _"Behind the scene"_ entry is selected:
 
@@ -61,8 +61,8 @@ The image above shows what happens when you navigate through Github: Github make
 
 Remember that if you block indiscriminately, you could cripple the ability of your browser to update parts of itself or update extensions as well as the ability of extensions to work properly.  This is why this is an advanced user feature.
  
-To turn off the filtering of _behind-the-scene_ requests, whitelist the _"Behind the scene"_ scope or turn off _"Advanced user"_ mode.
+To turn off the filtering of _behind-the-scene_ requests, allow the _"Behind the scene"_ scope or turn off _"Advanced user"_ mode.
 
-To whitelist the _behind-the-scene_ scope, add `behind-the-scene` as a whitelist directive in the _Whitelist_ tab of the uBlock dashboard.
+To allow the _behind-the-scene_ scope, add `behind-the-scene` as a trusted site directive in the _Trusted sites_ tab of the uBlock dashboard.
 
 If there are only very specific behind-the-scene network requests you would like to filter, a good approach to minimize potential problems is to use dynamic filtering: set a local rule for the `all` cell to _allow_ (green) (i.e. `behind-the-scene * * allow`). This will ensure nothing is blocked in the _behind-the-scene scope_, just as if uBlock is disabled for that scope. Then create _block_ rules for the specific hostnames for which you want to block all network requests, or `noop` if you want to subject those hostnames to static filtering only.

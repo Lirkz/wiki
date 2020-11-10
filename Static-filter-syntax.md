@@ -21,11 +21,11 @@ Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c
 
 ## Not supported
 
-#### `document` for [_entire page exception_](https://adblockplus.org/filters#whitelist)
+#### `document` for [_entire page exception_](https://help.eyeo.com/en/adblockplus/how-to-write-filters#allowlist)
 
 Not supported. The purpose of the `document` option when used with an exception filter is to disable uBO completely. The purpose of the `document` option in static exception filters is mostly for the sake of "acceptable ads" support, which uBO does not support.
 
-The reason it is not supported is to be sure that users explicitly disable uBO themselves if they wish (through [whitelisting](./How-to-whitelist-a-web-site)), not having some external filter list decide for them.
+The reason it is not supported is to be sure that users explicitly disable uBO themselves if they wish (through [Trusted sites](./How-to-mark-a-web-site-as-trusted) feature), not having some external filter list decide for them.
 
 Note: it [still works](https://github.com/gorhill/uBlock/issues/1754) to negate [strict blocking](./Strict-blocking) when explicitly enabled by blocking filter `document` option.
 
@@ -277,7 +277,7 @@ Exception filter for specific `csp` blocking filter must have exactly the same c
 
     @@||example.com^$csp
 
-CSP option syntax may look unusual compared to other filters. It works mostly in "whitelist" mode - data can be downloaded only from addresses explicitly specified in this option. Refer to ["Content Security Policy (CSP)
+CSP option syntax may look unusual compared to other filters. It works mostly in "allowlist" mode - data can be downloaded only from addresses explicitly specified in this option. Refer to ["Content Security Policy (CSP)
 Quick Reference Guide"](https://content-security-policy.com/) or [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for further syntax help.
 
 See also [`denyallow`](#denyallow).

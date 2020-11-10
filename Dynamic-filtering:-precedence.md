@@ -2,7 +2,7 @@
 
 ***
 
-First: Whitelist directives override both dynamic filtering _and_ static filtering. Whitelist directives appear in the [_Whitelist_ pane in the dashboard](./How-to-whitelist-a-web-site), and they are used to completely disable filtering. The [big blue button in the popup UI](./Quick-guide:-popup-user-interface#the-large-power-button) is used to easily whitelist the current site/page.
+First: Trusted site directives override both dynamic filtering _and_ static filtering. Trusted site directives appear in the [_Trusted sites_ pane in the dashboard](./How-to-mark-a-web-site-as-trusted), and they are used to completely disable filtering. The [big blue button in the popup UI](./Quick-guide:-popup-user-interface#the-large-power-button) is used to easily add current site/page to the _Trusted sites_ list.
 
 ***
 
