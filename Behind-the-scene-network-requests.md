@@ -6,7 +6,7 @@ This wiki page is out of date and in need of revision. When this documentation w
 
 Since then things have changed: uBO no longer can see network requests from other extensions, and behind-the-scene network requests are now quite less frequent. Furthermore, the webRequest API now provides more context to event listeners, such that it is often possible to still filter properly even when it's not possible to know from which exact tab a network request originates.
 
-Because of this (and other reasons which will eventually come to light - the ["Who Left Open The Cookie Jar?"](https://github.com/ghacksuserjs/ghacks-user.js/issues/489) vulnerability), starting with uBO 1.15.20, the `behind-the-scene` scope will no longer be on _Trusted sites_ list by default, meaning network requests from the behind-the-scene scope will be subject to filtering by default.
+Because of this (and other reasons which will eventually come to light - the ["Who Left Open The Cookie Jar?"](https://github.com/ghacksuserjs/ghacks-user.js/issues/489) vulnerability), starting with uBO 1.15.20, the `behind-the-scene` scope will no longer be on the _Trusted sites_ list by default, meaning network requests from the behind-the-scene scope will be subject to filtering by default.
 
 ***
 
@@ -49,7 +49,7 @@ The ability to inspect behind-the-scene network requests is available to all use
 
 The ability to filter _behind-the-scene_ network requests is only available when _"Advanced user"_ is enabled in the uBlock options.
 
-The _behind-the-scene_ virtual tab is on _Trusted sites_ list by default.  No filtering will occur even after you enable _"Advanced user"_ mode.
+The _behind-the-scene_ virtual tab is on the _Trusted sites_ list by default.  No filtering will occur even after you enable _"Advanced user"_ mode.
 
 To access the filtering settings for _behind-the-scene_ network requests, simply open the popup UI in the network request logger while the _"Behind the scene"_ entry is selected:
 
