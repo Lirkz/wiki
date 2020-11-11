@@ -20,6 +20,7 @@ There are predefined trusted site directives when you first install uBO:
     about-scheme
     chrome-extension-scheme
     chrome-scheme
+    edge-scheme
     moz-extension-scheme
     opera-scheme
     vivaldi-scheme
