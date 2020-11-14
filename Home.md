@@ -70,6 +70,7 @@
     - [Counterpoints: unsorted](./Counterarguments)
     - [uBlock and others: Blocking ads, trackers, malwares](./uBlock-and-others:-Blocking-ads,-trackers,-malwares)
     - [About "This other extension reports more stuff blocked!"](./About-%22This-other-extension-reports-more-stuff-blocked!%22)
+    - [About "uBlock is inferior in capabilities as a result of being lighter on the browser"](./About-%22uBlock-is-inferior-in-capabilities-as-a-result-of-being-lighter-on-the-browser%22)
     - [Various videos showing side by side comparison of the load speed of complex sites](./Various-videos-showing-side-by-side-comparison-of-the-load-speed-of-complex-sites)
     - [Why don't you accept donations?](./Why-don't-you-accept-donations%3F)
     - [Reference description of uBO in various extensions stores](./Reference-description-of-uBO-in-various-extensions-stores)
