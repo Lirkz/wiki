@@ -192,7 +192,7 @@ If set to true, uBO will lz4-compress data before storing it in its cache storag
 
 #### `cloudStorageCompression`
 
-Default: `false`, will be toggled to `true` in future uBO version.
+Default: `true`, was `false` before [1.30.9rc2](https://github.com/gorhill/uBlock/commit/eb8433cb1964f9852d03f8ca1aa2cf51bd51a317)
 
 Introduced in [1.29.3b7](https://github.com/gorhill/uBlock/commit/d8b6b31eca117d2d82ab53bb2477117ef36761ab).
 
