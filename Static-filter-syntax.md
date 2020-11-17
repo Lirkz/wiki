@@ -534,7 +534,7 @@ By default, the implicit purpose of cosmetic filters is to hide unwanted DOM ele
 
 #### `subject:remove()`
 
-- Description: _action operator_, instruct to remove elements from the DOM tree.
+- Description: _action operator_, instruct to remove elements from the DOM tree, instead of just hiding them.
 - Chainable: No, _action operator_ can only be used at the end of the root chain.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - Examples:
