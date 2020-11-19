@@ -8,8 +8,7 @@ The element picker's purpose is to assist the user in the creation of network or
 
 If there is an element on a web page you wish to remove forever, open the extension's popup menu, and click the small "eye-dropper" icon. You will enter the interactive element picker mode.
 
-![Element picker](https://user-images.githubusercontent.com/585534/76684433-69c8c100-65e2-11ea-9588-60417dc00781.png)
-<!-- ![Element picker](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/ss-element-picker.png) -->
+![Element picker](https://user-images.githubusercontent.com/886325/99714989-9359b680-2aa6-11eb-8805-487fca0c8fef.png)
 
 Once in element-picker mode, you have to point and click on the element you wish to remove.
 
