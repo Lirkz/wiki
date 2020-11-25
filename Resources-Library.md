@@ -170,11 +170,11 @@ Examples:
 
 ***
 
-### json-prune.js [↪](https://github.com/gorhill/uBlock/blob/f433932d8602230539d3408e9946d4d70b40306c/assets/resources/scriptlets.js#L251)
+### json-prune.js [↪](https://github.com/gorhill/uBlock/blob/13f92756befaa9a8d3ba1615bd7abc7075758c67/assets/resources/scriptlets.js#L365)
 
 New in [1.23.0](https://github.com/gorhill/uBlock/commit/2fd86a66fcc2665e5672cc5862e24b3782ee7504)
 
-Intercepts calls to `JSON.parse`, and if the result of the parsing is an Object, it will remove specified properties from the result before returning to the caller.
+Intercepts calls to `JSON.parse()` and `Response.json()`. If the result of the parsing is an Object, it will remove specified properties from the result before returning to the caller.
 
 Parameters:
  - optional, string, a list of space-separated properties to remove 
