@@ -70,6 +70,45 @@ Examples:
 
 ***
 
+
+<details>
+<summary>Experimental, under development</summary>
+
+
+### aost.js /
+### abort-on-stack-trace.js [↪](https://github.com/gorhill/uBlock/blob/793e2c78963ba86c8d36b950807ce952f7199c1f/assets/resources/scriptlets.js#L194)
+
+New in: [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e15bbba3b4ba6cbf43935)
+
+Aborts execution of script (_throws_ `ReferenceError`) when attempts to access specified _property_ when _stack trace_ matches specified text or _regular expression_. <sub>[Internal discussion](https://github.com/orgs/uBlockOrigin/teams/ublock-issues-volunteers/discussions/237?from_comment=59)</sub>
+
+Parameters:
+ - required, _property_ (chain of properties joined by `.`) to trap in order to launch the stack trace matching code, ex. `Math.random`.
+ - optional, string/_regular expression_, the needle to match against the stack trace. If the empty string, always match.
+ - optional, whether to log, and if so how:
+     - Empty string: do not log
+     - `1`: log stack trace for all access to trapped property
+     - `2`: log stack trace for defused access to trapped property
+     - `3`: log stack trace for non-defused access to trapped property
+
+Stack trace is normalized, but there still can be differencess (Chromium vs Firefox) because of different format of stack trace.
+
+There is a special string which can be used to match inline script context - `inlineScript`.
+
+Though the stack trace is rendered in the console using new line to separate the stack trace lines, internally `\t` is used. The reason is to be more easily be able to create regex-based needle when using regex `.` character class.
+
+The stack trace is prepended with `stackDepth:...` in order to allow to filter on stack depth, however higher depth values can likely differ between Chromium and Firefox.
+
+Firefox often reports `injectedScript`, attempt has been made to convert entries in Chromium which seems to correspond to this, so that both browser families will report `injectedScript`.
+
+The column value is normalized to 1, however there is too much discrepancy between browser families for that value to be of any use.
+
+Filtering according to reported line numbers (`...:1234:1`), will not be reliable for inline scripts, since the line at which those inline scripts are located will vary from one page to another. It should be reliable for when the stack trace entry is for code in a JS file.
+
+</details>
+
+***
+
 ### aeld.js /
 ### addEventListener-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L182)
 Prevents attaching event listeners.
