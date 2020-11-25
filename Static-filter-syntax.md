@@ -8,6 +8,7 @@ Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c
 - [Pre-parsing directives](#pre-parsing-directives)
 - [Extended syntax](#extended-syntax)
     - [Static network filtering](#static-network-filtering)
+        - [Modifier filters](#modifier-filters)
     - [Static extended filtering](#static-extended-filtering)
         - [Entity](#entity)
         - [Cosmetic filters](#cosmetic-filters)
@@ -258,32 +259,6 @@ Filter list authors are discouraged from using exception filters of `cname` type
 
 ***
 
-#### `csp`
-
-This option will inject [`Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/Glossary/CSP) header to the HTTP network response of the requested web page. It can be applied to main document and documents in frames.
-
-This is special filter - it will not block matching resource, but only apply HTTP header to pages matching it. Because of this it cannot be mixed with other options speciyfing resource type, like for example `image`, `script` or [`frame`](#frame) (`subdocument`). It can still be used with [`1p`](#1p) (`first-party`), [`3p`](#3p) (`third-party`) or [`domain`](#domain) options.
-
-Because of how `csp` filters are implemented, they allow for some interesting applications. For example you can block scripts only in some specific path in page:
-
-    ||example.com/subpage/*$csp=script-src 'none'
-
-And even block them everywhere except main page (note end anchor):
-
-    ||example.com/*$csp=script-src 'none'
-    @@||example.com^|$csp=script-src 'none'
-
-Exception filter for specific `csp` blocking filter must have exactly the same content of `csp` option as blocking filter. However, exception filter with empty `csp` option will disable all `csp` injections for matching page:
-
-    @@||example.com^$csp
-
-CSP option syntax may look unusual compared to other filters. It works mostly in "allowlist" mode - data can be downloaded only from addresses explicitly specified in this option. Refer to ["Content Security Policy (CSP)
-Quick Reference Guide"](https://content-security-policy.com/) or [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for further syntax help.
-
-See also [`denyallow`](#denyallow).
-
-***
-
 #### `denyallow`
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/c3bc2c741d61db3e99b313835c2ae34a4a008359).
@@ -345,18 +320,6 @@ Option for exception filters only. Turns off all cosmetic filtering on matching 
 
 ***
 
-#### `empty`
-
-New in [1.22.0](https://github.com/gorhill/uBlock/commit/3e5c9e00ab3603ae0c02e08b007b084404bbb71d).
-
-The filter option `empty` is converted to `redirect=empty` by uBO internally; however unlike when the [`redirect`](#redirect) option is used expressly, the `empty` option does not require a resource type.
-
-When `empty` is used, only network requests which are meant to return a text response will be redirected to an empty response body by uBO - so `empty` will not work for resources such as images, media, or other binary resources.
-
-See also: [`mp4`](#mp4), [`redirect`](#redirect)
-
-***
-
 #### `first-party`
 
 Equivalent to `~third-party` [option](https://adblockplus.org/filters#options). Provided strictly for convenience (0.9.9.0).
@@ -401,6 +364,72 @@ To specifically disable inline font tags in a main page via CSP: `||example.com^
 
 ***
 
+#### `popunder`
+
+To block "popunders" windows/tabs, where original page is redirected to advertisement and desired content is loaded in newly created one. To be used in the same manner as the `popup` filter option, except that it will block popunders.
+
+***
+
+#### `specifichide`
+
+Alias: `shide`.
+
+New in uBO [1.23.0](https://github.com/gorhill/uBlock/commit/23c4c80136ba4974a6444488ef8162ba75b0cb84)
+
+Option for exception filters only. Turns off _specific_ cosmetic filtering on matching pages.
+
+Specific cosmetic filters, are filters which apply only to pages in domains specified in filter - `example.com##.ad-class`.
+
+***
+
+#### `xhr`
+
+Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options). For convenience.
+
+***
+
+## Modifier filters
+
+
+
+#### `csp`
+
+This option will inject [`Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/Glossary/CSP) header to the HTTP network response of the requested web page. It can be applied to main document and documents in frames.
+
+This is special filter - it will not block matching resource, but only apply HTTP header to pages matching it. Because of this it cannot be mixed with other options speciyfing resource type, like for example `image`, `script` or [`frame`](#frame) (`subdocument`). It can still be used with [`1p`](#1p) (`first-party`), [`3p`](#3p) (`third-party`) or [`domain`](#domain) options.
+
+Because of how `csp` filters are implemented, they allow for some interesting applications. For example you can block scripts only in some specific path in page:
+
+    ||example.com/subpage/*$csp=script-src 'none'
+
+And even block them everywhere except main page (note end anchor):
+
+    ||example.com/*$csp=script-src 'none'
+    @@||example.com^|$csp=script-src 'none'
+
+Exception filter for specific `csp` blocking filter must have exactly the same content of `csp` option as blocking filter. However, exception filter with empty `csp` option will disable all `csp` injections for matching page:
+
+    @@||example.com^$csp
+
+CSP option syntax may look unusual compared to other filters. It works mostly in "allowlist" mode - data can be downloaded only from addresses explicitly specified in this option. Refer to ["Content Security Policy (CSP)
+Quick Reference Guide"](https://content-security-policy.com/) or [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for further syntax help.
+
+See also [`denyallow`](#denyallow).
+
+***
+
+#### `empty`
+
+New in [1.22.0](https://github.com/gorhill/uBlock/commit/3e5c9e00ab3603ae0c02e08b007b084404bbb71d).
+
+The filter option `empty` is converted to `redirect=empty` by uBO internally; however unlike when the [`redirect`](#redirect) option is used expressly, the `empty` option does not require a resource type.
+
+When `empty` is used, only network requests which are meant to return a text response will be redirected to an empty response body by uBO - so `empty` will not work for resources such as images, media, or other binary resources.
+
+See also: [`mp4`](#mp4), [`redirect`](#redirect)
+
+***
+
 #### `mp4`
 
 New in [1.22.0](https://github.com/gorhill/uBlock/commit/68ae847ba385c09c5efa511d18a18a4753af47be).
@@ -408,12 +437,6 @@ New in [1.22.0](https://github.com/gorhill/uBlock/commit/68ae847ba385c09c5efa511
 The `mp4` filter option will be converted to `redirect=noopmp4-1s` internally, and `media` type will be assumed.
 
 See also: [`empty`](#empty), [`redirect`](#redirect)
-
-***
-
-#### `popunder`
-
-To block "popunders" windows/tabs, where original page is redirected to advertisement and desired content is loaded in newly created one. To be used in the same manner as the `popup` filter option, except that it will block popunders.
 
 ***
 
@@ -448,24 +471,6 @@ The above filter will result in a block filter `||example.com/ads.js$script` **a
     ||example.com/ads.js$script,redirect-rule=noop.js
 
 The above filter will not cause a block filter to be created, only a redirect directive will be created. Standalone redirect directives are useful when the blocking of a resource is optional but we still want the resource to be redirected should it ever be blocked by whatever mean - whether through a separate block filter, a dynamic filtering rule, etc.
-
-***
-
-#### `specifichide`
-
-Alias: `shide`.
-
-New in uBO [1.23.0](https://github.com/gorhill/uBlock/commit/23c4c80136ba4974a6444488ef8162ba75b0cb84)
-
-Option for exception filters only. Turns off _specific_ cosmetic filtering on matching pages.
-
-Specific cosmetic filters, are filters which apply only to pages in domains specified in filter - `example.com##.ad-class`.
-
-***
-
-#### `xhr`
-
-Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options). For convenience.
 
 ***
 
