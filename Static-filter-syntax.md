@@ -450,9 +450,24 @@ The filter syntax for `redirect=` filter option is a subset of ABP-compatible fi
     ||example.com/path/to/image$image,redirect=2x2-transparent.png,domain=github.com
     ||example.com/$script,redirect=noopjs,first-party
 
-A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).
+A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. 
 
-<sub>__*__ redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)</sub>
+Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks, `redirect=` filters can be used with any other static filtering modifier options, can be excepted using `@@` and can be badfilter-ed.
+
+Since more than one `redirect=` directives could be found to apply to a single network request, the concept of redirect priority is introduced.
+
+By default, `redirect=` directives have an implicit priority of `0`. Filter authors can declare an explicit priority by appending `:[integer]` to the token of the `redirect=` option, for example:
+
+    ||example.com/*.js$1p,script,redirect=noopjs:100
+
+The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely.
+
+Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
+
+Before 1.31.0:
+
+Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).  
+Redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)
 
 ***
 
