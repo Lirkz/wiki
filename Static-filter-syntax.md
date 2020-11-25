@@ -449,6 +449,8 @@ New in [1.31.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a405
 
 To remove query parameters form the URL of network requests.
 
+Available only to filter list authors.
+
 `queryprune` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
 
 `queryprune` must be assigned a value, which value will determine which parameters from a query string will be removed. The syntax for the value is that of regular expression *except* for the following rules:
