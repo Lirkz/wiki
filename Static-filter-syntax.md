@@ -440,6 +440,42 @@ See also: [`empty`](#empty), [`redirect`](#redirect)
 
 ***
 
+#### `queryprune`
+
+<details>
+<summary>Work in progress, syntax still experimental, documentation not complete</summary>
+
+New in [1.31.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
+
+To remove query parameters form the URL of network requests.
+
+`queryprune` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
+
+`queryprune` must be assigned a value, which value will determine which parameters from a query string will be removed. The syntax for the value is that of regular expression *except* for the following rules:
+
+- do not wrap the regex directive between `/`
+- do not use regex special values `^` and `$`
+- do not use literal comma character in the value, though you can use hex-encoded version, `\x2c`
+- to match the start of a query parameter, prepend `|`
+- to match the end of a query parameter, append `|`
+
+`queryprune` regex-like values will be tested against each key-value parameter pair as `[key]=[value]` string. This way you can prune according to either the key, the value, or both.
+
+**Important:** avoiding `queryprune` from being visited at all is best, I do hope filter authors will be as carefully as possible when crafting `queryprune` filters as I am careful at minimizing all overhead in the code -- otherwise all the coding efforts are going to waste. So typically the query parameter of interest will be part of the filter pattern:
+
+    ||reddit.com^*utm_$queryprune=|utm_
+    ||youtube.com^*fbclid*$queryprune=fbclid
+    ||youtube.com^*gclid*$queryprune=gclid
+
+This way uBO will scan the query parameters only when the URL is found to match the targeted query parameters. Mind performance when crafting filters. Your proposed filters forces uBO to scan every URL matching `reddit.com` and `youtube.com`.
+
+Additionally, prepending `queryprune` values with `|` when the match is of the "starts with" kind also helps.
+
+
+</details>
+
+***
+
 #### `redirect`
 
 To cause a blocked network request to be redirected to a local "neutered" version of the resource. The "neutered" resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets). Special, reserved token `none` can be used to disable specific redirect filters.
