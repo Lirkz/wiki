@@ -511,6 +511,12 @@ Possible values:
 
 ***
 
+#### `uiPopupConfig`
+
+`undocumented`
+
+***
+
 #### `uiStyles`
 
 Default: `unset`.
