@@ -443,7 +443,7 @@ See also: [`empty`](#empty), [`redirect`](#redirect)
 #### `queryprune`
 
 <details>
-<summary>Work in progress, syntax still experimental, documentation not complete</summary>
+<summary>Work in progress, syntax still experimental - valid only on uBO 1.31.0, documentation not complete</summary>
 
 New in [1.31.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
 
