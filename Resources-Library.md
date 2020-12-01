@@ -389,8 +389,6 @@ Scriptlet will succeed only when:
  - new _property_ written by `set.js` is `undefined` or `null`<sup>[1.25.0](https://github.com/gorhill/uBlock/commit/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce)</sup> **OR**
  - type of original _property_ is equal to type of new _property_
 
-Additionally, original _property_ (if exist) must not have getter.
-
 Value set by scriptlet can be overwritten by page script when:
  - current _property_ was not set to `undefined` or `null`<sup>[1.25.0](https://github.com/gorhill/uBlock/commit/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce)</sup> **AND**
  - new _property_ is not `undefined` or `null`<sup>[1.25.0](https://github.com/gorhill/uBlock/commit/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce)</sup> **AND**
