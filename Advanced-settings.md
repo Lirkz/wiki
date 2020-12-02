@@ -478,11 +478,11 @@ Possible values:
 
 - `unset` - leave it to the platform to pick the optimal
   behavior (default, Firefox - enabled, Chromium - disabled)
-- `no` - do no suspend tab loading at launch time
+- `no` - do not suspend tab loading at launch time
 - `yes` - suspend tab loading at launch time
 
-After [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3) configurable again in Firefox (can be disabled). 
-After uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17dbb996e605c4befb09e16911) - Chromium only. In Firefox this feature is always active thanks to ["persistent startup listeners"](https://bugzilla.mozilla.org/show_bug.cgi?id=1503721).
+After [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3) configurable again in Firefox (can be disabled).  
+Between uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17dbb996e605c4befb09e16911) and 1.18.6 - Chromium only. In Firefox this feature is always active from now on thanks to ["persistent startup listeners"](https://bugzilla.mozilla.org/show_bug.cgi?id=1503721).
 
 If enabled, uBO will hard block all network requests when the browser launches until _all_ the filter lists and rules are loaded and ready, at which time uBO will force a reload of the tabs for which there were network requests blocked during the setup phase.
 
