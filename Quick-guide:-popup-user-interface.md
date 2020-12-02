@@ -126,29 +126,14 @@ Unless you are in ["advanced user"](./Advanced-user-features) mode, this panel i
 
 ***
 
-In "advanced user" mode, the panel is fully interactive and can be used for advanced filtering control:
+In "advanced user" mode this panel is fully interactive and can be used for advanced filtering control:
 
 ![Overview panel advanced mode](https://user-images.githubusercontent.com/886325/85384714-b3aa3700-b541-11ea-91cd-6e0e2c1aad4c.gif)
 
-This is UI for [Dynamic filtering](./Dynamic-filtering). Column on the left represents global rules, on the right - local. Note that "green"/`allow` cell is [hidden by default to prevent missuse](https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-quick-guide#allow-rules).
+Refer to the [_Dynamic filtering_ documentation](./Dynamic-filtering) to learn more about the rules.
 
-![dynamic filtering cells](https://user-images.githubusercontent.com/886325/69888549-c2eb3e00-12ec-11ea-8341-9b0de36e7659.gif)
+After modifying the rules, you can quickly reload the page without leaving the popup by clicking on the reload button appearing in top-right corner. Click it with <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>Cmd</kbd> (Mac) pressed to bypass browser cache.
 
-Each cell has three fields representing [Dynamic filtering actions](./Dynamic-filtering:-rule-syntax#actions):
-
- - Green - `allow`: matching network request will be allowed.
- - Grey - `noop`: exclude network requests from being subjected to dynamic filtering. 
- - Red -  `block`: matching network request will be blocked.
-
-Rules set by clicking the cells are temporary by default - click the padlock button if you want to make them permanent or eraser to clear them. Pressing <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on Mac) when setting rules will make them permanent immediately.
-
-Quickly reload the page without leaving the popup by clicking reload button appearing on the right. Click it with <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>Cmd</kbd> (Mac) pressed to bypass cache.
-
-> ***
-> **Tip:**
->
-> Click the `all` cell at the top with <kbd>Ctrl</kbd> and <kbd>Shift</kbd> pressed to open panel as new browser tab.
->
-> ***
+Click the `all` cell at the top with <kbd>Ctrl</kbd> and <kbd>Shift</kbd> pressed to open popup panel as a new browser tab, which may be useful for example to capture screenshots.
 
 </details>
