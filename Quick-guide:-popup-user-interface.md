@@ -130,7 +130,7 @@ In "advanced user" mode, the panel is fully interactive and can be used for adva
 
 ![Overview panel advanced mode](https://user-images.githubusercontent.com/886325/85384714-b3aa3700-b541-11ea-91cd-6e0e2c1aad4c.gif)
 
-This is UI for [Dynamic filtering](./Dynamic-filtering). Column on the left represents global rules, on the right - local.
+This is UI for [Dynamic filtering](./Dynamic-filtering). Column on the left represents global rules, on the right - local. Note that "green"/`allow` cell is [hidden by default to prevent missuse](https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-quick-guide#allow-rules).
 
 ![dynamic filtering cells](https://user-images.githubusercontent.com/886325/69888549-c2eb3e00-12ec-11ea-8341-9b0de36e7659.gif)
 
