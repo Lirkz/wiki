@@ -470,7 +470,8 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 
 ***
 
-#### `suspendTabsUntilReady` (experimental)
+<span name="suspendtabsuntilready-experimental"></span>
+#### `suspendTabsUntilReady`
 
 Default: `unset`, before [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3): `false`.
 
