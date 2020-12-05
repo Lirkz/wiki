@@ -23,7 +23,7 @@
             - [Rule syntax](./Dynamic-filtering:-rule-syntax)
             - [Rule precedence](./Dynamic-filtering:-precedence)
             - [Blocking mode](./Blocking-mode)
-        - [URL filtering](./Dynamic-URL-filtering)
+        - [Dynamic URL filtering](./Dynamic-URL-filtering)
     - [_Trusted sites_ pane](./Dashboard:-Trusted-sites)
         - [How to mark a web site as trusted](./How-to-mark-a-web-site-as-trusted)
     - [Keyboard shortcuts](./Keyboard-shortcuts)
