@@ -22,7 +22,7 @@ The destination hostname corresponds to the hostname extracted from the URL of a
 > ***
 > **Tip:**
 >
-> In specific cases [URL filtering](./Dynamic-URL-filtering) will allow for greater accuracy when controlling destination URL.
+> In specific cases [Dynamic URL filtering](./Dynamic-URL-filtering) will allow for greater accuracy when controlling destination URL.
 > ***
 
 A rule always automatically propagates to all subdomains of the source hostname and all subdomains of the destination hostname -- unless the rule is overridden by a narrower rule in one of the subdomains.
