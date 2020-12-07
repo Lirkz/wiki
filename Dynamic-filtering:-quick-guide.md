@@ -131,6 +131,7 @@ The dynamic filtering _allow_ (green) rule is most useful to un-break sites brok
 The only way to enable the ability to point-and-click to create _allow_ rules is to either:
 
 - Tap twice on the <kbd>Ctrl</kbd> key while in the popup panel
+    - This won't work in Firefox when `privacy.resistFingerprinting` is set to `true`
 - Set `filterAuthorMode` to `true` in [advanced settings](./Advanced-settings)
 
 Doing so will enable the _allow_ rule creation widget in the popup panel:
