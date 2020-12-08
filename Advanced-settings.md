@@ -536,7 +536,8 @@ Default: `unset`.
 
 uBO [1.30.1b3](https://github.com/gorhill/uBlock/commit/e3a6d8465f19f4ef5d84ceddb9570644cf4fc0a3) and above.
 
-For development purposes only! DO NOT create issues about this feature!
+For development purposes only! DO NOT create issues about this feature!  
+Locked to dev build only in [1.31.3b5](https://github.com/gorhill/uBlock/commit/9aef41738b66b25028403d8e0f25f7fb4deafb0e).
 
 Allows to manually override dark mode theme status.
 
