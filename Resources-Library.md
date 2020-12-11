@@ -240,6 +240,26 @@ Parameters:
 Examples:
  - `orgyxxxhub.com##+js(noeval-if, replace)`
 
+***
+
+### no-fetch-if.js [↪](https://github.com/gorhill/uBlock/blob/b6ed83bc5c840431ed03cddaed1daeb395db3b0e/assets/resources/scriptlets.js#L586)
+
+New in [1.31.3b9](https://github.com/gorhill/uBlock/commit/ba11a700139bbc648e4ae5b2bc7af90ef03db5df).
+
+Defuses calls to `fetch()` by returning a promise which always resolve to an empty response.
+
+Parameters:
+ - optional, space-separated list of conditions which must be ALL fulfilled in order for the defusing to take place:
+     - string/_regular expression_ matching in URL passed to `fetch()` call
+     - colon-separated `name:value` pairs of [`init` option name](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) and string/_regular expression_ matching in value of that option passed to `fetch()` call.
+
+When used without parameters, the parameters passed to `no-fetch-if` will be logged to the console, as `uBO: fetch([...list of arguments...])`.
+
+Examples:
+ - `example.com##+js(no-fetch-if, method:HEAD)`
+ - `example.com##+js(no-fetch-if, adsbygoogle.js)`
+ - `example.com##+js(no-fetch-if, adsbygoogle.js method:HEAD)`
+ - `example.com##+js(no-fetch-if, /adsbygoogle.js$/ method:/HEAD|POST/)`
 
 ***
 
