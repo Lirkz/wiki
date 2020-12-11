@@ -411,20 +411,6 @@ Examples:
 
 ***
 
-### ~sid.js~ /
-### ~setInterval-defuser.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L474)
-
-Deprecated by [`no-setInterval-if.js`](#no-setinterval-ifjs-)
-
-Defuses calls to _`setInterval()`_ function for specified matching callbacks and intervals by setting callback function to noop.
-
-Parameters:
- - optional, string/_regular expression_, matching in stringified callback function
- - optional, decimal integer, matching interval
-
-
-***
-
 ### ~sil.js~ /
 ### ~setInterval-logger.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L500)
 
