@@ -333,6 +333,7 @@ Examples:
  - `computerbild.de##+js(nostif, ())return)`
  - `lablue.*##+js(nostif, push, 500)`
 
+In [1.31.3b11](https://github.com/gorhill/uBlock/commit/ba11a700139bbc648e4ae5b2bc7af90ef03db5df) aliased as `setTimeout-defuser.js` for backward compatibility.
 
 ***
 
