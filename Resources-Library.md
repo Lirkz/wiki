@@ -616,14 +616,6 @@ Fix for disappearing videos on chip.de
 These are smallest/shortest/fastest to execute files. Can be used in network filters as a parameter to `$redirect` option along with specific matching `$type` option.
 They purpose is to mislead page to think that real files have been served.
 
-
-
-### Supported types
-TODO: filter types, mime types, this needs clarification
-TODO: how filter type relates to mime type, needs more [source digging](https://github.com/gorhill/uBlock/blob/master/src/js/scriptlet-filtering.js)
-font, image, media, object, script, stylesheet, subdocument, xmlhttprequest
-
-
 ### Available resources
  - Images
 	- ~1x1-transparent.gif~ 1x1.gif `image/gif;base64` `$image` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/1x1.gif)
@@ -637,15 +629,13 @@ font, image, media, object, script, stylesheet, subdocument, xmlhttprequest
  - Media files
 	- ~noopmp3-0.1s~ noop-0.1s.mp3 `audio/mp3;base64` `$media` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-0.1s.mp3)
 	- ~noopmp4-1s~ noop-1s.mp4 `video/mp4;base64` `$media` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-1s.mp4)
-
-Special, reserved token `none` can be used to disable specific redirect filters.
+ - Special purpose
+    - reserved token `none` can be used to disable specific redirect filters.
+    - `click2load.html` for embedded `<iframe>` elements. New in [1.31.0](https://github.com/gorhill/uBlock/commit/59169209850c54c31d94990f0c956281fe43eb03) (also [2e5d32e9](https://github.com/gorhill/uBlock/commit/2e5d32e96798dd55f3fae66d7091645ff7ad3784), [46d7f8a7](https://github.com/gorhill/uBlock/commit/46d7f8a70c937441545db9c53df2647081ee9d12)). Frames redirected to this resource will not be collapsed, instead, widget with clickable and selectable frame source link will be displayed. Clicking the link will load it in new tab. Clicking the widget content will unblock and load original frame content.
 
 Example rule:
 
 `||ad.server.com/$script,redirect=noop.js,domain=www.google.com`
-
-TODO: object and font resources are missing? Find discussion about adding them on demand.
-
 
 ***
 
