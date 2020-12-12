@@ -87,7 +87,7 @@ Keep in mind that this feature is to prevent **leakage** of your non-internet-fa
 
 ### Block CSP reports
 
-**Enabled by default** in [1.31.3b12](https://github.com/gorhill/uBlock/commit/7d90f97aa1cbf2728508506f6dd7a75c054b85d1) to mitigate fingerprinting attempts as described in [LiCybora/NanoDefenderFirefox#196](https://github.com/LiCybora/NanoDefenderFirefox/issues/196).
+**Enabled by default** in [1.31.3b12](https://github.com/gorhill/uBlock/commit/7d90f97aa1cbf2728508506f6dd7a75c054b85d1) to mitigate fingerprinting attempts described in [LiCybora/NanoDefenderFirefox#196](https://github.com/LiCybora/NanoDefenderFirefox/issues/196).
 
 You can block network requests made as a result of your browser reporting Content Security Policy violations ("CSP reports") to a remote server (which can be 3rd-party to the site where the violation occurred).
 
