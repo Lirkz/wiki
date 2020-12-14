@@ -583,7 +583,7 @@ Fix for disappearing videos on chip.de
 ***
 
 ## Empty redirect resources
-These are smallest/shortest/fastest to execute files. Can be used in network filters as a parameter to `$redirect` option along with specific matching `$type` option.
+These are smallest/shortest/fastest to execute files. Should be used in network filters as a parameter to `$redirect` option.
 They purpose is to mislead page to think that real files have been served.
 
 ### Available resources
