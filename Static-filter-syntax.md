@@ -422,9 +422,9 @@ See also [`denyallow`](#denyallow).
 
 New in [1.22.0](https://github.com/gorhill/uBlock/commit/3e5c9e00ab3603ae0c02e08b007b084404bbb71d).
 
-The filter option `empty` is converted to `redirect=empty` by uBO internally; however unlike when the [`redirect`](#redirect) option is used expressly, the `empty` option does not require a resource type.
+Redirects request to empty response.
 
-When `empty` is used, only network requests which are meant to return a text response will be redirected to an empty response body by uBO - so `empty` will not work for resources such as images, media, or other binary resources.
+The filter option `empty` is converted internally to `redirect=empty`.
 
 See also: [`mp4`](#mp4), [`redirect`](#redirect)
 
@@ -504,7 +504,7 @@ Explicit redirect priority should be used if and only if there is a case of redi
 
 Before 1.31.0:
 
-Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).  
+Resource type must be specified. Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).  
 Redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)
 
 ***
