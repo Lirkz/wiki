@@ -484,9 +484,9 @@ To cause a blocked network request to be redirected to a local "neutered" versio
 
 The filter syntax for `redirect=` filter option is a subset of ABP-compatible filtering syntax, and is as follow:
 
-    ||example.com^$script,redirect=noopjs,domain=github.com
-    ||example.com/path/to/image$image,redirect=2x2-transparent.png,domain=github.com
-    ||example.com/$script,redirect=noopjs,first-party
+    ||example.com^$script,redirect=noop.js,domain=github.com
+    ||example.com/path/to/image$image,redirect=2x2.png,domain=github.com
+    ||example.com/$script,redirect=noop.js,first-party
 
 A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. 
 
