@@ -480,7 +480,7 @@ Additionally, prepending `queryprune` values with `|` when the match is of the "
 
 #### `redirect`
 
-To cause a blocked network request to be redirected to a local "neutered" version of the resource. The "neutered" resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets). Special, reserved token `none` can be used to disable specific redirect filters.
+To cause a blocked network request to be redirected to a local "neutered" version of the resource. The "neutered" resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets).
 
 The filter syntax for `redirect=` filter option is a subset of ABP-compatible filtering syntax, and is as follow:
 
@@ -490,7 +490,7 @@ The filter syntax for `redirect=` filter option is a subset of ABP-compatible fi
 
 A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. 
 
-Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks, `redirect=` filters can be used with any other static filtering modifier options, can be excepted using `@@` and can be badfilter-ed.
+Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks. `redirect=` filters can be used with any other static filtering modifier options, can be excepted using `@@`, can be `badfilter`-ed and its priority can be increased by `important` option. Previous way to disable redirection by specifying `none` as the redirect token is deprecated (and broken in [1.31.0](https://github.com/uBlockOrigin/uBlock-issues/issues/1388), fixed in [1.31.3b11](https://github.com/gorhill/uBlock/commit/904aa87e2aacb5fbfbb79ea702891e5be72d4b55)).
 
 Since more than one `redirect=` directives could be found to apply to a single network request, the concept of redirect priority is introduced.
 
@@ -504,8 +504,10 @@ Explicit redirect priority should be used if and only if there is a case of redi
 
 Before 1.31.0:
 
-Resource type must be specified. Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).  
-Redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)
+- Resource type must be specified.
+- Special, reserved token `none` must be used to disable specific redirect filters.
+- Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).
+- Redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)
 
 ***
 
