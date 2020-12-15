@@ -494,7 +494,7 @@ Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec92
 
 Since more than one `redirect=` directives could be found to apply to a single network request, the concept of redirect priority is introduced.
 
-By default, `redirect=` directives have an implicit priority of `0`. Filter authors can declare an explicit priority by appending `:[integer]` to the token of the `redirect=` option, for example:
+By default, `redirect=` directives have an implicit priority of `0`. Filter authors can declare an explicit priority by appending `:[integer]` (negative values are also supported) to the token of the `redirect=` option, for example:
 
     ||example.com/*.js$1p,script,redirect=noopjs:100
 
