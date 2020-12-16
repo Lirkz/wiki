@@ -512,6 +512,8 @@ The priority dictates which redirect token out of many will be ultimately used. 
 
 Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
 
+Changed in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62bb6c01e296d5301433a) - filters with unresolvable resource token at runtime, will be discarded.
+
 Before 1.31.0:
 
 - Resource type must be specified.
