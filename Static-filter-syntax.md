@@ -490,17 +490,11 @@ Additionally, prepending `queryprune` values with `|` when the match is of the "
 
 #### `redirect`
 
-To cause a blocked network request to be redirected to a local "neutered" version of the resource. The "neutered" resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets).
+The `redirect` option means _"block and redirect"_, and really causes two filters to be created internally, a block filter and a redirect directive (`redirect-rule`).
 
-The filter syntax for `redirect=` filter option is a subset of ABP-compatible filtering syntax, and is as follow:
+A redirect directive causes a blocked network request to be redirected to a local neutered version of the resource. The neutered resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets).
 
-    ||example.com^$script,redirect=noop.js,domain=github.com
-    ||example.com/path/to/image$image,redirect=2x2.png,domain=github.com
-    ||example.com/$script,redirect=noop.js,first-party
-
-A source hostname should always be specified, so the `domain=` option is strongly recommended. It is allowed to use `first-party` instead of `domain=[...]`, in which case the source hostname will be that of the destination hostname. 
-
-Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks. `redirect=` filters can be used with any other static filtering modifier options, can be excepted using `@@`, can be `badfilter`-ed and its priority can be increased by `important` option. Previous way to disable redirection by specifying `none` as the redirect token is deprecated (and broken in [1.31.0](https://github.com/uBlockOrigin/uBlock-issues/issues/1388), fixed in [1.31.3b4](https://github.com/gorhill/uBlock/commit/904aa87e2aacb5fbfbb79ea702891e5be72d4b55)).
+`redirect=` filters can be used with any other static filter options, can be excepted using `@@`, can be `badfilter`-ed and their priority can be increased with the `important` option.
 
 Since more than one `redirect=` directives could be found to apply to a single network request, the concept of redirect priority is introduced.
 
@@ -508,18 +502,25 @@ By default, `redirect=` directives have an implicit priority of `0`. Filter auth
 
     ||example.com/*.js$1p,script,redirect=noopjs:100
 
-The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely.
+The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely. Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
 
-Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
+To disable redirection, you can use an exception filter for the redirect directive specifically (example for the filter above):
 
-Changed in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62bb6c01e296d5301433a) - filters with unresolvable resource token at runtime, will be discarded.
+    @@||example.com/*.js$1p,script,redirect-rule=noopjs
 
-Before 1.31.0:
+Filters with unresolvable resource token at runtime, will be discarded.
+
+<details><summary>Before 1.31.0</summary>
+
+Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks listed below.
 
 - Resource type must be specified.
 - Special, reserved token `none` must be used to disable specific redirect filters.
 - Negated domains in `domain=` option are not supported because of syntax ambiguity - [#310](https://github.com/uBlockOrigin/uBlock-issues/issues/310).
 - Redirections applied to all destinations (starting with `*`) cannot be narrowed by `first-party` or `~third-party` option [#3590](https://github.com/gorhill/uBlock/issues/3590)
+- Disable redirection by specifying `none` as the redirect. (Broken in [1.31.0](https://github.com/uBlockOrigin/uBlock-issues/issues/1388), fixed in [1.31.3b4](https://github.com/gorhill/uBlock/commit/904aa87e2aacb5fbfbb79ea702891e5be72d4b55))
+- Filters with unresolvable resource token at runtime will cause redirection to fail. (Changed in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62bb6c01e296d5301433a))
+</details>
 
 ***
 
