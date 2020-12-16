@@ -364,6 +364,16 @@ To specifically disable inline font tags in a main page via CSP: `||example.com^
 
 ***
 
+#### `match-case`
+
+New in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62bb6c01e296d5301433a).
+
+Only for Regular Expression filters. Using with any other sort of filters will cause uBO to discard the filter.
+
+Instructs uBO filtering engine to perform a match, case sensitively.
+
+***
+
 #### `popunder`
 
 To block "popunders" windows/tabs, where original page is redirected to advertisement and desired content is loaded in newly created one. To be used in the same manner as the `popup` filter option, except that it will block popunders.
