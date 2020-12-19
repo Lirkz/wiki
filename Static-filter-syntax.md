@@ -492,23 +492,25 @@ Additionally, prepending `queryprune` values with `|` when the match is of the "
 
 The `redirect` option means _"block and redirect"_, and really causes two filters to be created internally, a block filter and a redirect directive (`redirect-rule`).
 
-A redirect directive causes a blocked network request to be redirected to a local neutered version of the resource. The neutered resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets).
+A redirect directive causes a blocked network request to be redirected to a local neutered version of the resource. The neutered resource must be referenced using a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets). Filters with unresolvable resource token at runtime, will be discarded.
 
 `redirect=` filters can be used with any other static filter options, can be excepted using `@@`, can be `badfilter`-ed and their priority can be increased with the `important` option.
 
-Since more than one `redirect=` directives could be found to apply to a single network request, the concept of redirect priority is introduced.
+Since more than one redirect directives could be found to apply to a single network request, the concept of redirect priority is introduced.
 
-By default, `redirect=` directives have an implicit priority of `0`. Filter authors can declare an explicit priority by appending `:[integer]` (negative values are also supported) to the token of the `redirect=` option, for example:
+By default, redirect directives have an implicit priority of `0`. Filter authors can declare an explicit priority by appending `:[integer]` (negative values are also supported) to the token of the `redirect=` option, for example:
 
     ||example.com/*.js$1p,script,redirect=noopjs:100
 
 The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely. Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
 
-To disable redirection, you can use an exception filter for the redirect directive specifically (example for the filter above):
+To disable a redirection, you can use an exception filter for the redirect directive specifically (example for the filter above):
 
     @@||example.com/*.js$1p,script,redirect-rule=noopjs
 
-Filters with unresolvable resource token at runtime, will be discarded.
+The filter above does not affect blocking filters, just matching redirect directives. You can broadly disable all redirect directives as follow:
+
+    @@||example.com/*.js$1p,script,redirect-rule
 
 <details><summary>Before 1.31.0</summary>
 
@@ -522,13 +524,13 @@ Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec92
 - Filters with unresolvable resource token at runtime will cause redirection to fail. (Changed in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62bb6c01e296d5301433a))
 </details>
 
+Available since [1.4.0](https://github.com/gorhill/uBlock/releases/tag/1.4.0).
+
 ***
 
 #### `redirect-rule`
 
-New in [1.22.0](https://github.com/gorhill/uBlock/commit/aa73f292eced0d34a2a2989b1b27ace1214a2809).
-
-Allows to create standalone [`redirect`](#redirect) rule without being forced to create blocking filter.
+Allows to create standalone redirect directives, i.e. without an implicit no blocking filter.
 
 For example, consider the following filter:
 
@@ -539,6 +541,8 @@ The above filter will result in a block filter `||example.com/ads.js$script` **a
     ||example.com/ads.js$script,redirect-rule=noop.js
 
 The above filter will not cause a block filter to be created, only a redirect directive will be created. Standalone redirect directives are useful when the blocking of a resource is optional but we still want the resource to be redirected should it ever be blocked by whatever mean - whether through a separate block filter, a dynamic filtering rule, etc.
+
+Available since [1.22.0](https://github.com/gorhill/uBlock/releases/tag/1.22.0).
 
 ***
 
