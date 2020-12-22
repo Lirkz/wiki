@@ -342,6 +342,52 @@ Generic cosmetic filters, are hiding filters which apply to all pages - `##.ad-c
 
 ***
 
+#### `header`
+
+<details>
+<summary>Work in progress, syntax still experimental and under evaluation</summary>
+
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c).
+
+Ability to filter network **responses** according to whether a specific **response header** is present and whether it matches or does not match a specific value.
+
+For example:
+
+    *$script,header=via:1.1 google
+
+The above filter is meant to block network requests of type `script`, which has a response HTTP header named `via`, which value matches the string `1.1 google` literally.
+
+The header value can be set to a regex literal by bracing the header value with the usual forward slashes, `/.../`:
+
+    *$script,header=via:/1\.1\s+google/
+
+The header value can be prepended with `~` to reverse the comparison:
+
+    *$script,header=via:~1.1 google
+
+The header value is optional and may be ommitted to test only for the presence of a specific header:
+
+    *$script,header=via
+
+Generic exception filters can be used to disable specific block `header=` filters, i.e. `@@*$script,header` will override the block `header=` filters given as example above.
+
+**Important:** It is key that filter authors use as many narrowing filter options as possible when using the `header=` option, and the `header=` option should be used ONLY when other filter options are not sufficient.
+
+Potential use case is to block [Google Tag Manager scripts proxied as first party in subdomain of the websites](https://www.simoahava.com/analytics/server-side-tagging-google-tag-manager/):
+
+    *$1p,strict3p,script,header=via:1.1 google
+
+Where connection:
+
+- is weakly 1st-party to the context
+- is not strictly 1st-party to the context
+- is of type `script`
+- has a response HTTP header named `via`, which value matches `1.1 google`.
+
+</details>
+
+***
+
 #### `important`
 
 The filter option `important` means to ignore all _exception_ filters (those prefixed with `@@`). It will allow you to block specific network requests with 100% certainty.
