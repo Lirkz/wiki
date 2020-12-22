@@ -9,7 +9,12 @@
 
 ### Make use of context menu where appropriate
 
-If checked, this gives permission for uBlock to add items in the context menu which are meant to improve convenience. Currently, only two items may be visible in the context menu, _"Block element..."_, which purpose is to launch the [element picker](./Element-picker) in order to filter out a specific element on a page and [_"Temporarily allow large media elements"_](./Per-site-switches#no-large-media-elements) which will temporarily remove bandwidth saving restriction for current page.
+If checked, this gives permission for uBlock to add items in the context menu which are meant to improve convenience.
+
+Currently, these items may be visible in the context menu:
+- _"Block element..."_, which purpose is to launch the [element picker](./Element-picker) in order to filter out a specific element on a page
+- _"Block element in frame.."_, like above, but will allow creating filters in frame elements embedded in other pages, for example in YouTube video embedded in Reddit thread.
+- [_"Temporarily allow large media elements"_](./Per-site-switches#no-large-media-elements) which will temporarily remove bandwidth saving restriction for current page.
 
 ***
 
