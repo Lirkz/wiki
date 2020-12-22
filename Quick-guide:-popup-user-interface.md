@@ -13,7 +13,7 @@
 
 This is uBlock's popup UI when you click on uBlock's icon in the toolbar:
 
-![Popup UI](https://user-images.githubusercontent.com/886325/85211176-df150200-b346-11ea-9b9e-e503de699aa0.png)
+![Popup UI](https://user-images.githubusercontent.com/886325/102915684-76881880-4482-11eb-84ab-fb0394118275.png)
 
 Amount of visible information can be adjusted by clicking on "More" and "Less" buttons:
 
@@ -80,7 +80,7 @@ And I had click-to-play enabled in all cases, so it could have been worse (excep
 
 ### The tools
 
-![row of tools buttons](https://user-images.githubusercontent.com/886325/85211214-331fe680-b347-11ea-960e-5fa943313e67.png)
+![row of tools buttons](https://user-images.githubusercontent.com/886325/102915866-cc5cc080-4482-11eb-947e-013d0fc417e1.png)
 
 #### Zap an element on the current page
 
@@ -98,7 +98,7 @@ Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between op
 
 #### Open the dashboard
 
-Click the _sliders_ icon to open uBlock's dashboard.
+Click the _gears_ icon to open uBlock's dashboard.
 
 ***
 
