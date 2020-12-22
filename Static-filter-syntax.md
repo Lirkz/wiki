@@ -438,6 +438,58 @@ Specific cosmetic filters, are filters which apply only to pages in domains spec
 
 ***
 
+#### `strict1p`
+
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c).
+
+Strict first-party request.
+
+The classic option [`1p`](#1p) is meant to "weakly" match partyness, i.e. a network request is considered 1st-party to its context as long as both the context and the request share the same _base domain_.
+
+This new `strict1p` option is meant to check for strict partyness, i.e. a network request will be considered 1st-party if and only if both the context and the request share the same _hostname_.
+
+For example:
+
+- context: `www.example.org`
+- request: `www.example.org`
+- `1p`: yes, `strict1p`: yes
+
+- context: `www.example.org`
+- request: `subdomain.example.org`
+- `1p`: yes, `strict1p`: no
+
+- context: `www.example.org`
+- request: `www.example.com`
+- `1p`: no, `strict1p`: no
+
+***
+
+#### `strict3p`
+
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c).
+
+Strict third-party request.
+
+The classic option [`3p`](#3p) is meant to "weakly" match partyness, i.e. a network request is considered 3rd-party to its context only if the context and the request _base domains_ are different.
+
+This new `strict3p` option is meant to check for strict partyness, i.e. a network request will be considered 3rd-party as soon as the context and the request _hostnames_ are different.
+
+For example:
+
+- context: `www.example.org`
+- request: `www.example.org`
+- `3p`: no,  `strict3p`: no
+
+- context: `www.example.org`
+- request: `subdomain.example.org`
+- `3p`: no,  `strict3p`: yes
+
+- context: `www.example.org`
+- request: `www.example.com`
+- `3p`: yes,  `strict3p`: yes
+
+***
+
 #### `xhr`
 
 Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options). For convenience.
