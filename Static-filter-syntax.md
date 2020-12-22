@@ -272,6 +272,8 @@ Example:
 The above filter tells the network filtering engine that when the context is `a.com` or `b.com`, block all
 3rd-party scripts except those from `x.com` and `y.com`.
 
+Note that [`domain=`](#domain) option is required!
+
 Essentially, the new `denyallow` option makes it easier to implement default-deny/allow-exceptionally in static filter lists, whereas before this had to be done with unwieldy regular expressions[1], or through the mix of broadly blocking filters along with exception filters[2].
 
 [_"Entity"_](#entity) wildcard matching is not supported.
