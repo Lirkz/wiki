@@ -13,7 +13,7 @@ If checked, this gives permission for uBlock to add items in the context menu wh
 
 Currently, these items may be visible in the context menu:
 - _"Block element..."_, which purpose is to launch the [element picker](./Element-picker) in order to filter out a specific element on a page
-- _"Block element in frame.."_, like above, but will allow creating filters in frame elements embedded in other pages, for example in YouTube video embedded in Reddit thread.
+- _"Block element in frame.."_ (new in [1.32.0](https://github.com/gorhill/uBlock/commit/db7f54dbf6c39cf2e6f35359248bf9f408e2d134).), like above, but will allow creating filters in frame elements embedded in other pages, for example in YouTube video embedded in Reddit thread.
 - [_"Temporarily allow large media elements"_](./Per-site-switches#no-large-media-elements) which will temporarily remove bandwidth saving restriction for current page.
 
 ***
