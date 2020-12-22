@@ -512,7 +512,7 @@ The filter above does not affect blocking filters, just matching redirect direct
 
     @@||example.com/*.js$1p,script,redirect-rule
 
-<details><summary>Before 1.31.0</summary>
+<details><summary>Before 1.32.0</summary>
 
 Starting with [1.31.0](https://github.com/gorhill/uBlock/commit/157cef6034a8ec926c1e59c7e77f0a1fcbef473c) `redirect=` option is not longer afflicted by static network filtering syntax quirks listed below.
 
