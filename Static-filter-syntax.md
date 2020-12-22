@@ -502,7 +502,7 @@ By default, redirect directives have an implicit priority of `0`. Filter authors
 
     ||example.com/*.js$1p,script,redirect=noopjs:100
 
-The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely. Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
+The priority dictates which redirect token out of many will be ultimately used. Cases of multiple `redirect=` directives applying to a single blocked network request are expected to be rather unlikely. All directives will be reported in the logger, and the effective one will be reported as the last one before redirection entry. Explicit redirect priority should be used if and only if there is a case of redirect ambiguity to solve.
 
 To disable a redirection, you can use an exception filter for the redirect directive specifically (example for the filter above):
 
