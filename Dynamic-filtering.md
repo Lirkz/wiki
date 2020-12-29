@@ -9,7 +9,3 @@ Dynamic filtering is available to [advanced users](./Advanced-user-features). Dy
 - [Rule syntax](./Dynamic-filtering:-rule-syntax)
 - [Rule precedence](./Dynamic-filtering:-precedence)
 - [Blocking modes](./Blocking-mode)
-- [Dynamic filtering usefulness/benefits](./Dynamic-filtering---examples) (dated)
-- [Default-deny](./Dynamic-filtering:-default-deny) (dated)
-    - [Default-deny: useful rulesets](./Dynamic-filtering:-default-deny:-useful-rulesets)
-    - [Default-deny users: mind behind-the-scene network requests](./Behind-the-scene-network-requests)
