@@ -21,7 +21,7 @@ Once you click on the element, you will be presented with a modal dialog box whi
 > You can easily move element picker dialog using mouse, by grabbing and dragging by empty space between buttons<sup>New in [1.24.0](https://github.com/gorhill/uBlock/commit/d1995778ff5908a4709c51dd30a08e2478c59251)</sup>
 > ***
 
-If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. The top most cosmetic filter is the most specific which could be derived from the element you clicked. The bottom-most is the broadest, the least specific. Pick the one which matches best what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
+If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. The top-most cosmetic filter in the list is targeting the leaf of the source tree closest to the element you clicked. The bottom-most is the broadest, targeting the element most close to the trunk of the source tree and is the least specific. This is also what the slider on the left hand side is adjusting. Slider on the right hand side is adjusting filter specificity by adding/removing match by id, `nth-of-type`, attributes, and modifying parent > child hierarchy if these are available. Pick the one of the proposed filters which matches best what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
 
 When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
 
