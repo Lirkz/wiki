@@ -21,9 +21,15 @@ Once you click on the element, you will be presented with a modal dialog box whi
 > You can easily move element picker dialog using mouse, by grabbing and dragging by empty space between buttons<sup>New in [1.24.0](https://github.com/gorhill/uBlock/commit/d1995778ff5908a4709c51dd30a08e2478c59251)</sup>
 > ***
 
-If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. The top-most cosmetic filter in the list is targeting the leaf of the source tree closest to the element you clicked. The bottom-most is the broadest, targeting the element most close to the trunk of the source tree and is the least specific. This is also what the slider on the left hand side is adjusting. Slider on the right hand side is adjusting filter specificity by adding/removing match by id, `nth-of-type`, attributes, and modifying parent > child hierarchy if these are available. Pick the one of the proposed filters which matches best what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
+If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
 
-When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
+When you select a cosmetic filter, there will be two sliders appearing to let you further adjust the suggested cosmetic filter.
+
+The slider on the left-hand side is to adjust the depth of the elements to target, i.e. filters with lower depth typically will remove larger areas in the page.
+
+The slider on the right hand-side is to adjust the specificity of the filter to create, i.e. higher specificity tends to cause less elements to be filtered (down to a single one), while lower specificity tends to cause more elements to be filtered.
+
+Adjust as needed in order to pick the filter which best matches what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
 
 You may manually edit the filter. However the result needs to be a valid filter, otherwise you won't be allowed to create a filter out of it. A valid filter in the context of the element picker is one which matches at least one element on the web page.
 
