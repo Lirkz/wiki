@@ -1,11 +1,11 @@
-Privileged Pages are the webpages that browser-developers consider as an entitled webpage/s where extensions are tasked to not work/have their functionality ceased entirely.
+Privileged Pages are the webpages that browser-vendors consider as an entitled webpage/s where extensions are tasked to not work/have their functionality ceased entirely.
 
 For Chromium<sup>1</sup>:
 ```
 chrome.google.com/webstore/*
 ```
 
-- On the aformentioned domain, ALL Chromium/Chrome extensions will cease their functionality.
+- On the aformentioned domain, all Chromium/Chrome extensions will **cease** their functionality.
 
 For Firefox<sup>2</sup>:
 ```
