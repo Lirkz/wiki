@@ -50,6 +50,7 @@ Placeholders are identified by `{{...}}`. Currently supported placeholders:
 
 - `{{date}}`: will be replaced with current date
 - `{{time}}`: will be replaced with current time
+- `{{hostname}}`: will be replaced with the hostname of the URL address for which the filter(s) was created
 - `{{origin}}`: will be replaced by origin part of the address for which the filter(s) was created
 - `{{url}}`: new in [1.30.3b6](https://github.com/gorhill/uBlock/commit/46ec9694115d79ef3b380f366a8332ead267ef49), will be replaced by full URL of the page for which a filter is created in Element Picker. For filters added from The Logger, replaced by origin part of the URL.
 
