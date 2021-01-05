@@ -7,6 +7,73 @@ I do not know much about that administrator stuff, so I will let a knowledgeable
 
 Administrators can force specific configurations to deployed uBlock Origin ("uBO"). At launch time, uBO will look for a setting named `adminSettings`, and if it exists, it will parse, extract and overwrite a user's settings with the administrator-assigned ones.
 
+After [1.32.5b5](https://github.com/gorhill/uBlock/commit/c1130ec8438da5fcc1a0d552ae42328d3102dcc6), new configuration options are available:
+
+- `toSet`, which allow to 
+    - override default [Trusted sites](./Dashboard:-Trusted-sites) list by `trustedSiteDirectives` array of strings
+    - override and lock modification of [Advanced settings](./Advanced-settings) by `hiddenSettings` array of `["name", "value"]` array of strings
+- `toAdd`, which allow to append additional directives to
+    - [Trusted sites](./Dashboard:-Trusted-sites) list by `trustedSiteDirectives` array of strings
+
+Description based on [Managed storage manifest](https://github.com/gorhill/uBlock/blob/master/platform/chromium/managed_storage.json).
+
+<details>
+<summary>Sample configuration</summary>
+
+- `adminSettings` enables uBlock annoyances list besides default ones
+- `toSet` locks uBO popup panel operation to big blue power button only and permanently displays version info in `hiddenSettings` and sets `example.com` as one of the default trusted sites in `trustedSiteDirectives`
+- `toAdd` appends `example.org` and `example.local` to Trusted sites by `trustedSiteDirectives`.
+
+```json
+{
+    "name": "uBlock0@raymondhill.net",
+    "description": "ignored",
+    "type": "storage",
+    "data":
+    {
+        "adminSettings":
+        {
+            "selectedFilterLists":
+            [
+                "user-filters", "ublock-filters", "ublock-badware", "ublock-privacy", "ublock-abuse", "ublock-unbreak", "easylist", "easyprivacy", "urlhaus-1", "ublock-annoyances", "plowe-0"
+            ]
+        },
+        "toSet":
+        {
+            "hiddenSettings":
+            [
+                ["popupPanelDisabledSections", "28"],
+                ["popupPanelLockedSections", "32"]
+            ],
+            "trustedSiteDirectives":
+            [
+                "about-scheme",
+                "chrome-extension-scheme",
+                "chrome-scheme",
+                "edge-scheme",
+                "moz-extension-scheme",
+                "opera-scheme",
+                "vivaldi-scheme",
+                "wyciwyg-scheme",
+                "example.com"
+            ]
+        },
+        "toAdd":
+        {
+            "trustedSiteDirectives":
+            [
+                "example.org", "example.local"
+            ]
+        }
+    }
+}
+
+```
+
+</details>
+
+***
+
 New standalone settings are being added as per demand, see ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
 For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests#Manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
