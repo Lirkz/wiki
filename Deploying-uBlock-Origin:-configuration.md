@@ -9,7 +9,7 @@ The properties in the `toSet` branch will wholly replace the corresponding local
 
 ### hiddenSettings
 
-The purpose of the `hiddenSettings` property is to set the values of various [advanced settings](https://github.com/uBlockOrigin/uBlock-issues/wiki/Advanced-settings).
+The purpose of the `hiddenSettings` property is to set the values of various [advanced settings](./Advanced-settings).
 
 Each entry in the array is an array consisting of a pair of name-value strings. Each name string must be a supported advanced setting, and each value string must properly resolve to a supported value.
 
@@ -29,7 +29,7 @@ Example, to remove the ability to configure uBO from the popup panel:
 
 The `trustedSiteDirectives` property is an array of string, which of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled. All the directives will be used to wholly replace the local trusted-site directives, including the built-in ones.
 
-See documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](https://github.com/uBlockOrigin/uBlock-issues/wiki/How-to-mark-a-web-site-as-trusted)
+See documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted)
 
 ## toAdd
 
@@ -39,4 +39,4 @@ The properties in the `toAdd` branch will append to the already present local se
 
 The `trustedSiteDirectives` property is an array of string, which of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled. The directives will be appended to the local ones.
 
-See documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](https://github.com/uBlockOrigin/uBlock-issues/wiki/How-to-mark-a-web-site-as-trusted)
+See documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted)
