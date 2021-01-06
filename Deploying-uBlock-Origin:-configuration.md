@@ -3,11 +3,7 @@ uBO supports being configured through central policies, see browser documentatio
 - Chromium: ["Configuring Apps and Extensions by Policy"](https://www.chromium.org/administrators/configuring-policy-for-extensions)
 - Firefox: ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests)
 
-## toOverwrite
-
-The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following subset of properties are supported:
-
-### advancedSettings
+## advancedSettings
 
 The purpose of the `advancedSettings` property is to set the values of various [advanced settings](./Advanced-settings).
 
@@ -18,18 +14,16 @@ Every valid entry will be used to overwrite the corresponding default advanced s
 Example:
 
     {
-        "toSet": {
-            "advancedSettings": [
-                [ "disableWebAssembly", "true" ]
-            ]
-        }
+        "advancedSettings": [
+            [ "disableWebAssembly", "true" ]
+        ]
     }
 
-### disableDashboard
+## disableDashboard
 
 Set to `true` to prevent access to uBO's dashboard.
 
-### disabledPopupPanelParts
+## disabledPopupPanelParts
 
 An array of strings, where each string refer to a part of the popup panel which should be removed from view. Current supported named parts:
 
@@ -37,6 +31,10 @@ An array of strings, where each string refer to a part of the popup panel which 
 - `basicTools`: remove access to [basic tools](./Quick-guide:-popup-user-interface#the-tools).
 - `extraTools`: remove access to [per-site switches](./Quick-guide:-popup-user-interface#the-per-site-switches).
 - `firewall`: remove access to the [overview pane](./Quick-guide:-popup-user-interface#the-overview-panel).
+
+## toOverwrite
+
+The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following subset of properties are supported:
 
 ### trustedSiteDirectives
 
