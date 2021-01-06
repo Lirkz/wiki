@@ -3,27 +3,40 @@ uBO supports being configured through central policies, see browser documentatio
 - Chromium: ["Configuring Apps and Extensions by Policy"](https://www.chromium.org/administrators/configuring-policy-for-extensions)
 - Firefox: ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests)
 
-## toSet
+## toOverwrite
 
-The properties in the `toSet` branch will wholly replace the corresponding local settings. Currently, the following subset of properties are supported:
+The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following subset of properties are supported:
 
-### hiddenSettings
+### advancedSettings
 
-The purpose of the `hiddenSettings` property is to set the values of various [advanced settings](./Advanced-settings).
+The purpose of the `advancedSettings` property is to set the values of various [advanced settings](./Advanced-settings).
 
 Each entry in the array is an array consisting of a pair of name-value strings. Each name string must be a supported advanced setting, and each value string must properly resolve to a supported value.
 
 Every valid entry will be used to overwrite the corresponding default advanced setting, and will also become read-only, i.e. the user won't be able to change it.
 
-Example, to remove the ability to configure uBO from the popup panel:
+Example:
 
     {
         "toSet": {
-            "hiddenSettings": [
-                [ "popupPanelDisabledSections", "28" ]
+            "advancedSettings": [
+                [ "disableWebAssembly", "true" ]
             ]
         }
     }
+
+### disableDashboard
+
+Set to `true` to prevent access to uBO's dashboard.
+
+### disabledPopupPanelParts
+
+An array of strings, where each string refer to a part of the popup panel which should be removed from view. Current supported named parts:
+
+- `globalStats`: remove access to _"Blocked since install"_ statistic.
+- `basicTools`: remove access to [basic tools](./Quick-guide:-popup-user-interface#the-tools).
+- `extraTools`: remove access to [per-site switches](./Quick-guide:-popup-user-interface#the-per-site-switches).
+- `firewall`: remove access to the [overview pane](./Quick-guide:-popup-user-interface#the-overview-panel).
 
 ### trustedSiteDirectives
 
