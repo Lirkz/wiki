@@ -3,6 +3,8 @@ uBO supports being configured through central policies, see browser documentatio
 - Chromium: ["Configuring Apps and Extensions by Policy"](https://www.chromium.org/administrators/configuring-policy-for-extensions)
 - Firefox: ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests)
 
+The documented settings below are only available with uBO version 1.33.0 and above.
+
 ## advancedSettings
 
 The purpose of the `advancedSettings` property is to set the values of various [advanced settings](./Advanced-settings).
