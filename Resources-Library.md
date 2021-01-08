@@ -348,16 +348,21 @@ Examples:
 
 ### ra.js /
 ### remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/b6ed83bc5c840431ed03cddaed1daeb395db3b0e/assets/resources/scriptlets.js#L653)
-Removes attribute(s) from DOM tree node(s). Will run only once after page load.
+Removes attribute(s) from DOM tree node(s). By default will run only once when the document becomes interactive.
 
 Parameters:
  - required, attribute or list of attributes joined by `|`
  - optional, _CSS selector_, specifies nodes from which attributes will be removed
+ - optional, one or more space-separated tokens dictating the behavior of the scriptlet, new in [1.32.5b8](https://github.com/gorhill/uBlock/commit/0f330c7359567587df6c35e9108b75c339533a56)
+    - `stay`: This tells the scriplet to stay and act on DOM changes, whiĺe the default behavior is to act only once when the document becomes interactive.
+    - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
+
 
 Examples:
  - `userscloud.com##+js(ra, onclick, .btn-icon-stacked)`
  - `magesy.*,majesy.*##+js(ra, oncontextmenu)`
  - `zerodot1.gitlab.io##+js(ra, oncontextmenu|onselectstart|ondragstart)`
+ - `example.com##+js(remove-attr, class, .j-mini-player, stay)`
 
 
 ***
