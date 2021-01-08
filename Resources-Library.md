@@ -347,7 +347,7 @@ Examples:
 ***
 
 ### ra.js /
-### remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/b6ed83bc5c840431ed03cddaed1daeb395db3b0e/assets/resources/scriptlets.js#L653)
+### remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/0f330c7359567587df6c35e9108b75c339533a56/assets/resources/scriptlets.js#L658)
 Removes attribute(s) from DOM tree node(s). By default will run only once when the document becomes interactive.
 
 Parameters:
