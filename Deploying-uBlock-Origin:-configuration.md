@@ -32,11 +32,15 @@ An array of strings, where each string refer to a part of the popup panel which 
 - `globalStats`: remove access to _"Blocked since install"_ statistic.
 - `basicTools`: remove access to [basic tools](./Quick-guide:-popup-user-interface#the-tools).
 - `extraTools`: remove access to [per-site switches](./Quick-guide:-popup-user-interface#the-per-site-switches).
-- `firewall`: remove access to the [overview pane](./Quick-guide:-popup-user-interface#the-overview-panel).
+- `overviewPane`: remove access to the [overview pane](./Quick-guide:-popup-user-interface#the-overview-panel).
 
 ## toOverwrite
 
 The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following properties are supported:
+
+### filterLists
+
+The `filterLists` property is an array of strings, where each string is a token which identifies a list to enable by default. To enable a stock filter list, this is the token identifying the list as per content of [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json). For an external list, i.e. not found in `assets.json`, the token is the URL of the filter list.
 
 ### trustedSiteDirectives
 
