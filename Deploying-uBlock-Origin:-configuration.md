@@ -46,6 +46,8 @@ The `filters` property is an array of strings, which are meant to represent all 
 
 The `filterLists` property is an array of strings, where each string is a token which identifies a list to enable by default. To enable a stock filter list, this is the token identifying the list as per content of [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json). For an external list, i.e. not found in `assets.json`, the token is the URL of the filter list.
 
+If you want the filters present in the _"My filters"_ pane to be enforced, be sure to use the token `user-filters` in your list of filter lists.
+
 ### trustedSiteDirectives
 
 The `trustedSiteDirectives` property is an array of string, each of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled.
