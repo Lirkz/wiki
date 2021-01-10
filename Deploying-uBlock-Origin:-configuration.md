@@ -38,6 +38,10 @@ An array of strings, where each string refer to a part of the popup panel which 
 
 The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following properties are supported:
 
+### filters
+
+The `filters` property is an array of strings, which are meant to represent all the lines making the text to use as the content of the [_"My filters"_ pane](./Dashboard:-My-filters).
+
 ### filterLists
 
 The `filterLists` property is an array of strings, where each string is a token which identifies a list to enable by default. To enable a stock filter list, this is the token identifying the list as per content of [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json). For an external list, i.e. not found in `assets.json`, the token is the URL of the filter list.
