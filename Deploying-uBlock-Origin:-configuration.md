@@ -48,6 +48,23 @@ The `filterLists` property is an array of strings, where each string is a token 
 
 If you want the filters present in the _"My filters"_ pane to be enforced, be sure to use the token `user-filters` in your list of filter lists.
 
+For reference, the following array correspond to the default list of filter lists enabled in uBO by default:
+
+    [
+      "user-filters",
+      "ublock-filters",
+      "ublock-badware",
+      "ublock-privacy",
+      "ublock-abuse",
+      "ublock-unbreak",
+      "easylist",
+      "easyprivacy",
+      "urlhaus-1",
+      "plowe-0"
+    ]
+
+Additionally, one or more regional lists may be enabled according to the current locale.
+
 ### trustedSiteDirectives
 
 The `trustedSiteDirectives` property is an array of string, each of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled.
