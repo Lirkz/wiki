@@ -550,30 +550,6 @@ See also: [`empty`](#empty), [`redirect`](#redirect)
 
 ***
 
-#### `queryprune`
-
-New in [1.32.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
-
-To remove query parameters from the URL of network requests. uBO can also parse and enforce [AdGuard's `removeparam`](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters?aid=16593#removeparam-modifier) as a synonym of `queryprune`.
-
-`queryprune` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
-
-`queryprune` must be assigned a value, which value will determine which exact parameter from a query string will be removed:
-
-    *$queryprune=utm_source
-
-The above filter tells uBO to remove the query parameter `utm_source` when present in a URL.
-
-The value assigned to `queryprune` can be a literal regular expression, in which case uBO will remove query parameters matching the regular expression:
-
-    *$queryprune=/^utm_/
-
-The above filter will remove all query parameters which name starts with `utm_`, regardless of their value. When using a literal regular expression, it is tested against each query parameter name-value pair assembled into a single string as `name=value`.
-
-Poorly crafted `queryprune` filters can have deleterious effects on performance, experienced filter authors are expected to understand well how to craft optimal filters.
-
-***
-
 #### `redirect`
 
 The `redirect` option means _"block and redirect"_, and really causes two filters to be created internally, a block filter and a redirect directive (`redirect-rule`).
@@ -629,6 +605,30 @@ The above filter will result in a block filter `||example.com/ads.js$script` **a
 The above filter will not cause a block filter to be created, only a redirect directive will be created. Standalone redirect directives are useful when the blocking of a resource is optional but we still want the resource to be redirected should it ever be blocked by whatever mean - whether through a separate block filter, a dynamic filtering rule, etc.
 
 Available since [1.22.0](https://github.com/gorhill/uBlock/releases/tag/1.22.0).
+
+***
+
+#### `removeparam`
+
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
+
+To remove query parameters from the URL of network requests -- see also [AdGuard's `removeparam`'s documentation](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters?aid=16593#removeparam-modifier). For historical reasons, `queryprune` is an alias of `ŕemoveparam`.
+
+`removeparam` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
+
+`removeparam` must be assigned a value, which value will determine which exact parameter from a query string will be removed:
+
+    *$removeparam=utm_source
+
+The above filter tells uBO to remove the query parameter `utm_source` when present in a URL.
+
+The value assigned to `removeparam` can be a literal regular expression, in which case uBO will remove query parameters matching the regular expression:
+
+    *$removeparam=/^utm_/
+
+The above filter will remove all query parameters which name starts with `utm_`, regardless of their value. When using a literal regular expression, it is tested against each query parameter name-value pair assembled into a single string as `name=value`.
+
+Poorly crafted `removeparam` filters can have deleterious effects on performance, experienced filter authors are expected to understand well how to craft optimal filters.
 
 ***
 
