@@ -5,6 +5,23 @@ uBO supports being configured through central policies, see browser documentatio
 
 The documented settings below are only available with uBO version 1.33.0 and above.
 
+## userSettings
+
+The purpose of the `userSettings` property is to set the values of various [user settings](./Dashboard:-Settings).
+
+Each entry in the array is an array consisting of a pair of name-value strings. Each name string must be a supported user setting, and each value string must properly resolve to a supported value.
+
+Every valid entry will be used to overwrite the corresponding default user setting at launch time.
+
+Example:
+
+    {
+        "userSettings": [
+            [ "contextMenuEnabled", "false" ],
+            [ "dynamicFilteringEnabled", "false" ]
+        ]
+    }
+
 ## advancedSettings
 
 The purpose of the `advancedSettings` property is to set the values of various [advanced settings](./Advanced-settings).
