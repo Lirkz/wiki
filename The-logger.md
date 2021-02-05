@@ -14,6 +14,7 @@ The color of a row hints at how the resource was filtered:
 - No color: The request for the resource was allowed to go through because it matched no filter/rule.
 - Purple: The request for the resource was modified by one of the ["Modifier filters"](./Static-filter-syntax#modifier-filters).
 - Red: The request for the resource was canceled (`--`) because of a block filter/rule.
+- Gray: ["Dynamic filtering"](./Dynamic-filtering) [`noop` rule](./Dynamic-filtering:-quick-guide#noop-rules).
 - Green: The request for the resource was allowed to go through (`++`) because it matched a filter/rule whose purpose is to bypass a matching block filter/rule.
 - Yellow:
     - A DOM element which was blocked by a cosmetic filter; OR
