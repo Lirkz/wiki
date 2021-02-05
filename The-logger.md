@@ -12,6 +12,7 @@ The request logger will open in a new tab (which was moved to its own window bel
 
 The color of a row hints at how the resource was filtered:
 - No color: The request for the resource was allowed to go through because it matched no filter/rule.
+- Purple: The request for the resource was modified by one of the ["Modifier filters"](./Static-filter-syntax#modifier-filters).
 - Red: The request for the resource was canceled (`--`) because of a block filter/rule.
 - Green: The request for the resource was allowed to go through (`++`) because it matched a filter/rule whose purpose is to bypass a matching block filter/rule.
 - Yellow:
