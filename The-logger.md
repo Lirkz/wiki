@@ -20,6 +20,7 @@ The color of a row hints at how the resource was filtered:
     - A DOM element which was blocked by a cosmetic filter; OR
     - A blocked request for a resource was redirected (`<<`) to a local, "neutered" replacement resource.
     - A defuser scriptlet was injected into the page (`+js(...)`)
+- Blue font: Uncloaked [canonical name (CNAME)](https://wikipedia.org/wiki/CNAME_record) hostname.
 
 
 Particular columns indicate:
