@@ -444,12 +444,12 @@ Parameters:
 ***
 
 ### nano-sib.js /
-### nano-setInterval-booster.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L239)
+### nano-setInterval-booster.js [↪](https://github.com/gorhill/uBlock/blob/001f5a650084ffa4842f9361bc975ca724bd69ba/assets/resources/scriptlets.js#L463)
 Adjusts interval for specified _`setInterval()`_ callbacks.
 
 Parameters:
  - optional, string/_regular expression_, matching in stringified callback function
- - optional - defaults to 1000, decimal integer, matching interval
+ - optional - defaults to 1000, decimal integer, matching interval. New in [1.33.0](https://github.com/gorhill/uBlock/commit/001f5a650084ffa4842f9361bc975ca724bd69ba): `*` will match any interval.
  - optional - default to 0.05 (20x faster), float, capped at 50 times for up and down, interval multiplier
 
 Examples:
@@ -461,12 +461,12 @@ Examples:
 ***
 
 ### nano-stb.js /
-### nano-setTimeout-booster.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L289)
+### nano-setTimeout-booster.js [↪](https://github.com/gorhill/uBlock/blob/001f5a650084ffa4842f9361bc975ca724bd69ba/assets/resources/scriptlets.js#L513)
 Adjusts delay for specified _`setTimeout()`_ callbacks.
 
 Parameters:
  - optional, string/_regular expression_, matching in stringified callback function
- - optional - defaults to 1000, decimal integer, matching delay
+ - optional - defaults to 1000, decimal integer, matching delay. New in [1.33.0](https://github.com/gorhill/uBlock/commit/001f5a650084ffa4842f9361bc975ca724bd69ba): `*` will match any delay.
  - optional - default to 0.05 (20x faster), float, capped at 50 times for up and down, delay multiplier
 
 Examples:
