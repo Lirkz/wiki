@@ -83,15 +83,11 @@ There are two ways to do this:
 
 **Warning!** These are third party tools, I can't vouch for them, you will have to find out for yourself whether they work.
 
-### Disabling filtering temporarily or by default (blocklist mode)
+### Disabling filtering by default
 
-**Be aware!** Following abilities are just side effects of uBO features and no additional work will be done to improve support for them<sup>[1](https://github.com/uBlockOrigin/uBlock-issues/issues/91#issuecomment-400282591),[2](https://github.com/uBlockOrigin/uBlock-issues/issues/586#issuecomment-494021002)</sup>.
+Not supported.
 
-Following pages describe how to disable filtering with help of [dynamic filtering](./Dynamic-filtering):
- - [Turn off uBlock everywhere temporarily](./Dynamic-filtering:-turn-off-uBlock-everywhere)
- - [Turn off uBlock everywhere _except_ (blocklist mode)](./Dynamic-filtering:-turn-off-uBlock-everywhere-except).
-
-Blocklist mode can also be achieved by specifically crafted Regular Expression trusted site directive:
+Blocklist mode can be achieved by specifically crafted Regular Expression trusted site directive:
 
     /^((?!example\.com|different\.example\.net|another\.example\.org).)*$/
 
