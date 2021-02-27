@@ -11,7 +11,7 @@
     - [Specific pattern](#specific-pattern)
     - [Regular expression](#regular-expression-1917)
  - [Disable filtering on YouTube channel](#disable-filtering-on-youtube-channel)
- - [Disabling filtering temporarily or by default (blocklist mode)](#disabling-filtering-temporarily-or-by-default-blocklist-mode)
+ - [Disabling filtering by default (blocklist mode)](#disabling-filtering-by-default)
  - [Other details](#other-details)
 
 ***
