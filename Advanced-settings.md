@@ -295,7 +295,9 @@ Replaying only the origin part is meant to lower undue breakage and improve perf
 
 #### `cnameUncloak`
 
-Default: `true`.
+Default: `undefined`, was `true` before [1.33.3b10](https://github.com/gorhill/uBlock/commit/1c3b45f75d0f84d68abb51b15bbdc043464ee3e0), will be removed in the future.
+
+Deprecated in favor of [_"Uncloak canonical names"_](./Dashboard:-Settings#uncloak-canonical-names) preference in Dashboard, Settings tab.
 
 Introduced in [1.25.0](https://github.com/gorhill/uBlock/commit/91e702cebbe52137f59a94f55e46d31f95eb98b9).
 
