@@ -124,7 +124,7 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 
 ### Uncloak canonical names
 
-From uBO 1.34.0 and above.
+From uBO 1.34.0 and above. Before 1.34.0, this was an [advanced setting](./Advanced-settings) since [1.25.0](https://github.com/gorhill/uBlock/releases/tag/1.25.0).
 
 Enable/disable the uncloaking of canonical names -- enabled by default.
 
