@@ -124,9 +124,15 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 
 ### Uncloak canonical names
 
-The setting will be disabled on platforms not supporting this feature. Currently supported only in Firefox.
+From uBO 1.34.0 and above.
 
-Enable/disable the uncloaking of canonical names -- enabled by default. In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5).
+Enable/disable the uncloaking of canonical names -- enabled by default.
+
+For background information see [_"What's CNAME of your game? This DNS-based tracking defies your browser privacy defenses"_](https://www.theregister.com/2021/02/24/dns_cname_tracking/).
+
+In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5).
+
+The setting will be disabled on platforms not supporting this feature. It's currently supported only on Firefox.
 
 ***
 
