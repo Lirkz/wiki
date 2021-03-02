@@ -122,6 +122,14 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 
 ***
 
+### Uncloak canonical names
+
+The setting will be disabled on platforms not supporting this feature. Currently supported only in Firefox.
+
+Enable/disable the uncloaking of canonical names -- enabled by default. In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5).
+
+***
+
 ## Default behavior
 
 Please see: ["Per site switches"](./Per-site-switches)
