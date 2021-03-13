@@ -573,7 +573,7 @@ Default: `unset`.
 
 One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
 
-uBO expects valid content such as can be seen in [resources.txt](https://github.com/uBlockOrigin/uAssets/blob/master/filters/resources.txt), anything else will lead to undefined results.
+uBO expects valid content such as can be seen in [scriptlets.js](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js), anything else will lead to undefined results.
 
 Any duplicate as per token will result in the previous resource being replaced by the latter one. The resource files are loaded in order of URL appearance, and uBO stock resource file is always loaded first.
 
