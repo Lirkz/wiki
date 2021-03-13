@@ -50,7 +50,7 @@ Note: "uBlock filters" entry is special - forcing update of this filter list, wi
 
 This will reset "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
 
-Clicking this button with <kbd>Ctrl</kbd> and <kbd>Shift</kbd> pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
+Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
 
 ##### Parse and enforce cosmetic filters
 
