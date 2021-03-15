@@ -612,7 +612,7 @@ Available since [1.22.0](https://github.com/gorhill/uBlock/releases/tag/1.22.0).
 
 New in [1.32.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
 
-To remove query parameters from the URL of network requests -- see also [AdGuard's `removeparam`'s documentation](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters?aid=16593#removeparam-modifier). For historical reasons, `queryprune` is an alias of `ŕemoveparam`.
+To remove query parameters from the URL of network requests -- see also [AdGuard's `removeparam`'s documentation](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters?aid=16593#removeparam-modifier). For historical reasons, `queryprune` is an alias of `removeparam`.
 
 `removeparam` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
 
