@@ -74,7 +74,7 @@ Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summ
 
 ### Prevent WebRTC from leaking local IP address
 
-![c](https://cloud.githubusercontent.com/assets/585534/8344622/0ce20cc4-1ab2-11e5-8f46-a0a387c91d63.png)
+![highlighted Prevent WebRTC from leaking local IP address preference](https://cloud.githubusercontent.com/assets/585534/8344622/0ce20cc4-1ab2-11e5-8f46-a0a387c91d63.png)
 
 Background info: [STUN IP Address requests for WebRTC](https://github.com/diafygi/webrtc-ips)
 
@@ -123,6 +123,8 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 ***
 
 ### Uncloak canonical names
+
+![higlighted Uncloak canonical names preference](https://user-images.githubusercontent.com/886325/111153280-0a551680-8592-11eb-9d18-058e5b845bd5.png)
 
 From uBO 1.34.0 and above. Before 1.34.0, this was an [advanced setting](./Advanced-settings) since [1.25.0](https://github.com/gorhill/uBlock/releases/tag/1.25.0).
 
