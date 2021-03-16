@@ -133,7 +133,7 @@ Deprecated in favor of [`subject:upward(arg)`](#subjectupwardarg) in [1.25.3b0](
 - Examples:
     - Existing filter: `fastbay.org##.detLink:has-text(VPN):xpath(../../..)` can be rewritten as `fastbay.org##.detLink:has-text(VPN):nth-ancestor(3)`
 
-Introduced in uBO [1.18.17rc1](https://github.com/gorhill/uBlock/commit/73e2f25e95b90332a3e53646d83525d14e816d25) to have a low overhead way to accomplish ancestor selection. It is effectively a low-overhead equivalent to `:xpath(..[/..]*)`, as it avoids the need to create and execute [XPath expressions](https://developer.mozilla.org/docs/Web/XPath).
+Introduced in uBO [1.18.17rc1](https://github.com/gorhill/uBlock/commit/73e2f25e95b90332a3e53646d83525d14e816d25) to have a low overhead way to accomplish ancestor selection. It is effectively a low-overhead equivalent to `:xpath(..[/..]*)`, as it avoids the need to create and execute [XPath expressions](https://developer.mozilla.org/en-US/docs/Web/XPath).
 
 ***
 
