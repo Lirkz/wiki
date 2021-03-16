@@ -182,7 +182,7 @@ By default hiding by procedural filters is reevaluated only when nodes in sub-tr
 
 ### `subject:xpath(arg)`
 
-- Description: Create a new set of elements by evaluating a XPath using _subject_ as the context node (optional) and _arg_ as the expression.
+- Description: Create a new set of elements by evaluating an [XPath expression](https://developer.mozilla.org/en-US/docs/Web/XPath) using _subject_ as the context node (optional) and _arg_ as the expression.
 - Chainable: Yes.
 - _subject_: Optional. Can be a plain CSS selector, or a procedural cosmetic filter.
 - _arg_: A valid XPath expression.
