@@ -55,11 +55,15 @@ The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of w
 
 ### `subject:if(arg)`
 
+**Do not use.**
+
 Deprecated in favor of [`:has(...)`](#subjecthasarg) in uBO 1.15.0
 
 ***
 
 ### `subject:if-not(arg)`
+
+**Do not use.**
 
 Deprecated in favor of [`:not(:has(arg))`](#subjectnotarg) operator.
 
@@ -124,6 +128,8 @@ Note that if _arg_ is valid CSS selector, uBO will not consider the `:not` opera
 
 ### `subject:nth-ancestor(n)`
 
+**Do not use.**
+
 Deprecated in favor of [`subject:upward(arg)`](#subjectupwardarg) in [1.25.3b0](https://github.com/gorhill/uBlock/commit/72bb70056843024b1a31fe1ab9c90bd4e8260ba2)
 
 ***
@@ -146,6 +152,8 @@ Introduced in uBO [1.25.3b0](https://github.com/gorhill/uBlock/commit/72bb700568
 ***
 
 ### `subject:watch-attrs(arg)`
+
+**Do not use.**
 
 Deprecated in favor of [`subject:watch-attr(arg)`](#subjectwatch-attrarg) in [1.20.1b3](https://github.com/gorhill/uBlock/commit/41685f4cce084f3f89e9cdd8fc1cde5b57862958)
 
