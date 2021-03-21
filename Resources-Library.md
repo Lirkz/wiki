@@ -1,6 +1,5 @@
 
  - Current RAW version of Resources can be found in [scriptlets.js file ↪](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js) and [web_accessible_resources directory ↪](https://github.com/gorhill/uBlock/tree/master/src/web_accessible_resources)
- - [Legacy RAW version of Resources Library ↪](https://github.com/uBlockOrigin/uAssets/blob/master/filters/resources.txt)
  - [General purpose scriptlets](#general-purpose-scriptlets)
  - [Defuser scriptlets](#defuser-scriptlets)
  - [Empty redirect resources](#empty-redirect-resources)
