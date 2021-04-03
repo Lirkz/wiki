@@ -152,4 +152,4 @@ As with some other per-site switches, the default state of per-site JavaScript m
 
 JavaScript master switch rules appear as `no-scripting: [hostname] true` entries in the [_My rules_ pane](./Dashboard:-My-rules).
 
-The JavaScript master switch can be disabled through the "Relax blocking mode" keyboard shortcut.
+The JavaScript master switch can be disabled through the "Relax blocking mode" [keyboard shortcut](./Keyboard-shortcuts).
