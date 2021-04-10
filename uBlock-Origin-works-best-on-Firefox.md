@@ -37,3 +37,5 @@ The Firefox version of uBO makes use of WebAssembly code for core filtering code
 ### Storage compression
 
 The Firefox version of uBO use LZ4 compression by default to store raw filter lists, compiled list data, and memory snapshots to disk storage.
+
+LZ4 compression requires the use of [`IndexedDB`](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), which is problematic with Chromium-based browsers in incognito mode -- where instances of `IndexedDB` are always reset, causing uBO to always launch inefficiently and with out of date filter lists (see [#399](https://github.com/uBlockOrigin/uBlock-issues/issues/399)). An `IndexedDB` instance is required because it supports storing [`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob)-based data, a capability not available to [`browser.storage.local` API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local).
