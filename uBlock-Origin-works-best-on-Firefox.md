@@ -6,7 +6,7 @@ Ability to uncloak 3rd-party servers disguised as 1st-party through the use of [
 
 ![c](https://user-images.githubusercontent.com/585534/103416937-b623c400-4b56-11eb-8e94-b4851a2248b7.png)
 <br>The dark green/red bars are uBO before/after it gained ability to uncloak CNAMEs on Firefox.<br>Source: [_"Characterizing CNAME Cloaking-Based Tracking
-on the Web"_](https://blog.apnic.net/2020/08/04/characterizing-cname-cloaking-based-tracking/) at [Asia Pacific Network Information Centre](https://www.apnic.net/about-apnic/)
+on the Web"_](https://blog.apnic.net/2020/08/04/characterizing-cname-cloaking-based-tracking/) at [Asia Pacific Network Information Centre](https://www.apnic.net/about-apnic/), August 2020.
 
 ### HTML filtering
 
