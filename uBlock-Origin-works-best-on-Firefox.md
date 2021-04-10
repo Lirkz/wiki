@@ -34,6 +34,8 @@ See [documentation for _"Disable pre-fetching"_ ](https://github.com/gorhill/uBl
 
 The Firefox version of uBO makes use of WebAssembly code for core filtering code paths. This is not the case with Chromium-based browsers because this would require an extra permission in the extension manifest which could cause friction when publishing the extension in the Chrome Web Store.
 
+For more about this, see: <https://github.com/WebAssembly/content-security-policy/issues/7#issuecomment-441259729>.
+
 ### Storage compression
 
 The Firefox version of uBO use LZ4 compression by default to store raw filter lists, compiled list data, and memory snapshots to disk storage.
