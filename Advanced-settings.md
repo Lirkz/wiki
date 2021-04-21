@@ -493,7 +493,7 @@ Between uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17db
 
 If enabled, uBO will hard block all network requests when the browser launches until _all_ the filter lists and rules are loaded and ready, at which time uBO will force a reload of the tabs for which there were network requests blocked during the setup phase.
 
-Disclaimer: especially in Chromium based browsers, even with this setting enabled, it's impossible for uBO to guarantee with 100% certainty that everything will be properly blocked when the browser is launched. **This is a by-design browser issue** -- do _not_ open an issue on uBO issue tracker about this.
+Disclaimer: In Chromium based browsers, even with this setting enabled, it's impossible for uBO to guarantee with 100% certainty that everything will be properly blocked when the browser is launched. **This is a by-design browser issue** -- do _not_ open an issue on uBO issue tracker about this.
 
 Related browser issues:
 - Chromium: <https://bugs.chromium.org/p/chromium/issues/detail?id=523634>
