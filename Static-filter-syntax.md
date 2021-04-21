@@ -661,11 +661,11 @@ Since the base domain name is used to derive the name of the "entity", `google.e
 
 New in [1.25.0](https://github.com/gorhill/uBlock/commit/3fab7bfdb4f892f3d33159fd53ccf1d5342a090a).
 
-A specific cosmetic filter of the following form...
+By preceding a typical generic cosmetic filter with a literal `*`, it can be turned into a specific-generic cosmetic filter:
 
     *##.selector
 
-... (with literal `*`) will be unconditionally injected into all web pages, whereas a cosmetic filter of the form...
+... which will be unconditionally injected into all web pages, whereas a typical generic cosmetic filter:
 
     ##.selector
 
