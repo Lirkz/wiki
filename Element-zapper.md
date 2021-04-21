@@ -20,7 +20,7 @@ Once you enter the "element-zapper mode":
 
 On touch screen devices:
 - tap once to select element
-- tap highlighted element to remove it and exit element-zapper
+- tap highlighted element to remove it
 - swipe right to remove incorrect highlighting
 - swipe right to exit element-zapper mode
 
