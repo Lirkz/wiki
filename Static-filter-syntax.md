@@ -347,9 +347,9 @@ Generic cosmetic filters, are hiding filters which apply to all pages - `##.ad-c
 #### `header`
 
 <details>
-<summary>Work in progress, syntax still experimental and under evaluation</summary>
+<summary>Work in progress, syntax still experimental and under evaluation</summary><br>
 
-New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c).
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c). Advanced setting `filterOnHeaders` must be set to `true` (default to `false`) for this filter option to be seen as valid by uBO.
 
 Ability to filter network **responses** according to whether a specific **response header** is present and whether it matches or does not match a specific value.
 
