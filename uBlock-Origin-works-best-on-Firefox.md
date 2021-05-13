@@ -22,6 +22,8 @@ This is not the case with Chromium-based browsers, i.e. tracker/advertisement pa
 
 Reliably blocking at browser launch is especially important for whoever uses default-deny mode for 3rd-party resources and/or JavaScript.
 
+There is an advanced setting available to tentatively mitigate this issue in Chromium-based browsers (disabled by default), see [`suspendTabsUntilReady`](https://github.com/gorhill/uBlock/wiki/Advanced-settings#suspendtabsuntilready) (this setting should be left untouched in Firefox-based browsers).
+
 ### Pre-fetching
 
 Pre-fetching, which is disabled by default in uBO, is reliably prevented in Firefox, while this is not the case in Chromium-based browsers.
