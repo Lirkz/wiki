@@ -169,7 +169,7 @@ Experimental.
 - _arg_: comma-separate list of attribute names. No argument means watch changes of any one attribute.
 
 Example:
-- [Test case](https://ameshkov.github.io/web/watchattr.html) to detect `id`changes using filter `ameshkov.github.io###testdiv:watch-attr(id):has(p)`
+- [Test case](https://ameshkov.github.io/web/watchattr.html) to detect `id` changes using filter `ameshkov.github.io###testdiv:watch-attr(id):has(p)`
 
 Introduced in uBO [1.17.5rc3](https://github.com/gorhill/uBlock/commit/8a88e9d93174badd6855c0e782737158c9ccd6f8) 
 
