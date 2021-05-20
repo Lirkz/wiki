@@ -168,8 +168,16 @@ Experimental.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - _arg_: comma-separate list of attribute names. No argument means watch changes of any one attribute.
 - Examples:
-    - `www.vivrehome.pl##.js-popup-register:not([style]):watch-attr(style):has(.js-title-default.is-hidden:watch-attr(class))` blocks the "Register" overlay when first visiting the site, but yet allow the "Register" overlay when clicking "rejestracja".
+    - `hrkgame.com##.dimmable, .dimmed:style(overflow: auto !important;)`
+
+      `hrkgame.com##.modals.dimmer > .gdpr.ui:style(visibility: hidden !important;)`
+
+      `hrkgame.com##.modals.dimmer > .gdpr.visible:upward(1):watch-attr([class])`
+
+      Filters try hide GDPR pop-up without break other pop-ups for logged users like enable/disable 2FA.
+
     - `ameshkov.github.io###testdiv:watch-attr(id):has(p)` demo, detects `id` changes.
+
 
 Introduced in uBO [1.17.5rc3](https://github.com/gorhill/uBlock/commit/8a88e9d93174badd6855c0e782737158c9ccd6f8) 
 
