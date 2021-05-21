@@ -384,17 +384,13 @@ After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc13
 
 #### `ignoreRedirectFilters`
 
-Default: `false`.
-
-If set to `true`, uBO will no longer attempt to redirect blocked network requests to a local, neutered version of a resource. The main purpose of redirect filters is to minimize web page breakage as a result of blocking resources.
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by fileter exception.
 
 ***
 
 #### `ignoreScriptInjectFilters`
 
-Default: `false`.
-
-If set to `true`, uBO will no longer lookup and inject scriptlets into web pages. The main purpose of the scriptlets is to defuse anti-blocker mechanisms present on some sites.
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by fileter exception.
 
 ***
 
