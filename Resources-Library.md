@@ -407,6 +407,8 @@ Parameters:
          - `trueFunc` - function returning true
          - `falseFunc` - function returning false
          - `''` - empty string<sup>[2019-01-06](https://github.com/uBlockOrigin/uAssets/commit/5051610f0e2374955a03c54be42bbbe9115f05c7#diff-8809d5783978a0b5b88f93d7dab99de0R2132)</sup>
+         - `[]` - empty array<sup>[1.35.4](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
+         - `{}` - empty object<sup>[1.35.4](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
 
 Examples:
  - `kompetent.de##+js(set, Object.keys, trueFunc)`
