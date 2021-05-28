@@ -381,7 +381,7 @@ Parameters:
 ***
 
 ### set.js /
-### set-constant.js [↪](https://github.com/gorhill/uBlock/blob/5de0ce975753b7565759ac40983d31978d1f84ca/assets/resources/scriptlets.js#L704)
+### set-constant.js [↪](https://github.com/gorhill/uBlock/blob/b9405f4e11d9f62beb209e4a014dd05300328272/assets/resources/scriptlets.js#L820)
 Creates _property_ and initializes it with a value from a predefined set.
 
 Scriptlet will succeed only when:
