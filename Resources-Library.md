@@ -169,7 +169,7 @@ Examples:
 
 ***
 
-### json-prune.js [↪](https://github.com/gorhill/uBlock/blob/13f92756befaa9a8d3ba1615bd7abc7075758c67/assets/resources/scriptlets.js#L365)
+### json-prune.js [↪](https://github.com/gorhill/uBlock/blob/d338e4c4b6caf339873a60c9d48fde58e9a495ce/assets/resources/scriptlets.js#L365)
 
 New in [1.23.0](https://github.com/gorhill/uBlock/commit/2fd86a66fcc2665e5672cc5862e24b3782ee7504)
 
@@ -210,6 +210,7 @@ New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267
 Examples:
  - `youthhealthmag.com##+js(json-prune, unit_list)`
  - `winfuture.de##+js(json-prune, adtagparameter, enabled)`
+ - `imgsen.com##+js(json-prune, *, showTrkURL)` - will remove everything when needle matches, new in [1.35](https://github.com/gorhill/uBlock/commit/d338e4c4b6caf339873a60c9d48fde58e9a495ce)
 
 
 ***
