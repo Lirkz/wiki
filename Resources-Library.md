@@ -368,15 +368,18 @@ Examples:
 ***
 
 ### rc.js /
-### remove-class.js [↪](https://github.com/gorhill/uBlock/blob/c2f0cae2cca2de785f326ae1c28dc1d61599bd7b/assets/resources/scriptlets.js#L461)
+### remove-class.js [↪](https://github.com/gorhill/uBlock/blob/3160bc8ccdab2b7dbc906ea213b29a4c04120be1/assets/resources/scriptlets.js#L757)
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/49d9929191461cc8534ebf5707d94a5970945bde).
 
-Removes classes from DOM tree node(s). Will run only once after page load. Syntax based on [`remove-attr.js`](#remove-attrjs-)
+Removes classes from DOM tree node(s). By default will run only once after page load. Syntax based on [`remove-attr.js`](#remove-attrjs-)
 
 Parameters:
  - required, class name or list of class names joined by `|`
  - optional, _CSS selector_, specifies nodes from which classes will be removed
+ - optional, new in [1.35.3rc1](https://github.com/gorhill/uBlock/commit/2de24a11843df653173e50b9e952052361c64147), one or more space-separated tokens dictating the behavior of the scriptlet
+    - `stay`: This tells the scriplet to stay and act on DOM changes, whiĺe the default behavior is to act only once when the document becomes interactive.
+    - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
 
 
 ***
