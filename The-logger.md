@@ -187,11 +187,18 @@ Examples:
 
 #### Filter statistics
 
+[Disabled temporarily](https://github.com/gorhill/uBlock/commit/5a5523c0b53697f816d942a1b3a712980bc77b93).
+
+<details>
+<summary>Details</summary>
+
 ![chart icon](https://user-images.githubusercontent.com/886325/62764319-e19f9d80-ba8d-11e9-8ada-7725e1ac9dae.png)
 
 The current implementation reports statistics for all static filters, and the presentation/feature set is intentionally minimal: *Do not open issues about this.* It's still a work in progress and it will be worked on slowly and thoughtfully over time and as time allows.
 
 Pausing the logger will not pause the collation of filter hit statistics, thus it is possible to lower the logger overhead by pausing logger output without losing filter hit collation.
+
+</details>
 
 ***
 
