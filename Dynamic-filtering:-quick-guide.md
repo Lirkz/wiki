@@ -142,7 +142,7 @@ This small obstacle to easily create _allow_ rule through point-and-click is [by
 
 To reiterate, creating _allow_ rules will completely override related block filters from static filter lists, which may easily cause you to be less protected than if not using dynamic filtering at all -- _allow_ rules are to be used exceptionally, and most of the time, temporarily -- they are typically most useful to filter list maintainers in order to quickly narrow down filter issues.
 
-Furthermore, when an _allow_ rule is set for the 1st-party domain, this will completely disable scriptlet injection and HTML filtering, again a behavior which is most useful to filter list maintainers. Scriptlet injection and HTML filtering are often used to deal with anti-blocker mechanisms.
+Furthermore, when an _allow_ rule is set for the 1st-party domain, this will completely disable scriptlet injection and HTML filtering, again a behavior which is most useful to filter list maintainers when investigating filter issues. Scriptlet injection and HTML filtering are often used to deal with anti-blocker mechanisms.
 
 **Important:** Typically, use only narrow _allow_ dynamic filtering rules to un-break sites. As these _allow_ rules override any static filtering, this means if you use a too broad _allow_ dynamic filtering rule you could start to allow in ads/trackers/annoyances.
 
