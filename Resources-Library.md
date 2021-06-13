@@ -109,7 +109,7 @@ Filtering according to reported line numbers (`...:1234:1`), will not be reliabl
 ***
 
 ### aeld.js /
-### addEventListener-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L182)
+### addEventListener-defuser.js [↪](https://github.com/gorhill/uBlock/blob/07d3c96261656e44f674550fbde50da8f6a15acc/assets/resources/scriptlets.js#L308)
 Prevents attaching event listeners.
 
 Parameters:
@@ -125,7 +125,7 @@ Examples:
 ***
 
 ### aell.js /
-### addEventListener-logger.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L221)
+### addEventListener-logger.js [↪](https://github.com/gorhill/uBlock/blob/07d3c96261656e44f674550fbde50da8f6a15acc/assets/resources/scriptlets.js#L352)
 Logs to the console event listeners created on page.
 
 
