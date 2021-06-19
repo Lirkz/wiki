@@ -353,7 +353,7 @@ Removes attribute(s) from DOM tree node(s). By default will run only once when t
 Parameters:
  - required, attribute or list of attributes joined by `|`
  - optional, _CSS selector_, specifies nodes from which attributes will be removed
- - optional, new in [1.32.5b8](https://github.com/gorhill/uBlock/commit/0f330c7359567587df6c35e9108b75c339533a56), one or more space-separated tokens dictating the behavior of the scriptlet
+ - optional, new in [1.33](https://github.com/gorhill/uBlock/commit/0f330c7359567587df6c35e9108b75c339533a56), one or more space-separated tokens dictating the behavior of the scriptlet
     - `stay`: This tells the scriplet to stay and act on DOM changes, whiĺe the default behavior is to act only once when the document becomes interactive.
     - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
 
@@ -377,7 +377,7 @@ Removes classes from DOM tree node(s). By default will run only once after page 
 Parameters:
  - required, class name or list of class names joined by `|`
  - optional, _CSS selector_, specifies nodes from which classes will be removed
- - optional, new in [1.35.3rc1](https://github.com/gorhill/uBlock/commit/2de24a11843df653173e50b9e952052361c64147), one or more space-separated tokens dictating the behavior of the scriptlet
+ - optional, new in [1.36](https://github.com/gorhill/uBlock/commit/2de24a11843df653173e50b9e952052361c64147), one or more space-separated tokens dictating the behavior of the scriptlet
     - `stay`: This tells the scriplet to stay and act on DOM changes, whiĺe the default behavior is to act only once when the document becomes interactive.
     - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
 
@@ -411,8 +411,8 @@ Parameters:
          - `trueFunc` - function returning true
          - `falseFunc` - function returning false
          - `''` - empty string<sup>[2019-01-06](https://github.com/uBlockOrigin/uAssets/commit/5051610f0e2374955a03c54be42bbbe9115f05c7#diff-8809d5783978a0b5b88f93d7dab99de0R2132)</sup>
-         - `[]` - empty array<sup>[1.35.4](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
-         - `{}` - empty object<sup>[1.35.4](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
+         - `[]` - empty array<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
+         - `{}` - empty object<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
 
 Examples:
  - `kompetent.de##+js(set, Object.keys, trueFunc)`
