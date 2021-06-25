@@ -573,6 +573,20 @@ Defuses BlockAdblock. Prevents executing of _`eval()`_ on sets of predefined pay
 Convenience, Sanitize `FuckAdBlock`, `BlockAdBlock`, `SniffAdBlock`, `fuckAdBlock`, `blockAdBlock`, `sniffAdBlock` properties.
 Often used as redirect in network filters. TODO: copy to redirect?
 
+### no-floc.js [↪](https://github.com/gorhill/uBlock/blob/bfdc81e9e400f7b78b2abc97576c3d7bf3a11a0b/assets/resources/scriptlets.js#L668)
+
+New in [1.35.0](https://github.com/gorhill/uBlock/commit/bfdc81e9e400f7b78b2abc97576c3d7bf3a11a0b).
+
+Defuses Google FLoC ("Federated Learning of Cohorts") tracking. Read more on https://amifloced.org/
+
+uBO ensures FLoC is opt-in. The generic filter `*##+js(no-floc)` in "uBlock filters -- Privacy" ensures the feature is disabled when using default settings/lists.
+
+Users can opt-in to FLoC by adding a generic exception filter to their custom filters, `#@#+js(no-floc)`; or they can opt-in only for a specific set of websites through a more specific exception filter:
+
+    example.com,shopping.example#@#+js(no-floc)
+
+Solves [#1553](https://github.com/uBlockOrigin/uBlock-issues/issues/1553).
+
 ### popads-dummy.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/popads-dummy.js)
 Convenience, sets static properties (`PopAds`, `popns`)
 
