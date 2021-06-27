@@ -98,6 +98,24 @@ The properties in the `toAdd` branch will append to the already present local se
 
 The `trustedSiteDirectives` property is an array of string, each of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled.
 
+Here is an example of how adding `example.com` and `example.org` would look like for managed storage on Chromium/Linux:
+
+    xxxxx@xxxxx:~$ cat /etc/chromium/policies/managed/ubo.json 
+    {
+      "3rdparty": {
+        "extensions": {
+          "cjpalhdlnbpafiamejdnhcphjbkeiagm": {
+            "toAdd": {
+              "trustedSiteDirectives": [
+                "example.com",
+                "example.org"
+              ]
+            }
+          }
+        }
+      }
+    }
+
 The directives will be appended to the local ones.
 
 See documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted)
