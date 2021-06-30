@@ -55,11 +55,11 @@ An array of strings, where each string refer to a part of the popup panel which 
 
 The properties in the `toOverwrite` branch will wholly replace the corresponding local settings. Currently, the following properties are supported:
 
-### filters
+#### filters
 
 The `filters` property is an array of strings, which are meant to represent all the lines making the text to use as the content of the [_"My filters"_ pane](./Dashboard:-My-filters).
 
-### filterLists
+#### filterLists
 
 The `filterLists` property is an array of strings, where each string is a token which identifies a list to enable by default. To enable a stock filter list, this is the token identifying the list as per content of [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json). For an external list, i.e. not found in `assets.json`, the token is the URL of the filter list.
 
@@ -82,7 +82,7 @@ For reference, the following array correspond to the default list of filter list
 
 Additionally, one or more regional lists may be enabled according to the current locale.
 
-### trustedSiteDirectives
+#### trustedSiteDirectives
 
 The `trustedSiteDirectives` property is an array of string, each of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled.
 
@@ -94,7 +94,7 @@ See documentation on how to create valid trusted-site directives: ["How to mark 
 
 The properties in the `toAdd` branch will append to the already present local settings. Currently, the following properties are supported:
 
-### trustedSiteDirectives
+#### trustedSiteDirectives
 
 The `trustedSiteDirectives` property is an array of string, each of which must resolve into a valid trusted-site directive, used to dictate where uBO must be disabled.
 
