@@ -153,7 +153,7 @@ However in uBO the interpretation will be "block network requests to the site `e
 
 So in uBO, any pattern which can be wholly read as a valid hostname, will be assumed to be equivalent to a filter of the form `||example.com^`. If ever you want such filter to be syntactically parsed according to ABP's interpretation, just add a wildcard at the end:
 
-    example.com/*
+    example.com*
 
 ***
 
