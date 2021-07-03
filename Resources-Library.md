@@ -348,15 +348,15 @@ Examples:
 
 ### ra.js /
 ### remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/0f330c7359567587df6c35e9108b75c339533a56/assets/resources/scriptlets.js#L658)
-Removes attribute(s) from DOM tree node(s). By default will run only once when the document becomes interactive.
+Removes attribute(s) from DOM tree node(s). By default will run only once when the initial HTML document has been completely loaded and parsed but sub-resources such as scripts, images, stylesheets and frames are still loading.
 
 Parameters:
  - required, attribute or list of attributes joined by `|`
  - optional, _CSS selector_, specifies nodes from which attributes will be removed
  - optional, new in [1.33](https://github.com/gorhill/uBlock/commit/0f330c7359567587df6c35e9108b75c339533a56), one or more space-separated tokens dictating the behavior of the scriptlet
-    - `stay`: This tells the scriplet to stay and act on DOM changes, whiĺe the default behavior is to act only once when the document becomes interactive.
-    - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
-
+    - `asap`: added in [1.36.1b2](https://github.com/gorhill/uBlock/commit/35d7406214e39fa5ad5c73cfab3eecb0eb7c8b7f), execute as soon as possible, do not wait for DOM to become vailable.
+    - `stay`: This tells the scriplet to stay active and act on document changes.
+    - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded.
 
 Examples:
  - `userscloud.com##+js(ra, onclick, .btn-icon-stacked)`
