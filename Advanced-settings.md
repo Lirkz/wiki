@@ -2,7 +2,7 @@
 
 ***
 
-The _"Advanced settings"_ page contains settings which are experimental, or which are of interest to advanced users who want more control over how uBO behaves internally.
+The _"Advanced settings"_ page contains settings which are experimental, or which are of interest to advanced users who want more control over how uBO behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
 
 These advanced settings can be easily accessed only when the setting [_"I am an advanced user"_](./Advanced-user-features) in the _Settings_ pane in the dashboard is checked, but will persist and work even when the setting [_"I am an advanced user"_](./Advanced-user-features) is not checked:
 
