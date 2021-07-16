@@ -7,7 +7,7 @@ The documented settings below are only available with uBO version 1.33.0 and abo
 
 ## userSettings
 
-The purpose of the `userSettings` property is to set the values of various [user settings](./Dashboard:-Settings).
+The purpose of the `userSettings` property is to set the values of various [user settings](./Dashboard:-Settings) (more specifically, to modify [these variables](https://github.com/gorhill/uBlock/blob/1c3b45f75d0f84d68abb51b15bbdc043464ee3e0/src/js/background.js#L86-L109)).
 
 Each entry in the array is an array consisting of a pair of name-value strings. Each name string must be a supported user setting, and each value string must properly resolve to a supported value.
 
