@@ -381,6 +381,9 @@ Parameters:
     - `stay`: This tells the scriplet to stay and act on DOM changes, while the default behavior is to act only once when the document becomes interactive.
     - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
 
+Example:
+- `danskebank.fi##+js(rc, cookie-consent-banner-open, html)` [Picture of the element](https://images2.imgbox.com/68/2b/tdWI9hBG_o.png)
+
 
 ***
 
