@@ -6,7 +6,7 @@ uBO supports being configured through central policies, see browser documentatio
 
 - Chromium: ["Configuring Apps and Extensions by Policy"](https://www.chromium.org/administrators/configuring-policy-for-extensions)
 - Firefox: ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests)
-- [Tutorial: Deploying uBO configuration - newer way](https://old.reddit.com/r/uBlockOrigin/comments/o7q2ou/control_trusted_sites_with_gpo/h3crkxf/) by [u/DefinitelyYou](https://old.reddit.com/user/DefinitelyYou)
+- [Tutorial: Deploying uBO configuration for Microsoft Edge Chromium and Google Chrome - newer way](https://old.reddit.com/r/uBlockOrigin/comments/o7q2ou/control_trusted_sites_with_gpo/h3crkxf/) by [u/DefinitelyYou](https://old.reddit.com/user/DefinitelyYou)
 
 The documented settings below are only available with uBO version 1.33.0 and above.
 
