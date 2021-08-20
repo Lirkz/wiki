@@ -1,3 +1,7 @@
+- Back to ["Deploying uBlock Origin"](./Deploying-uBlock-Origin)
+
+***
+
 uBO supports being configured through central policies, see browser documentation for administrators:
 
 - Chromium: ["Configuring Apps and Extensions by Policy"](https://www.chromium.org/administrators/configuring-policy-for-extensions)
