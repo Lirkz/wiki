@@ -95,6 +95,25 @@ Same as `:matches-css(...)` except that the style will be looked-up for `:after`
 
 ***
 
+### `subject:matches-path(arg)`
+
+- Description: Allows to further narrow the specificity according to the path and query of the current document location.
+- Chainable: Yes.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as first operator in a procedural cosmetic filter.
+- _arg_: Plain text to be found at any position in the path + query, or a literal regex against which the path + query is tested.
+- Examples:
+    - `example.com##:matches-path(/shop) p`: Will hide all `p` elements when visiting `https://example.com/shop/stuff`, but not when visiting `https://example.com/` or any other page on `example.com` which has no instance of `/shop` in the path part of the URL.
+
+Introduced in uBO [1.37.3b13](https://github.com/gorhill/uBlock/commit/9dece3bd30bfa6ef35a6e58c37740adbd8482ab9), [feature request #1690](https://github.com/uBlockOrigin/uBlock-issues/issues/1690).
+
+This is a all-or-nothing passthrough operator, which on/off behavior is dictated by whether the argument match the path of the current location. The argument can be either plain text to be found at any position in the path, or a literal Regular Expression against which the path is tested.
+
+Whereas cosmetic filters can be made specific to whole domain, the new `:matches-path()` operator allows to further narrow the specificity according to the path of the current document location.
+
+Typically this procedural operator is used as first operator in a procedural cosmetic filter, so as to ensure that no further matching work is performed should there be no match against the current path of the current document location.
+
+***
+
 ### `subject:min-text-length(n)`
 
 - Description: DOM elements whose text length is greater than or equal to `n` will be selected.
