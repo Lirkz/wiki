@@ -12,22 +12,16 @@ Dynamic `allow`/`block` rules override static filtering rules.
 - Use `block` to force requests to be blocked regardless of whether they would normally be allowed by static filtering.
     - Useful to block with 100% certainty, to bypass exception filters with which you may disagree in _EasyList_, _EasyPrivacy_ (or any other static filter lists).
 
-There is a precedence logic for dynamic filtering cells:
+There is a precedence logic for dynamic filtering cells. In general, narrower rules override broader ones; ties are broken first by destination domain, then by request type. From highest to lowest precedence, we have:
 
-Local rules override global rules.
-- Local setting for `example.com` override global setting for `example.com`.
+| Precedence rule | Example |
+|---|---|
+| More qualified destination domains take precedence over less qualified ones | `* www.dest.com * block` overrides `* dest.com * noop` |
+| Specific destination domains take precedence over specific request types | `* dest.com * noop` overrides `* * 3p-script block` |
+| Party-and-content types take precedence over party types |`* * 3p-script block` overrides `* * 3p noop` |
+| Party types take precedence over content types | `* * 3p noop` overrides `* * image block` |
+| Specific request types take precedence over specific source domains | `* * image block` overrides `source.com * * noop` |
+| More qualified source domains take precedence over less qualified ones | `www.source.com * * noop` overrides `source.com * * block` |
+| Specific source domains take precedence over universal rules | `source.com * * block` overrides `* * * noop` |
 
-The party-specific cells override the type-specific cells.
-- `3rd-party` override `images`
-- `example.com` override `images`
-
-The more specific the party, the higher the precedence.
-- `example.com` overrides `3rd-party scripts`
-- `www.example.com` overrides `example.com`
-
-Party-specific and type-specific cells override non specific party cells:
-- `3rd-party frames` overrides `3rd-party`
-
-All cells override the `all` cells. The local `all` cell overrides the global `all` cell.
-
-The UI is designed in such way that the precedence logic should quickly become obvious with usage.
+The UI is designed in such way that the precedence logic should hopefully become clear with usage. Lower rows in the grid of cells always take precedence over higher rows, and a cell in the right column takes precedence over the cell to its left. Rules in the left column (global, all source domains) "bleed" to the right (local, this particular source domain) when there's not a specific rule in the right column.
