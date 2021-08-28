@@ -12,7 +12,7 @@ Dynamic `allow`/`block` rules override static filtering rules.
 - Use `block` to force requests to be blocked regardless of whether they would normally be allowed by static filtering.
     - Useful to block with 100% certainty, to bypass exception filters with which you may disagree in _EasyList_, _EasyPrivacy_ (or any other static filter lists).
 
-There is a precedence logic for dynamic filtering cells. In general, narrower rules override broader ones; ties are broken first by destination domain, then by request type. From highest to lowest precedence, we have:
+There is a precedence logic for dynamic filtering cells. Narrower rules override broader ones; ties are broken first by destination domain, then by request type. From highest to lowest precedence, we have:
 
 | Precedence rule | Example |
 |---|---|
