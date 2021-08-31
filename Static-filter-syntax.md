@@ -155,6 +155,10 @@ So in uBO, any pattern which can be wholly read as a valid hostname, will be ass
 
     example.com*
 
+If the filter is a filename, it is ideal to add `^` at one or both ends:
+
+    ^example.js^
+
 ***
 
 #### `*` aka "all URLs"
