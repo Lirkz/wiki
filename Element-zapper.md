@@ -2,7 +2,7 @@
 
 ***
 
-The purpose of the element zapper is to quickly deal with the removal of nuisance elements on a page **without** having to create one or more filters. (To remove elements and create filters for them, use the [[element picker]].)
+The purpose of the element zapper is to quickly deal with the removal of nuisance elements on a page **without** having to create one or more filters (to create filters, use the [[element picker]]).
 
 ![uBO popup interface with "lightning" button highlighted](https://user-images.githubusercontent.com/585534/90419472-9cd91a00-e084-11ea-94ef-91be749a0fdb.png)
 
