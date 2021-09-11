@@ -18,7 +18,7 @@ Once you click on the element, you will be presented with a modal dialog box whi
 > ***
 > **Tip:**
 >
-> You can easily move element picker dialog using mouse, by grabbing and dragging by empty space between buttons<sup>New in [1.24.0](https://github.com/gorhill/uBlock/commit/d1995778ff5908a4709c51dd30a08e2478c59251)</sup>
+> You can easily move the element picker dialog out of the way, using the mouse by clicking and dragging the empty space between the _Preview_ and _Create_ buttons.
 > ***
 
 If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
@@ -58,7 +58,3 @@ There may be many different reasons for this.
 - There is a static filter in one of the 3rd-party filter lists in use which counters your filter.
     - Exception cosmetic filters (`#@#`) cancel cosmetic filters (`##`).
     - Exception filter with [`elemhide`](./Static-filter-syntax#elemhide-1) or [`specifichide`](./Static-filter-syntax#specifichide) option.
-
-### Element picker blocks view, or doesn't move when dragged
-
-As noted above, you can drag the element picker by clicking and dragging the empty space between buttons, although not by dragging the edges of the window.
