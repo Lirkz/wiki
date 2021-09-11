@@ -2,7 +2,7 @@
 
 ***
 
-The element picker's purpose is to assist the user in the creation of network or cosmetic filters. (To remove elements without creating new filters, use the [[element zapper]].)
+The element picker's purpose is to assist the user in the creation of network or cosmetic filters (to temporarily remove elements without creating new filters, use the [[element zapper]]).
 
 ![eye dropper highlighted in row of tool buttons](https://user-images.githubusercontent.com/886325/95906120-fd8d8600-0d99-11eb-9a91-84585e4c5739.png)
 
