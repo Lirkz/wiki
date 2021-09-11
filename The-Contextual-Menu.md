@@ -1,0 +1,1 @@
+In Firefox, uBlock Origin adds "Block element" to users' contextual menus (or right-click menus). This leads to the [[element picker]].
