@@ -9,7 +9,7 @@
 
 ### Make use of context menu where appropriate
 
-If checked, this gives permission for uBlock to add items in the [browser's contextual menu](./The-contextual-menu) which are meant to improve convenience.
+If checked, this gives permission for uBlock to add items in the [browser's context menu](./The-context-menu) which are meant to improve convenience.
 
 ***
 
