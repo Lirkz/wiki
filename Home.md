@@ -6,7 +6,7 @@
 - Install from [Mozilla Add-ons for Firefox ↪](https://addons.mozilla.org/firefox/addon/ublock-origin/), [Chrome store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Opera store ↪](https://addons.opera.com/en-gb/extensions/details/ublock/), or [manually](https://github.com/gorhill/uBlock/tree/master/dist#install).
 - [The popup user interface](./Quick-guide:-popup-user-interface)
     - [The per-site switches](./Per-site-switches)
-- [The contextual menu](./The-contextual-menu)
+- [The context menu](./The-context-menu)
 - [Dashboard](./Dashboard)
     - [_Settings_](./Dashboard:-Settings) pane
         - [Cloud storage](./Cloud-storage)
