@@ -1,3 +1,18 @@
+[Back to Dashboard: Settings](./Dashboard:-Settings)
+
+***
+
+Option removed from desktop browsers in [uBlock Origin v1.38](https://github.com/uBlockOrigin/uBlock-issues/issues/1723).
+
+Browsers now obfuscate LAN addresses by mDNS:
+
+- Firefox: ["Enable mDNS hostname obfuscation"](https://bugzilla.mozilla.org/show_bug.cgi?id=1588817)
+- Chromium: ["mDNS service for IP handling in WebRTC"](https://bugs.chromium.org/p/chromium/issues/detail?id=878465)
+
+Option is still available in Android Firefox, because obfuscation is still not implemented there: ["Support mDNS hostname obfuscation on Android"](https://bugzilla.mozilla.org/show_bug.cgi?id=1581947)
+
+***
+
 Keep in mind that this feature is to prevent leakage of your non-internet-facing IP adresses. The purpose of this feature is not to hide your current internet-facing IP address -- so be cautious to not misinterpret the results of some WebRTC-local-IP-address-leakage tests found online.
 
 **Important:** Enabling this feature can cause issues for some WebRTC-related services. If this is the case, you will have to disable it to prevent the breakage.
