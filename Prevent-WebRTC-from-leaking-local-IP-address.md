@@ -1,4 +1,4 @@
-[Back to Dashboard: Settings](./Dashboard:-Settings)
+Back to [Dashboard: Settings](./Dashboard:-Settings)
 
 ***
 
