@@ -69,6 +69,18 @@ Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summ
 
 ### Prevent WebRTC from leaking local IP address
 
+Option removed from desktop browsers in [uBlock Origin v1.38](https://github.com/uBlockOrigin/uBlock-issues/issues/1723).
+
+Browsers now obfuscate LAN addresses by mDNS:
+
+- Firefox: ["Enable mDNS hostname obfuscation"](https://bugzilla.mozilla.org/show_bug.cgi?id=1588817)
+- Chromium: ["mDNS service for IP handling in WebRTC"](https://bugs.chromium.org/p/chromium/issues/detail?id=878465)
+
+Option is still available in Android Firefox, because obfuscation is still not implemented there: ["Support mDNS hostname obfuscation on Android"](https://bugzilla.mozilla.org/show_bug.cgi?id=1581947)
+
+<details>
+<summary>Details</summary>
+
 ![highlighted Prevent WebRTC from leaking local IP address preference](https://cloud.githubusercontent.com/assets/585534/8344622/0ce20cc4-1ab2-11e5-8f46-a0a387c91d63.png)
 
 Background info: [STUN IP Address requests for WebRTC](https://github.com/diafygi/webrtc-ips)
@@ -82,6 +94,8 @@ Keep in mind that this feature is to prevent **leakage** of your non-internet-fa
    - the feature works only on version 42 and above.
 - Firefox: 
    - due to differences in handling of network connections by different browsers, before version [1.18.12](https://github.com/gorhill/uBlock/commit/977178bef23c7711a050181be979a4668bfebcfb) WebRTC was completely disabled if Firefox was not configured to use proxy. Related issue: [#3009](https://github.com/gorhill/uBlock/issues/3009#issuecomment-329798696)
+
+</details>
 
 ***
 
