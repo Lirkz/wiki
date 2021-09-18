@@ -343,6 +343,26 @@ Disables WebRTC by preventing web pages from using [_`RTCPeerConnection()`_](htt
 Examples:
  - `x1337x.*##+js(nowebrtc)`
 
+***
+
+### no-xhr-if.js [↪](https://github.com/gorhill/uBlock/blob/745fbd1c02b7179052ba97f51c54f7cb000636f0/assets/resources/scriptlets.js#L1171)
+
+New in [1.38.0](https://github.com/gorhill/uBlock/commit/745fbd1c02b7179052ba97f51c54f7cb000636f0).
+
+Defuses [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) network requests by returning empty response. Based on [`no-fetch-if.js`](#no-fetch-ifjs-).
+
+Parameters:
+ - optional, space-separated list of conditions which must be ALL fulfilled in order for the defusing to take place:
+     - string/_regular expression_ matching in URL passed to XMLHttpRequest `open()` call
+     - colon-separated `name:value` pairs of [XMLHttpRequest method `open()`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open#parameters) parameter names  (only `method` and `url` currently supported) and string/_regular expression_ matching in value of passed argument.
+
+When used without parameters, the parameters passed to `no-xhr-if` will be logged to the console, as `uBO: xhr.open(...list of arguments...)`.
+
+Examples:
+ - `example.com##+js(no-xhr-if, method:HEAD)`
+ - `example.com##+js(no-xhr-if, adsbygoogle.js)`
+ - `example.com##+js(no-xhr-if, adsbygoogle.js method:HEAD)`
+ - `example.com##+js(no-xhr-if, /adsbygoogle.js$/ method:/HEAD|POST/)`
 
 ***
 
