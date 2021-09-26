@@ -1,4 +1,4 @@
-* "What Ad Blockers Are (and Are Not) Doing" http://web.cs.wpi.edu/~cew/papers/hotweb16.pdf
+* "What Ad Blockers Are (and Are Not) Doing" https://web.cs.wpi.edu/~cew/papers/hotweb16.pdf
 * "Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools" https://www.sba-research.org/wp-content/uploads/publications/block_me_if_you_can.pdf
 * "Ad-blocking: A Study on Performance, Privacy and Counter-measures" https://dl.acm.org/doi/abs/10.1145/3091478.3091514
 * "Benchmark and Comparison of Tracker-blockers: Should You Trust Them?" https://tma.ifip.org/wordpress/wp-content/uploads/2017/06/tma2017_paper30.pdf
