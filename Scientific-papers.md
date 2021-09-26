@@ -7,5 +7,5 @@
 * "Internet Privacy Implications" https://digital.wpi.edu/downloads/h989r614k
 * "A comparison of web privacy protection techniques" https://arxiv.org/pdf/1712.06850.pdf
 * "Benchmark and comparison of tracker-blockers: Should you trust them?" https://core.ac.uk/download/pdf/234917747.pdf
-* "Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools" http://eprints.cs.univie.ac.at/6446/1/block_me_if_you_can.pdf
+* "Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools" https://eprints.cs.univie.ac.at/6446/1/block_me_if_you_can.pdf
 
