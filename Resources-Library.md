@@ -5,6 +5,7 @@
  - [Empty redirect resources](#empty-redirect-resources)
  - [URL-specific sanitized redirect resources](#url-specific-sanitized-redirect-resources-surrogates)
  - [Other](#other)
+ - Community scriptlets arsenal: [uBlock-user/uBO-Scriptlets](https://github.com/uBlock-user/uBO-Scriptlets) and [avotoko/ubo-resource](https://github.com/avotoko/ubo-resource)
  - [Glossary](#glossary)
 
 
