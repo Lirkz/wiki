@@ -1,8 +1,8 @@
 ### 2021
 
-* "A Distributed Performance Measurement Tool for Tor Browser", https://www.esat.kuleuven.be/cosic/publications/thesis-407.pdf
+* "A Distributed Performance Measurement Tool for Tor Browser" https://www.esat.kuleuven.be/cosic/publications/thesis-407.pdf
 * "Internet Privacy Implications" https://digital.wpi.edu/downloads/h989r614k
-* "The CNAME of the Game: Large-scale Analysis of DNS-based Tracking Evasion", https://arxiv.org/pdf/2102.09301.pdf
+* "The CNAME of the Game: Large-scale Analysis of DNS-based Tracking Evasion" https://arxiv.org/pdf/2102.09301.pdf
 
 ### 2020
 
