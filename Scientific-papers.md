@@ -1,4 +1,5 @@
 * "A comparison of web privacy protection techniques" https://arxiv.org/pdf/1712.06850.pdf
+* "A Distributed Performance Measurement Tool for Tor Browser" https://www.esat.kuleuven.be/cosic/publications/thesis-407.pdf
 * "Ad-blocking: A Study on Performance, Privacy and Counter-measures" https://arxiv.org/pdf/1705.03193.pdf
 * "Benchmark and Comparison of Tracker-blockers: Should You Trust Them?" https://tma.ifip.org/wordpress/wp-content/uploads/2017/06/tma2017_paper30.pdf
 * "Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools" https://www.sba-research.org/wp-content/uploads/publications/block_me_if_you_can.pdf
