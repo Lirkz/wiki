@@ -1,6 +1,7 @@
 ### 2021
 
 * "A Distributed Performance Measurement Tool for Tor Browser", https://www.esat.kuleuven.be/cosic/publications/thesis-407.pdf
+* "Internet Privacy Implications" https://digital.wpi.edu/downloads/h989r614k
 * "The CNAME of the Game: Large-scale Analysis of DNS-based Tracking Evasion", https://arxiv.org/pdf/2102.09301.pdf
 
 ### 2020
@@ -10,7 +11,6 @@
 
 ### 2017
 
-* "Internet Privacy Implications" https://digital.wpi.edu/downloads/h989r614k
 * "A comparison of web privacy protection techniques", https://arxiv.org/pdf/1712.06850.pdf
 * "Ad-blocking: A Study on Performance, Privacy and Counter-measures", https://arxiv.org/pdf/1705.03193.pdf
 * "Benchmark and Comparison of Tracker-blockers: Should You Trust Them?", https://tma.ifip.org/wordpress/wp-content/uploads/2017/06/tma2017_paper30.pdf
