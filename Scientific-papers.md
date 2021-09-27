@@ -7,6 +7,7 @@
 ### 2020
 
 * "Characterizing CNAME Cloaking-Based Tracking on the Web" https://tma.ifip.org/2020/wp-content/uploads/sites/9/2020/06/tma2020-camera-paper66.pdf
+* "Demystifying content-blockers: A large scale study of actual performance gains" https://arxiv.org/pdf/2002.01735.pdf
 * "Energy Conservation with Open Source Ad Blockers" https://www.mdpi.com/2227-7080/8/2/18/pdf
 * "Understanding the Performance Costs and Benefits of Privacy-focused Browser Extensions" https://kevin.borgolte.me/files/pdf/www2020-privacy-extensions.pdf
 * "What a Tangled Web We Weave: Understanding the Interconnectedness of the Third Party Cookie Ecosystem" https://nms.kcl.ac.uk/netsys/datasets/tracking-the-trackers-papers/tanged_web.pdf
