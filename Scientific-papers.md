@@ -22,3 +22,15 @@
 ### 2016
 
 * "What Ad Blockers Are (and Are Not) Doing" https://web.cs.wpi.edu/~cew/papers/hotweb16.pdf
+
+## Other useful reference materials
+
+### 2021
+
+- DebugBear Blog: ["How do Chrome extensions impact browser performance?"](https://www.debugbear.com/blog/chrome-extension-performance-2021)
+    - ["How do ad blockers and privacy tools affect browser performance?"](https://www.debugbear.com/blog/chrome-extension-performance-2021#how-do-ad-blockers-and-privacy-tools-affect-browser-performance)
+
+### 2020
+
+- DebugBear Blog: ["2020 Chrome Extension Performance Report"](https://www.debugbear.com/blog/2020-chrome-extension-performance-report)
+    - ["Performance impact of ad blockers"](https://www.debugbear.com/blog/2020-chrome-extension-performance-report#performance-impact-of-ad-blockers)
