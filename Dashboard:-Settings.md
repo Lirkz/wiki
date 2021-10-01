@@ -141,9 +141,11 @@ Enable/disable the uncloaking of canonical names -- enabled by default.
 
 For background information see [_"What's CNAME of your game? This DNS-based tracking defies your browser privacy defenses"_](https://www.theregister.com/2021/02/24/dns_cname_tracking/).
 
+The setting will be disabled on platforms not supporting this feature. It's currently supported only on Firefox.
+
 In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5), which occurred when funneling network requests through a proxy.
 
-The setting will be disabled on platforms not supporting this feature. It's currently supported only on Firefox.
+**Important note when using extension-based proxy service:** Extension-based proxy services are often done on-the-fly through a [browser API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest), and in such case uBO's own DNS queries to uncloak canonical names will **NOT** be caught and proxied by an extension-based proxy service. So you may want to disable this setting when using an extension-based proxy service.
 
 ***
 
