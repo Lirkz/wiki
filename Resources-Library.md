@@ -713,7 +713,7 @@ New in [1.27.0](https://github.com/gorhill/uBlock/commit/f842ab6d3c1cf0394f95d27
 
 Removed in [1.29.0](https://github.com/gorhill/uBlock/commit/7c22a312945a2bff41a2b5696a7e54f1c4c01cf2).
 
-### twitch-videoad.js [↪](https://github.com/gorhill/uBlock/blob/0d3a1932e998c0cb3f4c5ff1d9a3fe62e12a3cf4/assets/resources/scriptlets.js#L1562)
+### twitch-videoad.js [↪](https://github.com/gorhill/uBlock/blob/cc0008df57459aaeae9305a03a887a3c4c55675b/assets/resources/scriptlets.js#L1562)
 Twitch stream embedded ads bypasser
 
 
