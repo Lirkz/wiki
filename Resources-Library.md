@@ -73,7 +73,7 @@ Examples:
 ### aost.js /
 ### abort-on-stack-trace.js [↪](https://github.com/gorhill/uBlock/blob/793e2c78963ba86c8d36b950807ce952f7199c1f/assets/resources/scriptlets.js#L194)
 
-New in: [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e15bbba3b4ba6cbf43935)
+New in [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e15bbba3b4ba6cbf43935)
 
 <details>
 <summary>Experimental, under development</summary>
@@ -419,6 +419,17 @@ Parameters:
 Example:
 - `danskebank.fi##+js(rc, cookie-consent-banner-open, html)` [Picture of the element](https://images2.imgbox.com/68/2b/tdWI9hBG_o.png)
 
+
+***
+
+### refresh-defuser.js [↪](https://github.com/gorhill/uBlock/blob/c0a43b0d32e38aa3858644db20fc69a7b0c85e82/assets/resources/scriptlets.js#L726)
+
+New in [1.38.7b3](https://github.com/gorhill/uBlock/commit/c0a43b0d32e38aa3858644db20fc69a7b0c85e82)
+
+Attempts to defuse reloading of a document through a [meta "refresh" tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-http-equiv). Will stop navigation (call [`window.stop()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/stop)) at specified delay.
+
+Parameters:
+ - optional, number (float), number of seconds until the page will be reloaded / when defuser should run. Will be derived from source tag when not specified.
 
 ***
 
