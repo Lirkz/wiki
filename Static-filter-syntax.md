@@ -729,7 +729,13 @@ After [1.29.3b10](https://github.com/gorhill/uBlock/commit/35aefed92616cbfb75f12
 
 Related issue [Support cosmetic filters with explicit style properties](https://github.com/gorhill/uBlock/issues/781) and [example](https://github.com/uBlockOrigin/uAssets/issues/71#issuecomment-229503444) where it's useful.
 
-It's exactly the same syntax of plain cosmetic filters (i.e. must be a valid CSS selector), except that the `:style(...)` suffix is appended at the end. The content in the parentheses must be one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) (separated by the standard `;`). It is not allowed to use property values with `url(...)`, such `style`-based cosmetic filters will be discarded.
+It's exactly the same syntax of plain cosmetic filters (i.e. must be a valid CSS selector), except that the `:style(...)` suffix is appended at the end. The content in the parentheses must be one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) (separated by the standard `;`). It is not allowed to use 
+
+ - property values with `url(...)`,
+ - backslashes (`\`-escaped values),
+ - comments (`/*`, `*/`)
+
+such `style`-based cosmetic filters will be discarded.
 
 As with the other new cosmetic filtering selectors, the `:style` can be used only for _specific_ cosmetic filters, i.e. there must be a hostname or entity specified for the filter.
 
