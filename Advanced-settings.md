@@ -475,7 +475,7 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 <span name="suspendtabsuntilready-experimental"></span>
 #### `suspendTabsUntilReady`
 
-Default: `unset`, before [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3): `false`.
+Default: `unset`.
 
 Possible values:
 
@@ -483,9 +483,6 @@ Possible values:
   behavior (default, Firefox - enabled, Chromium - disabled)
 - `no` - do not suspend tab loading at launch time
 - `yes` - suspend tab loading at launch time
-
-After [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3) configurable again in Firefox (can be disabled).  
-Between uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17dbb996e605c4befb09e16911) and 1.18.6 - Chromium only. In Firefox this feature is always active from now on thanks to ["persistent startup listeners"](https://bugzilla.mozilla.org/show_bug.cgi?id=1503721).
 
 If enabled, uBO will hard block all network requests when the browser launches until _all_ the filter lists and rules are loaded and ready, at which time uBO will force a reload of the tabs for which there were network requests blocked during the setup phase.
 
@@ -495,6 +492,10 @@ Related browser issues:
 - Chromium: <https://bugs.chromium.org/p/chromium/issues/detail?id=523634>
 - Firefox: <https://bugzilla.mozilla.org/show_bug.cgi?id=1378459>, fixed by <https://bugzilla.mozilla.org/show_bug.cgi?id=1447551>.
 
+History:
+- After [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3), configurable again in Firefox (can be disabled). In Firefox this feature is always active by default from now on thanks to ["persistent startup listeners"](https://bugzilla.mozilla.org/show_bug.cgi?id=1503721).
+- Before [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3), default to `false`.
+- Between uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17dbb996e605c4befb09e16911) and 1.18.6, Chromium only.
 
 ***
 
