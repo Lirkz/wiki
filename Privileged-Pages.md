@@ -1,12 +1,10 @@
 Privileged Pages are the webpages that browser-vendors consider as an entitled webpage/s where extensions are tasked to not work/have their functionality ceased entirely.
 
-For ChromeOS<sup>1</sup> in stock Chrome:
-```
-chrome.google.com/webstore/*
-youtube.com
-```
 For Chromium<sup>1</sup>:
 ```
+clients.google.com
+clients[0-9]+.google.com
+sb-ssl.google.com
 chrome.google.com/webstore/*
 ```
 
@@ -39,7 +37,7 @@ sync.services.mozilla.com
 
 ***
 
-[1] [stackoverflow.com](https://stackoverflow.com/questions/11613371/chrome-extension-content-script-on-https-chrome-google-com-webstore/11614440#11614440), [chrome_extensions_client.cc](https://chromium.googlesource.com/chromium/src/+/ba355f657a607c74f0de82ad925a4dc1a7c9a95b/chrome/common/extensions/chrome_extensions_client.cc#235), [extension_urls.cc](https://chromium.googlesource.com/chromium/src/+/ba355f657a607c74f0de82ad925a4dc1a7c9a95b/extensions/common/extension_urls.cc#33)
+[1] [stackoverflow.com](https://stackoverflow.com/questions/11613371/chrome-extension-content-script-on-https-chrome-google-com-webstore/11614440#11614440), [chrome_extensions_client.cc](https://chromium.googlesource.com/chromium/src/+/ba355f657a607c74f0de82ad925a4dc1a7c9a95b/chrome/common/extensions/chrome_extensions_client.cc#235), [extension_urls.cc](https://chromium.googlesource.com/chromium/src/+/ba355f657a607c74f0de82ad925a4dc1a7c9a95b/extensions/common/extension_urls.cc#33), [web_request_permissions.cc](https://chromium.googlesource.com/chromium/chromium/+/26c2ff8d01f1e93082f8fc095e20fb68d5f8c24b/chrome/browser/extensions/api/web_request/web_request_permissions.cc#24)
 
 [2] https://hg.mozilla.org/mozilla-central/rev/39e131181d44
 
