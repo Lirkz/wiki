@@ -1,5 +1,10 @@
 Privileged Pages are the webpages that browser-vendors consider as an entitled webpage/s where extensions are tasked to not work/have their functionality ceased entirely.
 
+For ChromeOS<sup>1</sup> in stock Chrome:
+```
+chrome.google.com/webstore/*
+youtube.com
+```
 For Chromium<sup>1</sup>:
 ```
 chrome.google.com/webstore/*
@@ -16,13 +21,11 @@ addons.mozilla.org
 api.accounts.firefox.com
 content.cdn.mozilla.net
 discovery.addons.mozilla.org
-input.mozilla.org
 install.mozilla.org
 oauth.accounts.firefox.com
 profile.accounts.firefox.com
 support.mozilla.org
 sync.services.mozilla.com
-testpilot.firefox.com
 ```
 
 - Just like Chrome, Firefox's WebExtensions will also cease to work on these aformentioned domains.
