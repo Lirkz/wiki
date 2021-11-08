@@ -422,7 +422,7 @@ New in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62
 
 Only for Regular Expression filters. Using with any other sort of filters will cause uBO to discard the filter.
 
-Instructs uBO filtering engine to perform a match, case sensitively.
+Instructs uBO filtering engine to perform a case-sensitive match.
 
 ***
 
