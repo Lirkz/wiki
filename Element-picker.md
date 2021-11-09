@@ -60,3 +60,6 @@ There may be many different reasons for this.
 - There is a static filter in one of the 3rd-party filter lists in use which counters your filter.
     - Exception cosmetic filters (`#@#`) cancel cosmetic filters (`##`).
     - Exception filter with [`elemhide`](./Static-filter-syntax#elemhide-1) or [`specifichide`](./Static-filter-syntax#specifichide) option.
+-  The site you're trying to use Picker or Zapper on, is unsupported:
+    - unsupported pages: [Privileged Pages](https://github.com/gorhill/uBlock/wiki/Privileged-Pages), also see [related issue](https://github.com/uBlockOrigin/uBlock-issues/issues/512)
+    - unsupported protocol: Picker and Zapper are restricted to work on protocols `http(s)://` only, which means for example it won't work on `file:///` protocol, however cosmetic filters still can be added manually to My Filters pane, related issues: [issue 1](https://github.com/gorhill/uBlock/issues/1601#issuecomment-215929108), [issue 2](https://github.com/gorhill/uBlock/issues/1721#issuecomment-225959408), related comments: [comment 1](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964243361), [comment 2](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964254310), [comment 3](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964341350)
