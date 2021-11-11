@@ -735,7 +735,7 @@ It's exactly the same syntax of plain cosmetic filters (i.e. must be a valid CSS
  - property values with `image-set(...)`,
  - comments (`/*`, `*/`),
  - backslashes (`\`-escaped values),
- - sequence of two forward slashes (`//`)
+ - sequence of two forward slashes (`//`), even when separated by whitespace
 
 such `style`-based cosmetic filters will be discarded.
 
