@@ -720,7 +720,7 @@ AdGuard's cosmetic filter syntax `{ remove: true; }` will be converted to uBO's 
 - Description: _action operator_, applies specified style to selected elements in DOM tree.
 - Chainable: No, _action operator_ can only be used at the end of the root chain.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter after [1.29.3b10](https://github.com/gorhill/uBlock/commit/35aefed92616cbfb75f12f37c7ea7fb3a3cc3369). Before, only native, plain CSS selectors were supported, see [#382](https://github.com/uBlockOrigin/uBlock-issues/issues/382).
-- _arg_: one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax), separated by the standard `;`. Property values with `url(...)` are forbidden.
+- _arg_: one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax), separated by the standard `;`. Some characters, strings and values are forbidden - see bellow for a list.
 - Examples:
     - `example.com##h1:style(background-color: blue !important)`
     - `motobanda.pl###mvideo:style(z-index: 1!important)`
@@ -732,8 +732,10 @@ Related issue [Support cosmetic filters with explicit style properties](https://
 It's exactly the same syntax of plain cosmetic filters (i.e. must be a valid CSS selector), except that the `:style(...)` suffix is appended at the end. The content in the parentheses must be one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) (separated by the standard `;`). It is not allowed to use 
 
  - property values with `url(...)`,
+ - property values with `image-set(...)`,
+ - comments (`/*`, `*/`),
  - backslashes (`\`-escaped values),
- - comments (`/*`, `*/`)
+ - sequence of two forward slashes (`//`)
 
 such `style`-based cosmetic filters will be discarded.
 
