@@ -1,4 +1,4 @@
-[Back to Wiki home](./)
+[[Back to Wiki home|Home]]
 
 ***
 In uBlock Origin ("uBO"), _strict blocking_ is the blocking of a whole page, i.e. the _root_ document is blocked, so that not a single connection is made to the remote server hosting the web page.

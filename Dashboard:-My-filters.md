@@ -1,4 +1,4 @@
-- [Back to Wiki Home](./)
+- [[Back to Wiki home|Home]]
     - [Static filter syntax](./Static-filter-syntax)
         - [Procedural cosmetic filters](./Procedural-cosmetic-filters)
         - [Resources Library](./Resources-Library)

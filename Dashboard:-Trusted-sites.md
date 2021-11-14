@@ -1,4 +1,4 @@
-- Back to [Wiki home](./)
+- Back to [[Wiki home|Home]]
 - Back to [Dashboard](./Dashboard)
 
 ***

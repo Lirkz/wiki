@@ -1,4 +1,4 @@
-- [Wiki Home](./)
+- [[Wiki home|Home]]
 - [Permissions](./Permissions)
     - [Can you trust uBlock Origin?](./Can-you-trust-uBlock-Origin%3F)
 - [Privacy policy](./Privacy-policy)
