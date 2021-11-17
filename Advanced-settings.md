@@ -148,7 +148,7 @@ Default: `no-cache, no-store, must-revalidate`.
 
 uBO 1.17.0 and above.
 
-Configure how uBO should affect caching for the purpose of dealing with browser bug (see [#229](https://github.com/uBlockOrigin/uBlock-issues/issues/229)).
+Configure how uBO should affect caching main document requests for the purpose of dealing with browser bug (see [#229](https://github.com/uBlockOrigin/uBlock-issues/issues/229)).
 
 Possible values:
 
