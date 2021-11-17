@@ -161,8 +161,10 @@ Possible values:
 - `unset`:
      - Available after [1.22.0](https://github.com/gorhill/uBlock/commit/52925ba2f9ed4351c0f5c7420773d2f59557fc7d), turns off this path.
 
-Related browser issues:
-- Firefox: <https://bugzilla.mozilla.org/show_bug.cgi?id=1376932>
+Related Firefox issues:
+- test-only patch: <https://bugzilla.mozilla.org/show_bug.cgi?id=1376932>
+- which fails permanently and was disabled: <https://bugzilla.mozilla.org/show_bug.cgi?id=1573511>.
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1648635
 
 ***
 
