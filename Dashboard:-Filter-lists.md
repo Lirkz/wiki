@@ -73,3 +73,5 @@ This is a collection of various filter lists, grouped by purpose. To use a speci
 You can import custom 3rd-party filter lists: place check mark next to "Import..." in the "Custom" section and paste the URL of where a filter lists can be fetched from in the text area that appears. These custom filter lists will be also automatically updated on a regular basis.
 
 On some specific web pages, it is possible to subscribe to a 3rd-party filter list by simply clicking on a link to the filter list. There is such a page for uBlock Origin: [Filter lists from around the web](./Filter-lists-from-around-the-web).
+
+To remove custom lists mark them by clicking trash can icon at the end on list name, then click on "Apply changes".
