@@ -420,6 +420,22 @@ When clicking the _"Update now"_ button in the _"3rd-party filters"_ pane in the
 
 ***
 
+#### `modifyWebextFlavor`
+
+Default: `unset`.
+
+Introduced in [1.38.7b3](https://github.com/gorhill/uBlock/commit/f49c4e254b7137e40516cecced58c76d05f23672).
+
+Value: A list of space-separated tokens to be added/removed from the [computed default](https://github.com/gorhill/uBlock/blob/18ae79cdf25be59831c295ea7c90afbcd5a70ce8/platform/common/vapi-common.js#L52-L90) webext flavor.
+
+The primary purpose is to give filter list authors the ability to test mobile flavor on desktop computers. Though mobile versions of web pages can be emulated using browser dev tools, it's not possible to do so for uBO itself.
+
+By using `+mobile` as a value for this setting will force uBO to act as if it's being executed on a mobile device. 
+
+Important: this setting is best used in a dedicated browser profile, as this affects how filter lists are compiled. So best to set it in a new browser profile, then force all filter lists to be recompiled, and use the profile in the future when there is a need to test the specific webext flavor.
+
+***
+
 #### `popupFontSize`
 
 Default: `unset`.
