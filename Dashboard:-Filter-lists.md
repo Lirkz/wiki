@@ -27,7 +27,7 @@ Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-list
 
 ***
 
-##### Auto-update filter lists
+### Auto-update filter lists
 
 If you check this option, uBlock Origin will update automatically the currently selected filter lists at regular interval. This option is checked by default (recommended).
 
@@ -36,7 +36,9 @@ Filter lists are automatically updated according to:
 - or `updateAfter` attribute if found in list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
 - or every 5 days by default.
 
-##### Update now
+---
+
+### Update now
 
 This button is available for use if and only if there is at least one filter list which is deemed outdated. If this condition is fulfilled, you can force an update of all filter lists which are deemed out of date.
 
@@ -46,19 +48,27 @@ When a filter list has been updated using a newer version from its remote locati
 
 Note: "uBlock filters" entry is special - forcing update of this filter list, will also update additional resources when possible (library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection), allowed to be updated on Chromium browser and develpment buils).
 
-##### Purge all caches
+---
+
+### Purge all caches
+
+![_"Purge all caches"_ button](https://user-images.githubusercontent.com/585534/143480823-7b54e49d-fea7-4416-963d-c679243c770d.png)
 
 This will reset "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
 
 Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
 
-##### Parse and enforce cosmetic filters
+---
+
+### Parse and enforce cosmetic filters
 
 Un-check this option if you do not want cosmetic filters from various filterlists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-block-ads-or-just-hide-them%3F) on a web page which can't be blocked otherwise. An example of this are the ads served with some Google Search results.
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
-##### Stock filter lists
+---
+
+### Stock filter lists
 
 This is a collection of various filter lists, grouped by purpose. To use a specific filter list, just select it through its checkbox. Any change in the selection of filter lists must be committed by using the _Apply change_ button, which will appear if and only if the current selection of filter lists differs from the previous selection of filter lists.
 
@@ -68,7 +78,9 @@ This is a collection of various filter lists, grouped by purpose. To use a speci
 > The more filter lists are selected, the higher the likelihood of web site breakage. The quality of the selected filter lists also affects the likelihood of web site breakage. The _EasyList_-related filter lists are high quality filter lists, as they are actively maintained.
 > ***
 
-##### Custom filter lists
+---
+
+### Custom filter lists
 
 You can import custom 3rd-party filter lists: place check mark next to "Import..." in the "Custom" section and paste the URL of where a filter lists can be fetched from in the text area that appears. These custom filter lists will be also automatically updated on a regular basis.
 
