@@ -40,6 +40,8 @@ Filter lists are automatically updated according to:
 
 ### Update now
 
+![_"Update now"_ button](https://user-images.githubusercontent.com/585534/143616552-94dd8b15-d33c-4d45-97bd-2f73f95972ba.png)
+
 This button is available for use if and only if there is at least one filter list which is deemed outdated. If this condition is fulfilled, you can force an update of all filter lists which are deemed out of date.
 
 When a filter list has been updated using a newer version from its remote location, a clock icon will be present aside the filter list. You can force an update of a single filter list by clicking the clock icon of that filter list only, which will reset "last update" timestamp for this list, remove its content from storage, and cause the _"Update now"_ button to become available for use:
