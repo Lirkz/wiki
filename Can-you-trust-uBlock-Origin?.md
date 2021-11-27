@@ -10,7 +10,7 @@ I think it's time I give examples of how requiring _less_ permissions is **not**
 
 #### Web Protector - Reliable Phishing Protection
 
-Chrome store: [Web Protector - Reliable Phishing Protection](https://chrome.google.com/webstore/detail/web-protector-reliable-ph/kfecnpmgnlnbmipaogfhoacoioifjgko).
+Chrome store: Web Protector - Reliable Phishing Protection (the extension no longer exists on the Chrome Web Store).
 
 This extension requires the same permission as uBlock, _minus_ the `privacy` one. Some might be inclined that it can thus be more trusted than uBlock, which requires the `privacy` permission.
 
