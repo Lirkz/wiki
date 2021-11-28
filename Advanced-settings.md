@@ -535,7 +535,17 @@ Possible values:
 
 #### `uiPopupConfig`
 
-`undocumented`
+Default: `unset`, was `undocumented` before [1.39.1b?](https://github.com/gorhill/uBlock/commit/395a4e36a939907982d3768c2d9eabb8aca8cbd1).
+
+Introduced in [1.27.0](https://github.com/gorhill/uBlock/commit/db9c32185538c0943cb3f52a037bd11f6f60cbf9).
+
+Override uBO popup interface configuration.
+
+List of space-separated tokens:
+
+- `+captions`/`-captions`: enable/disable tool captions
+- `+no-popups`/`-no-popups`: enable/disable no-popups switch
+- `+logger`/`-logger`: new in [1.39.1b1](https://github.com/gorhill/uBlock/commit/1408422cbaa8d1efc0832b6cf09595fcc20369d7), enable/disable the logger button
 
 ***
 
