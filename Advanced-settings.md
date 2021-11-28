@@ -541,9 +541,9 @@ Introduced in [1.27.0](https://github.com/gorhill/uBlock/commit/db9c32185538c094
 
 Override uBO popup interface configuration.
 
-List of space-separated tokens:
+The value can be one or more space-separated tokens:
 
-- `+captions`/`-captions`: enable/disable tool captions
+- `+captions`/`-captions`: enable/disable captions
 - `+no-popups`/`-no-popups`: enable/disable no-popups switch
 - `+logger`/`-logger`: new in [1.39.1b1](https://github.com/gorhill/uBlock/commit/1408422cbaa8d1efc0832b6cf09595fcc20369d7), enable/disable the logger button
 
