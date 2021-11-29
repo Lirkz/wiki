@@ -112,8 +112,8 @@ Filtering according to reported line numbers (`...:1234:1`), will not be reliabl
 Prevents attaching event listeners.
 
 Parameters:
- - optional, string/_regular expression_, name of event listener
- - optional, string/_regular expression_ matching in stringified handler function
+ - optional, string/_regular expression_, name of the event listener to defuse
+ - optional, string/_regular expression_ matching in stringified handler function, narrows down defusing to specific handler
 
 Examples:
  - `vev.io##+js(aeld, adb.updated)`
