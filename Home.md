@@ -65,7 +65,7 @@
     - [uBlock vs. ABP: efficiency compared](./uBlock-vs.-ABP:-efficiency-compared)
     - [Own memory usage: benchmarks over time](./Own-memory-usage:-benchmarks-over-time)
     - [Contributed memory usage: benchmarks over time](./Contributed-memory-usage:-benchmarks-over-time)
-    - [Counterpoint: Who care about efficiency, I have 8 GB and/or a quad-core CPU](./Who-cares-about-efficiency,-I-have-8-GB-and%7Cor-a-quad-core-CPU)
+    - [Counterpoint: Who cares about efficiency, I have 8 GB RAM and|or a quad core CPU](./Who-cares-about-efficiency,-I-have-8-GB-RAM-and%7Cor-a-quad-core-CPU)
     - [Myth: uBlock consumes over 80MB](./Myth:-uBlock-consumes-over-80MB)
     - [Myth: uBlock is just slightly less resource intensive than Adblock Plus](./Myth:-uBlock-is-just-slightly-less-resource-intensive-than-Adblock-Plus)
     - [Counterpoints: unsorted](./Counterarguments)
