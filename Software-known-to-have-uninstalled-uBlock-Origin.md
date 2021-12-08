@@ -24,6 +24,8 @@ Here is a list of those software which are known to have uninstalled uBlock Orig
 
     Support forum: https://forums.malwarebytes.com/forum/122-false-positives/
 
+    Of note: [The Junkware Removal Tool has been discontinued by it's creator](https://forums.malwarebytes.com/topic/213402-junkware-removal-tool-to-be-discontinued/) - Malwarebytes - and thus false positives will probably not be fixed
+
 - SpyHunter 4:
     - https://github.com/gorhill/uBlock/issues/1009
     - [Of interest](http://www.bleepingcomputer.com/forums/t/550005/spyhunter-vs-malwarebytes-vs-iobit/#entry3491488): "In _my opinion_ SpyHunter is a **dubious program** with a high rate of [false positives](https://www.mywot.com/en/scorecard/enigmasoftware.com)".
