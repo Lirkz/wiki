@@ -201,7 +201,7 @@ prevent inline fonts/scripts from `bet365.com`. EasyList-
 compatible syntax does not allow to accomplish that
 semantic when using only `||bet365.com^`.
 
-See also [#2385](https://github.com/gorhill/uBlock/issues/2385)
+See also [#2385](https://github.com/gorhill/uBlock/issues/2385 "Static filtering: Cannot prevent my filter from strict-blocking")
 
 ***
 
