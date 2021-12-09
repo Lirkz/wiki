@@ -1,13 +1,13 @@
 <sup>[Screenshots are not necessarily up to date: this is tedious work and I rather not re-take all screenshots when there are only trivial changes]</sup>
 
-In µBlock version 0.8.5.0, dynamic filtering has been completely revamped. Summary of what changed:
+In uBlock version 0.8.5.0, dynamic filtering has been completely revamped. Summary of what changed:
 
 - An _"advanced user mode"_ setting, disabled by default
 - Expanded dynamic filtering to block/allow on a per hostname basis
 - A new _"My rules"_ tab in the dashboard, where you can see/edit all your dynamic filtering rules
 - A new, more convenient, more efficient network request logger
 
-For a fresh new install of µBlock, this is how the popup UI looks:
+For a fresh new install of uBlock, this is how the popup UI looks:
 
 ![figure 1](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/df-tut-01.png)
 
@@ -18,13 +18,13 @@ This is the "novice user" interface, which is the default when installing for th
 - The network request logger (the _eye_ icon) is now always available
     - There is no more setting to enable/disable the network request logger, it will be turned on/off automatically when opening/closing the logger page
 
-To access dynamic filtering, you need to indicate to µBlock that you are an advanced user (mind the ["Required reading"](./Advanced-user-features) link):
+To access dynamic filtering, you need to indicate to uBlock that you are an advanced user (mind the ["Required reading"](./Advanced-user-features) link):
 
 ![figure 2](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/df-tut-02.png)
 
 By the way, notice that the _Statistics_ tab (the network request log) is now gone from the dashboard.
 
-For advanced users, µBlock's popup UI will show a little `+` widget aside the prompt "requests blocked":
+For advanced users, uBlock's popup UI will show a little `+` widget aside the prompt "requests blocked":
 
 ![figure 3](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/df-tut-03.png)
 
