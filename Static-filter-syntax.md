@@ -508,7 +508,7 @@ Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options)
 
 #### `csp`
 
-This option will inject [`Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/Glossary/CSP) header to the HTTP network response of the requested web page. It can be applied to main document and documents in frames.
+This option will inject additional [`Content-Security-Policy`](https://developer.mozilla.org/en-US/docs/Glossary/CSP) header to the HTTP network response of the requested web page. This [will make Content Security Policy more strict](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#multiple_content_security_policies) as designed by specification. It can be applied to main document (`$document`) and documents in frames (`$subdocument`/`$frame`).
 
 This is special filter - it will not block matching resource, but only apply HTTP header to pages matching it. Because of this it cannot be mixed with other options speciyfing resource type, like for example `image`, `script` or [`frame`](#frame) (`subdocument`). It can still be used with [`1p`](#1p) (`first-party`), [`3p`](#3p) (`third-party`) or [`domain`](#domain) options.
 
