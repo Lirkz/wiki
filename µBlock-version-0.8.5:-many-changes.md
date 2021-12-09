@@ -1,0 +1,1 @@
+Moved to: [uBlock version 0.8.5: many changes](./uBlock-version-0.8.5:-many-changes)
