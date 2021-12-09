@@ -215,7 +215,7 @@ Examples:
 ***
 
 ### noeval.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noeval.js)
-Prevent web pages from using _`eval()`_, and report attempts to console.
+Prevent web pages from using _`eval()`_, and report attempts to console. This should not be used as a generic filter due to the fact that it breaks many websites, including those using Cloudflare's DDoS protection.
 
 Examples:
  - `solowarez.org##+js(noeval)`
@@ -225,7 +225,7 @@ Examples:
 
 ### noeval-silent.js /
 ### ~silent-noeval.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noeval-silent.js)
-Prevent web pages from using _`eval()`_.
+Prevent web pages from using _`eval()`_. 
 
 
 ***
