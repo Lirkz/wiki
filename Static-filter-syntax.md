@@ -523,7 +523,7 @@ Exception filter for specific `csp` blocking filter must have exactly the same c
 
     @@||example.com^$csp
 
-CSP option syntax may look unusual compared to other filters. It's advised to be used only by advanced users. It works in "allowlist" mode - data can be downloaded only from addresses explicitly specified in this option. However, uBO is adding it's own second CSP header, which [as per specification](https://w3c.github.io/webappsec-csp/#multiple-policies) will be merged into one final policy, which will be in sum enforcing most strict rules from both headers. For example, you can easily break webpage if policy send by server allows `a.com` and `b.com` and your filter adds `c.com` - in sum, no request will be allowed at all.
+CSP option syntax is unusual compared to other filters. It's advised to be used only by advanced users. It works in "allowlist" mode - data can be downloaded only from addresses explicitly specified in this option. However, uBO is adding it's own second CSP header, which [as per specification](https://w3c.github.io/webappsec-csp/#multiple-policies) will be merged into one final policy, which will be in sum enforcing most strict rules from both headers. For example, you can easily break webpage if policy send by server allows `a.com` and `b.com` and your filter adds `c.com` - in sum, no request will be allowed at all.
 
 Refer to ["Content Security Policy (CSP) Quick Reference Guide"](https://content-security-policy.com/) or [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for further syntax help.
 
