@@ -8,6 +8,12 @@ Here is a list of those software which are known to have uninstalled uBlock Orig
 
     Report form: https://analysis.avira.com/en/submit
 
+- Bitdefender:
+    - https://www.reddit.com/r/uBlockOrigin/comments/rdy62f/bitdefender_detects_ublock_origin_as_a_virus/
+    - https://www.reddit.com/r/uBlockOrigin/comments/b0579i/bitdefender_detected_web_threat_from_ublockorigin/
+
+    Report instructions: https://www.bitdefender.com/business/support/en/77209-79766-troubleshooting.html#UUID-34db599c-8f18-3a74-2ffe-12e4aa066e09
+
 - ClamAV (optionally with Immunet/Malware Patrol):
     - https://github.com/gorhill/uBlock/issues/2315
     - https://github.com/uBlockOrigin/uBlock-issues/issues/599
