@@ -411,7 +411,7 @@ Removes classes from DOM tree node(s). By default will run only once after page 
 
 Parameters:
  - required, class name or list of class names joined by `|`
- - optional, _CSS selector_, specifies nodes from which classes will be removed
+ - optional, _CSS selector_, specifies nodes from which classes should be removed
  - optional, new in [1.36](https://github.com/gorhill/uBlock/commit/2de24a11843df653173e50b9e952052361c64147), one or more space-separated tokens dictating the behavior of the scriptlet
     - `stay`: This tells the scriplet to stay and act on DOM changes, while the default behavior is to act only once when the document becomes interactive.
     - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
