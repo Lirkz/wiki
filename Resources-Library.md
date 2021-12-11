@@ -617,6 +617,9 @@ Defuses Fingerprintjs2. Sanitize `Fingerprint2` object.
 ### ~bab-defuser.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/nobab.js)
 Defuses BlockAdblock. Prevents executing of _`eval()`_ on sets of predefined payloads.
 
+### nobab2.js [↪](https://github.com/gorhill/uBlock/blob/d17d634b7c95261c376b42c0fb0a65fc9eff32ae/src/web_accessible_resources/nobab2.js)
+Redirect resource. Defuses BAB 4.2b.
+
 ### nofab.js /
 ### ~fuckadblock.js-3.2.0~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/nofab.js)
 Convenience, Sanitize `FuckAdBlock`, `BlockAdBlock`, `SniffAdBlock`, `fuckAdBlock`, `blockAdBlock`, `sniffAdBlock` properties.
