@@ -161,6 +161,16 @@ If the filter is a filename, it is ideal to add `^` at one or both ends:
 
 ***
 
+#### `_` aka "noop"
+
+Just a placeholder.
+
+[Implemented](https://github.com/uBlockOrigin/uBlock-issues/issues/1356#issuecomment-735280463) to resolve ambiguity in `$removeparam` filters with Regular Expression parameters being detected as plain Regular Expression filter, because of leading and trailing slashes:
+
+    /ad-$removeparam=/^ss$/,_
+
+***
+
 #### `*` aka "all URLs"
 
 The wildcard character `*` can be used to apply a filter to **all** URLs. This is not recommended though, unless you further narrow the filter using filter options. Examples:
