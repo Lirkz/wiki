@@ -22,6 +22,8 @@ Off the top of my head:
     - example: `wetteronline.de##^script:has-text(runCount)`
 - Ability to deal with unwanted popups
     - example: `&link_type=offer$popup,third-party`
+- Ability to remove tracking parameters from websites
+    - example: `||wuzhuiso.com^$removeparam=src`
 - You can easily (narrowly/broadly) override any filter from the filter lists through simple point-and-click operations to customize your own filtering or to quickly fix sites broken as a result of overzealous filters
 
 Main advantage of Pi-Hole is that it filters network traffic from all devices on your network, but filtering is blunt compared to what you can do through a browser extension.
