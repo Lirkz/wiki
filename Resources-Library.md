@@ -548,6 +548,31 @@ Parameters:
 
 ***
 
+### window-close-if.js [↪](https://github.com/gorhill/uBlock/blob/8d7469afcfae7dabefe819eb513a0ba026ed9dd7/assets/resources/scriptlets.js#L1273)
+
+New in [1.39.3b10](https://github.com/gorhill/uBlock/commit/c198b9a748265c0e1ce7f5bad4528d5bf6ce8161).
+
+
+<details>
+<summary>WIP</summary>
+
+
+
+Closes browser tab of the page on which is executed. Can be narrowed to specifica path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
+
+Parameters:
+
+ - optional, string/_regular expression_, matching in the path and query part of the web page address.
+
+Example:
+
+ - `acestream.com##+js(window-close-if, /plan/select?popup=noads)`
+
+
+</details>
+
+***
+
 ### nowoif.js /
 ### window.open-defuser.js [↪](https://github.com/gorhill/uBlock/blob/b98b2fc52becce75b858b0a6040328e291fdae29/src/web_accessible_resources/window.open-defuser.js)
 Prevent opening new windows by [_`window.open()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) when URL positively or negatively matches to specific string.
