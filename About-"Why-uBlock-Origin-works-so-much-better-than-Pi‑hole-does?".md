@@ -18,7 +18,7 @@ Off the top of my head:
     - example: `##.AdHeader`
 - Scriptlet injection filtering, i.e. the injection of JS scriptlets to modify the behavior of a page -- useful to defuse anti-content blockers
     - example: `wallstreet-online.de##+js(nostif, userHasAdblocker)`
-- HTML filtering, i.e. the removal of DOM elements from a document before it is parsed by the browser
+- HTML filtering (Tor Browser and Firefox only), i.e. the removal of DOM elements from a document before it is parsed by the browser
     - example: `wetteronline.de##^script:has-text(runCount)`
 - Ability to deal with unwanted popups
     - example: `&link_type=offer$popup,third-party`
