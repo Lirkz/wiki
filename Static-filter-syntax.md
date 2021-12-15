@@ -464,17 +464,11 @@ This new `strict1p` option is meant to check for strict partyness, i.e. a networ
 
 For example:
 
-- context: `www.example.org`
-- request: `www.example.org`
-- `1p`: yes, `strict1p`: yes
-
-- context: `www.example.org`
-- request: `subdomain.example.org`
-- `1p`: yes, `strict1p`: no
-
-- context: `www.example.org`
-- request: `www.example.com`
-- `1p`: no, `strict1p`: no
+| Context | Request | `1p` | `strict1p` |
+| --- | --- | --- | --- |
+| `www.example.org` | `www.example.org` | **yes** | **yes** |
+| `www.example.org` | `subdomain.example.org` | **yes** | no |
+| `www.example.org` | `www.example.com` | no | no |
 
 ***
 
@@ -490,17 +484,11 @@ This new `strict3p` option is meant to check for strict partyness, i.e. a networ
 
 For example:
 
-- context: `www.example.org`
-- request: `www.example.org`
-- `3p`: no,  `strict3p`: no
-
-- context: `www.example.org`
-- request: `subdomain.example.org`
-- `3p`: no,  `strict3p`: yes
-
-- context: `www.example.org`
-- request: `www.example.com`
-- `3p`: yes,  `strict3p`: yes
+| Context | Request | `3p` | `strict3p` |
+| --- | --- | --- | --- |
+| `www.example.org` | `www.example.org` | no | no |
+| `www.example.org` | `subdomain.example.org` | no | **yes** |
+| `www.example.org` | `www.example.com` | **yes** | **yes** |
 
 ***
 
