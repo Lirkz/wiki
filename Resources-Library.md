@@ -546,19 +546,14 @@ Allows opening RTC connections to matching [RTCIceServer](https://developer.mozi
 Parameters:
  - required, string/_regular expression_, matching in `RTCIceServer` `urls`, `username` or `credential`.
 
+
 ***
 
 ### window-close-if.js [↪](https://github.com/gorhill/uBlock/blob/8d7469afcfae7dabefe819eb513a0ba026ed9dd7/assets/resources/scriptlets.js#L1273)
 
 New in [1.39.3b10](https://github.com/gorhill/uBlock/commit/c198b9a748265c0e1ce7f5bad4528d5bf6ce8161).
 
-
-<details>
-<summary>WIP</summary>
-
-
-
-Closes browser tab of the page on which is executed. Can be narrowed to specifica path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
+Closes fresh browser tabs of the specified page. Can be used to close tabs which have been opened from other applications. Can be narrowed down to specific path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
 
 Parameters:
 
@@ -568,8 +563,6 @@ Example:
 
  - `acestream.com##+js(window-close-if, /plan/select?popup=noads)`
 
-
-</details>
 
 ***
 
