@@ -22,9 +22,9 @@ Additionally, you can point-and-click to block JavaScript locally or globally, c
 
 ***
 
-Free.
-Open source with public license (GPLv3)
-For users by users.
+Free.  
+Open source with public license (GPLv3)  
+For users by users.  
 
 If ever you really do want to contribute something, think about the people working hard to maintain the filter lists you are using, which were made available to use by all for free.
 
