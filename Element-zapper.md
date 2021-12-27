@@ -14,13 +14,15 @@ Really, this feature is already supported by all browsers if one care to use the
 
 Additionally, depending on what element you are zapping, the element zapper will also try to detect and deal with those pages preventing from scrolling through the whole content.
 
-Once you enter the "element-zapper mode":
+### Once you enter the "element-zapper mode":
+
 - Highlighting then clicking a page element will remove this element from the document and exit element-zapper mode;
     - Press the <kbd>Shift</kbd> key while clicking if you do not want to exit element-zapper mode.
 - Highlighting a page element and then pressing the <kbd>Delete</kbd> key will remove the element from the document, without quitting the element-zapper mode;
 - Pressing the <kbd>Esc</kbd> key will exit element-zapper mode.
 
-On touch screen devices:
+### On touch screen devices:
+
 - tap once to select element
 - tap highlighted element to remove it
 - swipe right to remove incorrect highlighting
