@@ -39,7 +39,8 @@ You may quit the interactive element picker by clicking the _Quit_ button (or pr
 
 The _Create_ button will be enabled only if a proper filter can be created from the content of the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure the filter apply **only** to the current web site, will add it to your custom list of filters and save it.
 
-On touch screen devices:
+### Touch screen devices:
+
 - swipe right to exit element-picker mode
 - when dialog is visible, swiping right will hide element-picker dialog (will make it dimmed and transparent)
 - when dialog is hidden, swipe right again to exit element-picker mode
