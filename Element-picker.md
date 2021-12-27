@@ -12,7 +12,9 @@ If there is an element on a web page you wish to remove forever, open the extens
 
 ![Element picker](https://user-images.githubusercontent.com/886325/99714989-9359b680-2aa6-11eb-8805-487fca0c8fef.png)
 
-Once in element-picker mode, you have to point and click on the element you wish to remove.
+### Once in element-picker mode:
+
+You have to point and click on the element you wish to remove.
 
 Once you click on the element, you will be presented with a modal dialog box which allows you to select, and optionally edit and create a filter for the element(s) you wish to remove from the web page.
 
@@ -39,7 +41,7 @@ You may quit the interactive element picker by clicking the _Quit_ button (or pr
 
 The _Create_ button will be enabled only if a proper filter can be created from the content of the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure the filter apply **only** to the current web site, will add it to your custom list of filters and save it.
 
-### Touch screen devices:
+### On touch screen devices:
 
 - swipe right to exit element-picker mode
 - when dialog is visible, swiping right will hide element-picker dialog (will make it dimmed and transparent)
