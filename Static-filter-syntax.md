@@ -16,7 +16,7 @@ Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c
             - [Procedural cosmetic filters ↪](./Procedural-cosmetic-filters)
         - [Action operators](#action-operators)
         - [HTML filters](#html-filters)
-        - [Response header filtering](#response-headers-removal)
+        - [Response header filtering](#response-header-filtering)
         - [Scriptlet injection](#scriptlet-injection)
 			- [Resources library ↪](./Resources-Library)
 
