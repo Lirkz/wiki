@@ -11,10 +11,12 @@ Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c
         - [Modifier filters](#modifier-filters)
     - [Static extended filtering](#static-extended-filtering)
         - [Entity](#entity)
+        - [Specific-generic](#specific-generic)
         - [Cosmetic filters](#cosmetic-filters)
             - [Procedural cosmetic filters ↪](./Procedural-cosmetic-filters)
-            - [Action operators](#action-operators)
+        - [Action operators](#action-operators)
         - [HTML filters](#html-filters)
+        - [Response headers removal](#response-headers-removal)
         - [Scriptlet injection](#scriptlet-injection)
 			- [Resources library ↪](./Resources-Library)
 
@@ -690,7 +692,7 @@ See [detailed documentation](./Procedural-cosmetic-filters).
 
 ***
 
-#### Action operators
+### Action operators
 
 By default, the implicit purpose of cosmetic filters is to hide unwanted DOM elements. However sometimes it may be useful to re-style a specific element or remove it completely from DOM tree.
 
@@ -762,6 +764,33 @@ These HTML filters will cause the elements matching the selectors to be **remove
 With the introduction of HTML filtering, the `script:contains(...)` is now deprecated and internally converted into an equivalent `##^script:has-text(...)` HTML filter. The result is essentially the same: to prevent the execution of specific inline script tags in a main HTML document. See [_"Inline script tag filtering"_](./Inline-script-tag-filtering) for further documentation.
 
 Support for chaining procedural operators with native CSS selector syntax (i.e. `a:has(b) + c`) was added in [1.20.1b3](https://github.com/gorhill/uBlock/commit/41685f4cce084f3f89e9cdd8fc1cde5b57862958). Only procedural operators which make sense in the context of HTML filtering are supported.
+
+***
+
+### Response headers removal
+
+New in [uBO 1.35.0](https://github.com/gorhill/uBlock/commit/f876b68171ff307f27601225607a6801f400437d).
+
+The syntax to remove response header is a special case of HTML filtering, whereas the response headers are targeted, rather than the response body:
+
+    example.com##^responseheader(header-name)
+
+Where `header-name` is the name of the header to remove, and must always be lowercase.
+
+The removal of response headers can only be applied to document resources, i.e. main- or sub-frames.
+
+Only a limited set of headers can be targeted for removal:
+
+- `location`
+- `refresh`
+- `report-to`
+- `set-cookie`
+
+This limitation is to ensure that uBO never lowers the security profile of web pages, i.e. we wouldn't want to remove `content-security-policy`.
+
+Given that the header removal occurs at onHeaderReceived time, this new ability works for all browsers.
+
+The motivation for this new filtering ability is instance of website using a `refresh` header to redirect a visitor to an undesirable destination after a few seconds.
 
 ***
 
