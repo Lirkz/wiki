@@ -87,7 +87,7 @@ memory before unsuspending network activity. Some users may find this behavior u
 
 This gives the option to potentially speed up page load at launch, at the cost of potentially not properly filtering network requests as per filter lists/rules.
 
-For platforms not supporting the suspension of network activity, the setting will merely prevent whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in "suspended" state at launch.
+For platforms not supporting the suspension of network activity, the setting will merely use whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in "suspended" state at launch.
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
