@@ -16,7 +16,7 @@ Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c
             - [Procedural cosmetic filters ↪](./Procedural-cosmetic-filters)
         - [Action operators](#action-operators)
         - [HTML filters](#html-filters)
-        - [Response headers removal](#response-headers-removal)
+        - [Response header filtering](#response-headers-removal)
         - [Scriptlet injection](#scriptlet-injection)
 			- [Resources library ↪](./Resources-Library)
 
@@ -767,7 +767,7 @@ Support for chaining procedural operators with native CSS selector syntax (i.e. 
 
 ***
 
-### Response headers removal
+### Response header filtering
 
 New in [uBO 1.35.0](https://github.com/gorhill/uBlock/commit/f876b68171ff307f27601225607a6801f400437d).
 
