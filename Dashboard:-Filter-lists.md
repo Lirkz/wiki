@@ -27,17 +27,6 @@ Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-list
 
 ***
 
-### Auto-update filter lists
-
-If you check this option, uBlock Origin will update automatically the currently selected filter lists at regular interval. This option is checked by default (recommended).
-
-Filter lists are automatically updated according to:
-- the [_Expires_ directive](https://adblockplus.org/filters#special-comments) if present in filter list header
-- or `updateAfter` attribute if found in list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
-- or every 5 days by default.
-
----
-
 ### Update now
 
 ![_"Update now"_ button](https://user-images.githubusercontent.com/585534/143616552-94dd8b15-d33c-4d45-97bd-2f73f95972ba.png)
@@ -50,7 +39,7 @@ When a filter list has been updated using a newer version from its remote locati
 
 Note: "uBlock filters" entry is special - forcing update of this filter list, will also update additional resources when possible (library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection), allowed to be updated on Chromium browser and develpment buils).
 
----
+***
 
 ### Purge all caches
 
@@ -60,7 +49,18 @@ This will reset "last update" timestamp for all of the subscribed filter lists. 
 
 Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
 
----
+***
+
+### Auto-update filter lists
+
+If you check this option, uBlock Origin will update automatically the currently selected filter lists at regular interval. This option is checked by default (recommended).
+
+Filter lists are automatically updated according to:
+- the [_Expires_ directive](https://adblockplus.org/filters#special-comments) if present in filter list header
+- or `updateAfter` attribute if found in list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
+- or every 5 days by default.
+
+***
 
 ### Parse and enforce cosmetic filters
 
@@ -68,7 +68,7 @@ Un-check this option if you do not want cosmetic filters from various filterlist
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
----
+***
 
 ### Stock filter lists
 
@@ -78,7 +78,7 @@ This is a collection of various filter lists, grouped by purpose. To use a speci
 
 The more filter lists are selected, the higher the likelihood of web site breakage. The quality of the selected filter lists also affects the likelihood of web site breakage. The _EasyList_-related filter lists are high quality filter lists, as they are actively maintained.
 
----
+***
 
 ### Custom filter lists
 
