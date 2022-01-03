@@ -78,6 +78,21 @@ This option can be enabled on a very low-end devices, but mind that some filter 
 
 ***
 
+### Suspend network activity until all filter lists are loaded
+
+New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
+
+The new setting, when disabled (enabled by default), allows a user to prevent uBlock Origin from waiting for all filter lists to be loaded before allowing network activity at browser launch. The setting is enabled by default, meaning uBO waits for all filter lists to be loaded in
+memory before unsuspending network activity. Some users may find this behavior undesirable, hence the new setting.
+
+This gives the option to potentially speed up page load at launch, at the cost of potentially not properly filtering network requests as per filter lists/rules.
+
+For platforms not supporting the suspension of network activity, the setting will merely prevent whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in "suspended" state at launch.
+
+See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
+
+***
+
 ### Stock filter lists
 
 This is a collection of various filter lists, grouped by purpose. To use a specific filter list, just select it through its checkbox. Any change in the selection of filter lists must be committed by using the _Apply change_ button, which will appear if and only if the current selection of filter lists differs from the previous selection of filter lists.
