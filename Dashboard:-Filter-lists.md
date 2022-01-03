@@ -109,4 +109,4 @@ You can import custom 3rd-party filter lists: place check mark next to "Import..
 
 On some specific web pages, it is possible to subscribe to a 3rd-party filter list by simply clicking on a link to the filter list. There is such a page for uBlock Origin: [Filter lists from around the web](./Filter-lists-from-around-the-web).
 
-To remove custom lists mark them by clicking trash can icon at the end on list name, then click on "Apply changes".
+To remove custom lists mark them by clicking trash can icon at the end of list name, then click on "Apply changes".
