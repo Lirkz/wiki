@@ -100,7 +100,7 @@ Reporting filter issues require a [GitHub account](https://github.com/signup), s
 
 The report icon is available only when uBO is enabled on a given site.
 
-On mobile devices, [the "Open the logger" icon](#open-the-logger) is replaced by the "chat" icon since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in the dashboard.
+On mobile devices, [the "Open the logger" icon](#open-the-logger) is replaced by the "chat" icon since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in [the Dashboard](./Dashboard).
 
 #### Open the logger
 
@@ -110,7 +110,7 @@ Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between op
 
 #### Open the dashboard
 
-Click the _gears_ icon to open uBlock's dashboard.
+Click the _gears_ icon to open the uBlock Origin [Dashboard](./Dashboard).
 
 ***
 
