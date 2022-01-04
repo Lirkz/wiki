@@ -7,4 +7,4 @@
 
 ***
 
-Here you will find links to this Documentation, support forum on Reddit, filter issue tracker, uBlock Origin add-on issue tracker, and also textbox with technical information about uBO that might be useful to volunteers when they try to help you solve a problem.
+Here you will find links to this Documentation, support forum on Reddit, filter issue tracker (you can find link to [the Logger](./The-logger) here too), uBlock Origin add-on issue tracker, and also textbox with technical information about uBO that might be useful to volunteers when they try to help you solve a problem.
