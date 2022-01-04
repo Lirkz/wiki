@@ -1,4 +1,24 @@
-[[Back to Wiki home|Home]]
+- [[Back to Wiki home|Home]]
+   - [_Settings_ pane](./Dashboard:-Settings)
+      - [Cloud storage](./Cloud-storage)
+      - [Advanced-user-features](./Advanced-user-features)
+         - [Advanced-settings](./Advanced-settings)
+   - [_Filter lists_ pane](./Dashboard:-Filter-lists)
+      - [Filter lists from around the web](./Filter-lists-from-around-the-web)
+   - [_My filters_ pane](./Dashboard:-My-filters)
+      - [Static filter syntax](./Static-filter-syntax)
+         - [Procedural cosmetic filters](./Procedural-cosmetic-filters)
+         - [Resources Library](./Resources-Library)
+   - [_My rules_ pane](./Dashboard:-My-rules)
+      - [Dynamic filtering](./Dynamic-filtering)
+         - [Quick guide](./Dynamic-filtering:-quick-guide)
+         - [Rule syntax](./Dynamic-filtering:-rule-syntax)
+         - [Rule precedence](./Dynamic-filtering:-precedence)
+         - [Blocking mode](./Blocking-mode)
+      - [URL filtering](./Dynamic-URL-filtering)
+   - [_Trusted sites_ pane](./Dashboard:-Trusted-sites)
+      - [How to mark a web site as trusted](./How-to-mark-a-web-site-as-trusted)
+   - [Keyboard shortcuts](./Keyboard-shortcuts)
 
 ***
 
