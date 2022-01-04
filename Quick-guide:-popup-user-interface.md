@@ -80,7 +80,7 @@ And I had click-to-play enabled in all cases, so it could have been worse (excep
 
 ### The tools
 
-![row of tools buttons](https://user-images.githubusercontent.com/886325/102915866-cc5cc080-4482-11eb-947e-013d0fc417e1.png)
+![row of tools buttons](https://user-images.githubusercontent.com/886325/148119666-61ac0ab2-85b4-48dc-8578-2850a18932e5.png)
 
 #### Zap an element on the current page
 
