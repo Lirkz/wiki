@@ -13,7 +13,7 @@
 
 This is uBlock's popup UI when you click on uBlock's icon in the toolbar:
 
-![Popup UI](https://user-images.githubusercontent.com/886325/102915684-76881880-4482-11eb-84ab-fb0394118275.png)
+![Popup UI](https://user-images.githubusercontent.com/886325/148119326-2b33327e-4e5a-4a90-a3f9-4e772adeba69.png)
 
 Amount of visible information can be adjusted by clicking on "More" and "Less" buttons:
 
