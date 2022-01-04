@@ -94,7 +94,7 @@ Click the _eye-dropper_ icon to enter [element picker mode](./Element-picker), w
 
 New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225dac203d3213f3ef2f7).
 
-The "chat" icon opens the "Report a filter issue" form, which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
+The "chat" icon opens the ["Report a filter issue" form](./The-"Report-a-filter-issue"-form), which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
 
 Reporting filter issues require a [GitHub account](https://github.com/signup), since uBlock Origin does not have a home server through which reports could be sent.
 
