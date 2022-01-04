@@ -90,6 +90,18 @@ Click the _flash_ icon to enter [element zapper mode](./Element-zapper), which a
 
 Click the _eye-dropper_ icon to enter [element picker mode](./Element-picker), which allows you to create a filter by interactively picking an element on a page, thus permanently removing it from the page. The filters created through the element picker are added at the end of your own filter list in the _My filters_ pane in the dashboard.
 
+#### Report an issue on this website
+
+New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225dac203d3213f3ef2f7).
+
+The "chat" icon opens the "Report a filter issue" form, which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
+
+Reporting filter issues require a [GitHub account](https://github.com/signup), since uBlock Origin does not have a home server through which reports could be sent.
+
+The report icon is available only when uBO is enabled on a given site.
+
+On mobile devices, [the logger icon](#open-the-logger) is replaced by the "chat" icon since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from the Support pane in the dashboard.
+
 #### Open the logger
 
 Click the _list_ icon to open the [logger](./The-logger) in a separate tab. This allows you to inspect real-time network traffic within the browser.
