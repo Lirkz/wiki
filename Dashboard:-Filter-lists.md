@@ -35,7 +35,7 @@ This button is available for use if and only if there is at least one filter lis
 
 When a filter list has been updated using a newer version from its remote location, a clock icon will be present aside the filter list. You can force an update of a single filter list by clicking the clock icon of that filter list only, which will reset "last update" timestamp for this list, remove its content from storage, and cause the _"Update now"_ button to become available for use:
 
-![](https://cloud.githubusercontent.com/assets/585534/25020937/4a6a55b6-205e-11e7-94ac-9c51697f9f90.gif)
+![update by clock icon](https://user-images.githubusercontent.com/886325/148108034-73419703-10a1-4f72-af4b-5dd5231fface.gif)
 
 Note: "uBlock filters" entry is special - forcing update of this filter list, will also update additional resources when possible (library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection), allowed to be updated on Chromium browser and develpment buils).
 
