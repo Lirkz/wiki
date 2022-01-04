@@ -1,5 +1,8 @@
 - Back to [[Wiki home|Home]]
 - Back to [Dashboard](./Dashboard)
+   - [Cloud storage](./Cloud-storage)
+   - [Advanced user features](./Advanced-user-features)
+      - [Advanced-settings](./Advanced-settings)
 
 ***
 
