@@ -386,13 +386,13 @@ After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc13
 
 #### `ignoreRedirectFilters`
 
-Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by fileter exception.
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by filter exception.
 
 ***
 
 #### `ignoreScriptInjectFilters`
 
-Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by fileter exception.
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by filter exception.
 
 ***
 
