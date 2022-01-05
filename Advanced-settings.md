@@ -512,7 +512,7 @@ Related browser issues:
 - Firefox: <https://bugzilla.mozilla.org/show_bug.cgi?id=1378459>, fixed by <https://bugzilla.mozilla.org/show_bug.cgi?id=1447551>.
 
 History:
-- [1.40.4](https://github.com/gorhill/uBlock/commit/84bd5c1c0ce4cf6f6270231d826851d3d8a490da) released with temporary fix allowing to disable tab reloading by setting `suspendTabsUntilReady` to `no` and with `yes` case actually blocking connections.
+- [1.40.4](https://github.com/gorhill/uBlock/commit/84bd5c1c0ce4cf6f6270231d826851d3d8a490da) released for Chrome with temporary fix allowing to disable tab reloading by setting `suspendTabsUntilReady` to `no` and with `yes` case actually blocking connections.
 - Moved to Dashboard in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development builds.
 - Broken in Chromium between [1.27.0](https://github.com/gorhill/uBlock/commit/80b758e18dbd6e5ed06975c2d4f30649a62b17a9) and [1.40.3b0](https://github.com/gorhill/uBlock/commit/869c06d4eec4847d4bf82c0453690dd17829d680) - suspending cannot be enabled.
 - Do not block connections on startup, but reload active tabs when uBO is ready in Chromium as the default behavior in [1.39.3rc0](https://github.com/gorhill/uBlock/commit/a0a9497b4aca86727b314d8fc31ad345dad08ac8) (workaround for increasing number of reports about ads slipping through).
