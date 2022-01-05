@@ -436,6 +436,12 @@ Instructs uBO filtering engine to perform a case-sensitive match.
 
 ***
 
+#### `ping`
+
+Blocks requests send by the [`ping`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-ping) attribute on links and [Navigator.sendBeacon()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
+
+***
+
 #### `popunder`
 
 To block "popunders" windows/tabs, where original page is redirected to advertisement and desired content is loaded in newly created one. To be used in the same manner as the `popup` filter option, except that it will block popunders.
@@ -497,12 +503,6 @@ For example:
 #### `xhr`
 
 Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options). For convenience.
-
-***
-
-#### `ping`
-
-Blocks requests send by the [`ping`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-ping) attribute on links and [Navigator.sendBeacon()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
 
 ***
 
