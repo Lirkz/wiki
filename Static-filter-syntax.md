@@ -500,6 +500,12 @@ Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options)
 
 ***
 
+#### `ping`
+
+Blocks requests send by the [`ping`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-ping) attribute on links and [Navigator.sendBeacon()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
+
+***
+
 ## Modifier filters
 
 
