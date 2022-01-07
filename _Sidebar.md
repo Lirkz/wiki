@@ -45,7 +45,7 @@
     - [Doesn't uBlock Origin add overhead to page load?](./Doesn't-uBlock-Origin-add-overhead-to-page-load%3F)
 - [Tools, tests](./Tools)
 - [Deploying uBlock Origin](./Deploying-uBlock-Origin)
-- [Troubleshooting](./Troubleshooting)
+- Troubleshooting:
     - [Privileged Pages](./Privileged-Pages)
     - [Software known to have uninstalled uBlock Origin](./Software-known-to-have-uninstalled-uBlock-Origin)
     - [The removed element reappears when you reload the page](./Element-picker#the-removed-element-reappears-when-you-reload-the-page)
