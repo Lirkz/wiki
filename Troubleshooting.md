@@ -1,10 +1,10 @@
 I am going to collect here common usage issues users may face.
 
-The best way to troubleshoot uBlock is with uBlock: the [logger](./The-logger) will tell you what uBlock is doing when you try to load a web page. Using the logger is the first thing you should try when you are trying to find out why a page does not load/display as expected.
+The best way to troubleshoot uBlock Origin is with uBlock Origin: the [logger](./The-logger) will tell you what uBO is doing when you try to load a web page. Using the logger is the first thing you should try when you are trying to find out why a page does not load/display as expected.
 
 ***
 
-#### Firefox: uBlock's popup UI is not displaying
+#### Firefox: uBlock Origin's popup UI is not displaying
 
 You can fix this by following the following steps:
 1.  In the navigation bar (Awesome Bar) enter `about:config`
@@ -15,7 +15,7 @@ You can fix this by following the following steps:
 
 ***
 
-#### Firefox: Missing icons in uBlock's popup UI
+#### Firefox: Missing icons in uBlock Origin's popup UI
 
 You can fix this by following the following steps:
 1.  If you use a Linux system go to Edit - Settings - Content and choose a default font other than "serif". "Liberation" and "Clear" are known to work.
@@ -32,11 +32,11 @@ Because you enabled _"Fanboy’s Social Blocking List"_, or one of the filter li
 
 ***
 
-#### My antivirus flags uBlock
+#### My antivirus flags uBlock Origin
 
 False positive.
 
-uBlock ships with malware filter lists, and this causes [false positives](https://github.com/gorhill/uBlock/issues/199) in some antiviruses.
+uBO ships with malware filter lists, and this causes [false positives](https://github.com/gorhill/uBlock/issues/199) in some antiviruses.
 
 ***
 
@@ -67,7 +67,7 @@ Specifically, it has been confirmed [Avira Anti-virus has been uninstalling uBlo
 
 ***
 
-#### Unable to open links in new tab
+#### Unable_**__**_ to open links in new tab
 
 - Are you using the [no-popups switch](./Quick-guide:-popup-user-interface#no-popups)?
 - Are you using a Chromium-based browser?
