@@ -8,8 +8,8 @@
     - [Chrome web store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
     - [Opera addons ↪](https://addons.opera.com/en-gb/extensions/details/ublock/),
     - [Edge Add-ons ↪](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
-    - [Tagged release package](https://github.com/gorhill/uBlock/tree/master/dist#install),
-    - [Source, by building by yourself](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
+    - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install),
+    - [Source (for developers)](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
 - [The popup user interface](./Quick-guide:-popup-user-interface)
     - [The per-site switches](./Per-site-switches)
 - [The context menu](./The-context-menu)
