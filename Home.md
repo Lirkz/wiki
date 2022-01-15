@@ -3,7 +3,13 @@
 - [Permissions](./Permissions)
     - [Can you trust uBlock Origin?](./Can-you-trust-uBlock-Origin%3F)
 - [Privacy policy](./Privacy-policy)
-- Install from [Mozilla Add-ons for Firefox ↪](https://addons.mozilla.org/firefox/addon/ublock-origin/), [Chrome store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Opera store ↪](https://addons.opera.com/en-gb/extensions/details/ublock/), or [manually](https://github.com/gorhill/uBlock/tree/master/dist#install).
+- Install from:
+    - [Mozilla Add-ons for Firefox ↪](https://addons.mozilla.org/firefox/addon/ublock-origin/),
+    - [Chrome web store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
+    - [Opera addons ↪](https://addons.opera.com/en-gb/extensions/details/ublock/),
+    - [Edge Add-ons ↪](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
+    - [Tagged release package](https://github.com/gorhill/uBlock/tree/master/dist#install),
+    - [Source, by building by yourself](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
 - [The popup user interface](./Quick-guide:-popup-user-interface)
     - [The per-site switches](./Per-site-switches)
 - [The context menu](./The-context-menu)
