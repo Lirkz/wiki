@@ -90,7 +90,8 @@ Click the _flash_ icon to enter [element zapper mode](./Element-zapper), which a
 
 Click the _eye-dropper_ icon to enter [element picker mode](./Element-picker), which allows you to create a filter by interactively picking an element on a page, thus permanently removing it from the page. The filters created through the element picker are added at the end of your own filter list in the _My filters_ pane in the dashboard.
 
-#### Report an issue on this website
+#### Report an issue with current website
+<span name="report-an-issue-on-this-website"></span>
 
 New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225dac203d3213f3ef2f7).
 
