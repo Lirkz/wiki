@@ -418,6 +418,8 @@ Example: `||google-analytics.com^$important,third-party` will block all network 
 
 To specifically disable inline script tags in a main page via CSP: `||example.com^$inline-script`.
 
+See also: [`csp`](#csp)
+
 ***
 
 #### `inline-font`
