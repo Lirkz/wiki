@@ -1,1 +1,1 @@
-Moved to: [Does uBlock Origin block ads or just hide them?](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F)
+Moved to: [Memory footprint: what happens inside uBlock after installation](./Memory-footprint:-what-happens-inside-uBlock-after-installation)
