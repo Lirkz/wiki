@@ -64,7 +64,7 @@ Filter lists are automatically updated according to:
 
 ### Parse and enforce cosmetic filters
 
-Un-check this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-block-ads-or-just-hide-them%3F) on a web page which can't be blocked otherwise. An example of this are the ads served with some Google Search results.
+Un-check this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page which can't be blocked otherwise. An example of this are the ads served with some Google Search results.
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
