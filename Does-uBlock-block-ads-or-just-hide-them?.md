@@ -1,0 +1,1 @@
+Moved to: [Does uBlock Origin block ads or just hide them?](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F)
