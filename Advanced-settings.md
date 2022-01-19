@@ -493,7 +493,7 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 #### `suspendTabsUntilReady`
 <span name="suspendtabsuntilready-experimental"></span>
 
-Removed in favor of [_"Suspend network activity until all filter lists are loaded"_](./Dashboard%3A-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded) checkbox in Dashboard -> Filter lists in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
+Removed in favor of [_"Suspend network activity until all filter lists are loaded"_](./Dashboard%3A-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded) checkbox in Dashboard -> Filter lists in development version [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1). Will reach stable in 1.41.
 
 Default: `unset`.
 
