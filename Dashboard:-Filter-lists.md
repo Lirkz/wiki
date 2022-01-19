@@ -80,7 +80,7 @@ This option can be enabled on a very low-end devices, but mind that some filter 
 
 ### Suspend network activity until all filter lists are loaded
 
-New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
+New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development version. Will be available in stable next release cycle.
 
 The new setting, when disabled (enabled by default), allows a user to prevent uBlock Origin from waiting for all filter lists to be loaded before allowing network activity at browser launch. The setting is enabled by default, meaning uBO waits for all filter lists to be loaded in
 memory before unsuspending network activity. Some users may find this behavior undesirable, hence the new setting.
