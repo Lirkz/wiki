@@ -16,8 +16,8 @@
 - [Dashboard](./Dashboard)
     - [_Settings_](./Dashboard:-Settings) pane
         - [Cloud storage](./Cloud-storage)
-        - [Advanced-user-features](./Advanced-user-features)
-            - [Advanced-settings](./Advanced-settings)
+        - [Advanced user features](./Advanced-user-features)
+            - [Advanced settings](./Advanced-settings)
     - [_Filter lists_](./Dashboard:-Filter-lists) pane
         - [Filter lists from around the web](./Filter-lists-from-around-the-web)
     - [_My filters_](./Dashboard:-My-filters) pane
