@@ -1,4 +1,4 @@
-uBlock Origin ("uBO") supports most of EasyList filter syntax, so you can refer to existing filter syntax documentation from [Adblock Plus](https://adblockplus.org/en/filters) and [AdGuard](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters). For quick overview you can also check [Introduction to basic filtering syntax](./Introduction-to-basic-filtering-syntax) in this wiki.
+uBlock Origin ("uBO") supports most of EasyList filter syntax, so you can refer to existing filter syntax documentation from [Adblock Plus](https://adblockplus.org/en/filters) and [AdGuard](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters).
 
 However uBO does not support some very specific cases, while it also further extends EasyList filter syntax, which extended syntax may also be shared with AdGuard's own extended syntax. Few most surprising cases are documented [here](./Syntax-quirks).
 
