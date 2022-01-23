@@ -493,17 +493,19 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 #### `suspendTabsUntilReady`
 <span name="suspendtabsuntilready-experimental"></span>
 
-Removed in favor of [_"Suspend network activity until all filter lists are loaded"_](./Dashboard%3A-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded) checkbox in Dashboard -> Filter lists in development version [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1). Will reach stable in 1.41.
+Removed in favor of [_"Suspend network activity until all filter lists are loaded"_](./Dashboard%3A-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded) checkbox in Dashboard -> Filter lists in development version [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1). Will reach stable in next release cycle.
 
 Default: `unset`.
 
 Possible values:
 
-- `unset` - leave it to the platform to pick the optimal behavior
+- `unset` - leave it to the platform to pick the optimal behavior (suspend network requests in Firefox, reload active tabs in Chrome)
 - `no` - do not suspend tab loading at launch time
 - `yes` - suspend tab loading at launch time
 
-If enabled, uBO will hard block all network requests when the browser launches until _all_ the filter lists and rules are loaded and ready, at which time uBO will force a reload of the tabs for which there were network requests blocked during the setup phase.
+If enabled, uBO will attempt to suspend (Firefox) or block (Chromium) all network requests when the browser launches until _all_ the filter lists and rules are loaded and ready.
+
+If disabled, or in environments not supporting suspendable network request listeners (Chromium), active tabs for which there were network requests blocked during the setup phase, will be then reloaded.
 
 Disclaimer: In Chromium based browsers, even with this setting enabled, it's impossible for uBO to guarantee with 100% certainty that everything will be properly blocked when the browser is launched. **This is a by-design browser issue** -- do _not_ open an issue on uBO issue tracker about this.
 
