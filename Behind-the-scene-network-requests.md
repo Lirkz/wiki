@@ -1,20 +1,16 @@
-[Back to _Dynamic filtering: default-deny_](./Dynamic-filtering:-default-deny)
-
 **Important notes:**
 
-This wiki page is out of date and in need of revision. When this documentation was created, the behind-the-scene network requests uBlock Origin was able to see and filter, originated from many places, such as those from other extensions or from various browser operations (ex.: real-time search suggestions).
+When this documentation was created, the behind-the-scene network requests uBlock Origin was able to see and filter, originated from many places, such as those from other extensions or from various browser operations (ex.: real-time search suggestions).
 
-Since then things have changed: uBO no longer can see network requests from other extensions, and behind-the-scene network requests are now quite less frequent. Furthermore, the webRequest API now provides more context to event listeners, such that it is often possible to still filter properly even when it's not possible to know from which exact tab a network request originates.
+Since then things have changed: uBO no longer can see network requests from other extensions, and behind-the-scene network requests are now quite less frequent. Furthermore, the webRequest API now provides more context to event listeners, such that it is often possible to still filter properly even when it's not possible to know from which exact tab a network request originates. Such requests, not assigned to specific tab, but with known context, are categorized now as "Tabless".
 
 Because of this (and other reasons which will eventually come to light - the ["Who Left Open The Cookie Jar?"](https://github.com/ghacksuserjs/ghacks-user.js/issues/489) vulnerability), starting with uBO 1.15.20, the `behind-the-scene` scope will no longer be on the _Trusted sites_ list by default, meaning network requests from the behind-the-scene scope will be subject to filtering by default.
 
 ***
 
-The filtering of behind-the-scene network request is available to [advanced users](./Behind-the-scene-network-requests).
-
 ### What are behind-the-scene network requests
 
-_Behind-the-scene_ network requests are network requests which uBlock cannot associate with a specific tab in your browser: these requests come from _somewhere_, but uBlock is missing information to report exactly from where.
+_Behind-the-scene_ network requests are network requests which uBlock Origin cannot associate with a specific tab in your browser: these requests come from _somewhere_, but uBO is missing information to report exactly from where.
 
 All network requests without a specific origin are classified as _behind-the-scene_. Typically, all blockers will ignore and automatically allow behind-the-scene network requests.
 
