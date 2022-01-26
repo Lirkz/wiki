@@ -10,6 +10,8 @@ Because of this (and other reasons which will eventually come to light - the ["W
 
 ### What are behind-the-scene network requests
 
+Warning: following text is out of date and in need of revision.
+
 _Behind-the-scene_ network requests are network requests which uBlock Origin cannot associate with a specific tab in your browser: these requests come from _somewhere_, but uBO is missing information to report exactly from where.
 
 All network requests without a specific origin are classified as _behind-the-scene_. Typically, all blockers will ignore and automatically allow behind-the-scene network requests.
