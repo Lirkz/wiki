@@ -53,7 +53,7 @@ Below are the average time it takes for each extension to handle a net request i
 
 ##### Methodology
 
-Note that the results above are the tail end of running the [reference benchmark](./Reference-benchmark), except `wait` set to 15, and `repeat` set to 1. Both ABP and uBO set to use _EasyList_, _EasyPrivacy_, _"Peter Lowe’s Ad server list"_, _"Malware domains"_. ABP-specific: _"Acceptable ads"_ disabled. µBlock-specific: default settings.
+Note that the results above are the tail end of running the [reference benchmark](./Reference-benchmark), except `wait` set to 15, and `repeat` set to 1. Both ABP and uBO set to use _EasyList_, _EasyPrivacy_, _"Peter Lowe’s Ad server list"_, _"Malware domains"_. ABP-specific: _"Acceptable ads"_ disabled. uBO-specific: default settings.
 
 The results depend heavily on the processor: I benchmarked on an i5-3xxxK CPU @ 3.4 GHz x 4.
 
@@ -73,7 +73,7 @@ Extensions have their own memory footprint, but they also cause increased memory
 Now keep in mind this is the added footprint for a very simple web page which has no embedded frames. You can multiply the added footprint on the main page by the number of frames embedded on a page, so page with frames can end up consuming a _lot_ more memory than they would have otherwise. For instance, a very simple web page with a couple of `iframe` in it, [The Acid3 Test](http://acid3.acidtests.org/):
 
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/acid3test-mem.png)<br>
-<sup>Added memory footprint: Left = no extension. Middle = Adblock Plus. Right = µBlock.</sup>
+<sup>Added memory footprint: Left = no extension. Middle = Adblock Plus. Right = uBlock Origin.</sup>
 
 A good stress test which further demonstrate this is the [infamous vim test](https://github.com/gorhill/httpswitchboard/wiki/Adblock-Plus-memory-consumption).
 
@@ -85,7 +85,7 @@ Above picture gives an overview of how much more memory Adblock Plus consumes ov
 
 The vertical axis represents MB. The horizontal axis is time in seconds, and the data was tediously extracted from [this video](https://www.youtube.com/watch?v=DKM78oV_ftg) (consider the video to be the raw data -- [here is the spreadsheet](https://github.com/gorhill/uBlock/blob/master/doc/benchmarks/ublock-vs-abp-timeline.ods) so people can double check in doubt).
 
-The blue area represents how much more ABP itself consumes more memory than µBlock. The orange area represents how much more ABP causes the web pages themselves to consume more memory. ABP systematically causes web pages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short term memory overhead is not cheap, as it also means the CPU is working harder.
+The blue area represents how much more ABP itself consumes more memory than uBO. The orange area represents how much more ABP causes the web pages themselves to consume more memory. ABP systematically causes web pages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short term memory overhead is not cheap, as it also means the CPU is working harder.
 
 ### Added CPU overhead to web pages
 
