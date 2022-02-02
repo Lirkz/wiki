@@ -14,14 +14,14 @@ The picture below shows uBlock Origin's default selection of filter lists. You c
 
 If you remove filter lists, it is still strongly advised to at least keep _uBlock filters_ selected: these filters are optimized for uBlock Origin.
 
-The more filter lists one add, the higher the likelihood some web pages may not render properly, due to higher probability of false positives. When this occurs, you should report the issue to the maintainers of the filter list causing the issue, or create your own exception filters to fix the issue.
+The more filter lists you add, the higher the likelihood some web pages may not render properly, due to the higher probability of false positives. When this occurs, you should report the issue to the maintainers of the filter list causing the issue, or create your own exception filters to fix the issue.
 
 ![Filter lists pane](https://user-images.githubusercontent.com/886325/148105230-2a8abe39-c320-4c24-8c32-d17da8d2f029.png) |
 --- |
 
 uBlock Origin discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
 
-When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBO will mark the list as out-of-date. Lists which are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
+When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBO will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
 
 Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-lists-load-performance).
 
@@ -31,13 +31,13 @@ Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-list
 
 ![_"Update now"_ button](https://user-images.githubusercontent.com/585534/143616552-94dd8b15-d33c-4d45-97bd-2f73f95972ba.png)
 
-This button is available for use if and only if there is at least one filter list which is deemed outdated. If this condition is fulfilled, you can force an update of all filter lists which are deemed out of date.
+This button is available for use if and only if there is at least one filter list that is deemed outdated. If this condition is fulfilled, you can force an update of all filter lists which are deemed out of date.
 
-When a filter list has been updated using a newer version from its remote location, a clock icon will be present aside the filter list. You can force an update of a single filter list by clicking the clock icon of that filter list only, which will reset "last update" timestamp for this list, remove its content from storage, and cause the _"Update now"_ button to become available for use:
+When a filter list has been updated using a newer version from its remote location, a clock icon will be present aside the filter list. You can force an update of a single filter list by clicking the clock icon of that filter list only, which will reset the "last update" timestamp for this list, remove its content from storage, and cause the _"Update now"_ button to become available for use:
 
 ![update by clock icon](https://user-images.githubusercontent.com/886325/148108034-73419703-10a1-4f72-af4b-5dd5231fface.gif)
 
-Note: "uBlock filters" entry is special - forcing update of this filter list, will also update additional resources when possible (library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection), allowed to be updated on Chromium browser and develpment buils).
+Note: When forcing an update of the "uBlock filters" entry itself, this will also update additional resources when possible. (Library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection) allowed to be updated on Chromium-based browsers and development builds).
 
 ***
 
@@ -45,7 +45,7 @@ Note: "uBlock filters" entry is special - forcing update of this filter list, wi
 
 ![_"Purge all caches"_ button](https://user-images.githubusercontent.com/585534/143480823-7b54e49d-fea7-4416-963d-c679243c770d.png)
 
-This will reset "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
+This will reset the "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
 
 Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
 
@@ -53,18 +53,18 @@ Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github
 
 ### Auto-update filter lists
 
-If you check this option, uBlock Origin will update automatically the currently selected filter lists at regular interval. This option is checked by default (recommended).
+If you check this option, uBlock Origin will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
 
 Filter lists are automatically updated according to:
-- the [_Expires_ directive](https://adblockplus.org/filters#special-comments) if present in filter list header
-- or `updateAfter` attribute if found in list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
+- the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header
+- or the `updateAfter` attribute if found in the list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
 - or every 5 days by default.
 
 ***
 
 ### Parse and enforce cosmetic filters
 
-Un-check this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page which can't be blocked otherwise. An example of this are the ads served with some Google Search results.
+Un-check this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page that can't be blocked otherwise. An example of this is the ads served with some Google Search results.
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
@@ -72,9 +72,9 @@ Note that if you disable this option, your own custom cosmetic filters in `My Fi
 
 ### Ignore generic cosmetic filters 
 
-Generic cosmetic filters are those cosmetic filters which are meant to apply on all web sites. Though handled efficiently by uBlock Origin, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
+Generic cosmetic filters are those cosmetic filters that are meant to apply on all web sites. Though handled efficiently by uBlock Origin, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
 Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBO itself.
-This option can be enabled on a very low-end devices, but mind that some filter lists (EasyList Cookie for ex.) rely on generic cosmetic filters a lot, so they may pretty much stop working.
+This option can be enabled on very low-end devices, but mind that some filter lists (EasyList Cookie for ex.) rely on generic cosmetic filters a lot, so they may pretty much stop working.
 
 ***
 
@@ -87,7 +87,7 @@ memory before unsuspending network activity. Some users may find this behavior u
 
 This gives the option to potentially speed up page load at launch, at the cost of potentially not properly filtering network requests as per filter lists/rules.
 
-For platforms not supporting the suspension of network activity, the setting will merely use whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in "suspended" state at launch.
+For platforms not supporting the suspension of network activity, the setting will merely use whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in a "suspended" state at launch.
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
@@ -99,14 +99,14 @@ This is a collection of various filter lists, grouped by purpose. To use a speci
 
 #### Important
 
-The more filter lists are selected, the higher the likelihood of web site breakage. The quality of the selected filter lists also affects the likelihood of web site breakage. The _EasyList_-related filter lists are high quality filter lists, as they are actively maintained.
+The more filter lists are selected, the higher the likelihood of web site breakage. The quality of the selected filter lists also affects the likelihood of web site breakage. The _EasyList_-related filter lists are high-quality filter lists, as they are actively maintained.
 
 ***
 
 ### Custom filter lists
 
-You can import custom 3rd-party filter lists: place check mark next to "Import..." in the "Custom" section and paste the URL of where a filter lists can be fetched from in the text area that appears. These custom filter lists will be also automatically updated on a regular basis.
+You can import custom 3rd-party filter lists: place a checkmark next to "Import..." in the "Custom" section and paste the URL of where a filter list can be fetched from in the text area that appears. These custom filter lists will be also automatically updated on a regular basis.
 
 On some specific web pages, it is possible to subscribe to a 3rd-party filter list by simply clicking on a link to the filter list. There is such a page for uBlock Origin: [Filter lists from around the web](./Filter-lists-from-around-the-web).
 
-To remove custom lists mark them by clicking trash can icon at the end of list name, then click on "Apply changes".
+To remove custom lists, mark them by clicking the trash can icon at the end of the list name, then click on "Apply changes".
