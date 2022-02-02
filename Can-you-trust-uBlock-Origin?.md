@@ -1,4 +1,4 @@
-After I added the `privacy` permission in order to make uBlock Origin  reliable when it comes to blocking network requests, a lot of people questioned uBlock Origin's trustworthiness.
+After I added the `privacy` permission in order to make uBlock Origin reliable when it comes to blocking network requests, a lot of people questioned uBlock Origin's trustworthiness.
 
 First, uBlock Origin is completely developed in full public view. All the sources and all the changes to the sources are fully accessible on GitHub.
 
@@ -6,7 +6,7 @@ Second, uBlock Origin does not have a dedicated server, it can't "phone home" wi
 
 Third, I have no intent to _ever_ monetize uBlock Origin. It started as a personal project, and it still is a personal project. So uBlock Origin has absolutely no interest in data mining you.
 
-I think it's time I give examples of how requiring _less_ permissions is **not** a sure sign a higher trustworthiness.
+I think it's time I give examples of how requiring _fewer_ permissions is **not** a sure sign of higher trustworthiness.
 
 #### Web Protector - Reliable Phishing Protection
 
@@ -30,4 +30,4 @@ This is just to demonstrate that the permissions _alone_ do not tell the whole s
 - What network requests are made by an extension behind the scene?
     - uBlock Origin's logger allows you to see all [behind-the-scene network requests](https://github.com/uBlockOrigin/uBlock-issues/wiki/Behind-the-scene-network-requests), including its own (mainly to GitHub, for updating filter lists).
 - How is an extension monetizing itself?
-    - Learning about this factor will help you best understand whether the extension's developer's interests are aligned or at odd with yours.
+    - Learning about this factor will help you best understand whether the extension's developer's interests are aligned or at odds with yours.
