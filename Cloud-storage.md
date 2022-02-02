@@ -24,7 +24,7 @@ Once you enable cloud storage support, a new UI widget will be available in the 
 > Even if cloud storage support is enabled, it will work **if and only if** you actually enable sync support in your browser -- as uBlock itself does not connect to any remote server, your browser does this through its own sync feature, if you enabled such feature.
 > ***
 
-A narrow, purple-grey strip on the bottom of the cloud storage widget allows estimating available space on cloud storage servers. The violet part represents space occupied by settings on the current page. Dark grey represents all storage used by uBO settings. ([1.29.3b7](https://github.com/gorhill/uBlock/commit/2afcc13ca6c09175b33ff74494eba7113ceb3df1))
+A narrow, purple-grey strip on the bottom of the cloud storage widget allows estimating available space on cloud storage servers. The violet part represents the space occupied by settings on the current page. Dark grey represents all storage used by uBO settings. ([1.29.3b7](https://github.com/gorhill/uBlock/commit/2afcc13ca6c09175b33ff74494eba7113ceb3df1))
 
 Your uBlock Origin settings are precious, and in order to prevent any automated browser's syncing task to cause precious local data (or cloud data) to be mistakenly overwritten, the chosen solution in uBlock Origin is to _never_ ever export to/import from cloud storage without **the user expressly asking uBlock Origin to do so**.
 
