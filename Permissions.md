@@ -16,9 +16,9 @@ uBlock's required permissions are the same as those of [Privacy Badger](https://
         "https://*/*"
     ],
 
-[`"privacy"`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) is the only permission added in [version 0.9.8.2](https://github.com/gorhill/uBlock/releases/tag/0.9.8.2). All the others were there since when uBlock was first published (except for `"contextMenus"` which was added at some point, to support blocking element from within the context menu).
+[`"privacy"`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) is the only permission added in [version 0.9.8.2](https://github.com/gorhill/uBlock/releases/tag/0.9.8.2). All the others were there since when uBlock was first published (except for `"contextMenus"` which was added at some point, to support blocking elements from within the context menu).
 
-The `privacy` permission is needed for uBlock to be able to disable the setting "Prefetch resources to load pages more quickly". This will ensure no connection is opened at all for blocked requests: It's for your own protection privacy-wise.
+The `privacy` permission is needed for uBlock to be able to disable the setting "Prefetch resources to load pages more quickly". This will ensure no connection is opened at all for blocked requests: It's for your protection privacy-wise.
 
 This is Privacy Badger required permissions:
 
@@ -40,7 +40,7 @@ This is Privacy Badger required permissions:
 
 Since [first version](https://github.com/gorhill/uBlock/blob/b5fdac90539b19a0db8f36ea537bd150edb4d9c8/manifest.json).
 
-- To be able to inspect all net requests so that they can be cancelled if needed.
+- To be able to inspect all net requests so that they can be canceled if needed.
     - Only on http- and https-based URL addresses.
 
 See code:
@@ -78,11 +78,11 @@ Since [version 1.25.0](https://github.com/gorhill/uBlock/releases/tag/1.25.0) (F
 
 This warning is triggered by the `dns` permission, which allows using the [`browser.dns` API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns). The purpose is for uBO to gain the [ability to reveal the canonical name of aliased hostnames](https://github.com/uBlockOrigin/uBlock-issues/issues/780).
 
-Note that even without this permission, uBO has the ability to see IP address and hostname information, through the [`browser.webRequest API`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) which uBO already requires.
+Note that even without this permission, uBO can see the IP address and hostname information, through the [`browser.webRequest API`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) which uBO already requires.
 
 **Important:** the statement "IP address" refers to the IP address of the servers to which your browser connects, **NOT** your specific IP address. uBO has **no access to** (and no need to know) **your specific IP address**. 
 
-<sub>There is an [Firefox issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1617861) regarding the confusing wording of the permission. Firefox 74 Beta 9 no longer asks for this permission.</sub>
+<sub>There is a [Firefox issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1617861) regarding the confusing wording of the permission. Firefox 74 Beta 9 no longer asks for this permission.</sub>
 
 ---
 
@@ -92,7 +92,7 @@ Related permission: [`unlimitedStorage`](https://developer.mozilla.org/en-US/doc
 
 Since [first version](https://github.com/gorhill/uBlock/blob/b5fdac90539b19a0db8f36ea537bd150edb4d9c8/manifest.json).
 
-This permission is necessary to allow uBO to use more than 5 MB of storage. uBO uses client-side storage to save the assets downloaded from remote servers (filter lists and other assets), the compiled version of those assets and the selfie representation of various assets (for efficient launch time). The storage used by uBO is shown at the bottom of the _Settings_ pane in the dashboard. Without this permission uBO would not be able to use more than 5 MB, which is not enough for uBO to function properly.
+This permission is necessary to allow uBO to use more than 5 MB of storage. uBO uses client-side storage to save the assets downloaded from remote servers (filter lists and other assets), the compiled version of those assets and the selfie representation of various assets (for efficient launch time). The storage used by uBO is shown at the bottom of the _Settings_ pane in the dashboard. Without this permission, uBO would not be able to use more than 5 MB, which is not enough for uBO to function properly.
 
 ---
 
@@ -104,13 +104,13 @@ This is necessary to be able to:
 
 - Disable _"Prefetch resources to load pages more quickly"_
     - This will ensure no TCP connection is opened **at all** for blocked requests: **It's for your own protection privacy-wise.**<sup>[1]</sup>
-    - For pages with lots of blocked requests, this will actually remove overhead from page load (if you did not have the setting already disabled).
+    - For pages with lots of blocked requests, this will remove overhead from page load (if you did not have the setting already disabled).
     - When uBlock blocks a network request, the expectation is that it blocks **completely** the connection, hence the new permission is necessary for uBlock to do **truthfully** what it says it does.
 - Disable [hyperlink auditing/beacon](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) (0.9.8.5)
 
-uBlock's primary purpose is to block **network connections**, not just data transfer. Not blocking the connection while just blocking the data transfer would mean uBlock is lying to users. So this permission will stay, and sorry for those who do not understand that it actually allows uBlock to do its intended job more thoroughly<sup>[2]</sup>. A blocker that does not thoroughly prevent connections is not a real blocker.
+uBlock's primary purpose is to block **network connections**, not just data transfer. Not blocking the connection while just blocking the data transfer would mean uBlock is lying to users. So this permission will stay, and sorry for those who do not understand that it allows uBlock to do its intended job more thoroughly<sup>[2]</sup>. A blocker that does not thoroughly prevent connections is not a real blocker.
 
-**Privacy Badger also requires exactly the same permissions.** I want uBlock to also serve privacy-minded users first.
+**Privacy Badger also requires the same permissions.** I want uBlock to also serve privacy-minded users first.
 
 If _prefetching_ had been disabled by default, this new permission would not be needed, but _prefetching_ is unfortunately enabled by default, and under _Privacy_ heading, which is itself hidden by default under _"advanced settings"_, and even at this point, you would still have to dig to find out the [negative side effects of prefetching](https://wikipedia.org/wiki/Link_prefetching#Issues_and_criticisms) (related: [dark patterns](https://www.darkpatterns.org/)).
 
@@ -120,7 +120,7 @@ Also, the benefits of _prefetching_ are probably marginal, and in the context of
 
 **Edit:** actually, prefetching is worst than I first thought, I had tested that it was just a connection issue, but [as per Google](https://support.google.com/chrome/answer/1385029):
 
-> If you turn this setting on in Chrome, websites (and any of their embedded resources) that are prerendered or prefetched may set and read their own cookies as if you had visited them before -- even if you don’t visit the prerendered or prefetched pages after all.
+> If you turn this setting on in Chrome, websites (and any of their embedded resources) that are prerendered or prefetched may set and read their cookies as if you had visited them before -- even if you don’t visit the prerendered or prefetched pages after all.
 
 See code:
 
