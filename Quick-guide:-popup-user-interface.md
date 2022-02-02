@@ -15,7 +15,7 @@ This is uBlock's popup UI when you click on uBlock's icon in the toolbar:
 
 ![Popup UI](https://user-images.githubusercontent.com/886325/148119326-2b33327e-4e5a-4a90-a3f9-4e772adeba69.png)
 
-The amount of visible information can be adjusted by clicking on "More" and "Less" buttons:
+The amount of visible information can be adjusted by clicking on the "More" and "Less" buttons:
 
 ![Toggling popup panels](https://user-images.githubusercontent.com/886325/85211186-fd7afd80-b346-11ea-99b6-ca304b867c09.gif)
 
@@ -97,7 +97,7 @@ New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225d
 
 The "chat" icon opens the ["Report a filter issue" form](./The-"Report-a-filter-issue"-form), which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
 
-Reporting filter issues require a [GitHub account](https://github.com/signup), since uBlock Origin does not have a home server through which reports could be sent.
+Reporting filter issues requires a [GitHub account](https://github.com/signup) since uBlock Origin does not have a home server through which reports could be sent.
 
 The report icon is available only when uBO is enabled on a given site.
 
@@ -117,11 +117,11 @@ Click the _gears_ icon to open the uBlock Origin [Dashboard](./Dashboard).
 
 ### The overview panel
 
-Clicking on "More" button will expand uBO popup panel to the point where it will show you a list with details about requests blocked and domains connected on the page:
+Clicking on the "More" button will expand uBO popup panel to the point where it will show you a list with details about requests blocked and domains connected on the page:
 
 ![Overview panel expanded](https://user-images.githubusercontent.com/886325/85211429-6794a200-b349-11ea-94cb-998ee36e6d59.gif)<br>Clicking empty space before a particular domain name or the `all` cell in the first row, will toggle on/off subdomain-level details.
 
-The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on "Less" button to adjust it to show only the information you desire.
+The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on the "Less" button to adjust it to show only the information you desire.
 
 <span name="the-pluses-and-minuses">The pluses and minuses</span> denote network requests which were either allowed (not blocked) or blocked, respectively for the specific domain/hostname aside from which they appear. The number of pluses and minuses are proportional to the number of requests allowed or blocked:
 - `+`, `-`: under 10 network requests were allowed, blocked.
