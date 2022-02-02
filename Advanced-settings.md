@@ -2,7 +2,7 @@
 
 ***
 
-The _"Advanced settings"_ page contains settings which are experimental, or which are of interest to advanced users who want more control over how uBO behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
+The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBO behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
 
 These advanced settings can be easily accessed only when the setting [_"I am an advanced user"_](./Advanced-user-features) in the _Settings_ pane in the dashboard is checked, but will persist and work even when the setting [_"I am an advanced user"_](./Advanced-user-features) is not checked:
 
@@ -14,7 +14,7 @@ If you want to reset a specific setting to its default value, just delete the va
 
 If you want to reset all settings to their default values, delete everything then press _"Apply changes"_.
 
-**Important:** Some advanced settings are purposefully left undocumented, they are for internal use during development, or their long term availability has not yet been decided. Do not open an issue about these purposefully undocumented settings -- the issue will be closed without further comment.
+**Important:** Some advanced settings are purposefully left undocumented, they are for internal use during development, or their long-term availability has not yet been decided. Do not open an issue about these purposefully undocumented settings -- the issue will be closed without further comment.
 
 ***
 
@@ -26,7 +26,7 @@ uBO [1.20.0](https://github.com/gorhill/uBlock/commit/1caff7429eceabc712b98b25b5
 
 If set to `true`, generic [procedural cosmetic filters](./Procedural-cosmetic-filters) will no longer be discarded as invalid.
 
-Whenever this setting is toggled, the user is responsible of forcing a reload of all filter lists so as to allow uBO to process differently any existing generic procedural cosmetic filters.
+Whenever this setting is toggled, the user is responsible for forcing a reload of all filter lists so as to allow uBO to process differently any existing generic procedural cosmetic filters.
 
 ***
 
@@ -44,15 +44,15 @@ Default: `{{date}} {{origin}}`.
 
 uBO 1.17.7b2 and above.
 
-Template used to create comments in My filters, when new filter is created by Element Picker or from The Logger.
+Template used to create comments in My filters when a new filter is created by Element Picker or from The Logger.
 
 Placeholders are identified by `{{...}}`. Currently supported placeholders:
 
-- `{{date}}`: will be replaced with current date
-- `{{time}}`: will be replaced with current time
+- `{{date}}`: will be replaced with the current date
+- `{{time}}`: will be replaced with the current time
 - `{{hostname}}`: will be replaced with the hostname of the URL address for which the filter(s) was created
-- `{{origin}}`: will be replaced by origin part of the address for which the filter(s) was created
-- `{{url}}`: new in [1.30.3b6](https://github.com/gorhill/uBlock/commit/46ec9694115d79ef3b380f366a8332ead267ef49), will be replaced by full URL of the page for which a filter is created in Element Picker. For filters added from The Logger, replaced by origin part of the URL.
+- `{{origin}}`: will be replaced by the origin part of the address for which the filter(s) was created
+- `{{url}}`: new in [1.30.3b6](https://github.com/gorhill/uBlock/commit/46ec9694115d79ef3b380f366a8332ead267ef49), will be replaced by the full URL of the page for which a filter is created in Element Picker. For filters added from The Logger, replaced by the origin part of the URL.
 
 If no placeholder is found in `autoCommentFilterTemplate`, this will disable auto-commenting. So one can use `-` or `none` to disable auto-commenting.
 
@@ -62,7 +62,7 @@ If no placeholder is found in `autoCommentFilterTemplate`, this will disable aut
 
 Default: `120` seconds.
 
-When the auto-updater kicks in and an asset in need of update is fetched, this is the number of seconds to wait before fetching the next asset which needs to be updated. The delay helps spread the load on CPU and memory as a result of loading/parsing/compiling the filter lists which have been updated.
+When the auto-updater kicks in and an asset in need of an update is fetched, this is the number of seconds to wait before fetching the next asset which needs to be updated. The delay helps spread the load on CPU and memory as a result of loading/parsing/compiling the filter lists which have been updated.
 
 ***
 
@@ -74,7 +74,7 @@ uBO [1.20.0](https://github.com/gorhill/uBlock/commit/72d9758faa40a49f00d2a4671c
 
 The number of seconds to wait after launch before an auto-update session<sup>[1]</sup> is started.
 
-<sub>[1] "Update session" means that uBO will lookup and update assets deemed out of date, if any.</sub>
+<sub>[1] "Update session" means that uBO will lookup and update assets deemed out of date if any.</sub>
 
 ***
 
@@ -94,11 +94,11 @@ Default: `unset`.
 
 uBO [1.25.2](https://github.com/gorhill/uBlock/commit/b784b7d5693751844bdb6e7ec7bd30368b2598a8) and above.
 
-URL from where the _benchmark_ _dataset_ will be fetched. This allows to launch benchmark operations from within published versions of uBO, rather than from just a locally built version.
+URL from where the _benchmark_ _dataset_ will be fetched. This allows launching the benchmark operations from within published versions of uBO, rather than from just a locally built version.
 
 _Dataset_ is the `requests_top500.json.gz` dataset of URLs released by "whotracks.me" with their [Adblockers Performance Study](https://whotracks.me/blog/adblockers_performance_study.html).
 
-It is recommended to download the dataset, decompress it, and use a local URL to refer to the resource so as to not abuse the bandwidth of the remote server. In Chromium-based browser, you can use a `file:///`-based URL to the local copy. On Firefox you will have to [create a simple HTTP server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server) and create a URL such as `http://localhost:8000/[...]` to the local copy.
+It is recommended to download the dataset, decompress it, and use a local URL to refer to the resource so as to not abuse the bandwidth of the remote server. In a Chromium-based browser, you can use a `file:///`-based URL to the local copy. On Firefox you will have to [create a simple HTTP server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) and create a URL such as `http://localhost:8000/[...]` to the local copy.
 
 _Benchmark_ is one of the internal uBO benchmarks:
 - [`µBlock.staticNetFilteringEngine.benchmark();`](https://github.com/gorhill/uBlock/commit/5733439f629da948cfc3cae74afa519f6cff7b7f) (initial implementation, recording of the matches was added [later](https://github.com/gorhill/uBlock/commit/92c5f17b78e5056340f462b049c1871ae0467220) for comparison/debugging purposes)
@@ -120,9 +120,9 @@ Before [1.31.3b13](https://github.com/gorhill/uBlock/commit/b779f1f7c9deea32970b
 Before [1.22.0](https://github.com/gorhill/uBlock/compare/5e1f4d7...07c950f): `11101 11001 00001`
 
 Introduced in [1.21.0](https://github.com/gorhill/uBlock/commit/693687fd74fe9a4645f0c9c1e6dbedb56b5fb5d7), improved after 1.22.0 to reflect blocking mode in the color of uBlock₀ icon badge.  
-[1.31.3b13](https://github.com/gorhill/uBlock/commit/b779f1f7c9deea32970b93e11a8d33ef7efe5db8) will attempt to automatically reload CSS styles without reloading whole page when 3p blocking is relaxed.
+[1.31.3b13](https://github.com/gorhill/uBlock/commit/b779f1f7c9deea32970b93e11a8d33ef7efe5db8) will attempt to automatically reload CSS styles without reloading the whole page when 3p blocking is relaxed.
 
-Preference allows to configure cascade of the "Relax blocking mode" [keyboard shortcut](./Keyboard-shortcuts), along with corresponding badge color.
+Preference allows configuring cascade of the "Relax blocking mode" [keyboard shortcut](./Keyboard-shortcuts), along with corresponding badge color.
 
 Default value contains four codes separated by space representing four [blocking modes](https://github.com/uBlockOrigin/uBlock-issues/wiki/Blocking-mode):
 
@@ -148,7 +148,7 @@ Default: `no-cache, no-store, must-revalidate`.
 
 uBO 1.17.0 and above.
 
-Configure how uBO should affect caching main document requests for the purpose of dealing with browser bug (see [#229](https://github.com/uBlockOrigin/uBlock-issues/issues/229)).
+Configure how uBO should affect caching main document requests for the purpose of dealing with browser bugs (see [#229](https://github.com/uBlockOrigin/uBlock-issues/issues/229)).
 
 Possible values:
 
@@ -184,7 +184,7 @@ uBO 1.18.2 and above, Chromium only.
 If set to `indexedDB`, uBO will use [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) as a backend to the cache storage, potentially increasing performance and reducing memory usage. See [#328](https://github.com/uBlockOrigin/uBlock-issues/issues/328) for details.
 Bad side effects - filter lists will be out of date in Chrome incognito mode - [#399](https://github.com/uBlockOrigin/uBlock-issues/issues/399).
 
-If `unset`, uBO will use whatever backend storage which is optimal for the current platform.
+If `unset`, uBO will use whatever backend storage is optimal for the current platform.
 
 ***
 
@@ -277,7 +277,7 @@ Firefox only.
 
 This tells uBO to clear its CNAME cache after the specified time.
 
-For efficiency purpose, uBO will cache alias=>CNAME associations for reuse so as to reduce calls to `browser.dns.resolve`. All the associations will be cleared after the specified time to ensure the map does not grow too large and too ensure uBO uses up to date CNAME information.
+For efficiency purposes, uBO will cache alias=>CNAME associations for reuse so as to reduce calls to `browser.dns.resolve`. All the associations will be cleared after the specified time to ensure the map does not grow too large and to ensure uBO uses up-to-date CNAME information.
 
 ***
 
@@ -362,7 +362,7 @@ Default: `false`.
 
 uBO [1.23.0](https://github.com/gorhill/uBlock/commit/93f438f55ebd8d1f558f2e73b64b3f87e928bf02) and above.
 
-If set to `true`, restores update behavior from before [1.22.3b ("Prevent uBO from being reloaded mid-session ")](https://github.com/gorhill/uBlock/commit/59bdf2b4ccd1151a296af36e5536ed00eeb07fb4), extension will unconditionally reload when an update is available; otherwise the extension will reload only when being explicitly disabled then enabled, or when the browser is restarted.
+If set to `true`, restores update behavior from before [1.22.3b ("Prevent uBO from being reloaded mid-session ")](https://github.com/gorhill/uBlock/commit/59bdf2b4ccd1151a296af36e5536ed00eeb07fb4), the extension will unconditionally reload when an update is available; otherwise, the extension will reload only when being explicitly disabled then enabled, or when the browser is restarted.
 
 ***
 
@@ -378,9 +378,9 @@ Enable point-and-click feature, to create temporary exception filters for static
 
 ![filtering tools dialog](https://user-images.githubusercontent.com/886325/69076705-4fb41300-0a34-11ea-8e9a-463b9a1d29d8.png)
 
-The created exceptions are temporary and will be lost when restarting uBO, or manually toggling off the exception filters.
+The created exceptions are temporary and will be lost when restarting uBO or manually toggling off the exception filters.
 
-After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) restores ability to set _allow_ rules from popup panel. The ability to point-and-click to create _allow_ rules from the popup panel is no longer allowed by default. See [commit message](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) for reasoning. Tap twice on <kbd>Ctrl</kbd> if you want to access allow rules only temporarily.
+After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) restores the ability to set _allow_ rules from popup panel. The ability to point-and-click to create _allow_ rules from the popup panel is no longer allowed by default. See [commit message](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) for reasoning. Tap twice on <kbd>Ctrl</kbd> if you want to access allow rules only temporarily.
 
 ***
 
@@ -408,7 +408,7 @@ Possible values:
 
 - `popup` - browser window without toolbars (default)
 - `normal` - normal browser window with all toolbars and buttons
-- any other value defined in [Chromium](https://developer.chrome.com/extensions/windows#type-CreateType) or [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/CreateType#Type) documentation.
+- any other value defined in [Chromium](https://developer.chrome.com/docs/extensions/reference/windows/#type-CreateType) or [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/CreateType#type) documentation.
 
 ***
 
@@ -430,7 +430,7 @@ Value: A list of space-separated tokens to be added/removed from the [computed d
 
 The primary purpose is to give filter list authors the ability to test mobile flavor on desktop computers. Though mobile versions of web pages can be emulated using browser dev tools, it's not possible to do so for uBO itself.
 
-By using `+mobile` as a value for this setting will force uBO to act as if it's being executed on a mobile device. 
+Using `+mobile` as a value for this setting will force uBO to act as if it's being executed on a mobile device. 
 
 Important: this setting is best used in a dedicated browser profile, as this affects how filter lists are compiled. So best to set it in a new browser profile, then force all filter lists to be recompiled, and use the profile in the future when there is a need to test the specific webext flavor.
 
@@ -462,9 +462,9 @@ Default: `1000` milliseconds.
 
 uBO 1.16.21b2 and above.
 
-Controls the delay before uBO internally process it's network request journal queue. The network request journal queue exists for the purpose of fixing [issue 2053](https://github.com/gorhill/uBlock/issues/2053).
+Controls the delay before uBO internally processes its network request journal queue. The network request journal queue exists for the purpose of fixing [issue 2053](https://github.com/gorhill/uBlock/issues/2053).
 
-As a benign side effect to the fix, there is a delay in displaying the number of blocked requests on extension icon (see [#155](https://github.com/uBlockOrigin/uBlock-issues/issues/155)).
+As a benign side effect to the fix, there is a delay in displaying the number of blocked requests on the extension icon (see [#155](https://github.com/uBlockOrigin/uBlock-issues/issues/155)).
 
 A lower delay than the default one could bring back the issue it's meant to fix.
 
@@ -507,7 +507,7 @@ If enabled, uBO will attempt to suspend (Firefox) or block (Chromium) all networ
 
 If disabled, or in environments not supporting suspendable network request listeners (Chromium), active tabs for which there were network requests blocked during the setup phase, will be then reloaded.
 
-Disclaimer: In Chromium based browsers, even with this setting enabled, it's impossible for uBO to guarantee with 100% certainty that everything will be properly blocked when the browser is launched. **This is a by-design browser issue** -- do _not_ open an issue on uBO issue tracker about this.
+Disclaimer: In Chromium-based browsers, even with this setting enabled, it's impossible for uBO to guarantee with 100% certainty that everything will be properly blocked when the browser is launched. **This is a by-design browser issue** -- do _not_ open an issue on uBO issue tracker about this.
 
 Related browser issues:
 - Chromium: <https://bugs.chromium.org/p/chromium/issues/detail?id=523634>
@@ -517,7 +517,7 @@ History:
 - [1.40.4](https://github.com/gorhill/uBlock/commit/84bd5c1c0ce4cf6f6270231d826851d3d8a490da) released for Chrome with temporary fix allowing to disable tab reloading by setting `suspendTabsUntilReady` to `no` and with `yes` case actually blocking connections.
 - Moved to Dashboard in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development builds.
 - Broken in Chromium between [1.27.0](https://github.com/gorhill/uBlock/commit/80b758e18dbd6e5ed06975c2d4f30649a62b17a9) and [1.40.3b0](https://github.com/gorhill/uBlock/commit/869c06d4eec4847d4bf82c0453690dd17829d680) - suspending cannot be enabled.
-- Do not block connections on startup, but reload active tabs when uBO is ready in Chromium as the default behavior in [1.39.3rc0](https://github.com/gorhill/uBlock/commit/a0a9497b4aca86727b314d8fc31ad345dad08ac8) (workaround for increasing number of reports about ads slipping through).
+- Do not block connections on startup, but reload active tabs when uBO is ready in Chromium as the default behavior in [1.39.3rc0](https://github.com/gorhill/uBlock/commit/a0a9497b4aca86727b314d8fc31ad345dad08ac8) (workaround for increasing the number of reports about ads slipping through).
 - After [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3), configurable again in Firefox (can be disabled). In Firefox this feature is always active by default from now on thanks to ["persistent startup listeners"](https://bugzilla.mozilla.org/show_bug.cgi?id=1503721).
 - Before [1.18.6](https://github.com/gorhill/uBlock/commit/87feb47b51202cb8464eab91597b706965a224f3), default to `false`.
 - Between uBO [1.18.0](https://github.com/gorhill/uBlock/commit/41548be6be35fe17dbb996e605c4befb09e16911) and 1.18.6, Chromium only.
@@ -534,7 +534,7 @@ Possible values:
 
 - `fenix` - to forcefully enable new, mobile-friendly, Popup UI layout.
 - `classic` - to revert back to old Popup UI (it was `-` up to [1.27.0](https://github.com/gorhill/uBlock/commit/b295d4a0d0d25848211c43cc2e7068859c2cb9ea#diff-0d94ddccc559e1231fe0cfa793814429L359-R377)).
-- `unset` - uBO will use whatever UI flavor which is optimal for the current platform.
+- `unset` - uBO will use whatever UI flavor is optimal for the current platform.
 
 ![Mobile Popup UI layout](https://user-images.githubusercontent.com/585534/74933925-1c767c80-53b3-11ea-96fd-79cedd5533cb.png)
 
@@ -562,9 +562,9 @@ Default: `unset`.
 
 uBO [1.28.0](https://github.com/gorhill/uBlock/commit/9f7e5b621dc5e7a3e0fed0daa57d922f1ec56d80) and above.
 
-Allow to bypass uBO's default CSS styles in case they are causing issues to specific users. It is the responsibility of the user to ensure the value of `uiStyles` contains valid CSS property declarations. uBO will assign the value to `document.body.style.cssText`.
+Allow bypassing uBO's default CSS styles in case they are causing issues to specific users. It is the responsibility of the user to ensure the value of `uiStyles` contains valid CSS property declarations. uBO will assign the value to `document.body.style.cssText`.
 
-For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface. Another example is [issue #1254](https://github.com/uBlockOrigin/uBlock-issues/issues/1254) where in [uBO v1.30.0](https://github.com/gorhill/uBlock/commit/1cdffea6186af8965d722575ed8fa74b0a6e193c) will be possible to adjust width of popup panels.
+For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface. Another example is [issue #1254](https://github.com/uBlockOrigin/uBlock-issues/issues/1254) wherein [uBO v1.30.0](https://github.com/gorhill/uBlock/commit/1cdffea6186af8965d722575ed8fa74b0a6e193c) will be possible to adjust width of popup panels.
 
 ***
 
@@ -581,7 +581,7 @@ Allows to manually override dark mode theme status.
 
 Possible values:
 
-- `unset`: depending on uBO version - force light theme or uBO will pick the theme according to browser's `prefers-color-scheme`
+- `unset`: depending on uBO version - force light theme or uBO will pick the theme according to the browser's `prefers-color-scheme`
 - `light`: force light theme
 - `dark`: force dark theme
 
