@@ -15,7 +15,7 @@ This is uBlock's popup UI when you click on uBlock's icon in the toolbar:
 
 ![Popup UI](https://user-images.githubusercontent.com/886325/148119326-2b33327e-4e5a-4a90-a3f9-4e772adeba69.png)
 
-Amount of visible information can be adjusted by clicking on "More" and "Less" buttons:
+The amount of visible information can be adjusted by clicking on "More" and "Less" buttons:
 
 ![Toggling popup panels](https://user-images.githubusercontent.com/886325/85211186-fd7afd80-b346-11ea-99b6-ca304b867c09.gif)
 
@@ -46,7 +46,7 @@ The per-site switches allow you to control some settings on a per-site basis. Se
 
 ![statistics section](https://user-images.githubusercontent.com/886325/85211231-564a9600-b347-11ea-9f5b-ab926c202cb0.png)
 
-This shows the number of network requests uBlock blocked on the current page. Also, less useful (but people like this kind of thing), the number of network requests uBlock blocked since you installed it. The percentage figure tells you how many requests were blocked out of all the requests made.
+This shows the number of network requests uBlock blocked on the current page. Also, less useful (but people like this kind of thing), is the number of network requests uBlock blocked since you installed it. The percentage figure tells you how many requests were blocked out of all the requests made.
 
 ***
 
@@ -56,7 +56,7 @@ This shows the number of network requests uBlock blocked on the current page. Al
 
 The number of **distinct** domains with which a network connection was established, out of all connections (established + blocked). The domains are derived using the official [Public Suffix List](https://publicsuffix.org/).
 
-In general, it must be assumed that each distinct domain is managed by a distinct administrative authority. In practice, it is not uncommon to have a multiple distinct domains which are under the same administrative authority (example 1: `google.com`, `ajax.googleapis.com` and `gstatic.com`, example 2: `wikipedia.org` and `wikimedia.org`).
+In general, it must be assumed that each distinct domain is managed by a distinct administrative authority. In practice, it is not uncommon to have multiple distinct domains which are under the same administrative authority (example 1: `google.com`, `ajax.googleapis.com` and `gstatic.com`, example 2: `wikipedia.org` and `wikimedia.org`).
 
 That said, this statistic may be seen this way: the more distinct domains your browser connects to, the greater the privacy exposure.
 
@@ -66,7 +66,7 @@ In a best-case scenario, the number of distinct domains to which a web page conn
 
 There is a good correlation between the _domains connected_ count and: unneeded page bloat, high privacy exposure, increased likelihood of being the target of data mining.
 
-Example: the web page on <http://www.ibtimes.com/> (which can be read fine in all cases, by the way):
+Example: the web page on <https://www.ibtimes.com/> (which can be read fine in all cases, by the way):
 
  uBlock's mode | turned off | default settings | [default-deny](./Blocking-mode:-medium-mode)
 --- | --- | --- | ---
@@ -107,7 +107,7 @@ On mobile devices, [the "Open the logger" icon](#open-the-logger) is replaced by
 
 Click the _list_ icon to open the [logger](./The-logger) in a separate tab. This allows you to inspect real-time network traffic within the browser.
 
-Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between opening the logger in a separate window or separate tab. uBO will remember that setting when you open the logger without the <kbd>Shift</kbd> key.
+Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between opening the logger in a separate window or a separate tab. uBO will remember that setting when you open the logger without the <kbd>Shift</kbd> key.
 
 #### Open the dashboard
 
@@ -117,13 +117,13 @@ Click the _gears_ icon to open the uBlock Origin [Dashboard](./Dashboard).
 
 ### The overview panel
 
-Clicking on "More" button, will expand uBO popup panel to the point where it will show you a list with details about requests blocked and domains connected on the page:
+Clicking on "More" button will expand uBO popup panel to the point where it will show you a list with details about requests blocked and domains connected on the page:
 
-![Overview panel expanded](https://user-images.githubusercontent.com/886325/85211429-6794a200-b349-11ea-94cb-998ee36e6d59.gif)<br>Clicking empty space before particular domain name or the `all` cell in the first row, will toggle on/off subdomain-level details.
+![Overview panel expanded](https://user-images.githubusercontent.com/886325/85211429-6794a200-b349-11ea-94cb-998ee36e6d59.gif)<br>Clicking empty space before a particular domain name or the `all` cell in the first row, will toggle on/off subdomain-level details.
 
-The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on "Less" button to adjust it to show only information you desire.
+The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on "Less" button to adjust it to show only the information you desire.
 
-<span name="the-pluses-and-minuses">The pluses and minuses</span> denote network requests which were either allowed (not blocked) or blocked, respectively for the specific domain/hostname aside which they appear. The number of pluses and minuses are proportional to the number of requests allowed or blocked:
+<span name="the-pluses-and-minuses">The pluses and minuses</span> denote network requests which were either allowed (not blocked) or blocked, respectively for the specific domain/hostname aside from which they appear. The number of pluses and minuses are proportional to the number of requests allowed or blocked:
 - `+`, `-`: under 10 network requests were allowed, blocked.
 - `++`, `--`: under 100 network requests were allowed, blocked.
 - `+++`, `---`: 100 or more network requests were allowed, blocked.
@@ -132,7 +132,7 @@ Starting with [1.24.3b7](https://github.com/gorhill/uBlock/commit/d0738c0835338a
 
 ![Closeup on domains in overview panel](https://user-images.githubusercontent.com/886325/85211664-a297d500-b34b-11ea-82fd-f9fb64189091.png)
 
-Unless you are in ["advanced user"](./Advanced-user-features) mode, this panel is read-only and available only for informational purpose.
+Unless you are in ["advanced user"](./Advanced-user-features) mode, this panel is read-only and available only for informational purposes.
 
 <details>
 <summary><strong>I am an advanced user!</strong></summary>
