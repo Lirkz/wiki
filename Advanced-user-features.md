@@ -2,7 +2,7 @@ Advanced user mode can be [enabled from the _Settings_ tab](./Dashboard:-Setting
 
 ## Read the docs
 <table><tr><td width="130" align="center">
-<img src="http://i.imgur.com/3kJFgHX.jpg" float="right" width="96" height="96">
+<img src="https://i.imgur.com/3kJFgHX.jpg" float="right" width="96" height="96">
 </td><td>
 
 #### Advanced users are expected to read the documentation. This is very important.
