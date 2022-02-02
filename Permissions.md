@@ -1,6 +1,6 @@
 ### uBlock's required (Chromium) permissions
 
-uBlock's required permissions are the same as those of [Privacy Badger](https://www.eff.org/privacybadger), except that Privacy Badger requires one extra permission, `cookies`. These are uBlock's required permissions:
+uBlock's required permissions are the same as those of [Privacy Badger](https://privacybadger.org/), except that Privacy Badger requires one extra permission, `cookies`. These are uBlock's required permissions:
 
     "permissions": [
         "contextMenus",
@@ -126,7 +126,7 @@ See code:
 
 - [browser.privacy.network](https://github.com/gorhill/uBlock/commit/e65c2939757f09db646d277b82da8690aaf3adbc)
 
-<sub>[1] Merely opening a TCP connection leaks your IP address to the remote server -- this is incompatible with an extension whose primary purpose is to **completely** prevent connections to remove server, not just merely prevent the transfer of data. For instance, [see what can be found](https://www.browserleaks.com/whois) with a just that connection being established (IP, OS Fingerprinting, IP Address Location).</sub>
+<sub>[1] Merely opening a TCP connection leaks your IP address to the remote server -- this is incompatible with an extension whose primary purpose is to **completely** prevent connections to remove server, not just merely prevent the transfer of data. For instance, [see what can be found](https://browserleaks.com/ip) with a just that connection being established (IP, OS Fingerprinting, IP Address Location).</sub>
 
 <sub>[2] In version 0.9.8.3, there will be [a setting to allow re-enabling prefetching](https://github.com/gorhill/uBlock/issues/274), default will still be to disable it though.
 </sub>
