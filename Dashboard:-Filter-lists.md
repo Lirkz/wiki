@@ -105,7 +105,7 @@ The more filter lists are selected, the higher the likelihood of web site breaka
 
 ### Custom filter lists
 
-You can import custom 3rd-party filter lists: place a checkmark next to "Import..." in the "Custom" section and paste the URL of where a filter list can be fetched from in the text area that appears. These custom filter lists will be also automatically updated on a regular basis.
+You can add 3rd-party filter lists into uBlock Origin. Place a checkmark next to "Import..." in the "Custom" section and then paste the URLs of the filter lists into the text area that appears below. These custom filter lists are automatically updated regularly.
 
 On some specific web pages, it is possible to subscribe to a 3rd-party filter list by simply clicking on a link to the filter list. There is such a page for uBlock Origin: [Filter lists from around the web](./Filter-lists-from-around-the-web).
 
