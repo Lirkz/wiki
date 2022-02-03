@@ -123,7 +123,7 @@ Clicking on the "More" button will expand uBO popup panel to the point where it 
 
 The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on the "Less" button to adjust it to show only the information you desire.
 
-<span name="the-pluses-and-minuses">The pluses and minuses</span> denote network requests which were either allowed (not blocked) or blocked, respectively for the specific domain/hostname aside from which they appear. The number of pluses and minuses are proportional to the number of requests allowed or blocked:
+<span name="the-pluses-and-minuses">The pluses and minuses</span> denote network requests allowed or blocked for the specific domain/hostname in the same row. The number of pluses and minuses are proportional to the number of requests that were either allowed or blocked:
 - `+`, `-`: under 10 network requests were allowed, blocked.
 - `++`, `--`: under 100 network requests were allowed, blocked.
 - `+++`, `---`: 100 or more network requests were allowed, blocked.
