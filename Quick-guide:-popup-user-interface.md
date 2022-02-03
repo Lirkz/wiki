@@ -46,7 +46,7 @@ The per-site switches allow you to control some settings on a per-site basis. Se
 
 ![statistics section](https://user-images.githubusercontent.com/886325/85211231-564a9600-b347-11ea-9f5b-ab926c202cb0.png)
 
-Shows the number of blocked network requests on the current page. Also displayed is the number of network requests blocked since installation. (This is less useful; however, users appreciate this information). The percentage indicates the number of blocked requests out of the total number of requests made.
+Shows the number of blocked network requests on the current page. The number of network requests blocked since installation is also displayed. (This is less useful; however, users appreciate this information). The percentage indicates the number of blocked requests out of the total number of requests made.
 
 ***
 
