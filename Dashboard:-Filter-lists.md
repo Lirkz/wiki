@@ -111,7 +111,7 @@ To add a 3rd-party filter list, place a checkmark next to _Import_ under the _Cu
 
 ![custom-filter-lists](https://user-images.githubusercontent.com/886325/41821466-99d67040-77e1-11e8-9973-08f9fe4f4049.png)
 
-To remove a 3rd-party filter list, click the trash can icon at the end of the filter list name. Then click on the _Apply changes_ button. The filter list will disappear.
+To remove a 3rd-party filter list, click the trash can icon at the end of the filter list name. Then click on the _Apply changes_ button. The removed filter list will disappear.
 
 #### Adding via External Websites
 
