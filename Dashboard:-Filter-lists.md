@@ -103,10 +103,18 @@ The more filter lists are selected, the higher the likelihood of web site breaka
 
 ***
 
-### Custom filter lists
+### 3rd-party filter lists
 
-You can add 3rd-party filter lists into uBlock Origin. Place a checkmark next to "Import..." in the "Custom" section and then paste the URLs of the filter lists into the text area that appears below. These custom filter lists are automatically updated regularly.
+#### Adding Manually
 
-On some specific web pages, it is possible to subscribe to a 3rd-party filter list by simply clicking on a link to the filter list. There is such a page for uBlock Origin: [Filter lists from around the web](./Filter-lists-from-around-the-web).
+To add a 3rd-party filter list, place a checkmark next to _Import_ under the _Custom_ section near the bottom of the _Filter lists_ pane. Paste the URL of the filter list into the text area that appears below. (You can add multiple filter lists at once; however, only one URL per line. Invalid URLs will be silently ignored). These filter lists are automatically updated regularly.
 
-To remove custom lists, mark them by clicking the trash can icon at the end of the list name, then click on "Apply changes".
+![custom-filter-lists](https://user-images.githubusercontent.com/886325/41821466-99d67040-77e1-11e8-9973-08f9fe4f4049.png)
+
+To remove a 3rd-party filter list, click the trash can icon at the end of the filter list name. Then click on the _Apply changes_ button. The filter list will disappear.
+
+#### Adding via External Websites
+
+You can subscribe to 3rd-party filter lists by clicking on a link for them on external websites.
+
+[External Websites List](https://github.com/uBlockOrigin/uBlock-issues/wiki/External-Websites-List)
