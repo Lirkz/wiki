@@ -3,7 +3,6 @@
 
 ***
 
-- [Filter lists from around the web ↪](./Filter-lists-from-around-the-web)
 - [Filter list licenses ↪](./Filter-list-licenses)
 
 ***
@@ -21,7 +20,7 @@ The more filter lists you add, the higher the likelihood some web pages may not 
 
 uBlock Origin discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
 
-When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBO will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
+When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBlock Origin will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
 
 Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-lists-load-performance).
 
@@ -47,7 +46,7 @@ Note: When forcing an update of the "uBlock filters" entry itself, this will als
 
 This will reset the "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
 
-Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
+Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBlock Origin to rebuild all of its databases from the beginning.
 
 ***
 
@@ -64,7 +63,7 @@ Filter lists are automatically updated according to:
 
 ### Parse and enforce cosmetic filters
 
-Un-check this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page that can't be blocked otherwise. An example of this is the ads served with some Google Search results.
+Uncheck this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page that can't be blocked otherwise. An example of this is the ads served with some Google Search results.
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
@@ -72,8 +71,8 @@ Note that if you disable this option, your own custom cosmetic filters in `My Fi
 
 ### Ignore generic cosmetic filters 
 
-Generic cosmetic filters are those cosmetic filters that are meant to apply on all web sites. Though handled efficiently by uBlock Origin, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
-Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBO itself.
+Generic cosmetic filters are those cosmetic filters that are meant to apply on all websites. Though handled efficiently by uBlock Origin, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
+Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBlock Origin itself.
 This option can be enabled on very low-end devices, but mind that some filter lists (EasyList Cookie for ex.) rely on generic cosmetic filters a lot, so they may pretty much stop working.
 
 ***
@@ -86,9 +85,9 @@ This new setting suspends network activity until uBlock Origin has loaded all fi
 
 If this behavior is undesirable, disable the setting to prevent uBlock Origin from suspending network activity when the browser launches.
 
-This gives the option to potentially speed up page load at launch, at the cost of potentially not properly filtering network requests as per filter lists/rules.
+This setting gives the option to potentially speed up page load at launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
 
-For platforms not supporting the suspension of network activity, the setting will merely use whatever mechanism exists on the platform to mitigate improper filtering of network requests at launch. For example, in Chromium-based browsers, unchecking the new setting will prevent the browser from re-loading tabs for which there was network activity while in a "suspended" state at launch.
+This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers, disabling the setting will prevent the browser from reloading tabs in which there was network activity while being in a suspended state at launch.
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
@@ -100,7 +99,7 @@ This is a collection of various filter lists, grouped by purpose. To use a speci
 
 #### Important
 
-The more filter lists are selected, the higher the likelihood of web site breakage. The quality of the selected filter lists also affects the likelihood of web site breakage. The _EasyList_-related filter lists are high-quality filter lists, as they are actively maintained.
+The more filter lists are selected, the higher the likelihood of website breakage. The quality of the selected filter lists also affects the likelihood of website breakage. The _EasyList_-related filter lists are high-quality filter lists, as they are actively maintained.
 
 ***
 
