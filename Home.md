@@ -19,7 +19,6 @@
         - [Advanced user features](./Advanced-user-features)
             - [Advanced settings](./Advanced-settings)
     - [_Filter lists_](./Dashboard:-Filter-lists) pane
-        - [External Websites List](https://github.com/uBlockOrigin/uBlock-issues/wiki/External-Websites-List)
     - [_My filters_](./Dashboard:-My-filters) pane
         - [Static filter syntax](./Static-filter-syntax)
             - [Procedural cosmetic filters](./Procedural-cosmetic-filters)
