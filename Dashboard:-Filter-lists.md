@@ -113,8 +113,13 @@ To add a 3rd-party filter list, place a checkmark next to _Import_ under the _Cu
 
 To remove a 3rd-party filter list, click the trash can icon at the end of the filter list name. Then click on the _Apply changes_ button. The removed filter list will disappear.
 
-#### Adding via External Websites
+#### Adding via Approved External Websites
 
-You can subscribe to 3rd-party filter lists by clicking on a link for them on external websites.
+You can subscribe to 3rd-party filter lists by clicking on a link for them on these approved external websites.
 
-[External Websites List](https://github.com/uBlockOrigin/uBlock-issues/wiki/External-Websites-List)
+<p>https://easylist.to/*<br>
+https://*.fanboy.co.nz/*<br>
+https://filterlists.com/*<br>
+https://forums.lanik.us/*<br>
+https://github.com/*<br>
+https://*.github.io/</p>
