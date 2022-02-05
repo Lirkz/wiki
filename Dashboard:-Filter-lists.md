@@ -82,8 +82,9 @@ This option can be enabled on very low-end devices, but mind that some filter li
 
 New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development version. Will be available in stable next release cycle.
 
-The new setting, when disabled (enabled by default), allows a user to prevent uBlock Origin from waiting for all filter lists to be loaded before allowing network activity at browser launch. The setting is enabled by default, meaning uBO waits for all filter lists to be loaded in
-memory before unsuspending network activity. Some users may find this behavior undesirable, hence the new setting.
+This new setting suspends network activity until uBlock Origin has loaded all filter lists into memory. The default for this setting is enabled.
+
+If this behavior is undesirable, disable the setting to prevent uBlock Origin from suspending network activity when the browser launches.
 
 This gives the option to potentially speed up page load at launch, at the cost of potentially not properly filtering network requests as per filter lists/rules.
 
