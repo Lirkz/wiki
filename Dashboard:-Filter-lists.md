@@ -13,7 +13,7 @@ The picture below shows uBlock Origin's default selection of filter lists. You c
 
 If you remove filter lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBlock Origin.
 
-The increased likelihood of some web pages not being rendered correctly due to the higher probability of false positives when adding more filter lists is possible. When this issue occurs, you should report it to the maintainers of the filter list causing this or create your own exception filters to fix it.
+The increased likelihood of some web pages not being rendered correctly due to the higher probability of false positives when adding more filter lists is possible. When this issue occurs, you should report it to the maintainers of the corresponding filter list or create an exception filter to fix it for yourself.
 
 ![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png) |
 --- |
