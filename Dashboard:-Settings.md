@@ -12,7 +12,7 @@
 
 ### Make use of context menu where appropriate
 
-If checked, this gives permission for uBlock to add items in the [browser's context menu](./The-context-menu) which are meant to improve convenience.
+If checked, this gives permission for uBlock Origin (uBO) to add items in the [browser's context menu](./The-context-menu) which are meant to improve convenience.
 
 ***
 
@@ -30,7 +30,7 @@ See [Cloud storage](./Cloud-storage) documentation.
 
 ### I am an advanced user
 
-If you check this, this will enable [uBlock's dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBlock's popup UI.
+If you check this, this will enable [uBO's dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
 
 Unchecking this disables dynamic filtering. And the dynamic filtering pane in the popup UI will no longer be available.
 
@@ -44,9 +44,9 @@ You should avoid playing with advanced features and settings unless [you underst
 
 ### Disable pre-fetching
 
-Checking this will disable prefetching in your browser. When prefetching is enabled, the browser _can_ still establish connections to remote servers even if the resources from these remote servers are meant to be blocked by uBlock.
+Checking this will disable prefetching in your browser. When prefetching is enabled, the browser _can_ still establish connections to remote servers even if the resources from these remote servers are meant to be blocked by uBO.
 
-This prevents the browser from bypassing uBlock's filtering engine before establishing connections to remote servers.
+This prevents the browser from bypassing uBO's filtering engine before establishing connections to remote servers.
 
 Mozilla's [_"Link prefetching FAQ"_](https://developer.mozilla.org/docs/Web/HTTP/Link_prefetching_FAQ):
 
@@ -72,7 +72,7 @@ Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summ
 
 ### Prevent WebRTC from leaking local IP address
 
-Option removed from desktop browsers in [uBlock Origin v1.38](https://github.com/uBlockOrigin/uBlock-issues/issues/1723).
+Option removed from desktop browsers in [uBO v1.38](https://github.com/uBlockOrigin/uBlock-issues/issues/1723).
 
 Browsers now obfuscate LAN addresses by mDNS:
 
@@ -162,7 +162,7 @@ Please see: ["Per site switches"](./Per-site-switches)
 
 ![buttons](https://user-images.githubusercontent.com/585534/80806433-af3c5000-8b88-11ea-9f8c-bbd9fb3df9d7.png)
 
-The bottom-most section is for you to easily backup/restore/reset all settings in uBlock.
+The bottom-most section is for you to easily backup/restore/reset all settings in uBO.
 
 It's done by saving a text file to the location specified by your browser.
 
