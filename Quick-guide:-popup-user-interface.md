@@ -11,7 +11,7 @@
 
 ***
 
-This is uBlock's popup UI when you click on uBlock's icon in the toolbar:
+This is uBlock Origin (uBO)'s popup UI when you click on uBO's icon in the toolbar:
 
 ![Popup UI](https://user-images.githubusercontent.com/886325/148119326-2b33327e-4e5a-4a90-a3f9-4e772adeba69.png)
 
@@ -26,9 +26,9 @@ The amount of visible information can be adjusted by clicking on the "More" and 
 
 ![large blue power button](https://user-images.githubusercontent.com/886325/85211203-1d122600-b347-11ea-8271-a60449a57c8b.png)
 
-Click the large power button to turn off uBlock **for the current site** (add current site to _Trusted sites_ list). This will be remembered the next time you visit the site.
+Click the large power button to turn off uBO **for the current site** (add current site to _Trusted sites_ list). This will be remembered the next time you visit the site.
 
-Alternatively, you can also <kbd>Ctrl</kbd>-click to turn off uBlock only for the current page (<kbd>Cmd</kbd>-click on Mac).
+Alternatively, you can also <kbd>Ctrl</kbd>-click to turn off uBO only for the current page (<kbd>Cmd</kbd>-click on Mac).
 
 For more advanced control, see ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted).
 
@@ -68,7 +68,7 @@ There is a good correlation between the _domains connected_ count and: unneeded 
 
 Example: the web page on <https://www.ibtimes.com/> (which can be read fine in all cases, by the way):
 
- uBlock's mode | turned off | default settings | [default-deny](./Blocking-mode:-medium-mode)
+ uBO's mode | turned off | default settings | [default-deny](./Blocking-mode:-medium-mode)
 --- | --- | --- | ---
 domains connected | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1e.png) | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1d.png) | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1f.png)
 privacy exposure | very high | medium | very low
@@ -97,7 +97,7 @@ New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225d
 
 The "chat" icon opens the ["Report a filter issue" form](./The-"Report-a-filter-issue"-form), which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
 
-Reporting filter issues requires a [GitHub account](https://github.com/signup) since uBlock Origin does not have a home server through which reports could be sent.
+Reporting filter issues requires a [GitHub account](https://github.com/signup) since uBO does not have a home server through which reports could be sent.
 
 The report icon is available only when uBO is enabled on a given site.
 
@@ -111,7 +111,7 @@ Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between op
 
 #### Open the dashboard
 
-Click the _gears_ icon to open the uBlock Origin [Dashboard](./Dashboard).
+Click the _gears_ icon to open the uBO [Dashboard](./Dashboard).
 
 ***
 
