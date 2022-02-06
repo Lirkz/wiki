@@ -11,7 +11,7 @@ The _Filter lists_ pane is where you subscribe to filter lists that feed into uB
 
 The picture below shows uBlock Origin's default selection of filter lists. You can add more or remove some filter lists already selected by default. (Most other blockers only enable EasyList.)
 
-If you remove filters lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBlock Origin.
+If you remove filter lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBlock Origin.
 
 The increased likelihood of some web pages not being rendered correctly due to the higher probability of false positives when adding more filter lists is possible. When this issue occurs, you should report it to the maintainers of the filter list causing this or create your own exception filters to fix it.
 
