@@ -117,9 +117,9 @@ To remove a 3rd-party filter list, click the trash can icon at the end of the fi
 
 You can subscribe to 3rd-party filter lists by clicking on a link for them on these approved external websites.
 
-<p>https://easylist.to/*<br>
-https://*.fanboy.co.nz/*<br>
-https://filterlists.com/*<br>
-https://forums.lanik.us/*<br>
-https://github.com/*<br>
-https://*.github.io/</p>
+`https://easylist.to/*`  
+`https://*.fanboy.co.nz/*`  
+`https://filterlists.com/*`  
+`https://forums.lanik.us/*`  
+`https://github.com/*`  
+`https://*.github.io/`
