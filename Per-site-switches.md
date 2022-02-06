@@ -2,7 +2,7 @@
 
 ***
 
-The per-site switches allow you to control uBlock's behavior on a per-site basis.
+The per-site switches allow you to control uBlock Origin (uBO)'s behavior on a per-site basis.
 
 ![Popup UI](https://user-images.githubusercontent.com/585534/87855535-01b71e00-c8e7-11ea-9744-4e21429cfd7d.png)
 
@@ -31,7 +31,7 @@ No popups rules appear as `no-popups: [hostname] true` entries in the [_My rules
 
 Blocking popups depends on whether the proper filters are present in the selected filter lists, so this feature is most useful when a site creates popups for which there are no filters to take care of them in 3rd-party filter lists.
 
-**Caveat:** It's not _always_ possible for uBlock Origin to determine for sure whether a new tab being opened is that of a popup, or is the result of a legitimate click on a link by the user. So if the no-popups switch is in use, you _may_ not be able to open a link in a new tab through the context menu.
+**Caveat:** It's not _always_ possible for uBO to determine for sure whether a new tab being opened is that of a popup, or is the result of a legitimate click on a link by the user. So if the no-popups switch is in use, you _may_ not be able to open a link in a new tab through the context menu.
 
 ***
 
@@ -140,7 +140,7 @@ Wholly disable JavaScript for a given site.
 been seen on the page (the number is limited to 99 because of layout constraints)
 
 ![purple badge](https://user-images.githubusercontent.com/886325/64036667-039fb380-cb54-11e9-8199-cf042837d481.png)
-<br>Starting with [v1.21.7b5](https://github.com/gorhill/uBlock/commit/7ff750eaf6007bdea4e843d3314fc7275b1ce945), a purple badge on uBlock₀ toolbar button indicates activation of the "No scripting" switch.
+<br>Starting with [v1.21.7b5](https://github.com/gorhill/uBlock/commit/7ff750eaf6007bdea4e843d3314fc7275b1ce945), a purple badge on uBO toolbar button indicates activation of the "No scripting" switch.
 
 This master switch has blocking precedence over dynamic filtering rules and static filters related to script resources.
 
