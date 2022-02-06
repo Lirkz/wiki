@@ -1,6 +1,6 @@
-### uBlock's required (Chromium) permissions
+### uBlock Origin (uBO)'s required (Chromium) permissions
 
-uBlock's required permissions are the same as those of [Privacy Badger](https://privacybadger.org/), except that Privacy Badger requires one extra permission, `cookies`. These are uBlock's required permissions:
+uBO's required permissions are the same as those of [Privacy Badger](https://privacybadger.org/), except that Privacy Badger requires one extra permission, `cookies`. These are uBO's required permissions:
 
     "permissions": [
         "contextMenus",
@@ -16,9 +16,9 @@ uBlock's required permissions are the same as those of [Privacy Badger](https://
         "https://*/*"
     ],
 
-[`"privacy"`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) is the only permission added in [version 0.9.8.2](https://github.com/gorhill/uBlock/releases/tag/0.9.8.2). All the others were there since when uBlock was first published (except for `"contextMenus"` which was added at some point, to support blocking elements from within the context menu).
+[`"privacy"`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy) is the only permission added in [version 0.9.8.2](https://github.com/gorhill/uBlock/releases/tag/0.9.8.2). All the others were there since when uBO was first published (except for `"contextMenus"` which was added at some point, to support blocking elements from within the context menu).
 
-The `privacy` permission is needed for uBlock to be able to disable the setting "Prefetch resources to load pages more quickly". This will ensure no connection is opened at all for blocked requests: It's for your protection privacy-wise.
+The `privacy` permission is needed for uBO to be able to disable the setting "Prefetch resources to load pages more quickly". This will ensure no connection is opened at all for blocked requests: It's for your protection privacy-wise.
 
 This is Privacy Badger required permissions:
 
@@ -105,12 +105,12 @@ This is necessary to be able to:
 - Disable _"Prefetch resources to load pages more quickly"_
     - This will ensure no TCP connection is opened **at all** for blocked requests: **It's for your own protection privacy-wise.**<sup>[1]</sup>
     - For pages with lots of blocked requests, this will remove overhead from page load (if you did not have the setting already disabled).
-    - When uBlock blocks a network request, the expectation is that it blocks **completely** the connection, hence the new permission is necessary for uBlock to do **truthfully** what it says it does.
+    - When uBO blocks a network request, the expectation is that it blocks **completely** the connection, hence the new permission is necessary for uBO to do **truthfully** what it says it does.
 - Disable [hyperlink auditing/beacon](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) (0.9.8.5)
 
-uBlock's primary purpose is to block **network connections**, not just data transfer. Not blocking the connection while just blocking the data transfer would mean uBlock is lying to users. So this permission will stay, and sorry for those who do not understand that it allows uBlock to do its intended job more thoroughly<sup>[2]</sup>. A blocker that does not thoroughly prevent connections is not a real blocker.
+uBO's primary purpose is to block **network connections**, not just data transfer. Not blocking the connection while just blocking the data transfer would mean uBO is lying to users. So this permission will stay, and sorry for those who do not understand that it allows uBO to do its intended job more thoroughly<sup>[2]</sup>. A blocker that does not thoroughly prevent connections is not a real blocker.
 
-**Privacy Badger also requires the same permissions.** I want uBlock to also serve privacy-minded users first.
+**Privacy Badger also requires the same permissions.** I want uBO to also serve privacy-minded users first.
 
 If _prefetching_ had been disabled by default, this new permission would not be needed, but _prefetching_ is unfortunately enabled by default, and under _Privacy_ heading, which is itself hidden by default under _"advanced settings"_, and even at this point, you would still have to dig to find out the [negative side effects of prefetching](https://wikipedia.org/wiki/Link_prefetching#Issues_and_criticisms) (related: [dark patterns](https://www.darkpatterns.org/)).
 
