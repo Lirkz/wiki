@@ -1,4 +1,4 @@
-uBlock Origin ("uBO") supports most of EasyList filter syntax, so you can refer to existing filter syntax documentation from [Adblock Plus](https://adblockplus.org/en/filters) and [AdGuard](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters).
+uBlock Origin (uBO) supports most of EasyList filter syntax, so you can refer to existing filter syntax documentation from [Adblock Plus](https://help.eyeo.com/en/adblockplus/how-to-write-filters) and [AdGuard](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters).
 
 However uBO does not support some very specific cases, while it also further extends EasyList filter syntax, which extended syntax may also be shared with AdGuard's own extended syntax. Few most surprising cases are documented [here](./Syntax-quirks).
 
@@ -186,13 +186,13 @@ Usually, it is far more convenient to use [dynamic filtering rules](./Dynamic-fi
 
 #### `1p`
 
-Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` [option](https://adblockplus.org/filters#options) (`~third-party`). For convenience.
+Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options) (`~third-party`). For convenience.
 
 ***
 
 #### `3p`
 
-Equivalent to `third-party` [option](https://adblockplus.org/filters#options). For convenience.
+Equivalent to `third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
 
 ***
 
@@ -248,7 +248,7 @@ Will be processed in a special manner:
 
 #### `css`
 
-Equivalent to `stylesheet` [option](https://adblockplus.org/filters#options). For convenience.
+Equivalent to `stylesheet` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
 
 ***
 
@@ -338,13 +338,13 @@ Option for exception filters. Turns off all cosmetic filtering on matching pages
 
 #### `first-party`
 
-Equivalent to `~third-party` [option](https://adblockplus.org/filters#options). Provided strictly for convenience (0.9.9.0).
+Equivalent to `~third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). Provided strictly for convenience (0.9.9.0).
 
 ***
 
 #### `frame`
 
-Equivalent to `subdocument` [option](https://adblockplus.org/filters#options). For convenience.
+Equivalent to `subdocument` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
 
 ***
 
@@ -504,7 +504,7 @@ For example:
 
 #### `xhr`
 
-Equivalent to `xmlhttprequest` [option](https://adblockplus.org/filters#options). For convenience.
+Equivalent to `xmlhttprequest` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
 
 ***
 
@@ -623,7 +623,7 @@ Available since [1.22.0](https://github.com/gorhill/uBlock/releases/tag/1.22.0).
 
 New in [1.32.0](https://github.com/gorhill/uBlock/commit/1e2eb037e5b4754feb4a40519951b3e7a73d545d).
 
-To remove query parameters from the URL of network requests -- see also [AdGuard's `removeparam`'s documentation](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters?aid=16593#removeparam-modifier). For historical reasons, `queryprune` is an alias of `removeparam` (avoid using `queryprune`, it is deprecated and support will be removed eventually).
+To remove query parameters from the URL of network requests -- see also [AdGuard's `removeparam`'s documentation](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#removeparam-modifier). For historical reasons, `queryprune` is an alias of `removeparam` (avoid using `queryprune`, it is deprecated and support will be removed eventually).
 
 `removeparam` is a modifier option (like `csp`) in that it does not cause a network request to be blocked but rather modified before being emitted.
 
@@ -660,7 +660,7 @@ All static extended filters can be declared to apply to a specific _entity_. For
 
     google.*###tads.c
 
-An _entity_ is defined as follow: a formal domain name with the [Public Suffix](https://publicsuffix.org) part replaced by a wildcard.
+An _entity_ is defined as follow: a formal domain name with the [Public Suffix](https://publicsuffix.org/) part replaced by a wildcard.
 
 Examples: `google.*`  will apply to all similar Google domain names: `google.com`, `google.com.br`, `google.ca`, `google.co.uk`, etc. Another example: `facebook.*` will apply to all similar Facebook domain names: `facebook.com`, `facebook.net`.
 
