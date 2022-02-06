@@ -30,7 +30,7 @@ See [Cloud storage](./Cloud-storage) documentation.
 
 ### I am an advanced user
 
-If you check this, this will enable [uBO's dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
+If you check this, this will enable uBO's [dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
 
 Unchecking this disables dynamic filtering. And the dynamic filtering pane in the popup UI will no longer be available.
 
