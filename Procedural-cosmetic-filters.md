@@ -8,9 +8,9 @@ The initial implementation was revised to allow chained/recursive use of the pro
 
 Only use procedural cosmetic filters when plain CSS selectors won't work.
 
-Standard cosmetic filters are _declarative_, i.e. when used as a selector in a CSS rule and handled by browsers through `style` tag elements.
+Regular cosmetic filters are _declarative_, i.e., they are used as a selector in a CSS rule and handled by browsers through `style` tag elements.
 
-_Procedural_ means JavaScript code will find DOM elements that it must hide. A procedural cosmetic filter uses a cosmetic filter _operator_. That will tell uBO how to find/filter DOM elements to find which DOM elements to target.
+_Procedural_ means JavaScript code will find DOM elements that it must hide. A procedural cosmetic filter uses a filter _operator_ that will tell uBO how to find/filter DOM elements to find which DOM elements to target.
 
 #### Important:
 
