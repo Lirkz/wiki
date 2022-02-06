@@ -7,15 +7,15 @@
 
 ***
 
-The _Filter lists_ pane is where you subscribe to filter lists. The filter lists to which you subscribe will feed uBlock Origin's [static filtering engine](./Overview-of-uBlock's-network-filtering-engine:-details#static-filtering).
+The _Filter lists_ pane is where you subscribe to filter lists that feed into uBlock Origin's [static filtering engine](./Overview-of-uBlock's-network-filtering-engine:-details#static-filtering).
 
-The picture below shows uBlock Origin's default selection of filter lists. You can add more, or remove some of the filter lists already selected by default (for reference, most other blockers have only EasyList selected).
+The picture below shows uBlock Origin's default selection of filter lists. You can add more or remove some filter lists already selected by default. (Most other blockers only enable EasyList.)
 
-If you remove filter lists, it is still strongly advised to at least keep _uBlock filters_ selected: these filters are optimized for uBlock Origin.
+If you remove filters lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBlock Origin.
 
-The more filter lists you add, the higher the likelihood some web pages may not render properly, due to the higher probability of false positives. When this occurs, you should report the issue to the maintainers of the filter list causing the issue, or create your own exception filters to fix the issue.
+The increased likelihood of some web pages not being rendered correctly due to the higher probability of false positives when adding more filter lists is possible. When this issue occurs, you should report it to the maintainers of the filter list causing this or create your own exception filters to fix it.
 
-![Filter lists pane](https://user-images.githubusercontent.com/886325/148105230-2a8abe39-c320-4c24-8c32-d17da8d2f029.png) |
+![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png) |
 --- |
 
 uBlock Origin discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
