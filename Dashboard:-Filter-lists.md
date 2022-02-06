@@ -7,20 +7,20 @@
 
 ***
 
-The _Filter lists_ pane is where you subscribe to filter lists that feed into uBlock Origin's [static filtering engine](./Overview-of-uBlock's-network-filtering-engine:-details#static-filtering).
+The _Filter lists_ pane is where you subscribe to filter lists that feed into uBlock Origin (uBO)'s [static filtering engine](./Overview-of-uBlock's-network-filtering-engine:-details#static-filtering).
 
-The picture below shows uBlock Origin's default selection of filter lists. You can add more or remove some filter lists already selected by default. (Most other blockers only enable EasyList.)
+The picture below shows uBO's default selection of filter lists. You can add more or remove some filter lists already selected by default. (Most other blockers only enable EasyList.)
 
-If you remove filter lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBlock Origin.
+If you remove filter lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBO.
 
 The likelihood of page breakage increases with more filter lists added. When this issue occurs, you should report it to the maintainers of the corresponding filter list or create an exception filter to fix it for yourself.
 
 ![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png) |
 --- |
 
-uBlock Origin discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
+uBO discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
 
-When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBlock Origin will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
+When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBO will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
 
 Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-lists-load-performance).
 
@@ -46,13 +46,13 @@ Note: When forcing an update of the "uBlock filters" entry itself, this will als
 
 This will reset the "last update" timestamp for all of the subscribed filter lists. Essentially, this will cause all filter lists to become out of date. This can be used to force an update of all filter lists.
 
-Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBlock Origin to rebuild all of its databases from the beginning.
+Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github.com/gorhill/uBlock/commit/972feae05d22239c46b837e64001f9f322724585) required also <kbd>Ctrl</kbd>) pressed will remove all locally cached content of filter lists, which will force uBO to rebuild all of its databases from the beginning.
 
 ***
 
 ### Auto-update filter lists
 
-If you check this option, uBlock Origin will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
+If you check this option, uBO will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
 
 Filter lists are automatically updated according to:
 - the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header
@@ -63,7 +63,7 @@ Filter lists are automatically updated according to:
 
 ### Parse and enforce cosmetic filters
 
-Uncheck this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBlock Origin's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page that can't be blocked otherwise. An example of this is the ads served with some Google Search results.
+Uncheck this option if you do not want cosmetic filters from various filter lists to be parsed and enforced. This option is mostly of interest for those who want to further reduce uBO's memory and CPU footprint. Cosmetic filtering has no value privacy-wise, its only purpose is to [hide elements](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F) on a web page that can't be blocked otherwise. An example of this is the ads served with some Google Search results.
 
 Note that if you disable this option, your own custom cosmetic filters in `My Filters` (if any) will still be enforced.
 
@@ -71,8 +71,8 @@ Note that if you disable this option, your own custom cosmetic filters in `My Fi
 
 ### Ignore generic cosmetic filters 
 
-Generic cosmetic filters are those cosmetic filters that are meant to apply on all websites. Though handled efficiently by uBlock Origin, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
-Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBlock Origin itself.
+Generic cosmetic filters are those cosmetic filters that are meant to apply on all websites. Though handled efficiently by uBO, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
+Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBO itself.
 This option can be enabled on very low-end devices, but mind that some filter lists (EasyList Cookie for ex.) rely on generic cosmetic filters a lot, so they may pretty much stop working.
 
 ***
@@ -81,9 +81,9 @@ This option can be enabled on very low-end devices, but mind that some filter li
 
 New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development version. Will be available in stable next release cycle.
 
-This new setting suspends network activity until uBlock Origin has loaded all filter lists into memory. The default for this setting is enabled.
+This new setting suspends network activity until uBO has loaded all filter lists into memory. The default for this setting is enabled.
 
-If this behavior is undesirable, disable the setting to prevent uBlock Origin from suspending network activity when the browser launches.
+If this behavior is undesirable, disable the setting to prevent uBO from suspending network activity when the browser launches.
 
 This setting gives the option to potentially speed up page load at launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
 
