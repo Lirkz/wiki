@@ -1,15 +1,15 @@
 Motivation for creating this page, this comment made in the spirit of _Fake News_ (i.e. with no supporting objective evidences, merely a _"just trust me"_ statement):
 
-> Ublock is inferior in capabilities [to ABP] as a result of being lighter on the browser [[source](http://forums.mozillazine.org/viewtopic.php?p=14743232#p14743232)]
+> Ublock is inferior in capabilities [to Adblock Plus (ABP)] as a result of being lighter on the browser [[source](http://forums.mozillazine.org/viewtopic.php?p=14743232#p14743232)]
 
-There is nothing wrong with preferring ABP to uBO. There is however something wrong when someone engages in misinformation regarding uBO because of their preference for ABP.
+There is nothing wrong with preferring ABP to uBlock Origin (uBO). There is however something wrong when someone engages in misinformation regarding uBO because of their preference for ABP.
 
 This is my reference answer to such claims.
 
-uBlock Origin is lighter on the browser because of many choices which were made regarding how the filtering engine is designed internally. A coarse enumeration of these choices are:
+uBlock Origin (uBO) is lighter on the browser because of many choices which were made regarding how the filtering engine is designed internally. A coarse enumeration of these choices are:
 - lean in-memory filter representation
 - plain string comparisons instead of regular expressions wherever possible
-    - a majority of network filters can be reduced to plain string comparison, and this is what uBO does internally for these filters, whereas ABP convert _all_ network filters into regular expressions.
+    - a majority of network filters can be reduced to plain string comparison, and this is what uBO does internally for these filters, whereas Adblock Plus (ABP) converts _all_ network filters into regular expressions.
     - Example, `&ad_zones=` (filter found in EasyList).
         - ABP's code conceptually is: `/&ad_zones=/.test(url)` -- the whole URL must be scanned
         - uBO's code conceptually is: `url.startsWith('&ad_zones=', i)` -- no scanning of the URL
