@@ -8,7 +8,7 @@
 
 ![my-filters](https://user-images.githubusercontent.com/585534/85202191-a0ddfb00-b2d2-11ea-8f93-a360c338ded7.png)
 
-uBO uses [CodeMirror's widget](https://codemirror.net/index.html) to freely edit your filters as plain text.
+uBlock Origin (uBO) uses [CodeMirror's widget](https://codemirror.net/index.html) to freely edit your filters as plain text.
 
 The following keyboard shortcuts are available during editing -- most of them are handled by CodeMirror by default (I mostly lazily transcribed [CodeMirror's own documentation](https://codemirror.net/doc/manual.html#commands)):
 
