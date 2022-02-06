@@ -2,7 +2,7 @@
 
 ***
 
-The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBO behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
+The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBlock Origin (uBO) behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
 
 These advanced settings can be easily accessed only when the setting [_"I am an advanced user"_](./Advanced-user-features) in the _Settings_ pane in the dashboard is checked, but will persist and work even when the setting [_"I am an advanced user"_](./Advanced-user-features) is not checked:
 
@@ -119,7 +119,7 @@ Before [1.31.3b13](https://github.com/gorhill/uBlock/commit/b779f1f7c9deea32970b
 
 Before [1.22.0](https://github.com/gorhill/uBlock/compare/5e1f4d7...07c950f): `11101 11001 00001`
 
-Introduced in [1.21.0](https://github.com/gorhill/uBlock/commit/693687fd74fe9a4645f0c9c1e6dbedb56b5fb5d7), improved after 1.22.0 to reflect blocking mode in the color of uBlock₀ icon badge.  
+Introduced in [1.21.0](https://github.com/gorhill/uBlock/commit/693687fd74fe9a4645f0c9c1e6dbedb56b5fb5d7), improved after 1.22.0 to reflect blocking mode in the color of uBO icon badge.  
 [1.31.3b13](https://github.com/gorhill/uBlock/commit/b779f1f7c9deea32970b93e11a8d33ef7efe5db8) will attempt to automatically reload CSS styles without reloading the whole page when 3p blocking is relaxed.
 
 Preference allows configuring cascade of the "Relax blocking mode" [keyboard shortcut](./Keyboard-shortcuts), along with corresponding badge color.
