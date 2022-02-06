@@ -12,7 +12,7 @@ I think it's time I give examples of how requiring _fewer_ permissions is **not*
 
 Chrome store: Web Protector - Reliable Phishing Protection (the extension no longer exists on the Chrome Web Store).
 
-This extension requires the same permission as uBlock, _minus_ the `privacy` one. Some might be inclined that it can thus be more trusted than uBlock, which requires the `privacy` permission.
+This extension requires the same permission as uBO, _minus_ the `privacy` one. Some might be inclined that it can thus be more trusted than uBO, which requires the `privacy` permission.
 
 However, Web Protector has a home server, and it does "phone home" as opposed to uBO (which has no home server in the first place).
 
