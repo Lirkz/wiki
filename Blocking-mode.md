@@ -2,7 +2,7 @@
 
 ***
 
-uBlock Origin is not an "ad blocker", it is a wide-spectrum blocker, which happens to be able to function as a mere "ad blocker". But it can also be used in a manner similar to [NoScript](https://noscript.net/) (to block scripts) and/or [RequestPolicy](https://requestpolicycontinued.github.io/) (to block all 3rd-party servers by default), using a point-and-click user interface.
+uBlock Origin (uBO) is not an "ad blocker", it is a wide-spectrum blocker, which happens to be able to function as a mere "ad blocker". But it can also be used in a manner similar to [NoScript](https://noscript.net/) (to block scripts) and/or [RequestPolicy](https://requestpolicycontinued.github.io/) (to block all 3rd-party servers by default), using a point-and-click user interface.
 
 ![Number of 3rd-party servers to which the browser connected during benchmark](https://cloud.githubusercontent.com/assets/585534/8906091/b7334ddc-3439-11e5-848b-9e8a58eff876.png)<br><sup>Number of 3rd-party servers to which the browser connected during benchmark: 83 URLs of high-traffic sites were visited (on July 24, 2015). [TODO: include intermediate mode between _easy_ and _medium_ in next benchmark]</sup>
 
@@ -13,7 +13,7 @@ In the above chart, the difference between two modes translate into differences 
 - Privacy exposure
 - Security
 
-uBlock Origin + default settings corresponds to _Easy mode_ in the graph above.
+uBO + default settings corresponds to _Easy mode_ in the graph above.
 
 For reference, Adblock Plus + default settings (i.e. with _Acceptable ads_ enabled) will position you somewhere between _No blocking_ and _Very easy mode_ in the graph above.
 
@@ -26,8 +26,8 @@ For reference, Adblock Plus + default settings (i.e. with _Acceptable ads_ enabl
 - _EasyList_.
 
 #### Easy mode ([details ↪](./Blocking-mode:-easy-mode)):
-- This is uBlock's default, out-of-the-box mode.
-- All of uBlock's own filter lists.
+- This is uBO's default, out-of-the-box mode.
+- All of uBO's own filter lists.
 - _EasyList_.
 - _EasyPrivacy_.
 - _Peter Lowe’s Ad server list‎_.
@@ -46,7 +46,7 @@ These will set you somewhere between _Easy mode_  and _Medium mode_:
 <img align=right alt="blue badge" src="https://user-images.githubusercontent.com/886325/64036718-229e4580-cb54-11e9-91d3-10b6d95b6068.png">
 
 #### Medium mode ([details ↪](./Blocking-mode:-medium-mode)):
-- uBlock's out-of-the-box settings.
+- uBO's out-of-the-box settings.
 - _I am an advanced user_ = checked.
 - 3rd-party scripts = globally blocked.
 - 3rd-party frames = globally blocked.
@@ -59,7 +59,7 @@ These will set you somewhere between _Easy mode_  and _Medium mode_:
 <img align=right alt="red badge" src="https://user-images.githubusercontent.com/886325/64036700-1c0fce00-cb54-11e9-9fad-49f72c4fa086.png">
 
 #### Hard mode ([details ↪](./Blocking-mode:-hard-mode)):
-- uBlock's out-of-the-box settings.
+- uBO's out-of-the-box settings.
 - _I am an advanced user_ = checked.
 - 3rd-party scripts = globally blocked.
 - 3rd-party frames = globally blocked.
