@@ -28,7 +28,7 @@ It serves to turn off blocking **on the current web site** (will add current sit
 
 All trusted site directives are matched against the URL address of web pages.
 
-As of version uBlock 0.8.2.0, the trusted site directive syntax is split into three classes:
+As of version uBlock Origin (uBO) 0.8.2.0, the trusted site directive syntax is split into three classes:
 - Plain
 - Complex
 - Comment
@@ -37,9 +37,9 @@ Plain syntax is when using only hostname label(s), which means only the hostname
 
 Complex syntax occurs if and only if at least one `/` appears in a trusted site directive.  Optionally, the wildcard `*` can be used with complex directives for more flexibility.
 
-A comment is a line prefixed with `#`.  Comments are ignored by uBlock.
+A comment is a line prefixed with `#`.  Comments are ignored by uBO.
 
-If no `/` appears in a trusted site directive, and if the directive contains characters which are not allowed for a plain hostname, then the trusted site directive will be commented out and ignored by uBlock.  This allows you to fix your directive.
+If no `/` appears in a trusted site directive, and if the directive contains characters which are not allowed for a plain hostname, then the trusted site directive will be commented out and ignored by uBO.  This allows you to fix your directive.
 
 #### Plain hostname
 
@@ -95,4 +95,4 @@ With this directive all domains put between `|` characters will be treated as _b
 
 ### Other details
 
-If you re-enable uBlock by clicking the big power button in the popup while a trusted site directive you handcrafted is in effect, your handcrafted directive will simply be commented out. This way you can bring it back to life if ever you clicked the button by mistake.
+If you re-enable uBO by clicking the big power button in the popup while a trusted site directive you handcrafted is in effect, your handcrafted directive will simply be commented out. This way you can bring it back to life if ever you clicked the button by mistake.
