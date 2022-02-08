@@ -247,7 +247,7 @@ New in [1.35.0](https://github.com/gorhill/uBlock/commit/bfdc81e9e400f7b78b2abc9
 
 Defuses Google FLoC ("Federated Learning of Cohorts") tracking. Read more on https://amifloced.org/
 
-uBO ensures FLoC is opt-in. The generic filter `*##+js(no-floc)` in "uBlock filters -- Privacy" ensures the feature is disabled when using default settings/lists.
+uBlock Origin (uBO) ensures FLoC is opt-in. The generic filter `*##+js(no-floc)` in "uBlock filters -- Privacy" ensures the feature is disabled when using default settings/lists.
 
 Users can opt-in to FLoC by adding a generic exception filter to their custom filters, `#@#+js(no-floc)`; or they can opt-in only for a specific set of websites through a more specific exception filter:
 
