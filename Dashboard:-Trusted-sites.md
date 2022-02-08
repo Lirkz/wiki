@@ -3,7 +3,7 @@
 
 ***
 
-The _Trusted sites_ pane lists all the _trusted site directives_. The purpose of a trusted site directive is to tell on which page uBlock Origin ("uBO") should disable itself completely. When uBO is disabled on a page, there will be no filtering applied to that page.
+The _Trusted sites_ pane lists all the _trusted site directives_. The purpose of a trusted site directive is to tell on which page uBlock Origin (uBO) should disable itself completely. When uBO is disabled on a page, there will be no filtering applied to that page.
 
 When uBO is disabled for a site, its toolbar icon will be grayed, and the large blue "power" button in the popup panel is dimmed.
 
@@ -11,7 +11,7 @@ When you visit a web page, uBO will try to match the URL of the page in the addr
 
 The easiest way to create a trusted site directive is by toggling the large "power" button in uBO's popup panel -- this will cause a site-wide trusted site directive for the current site to be automatically created and added to the _Trusted sites_ pane.
 
-The _Trusted sites_ pane allows you to review or edit the exisiting trusted site directives, or to manually add new ones.
+The _Trusted sites_ pane allows you to review or edit the existing trusted site directives, or to manually add new ones.
 
 ### Important: read carefully
 
