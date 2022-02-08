@@ -1,8 +1,8 @@
-uBlock Origin comes with a logger, which gives the ability to inspect what uBlock₀ is doing with network requests and DOM elements, whether something is blocked or allowed, and which filter, if any, matched a network request or DOM element. This logger is _unified_, meaning it will display _everything_ uBlock₀ does as it occurs.
+uBlock Origin (uBO) comes with a logger, which gives the ability to inspect what uBO is doing with network requests and DOM elements, whether something is blocked or allowed, and which filter, if any, matched a network request or DOM element. This logger is _unified_, meaning it will display _everything_ uBO does as it occurs.
 
-The logger is the tool of choice to see, understand, diagnose and fix the functioning of uBlock₀.
+The logger is the tool of choice to see, understand, diagnose and fix the functioning of uBO.
 
-To access the logger, click on the _list_ icon of uBlock Origin's popup UI:
+To access the logger, click on the _list_ icon of uBO's popup UI:
 
 ![list icon](https://user-images.githubusercontent.com/886325/62736450-a8cfdc00-ba2d-11e9-8f24-9d6004371f8c.png)
 
@@ -26,7 +26,7 @@ The color of a row hints at how the resource was filtered:
 Particular columns indicate:
 1. Timestamp of the event
 1. For blocked/allowed/hidden resources, the column will contains the responsible filter. For redirection, local resource used as replacement to the blocked network request.
-1. Action taken by uBlock Origin:
+1. Action taken by uBO:
     - `--` blocked request
     - `++` allowed by exception filter/rule
     - `<<` redirection to neutered resource
@@ -41,9 +41,9 @@ Particular columns indicate:
 Time, Filter/Rule, Context and Partyness columns can be disabled in [Settings dialog](#settings-dialog)
 
 
-Take note that the network request logger in uBlock₀ is a forward-looking logger: this means only future requests can be logged.
+Take note that the network request logger in uBO is a forward-looking logger: this means only future requests can be logged.
 
-In the spirit of efficiency, uBlock₀ will log entries **IF AND ONLY IF** the logger is opened. Otherwise, if the logger is not opened, no CPU/memory resources are consumed by uBlock₀ for logging purpose.
+In the spirit of efficiency, uBO will log entries **IF AND ONLY IF** the logger is opened. Otherwise, if the logger is not opened, no CPU/memory resources are consumed by uBO for logging purpose.
 
 #### Tip
 Hold the <kbd>Shift</kbd> key while clicking the "Open the logger" icon to toggle between opening the logger in a separate window or in a separate tab. uBO will remember that setting when you open the logger next time, without having to hold the <kbd>Shift</kbd> key.
@@ -159,7 +159,7 @@ Clicking on arrow in the filtering input box deactivates expression picker.
 
 Funnel icon toggles on/off current filter expression.
 
-Filter can also be entered manually. Supported sytax:
+Filter can also be entered manually. Supported syntax:
 
 - Enter `foo` to only show entries which have a string `foo`.
 - Enter `|foo` to only show entries which have a field starting with `foo`.
