@@ -30,7 +30,7 @@ As you can see, you can create dynamic filtering rules for resource types, or ho
 
 The color of an entry indicates whether all requests were blocked (reddish), all requests were allowed (greenish), or some were blocked some were allowed (yellowish).
 
-In bold, domain names. Domain names are hostnames, but hostnames are not necessarily domain names from uBlock's point of view: domain names are extracted as per [Mozilla Public Suffix list](https://publicsuffix.org/).
+In bold, domain names. Domain names are hostnames, but hostnames are not necessarily domain names from uBlock Origin (uBO)'s point of view: domain names are extracted as per [Mozilla Public Suffix list](https://publicsuffix.org/).
 
 **Second column**: **_global_** dynamic filtering rules, i.e. whatever rule appears in this column applies everywhere, on _all_ sites:
 
