@@ -79,7 +79,7 @@ This option can be enabled on very low-end devices, but mind that some filter li
 
 ### Suspend network activity until all filter lists are loaded
 
-New in [1.40.3b1](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1) development version. Will be available in stable next release cycle.
+New in [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
 
 This new setting suspends network activity until uBO has loaded all filter lists into memory. The default for this setting is enabled.
 
