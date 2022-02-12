@@ -16,9 +16,9 @@ This is also true for other entity such as Twitter, Google, Disqus, etc.
 > [_Internet Companies: Confusing Consumers for Profit_](https://www.eff.org/deeplinks/2015/10/internet-companies-confusing-consumers-profit) (EFF)
 > ***
 
-uBlock Origin's [_dynamic filtering_](./Dynamic-filtering) can help you foil the ability of ubiquitous servers from building a profile of your browsing habits.
+uBlock Origin (uBO)'s [_dynamic filtering_](./Dynamic-filtering) can help you foil the ability of ubiquitous servers from building a profile of your browsing habits.
 
-Will use Facebook as an example. Facebook will still have the ability to track your browsing habits when using uBlock Origin with its default settings [see benchmark's raw data for [_Easy Mode_](./Blocking-mode:-easy-mode): notice in the [list of 3rd parties](./Blocking-mode#easy-mode) how `facebook.net` is ubiquitous].
+Will use Facebook as an example. Facebook will still have the ability to track your browsing habits when using uBO with its default settings [see benchmark's raw data for [_Easy Mode_](./Blocking-mode:-easy-mode): notice in the [list of 3rd parties](./Blocking-mode#easy-mode) how `facebook.net` is ubiquitous].
 
 First, we block Facebook-related hostnames globally, such that network requests to Facebook servers are blocked _by default, everywhere_ (the first column is for global rules):
 
@@ -52,12 +52,11 @@ The same sort of dynamic filtering rules can be used for whatever sites for whic
     example.com facebook.net * noop
     example.com fbcdn.net * noop
 
-This is just an example, the same can be applied to any of the ubiquitous servers out there. The dynamic filtering pane in uBlock Origin's popup UI will keep you informed about all the 3rd-party servers a web page connects (or tries to), and from there one can simply point-and-click to create global/local block/noop rules to foil the ability of 3rd parties to record your browsing history.
+This is just an example, the same can be applied to any of the ubiquitous servers out there. The dynamic filtering pane in uBO's popup UI will keep you informed about all the 3rd-party servers a web page connects (or tries to), and from there one can simply point-and-click to create global/local block/noop rules to foil the ability of 3rd parties to record your browsing history.
 
 `block` rules to ubiquitous web sites will easily reduce _significantly_ your privacy exposure.
 
-Using the above example of blocking Facebook everywhere with the [benchmark result for _Easy mode_](./Blocking-mode#easy-mode) (uBlock Origin's default mode), the count of 3rd parties would have been decreased from 512 to 
-437, an easy way to significantly reduce your privacy exposure with just a few clicks.
+Using the above example of blocking Facebook everywhere with the [benchmark result for _Easy mode_](./Blocking-mode#easy-mode) (uBO's default mode), the count of 3rd parties would have been decreased from 512 to 437, an easy way to significantly reduce your privacy exposure with just a few clicks.
 
 ***
 
