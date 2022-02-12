@@ -5,11 +5,11 @@
 
 The sites below are included in the _"uBlock filters – Badware risks"_ -- or are candidates for inclusion. The sites are documented to contain [badware](https://en.wikipedia.org/wiki/StopBadware#Defining_.22badware.22) and other programs that have unwanted hidden functionality. Not all downloads on a site may be affected. The block page is there to _remind_ users to be cautious, particularly non-technical users.
 
-Users of uBlock are free to disable blocking by selecting either:
+Users of uBlock Origin (uBO) are free to disable blocking by selecting either:
 - Temporarily - The site will be temporarily allowed for a limited time (60 seconds, after [1.17.4](https://github.com/gorhill/uBlock/releases/tag/1.17.4) 120 seconds - [configurable](./Advanced-settings#strictblockingbypassduration)).
 - Permanently - The site will be permanently allowed.
 
-Blocking may be re-enabled by removing specific `no-strict-blocking: ...` line from rules list in _My rules_ pane in uBlock Origin dashboard.
+Blocking may be re-enabled by removing specific `no-strict-blocking: ...` line from rules list in _My rules_ pane in uBO dashboard.
 
 Below are sites currently part of the list, or sites being candidate for the list (will be added once there are enough sources to support the _badware risks_ qualifier), and links giving further information as to why. Feel free to add _good_ sources if you find more (please respect the chronological order, keep everything neat). You can find more information about recently added sites in comments [directly in the list source ↪](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt). There is a comment above each entry with links to the relevant issue that caused it to be added.
 
