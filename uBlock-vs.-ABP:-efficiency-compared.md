@@ -12,10 +12,10 @@ These screenshots show the memory footprint of ABP and uBO _after_ they have gon
 ##### Adblock Plus
 ![ABP](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/abp-own-mem.png)
 
-##### uBlock Origin
+##### uBlock Origin (uBO)
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/ublock-own-mem.png)
 
-Both extensions had _EasyList_, _EasyPrivacy_, _Peter Lowe's Ad Server_ list, and malware protection (there are more filters in uBlock Origin for this last one).
+Both extensions had _EasyList_, _EasyPrivacy_, _Peter Lowe's Ad Server_ list, and malware protection (there are more filters in uBO for this last one).
 
 ### Added CPU overhead to each net request
 
@@ -38,7 +38,7 @@ Below are the average time it takes for each extension to handle a net request i
     ABP> onBeforeRequest: 0.421 ms (9704 samples)
     ABP> onBeforeRequest: 0.421 ms (9861 samples)
 
-##### uBlock Origin 0.8.7.0
+##### uBO 0.8.7.0
 
     uBO> onBeforeRequest: 0.131 ms (8664 samples)
     uBO> onBeforeRequest: 0.131 ms (8763 samples)
@@ -67,21 +67,21 @@ Extensions have their own memory footprint, but they also cause increased memory
 **Adblock Plus:**<br>
 ![ABP](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-abp.png)
 
-**uBlock Origin:**<br>
+**uBO:**<br>
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-ublock.png)
 
 Now keep in mind this is the added footprint for a very simple web page which has no embedded frames. You can multiply the added footprint on the main page by the number of frames embedded on a page, so page with frames can end up consuming a _lot_ more memory than they would have otherwise. For instance, a very simple web page with a couple of `iframe` in it, [The Acid3 Test](http://acid3.acidtests.org/):
 
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/acid3test-mem.png)<br>
-<sup>Added memory footprint: Left = no extension. Middle = Adblock Plus. Right = uBlock Origin.</sup>
+<sup>Added memory footprint: Left = no extension. Middle = Adblock Plus. Right = uBO.</sup>
 
 A good stress test which further demonstrate this is the [infamous vim test](https://github.com/gorhill/httpswitchboard/wiki/Adblock-Plus-memory-consumption).
 
-##### uBlock Origin vs. Adblock: memory usage differential during reference benchmark
+##### uBO vs. Adblock: memory usage differential during reference benchmark
 
 ![uBO vs. Adblock: memory usage differential during reference benchmark](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/media/ublock-vs-abp-cpu-2.png)
 
-Above picture gives an overview of how much more memory Adblock Plus consumes over uBlock Origin. It represents the **extra memory** ABP consumes relative to uBO -- so essentially uBO is the horizontal axis. If memory consumption of ABP and uBO were exactly the same, there would be no graph. The [reference benchmark](/gorhill/uBlock/wiki/Reference-benchmark) was used, which consists of visiting 60 front pages of high traffic web sites.
+Above picture gives an overview of how much more memory Adblock Plus consumes over uBO. It represents the **extra memory** ABP consumes relative to uBO -- so essentially uBO is the horizontal axis. If memory consumption of ABP and uBO were exactly the same, there would be no graph. The [reference benchmark](/gorhill/uBlock/wiki/Reference-benchmark) was used, which consists of visiting 60 front pages of high traffic web sites.
 
 The vertical axis represents MB. The horizontal axis is time in seconds, and the data was tediously extracted from [this video](https://www.youtube.com/watch?v=DKM78oV_ftg) (consider the video to be the raw data -- [here is the spreadsheet](https://github.com/gorhill/uBlock/blob/master/doc/benchmarks/ublock-vs-abp-timeline.ods) so people can double check in doubt).
 
@@ -91,13 +91,13 @@ The blue area represents how much more ABP itself consumes more memory than uBO.
 
 This is the benchmarks comparing CPU usage in the background page when loading [si.com](http://www.si.com) ten times (so you can shift one decimal to the left for per page figures). Each page load was triggered after the previous page load completed.
 
-**Top:** Adblock Plus 1.8.3. **Bottom:** uBlock Origin 0.5.1.0.
+**Top:** Adblock Plus 1.8.3. **Bottom:** uBO 0.5.1.0.
 
 ![CPU benchmark](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/bgpage-cpu-si.comx10.png)
 
 I did measure CPU usage for content scripts (above benchmarks are for background pages), but given the web page used for the benchmark is quite a bloated one, the useful figures were drowned in a sea of noise. But the fact that ABP inserts 14,000+ CSS rules caused the CPU to used be much more than uBO (2-3 to 1 ratio) when comparing content script CPU usage (again, above is background page CPU usage).
 
-Also, the amount of work uBlock Origin does in its content scripts is proportional to the complexity of a web page. So given uBO did much better CPU-wise than ABP in its content script for such a bloated web site means it was a worst-case scenario for uBO, and yet it did its job of hiding elements between 2 and 3 times faster.
+Also, the amount of work uBO does in its content scripts is proportional to the complexity of a web page. So given uBO did much better CPU-wise than ABP in its content script for such a bloated web site means it was a worst-case scenario for uBO, and yet it did its job of hiding elements between 2 and 3 times faster.
 
 ### Related wiki pages
 
