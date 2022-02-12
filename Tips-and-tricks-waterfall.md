@@ -8,7 +8,7 @@ In response to this [ridiculously over-the-top pure propaganda](http://www.tomsg
 
 **Right:** default-deny with noop'ing of site's own domains (`bestofmedia.com`, `bestofmicro.com`): 3 domains. Page appeared properly rendered.
 
-The content of the picture below is not fabricated, it's really what was reported by uBlock.
+The content of the picture below is not fabricated, it's really what was reported by uBlock Origin (uBO).
 
 As I often say, ads are only the small visible tip of the iceberg of the insidious privacy-invading data mining of people, without their _fully informed_ consent.
 
