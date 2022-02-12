@@ -2,7 +2,7 @@
 
 ***
 
-Yes, uBlock Origin ("uBO") adds overhead to page load. It's impossible for a content blocker to add zero CPU cycles and/or memory overhead.
+Yes, uBlock Origin (uBO) adds overhead to page load. It's impossible for a content blocker to add zero CPU cycles and/or memory overhead.
 
 **However**, for most web pages nowadays, that extra overhead is paid back many times from all the blocked resources which won't consume CPU cycles and memory.
 
