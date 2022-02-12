@@ -6,7 +6,7 @@ I do not know much about that administrator stuff, so I will let a knowledgeable
 
 ### Customizing the settings
 
-Administrators can force specific configurations to deployed uBlock Origin ("uBO"). At launch time, uBO will look for a setting named `adminSettings`, and if it exists, it will parse, extract and overwrite a user's settings with the administrator-assigned ones.
+Administrators can force specific configurations to deployed uBlock Origin (uBO). At launch time, uBO will look for a setting named `adminSettings`, and if it exists, it will parse, extract and overwrite a user's settings with the administrator-assigned ones.
 
 New standalone settings are being added as per demand, see ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
