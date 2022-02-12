@@ -1,4 +1,4 @@
-uBlock Origin is not an "ad blocker", it's a wide-spectrum content blocker with CPU and memory efficiency as a primary feature.
+uBlock Origin (uBO) is not an "ad blocker", it's a wide-spectrum content blocker with CPU and memory efficiency as a primary feature.
 
 ***
 
