@@ -1,11 +1,11 @@
 ##### Settings
 
-Unlike uMatrix, uBlock can't foil cookie headers. For privacy-minded users it is strongly suggested to...
+Unlike uMatrix, uBlock Origin (uBO) can't foil cookie headers. For privacy-minded users it is strongly suggested to...
 
 - Enable _"Block third-party cookies and site data"_ in _"Content settings"_ / _"Cookies"_.
     - It works very well: see "Outbound cookies" in [this benchmark results](./%C2%B5Block-and-others:-Blocking-ads,-trackers,-malwares).
     - But this may break some sites. For instance, you won't be able to enter comments on Youtube.
-    - Useful to know: the block also applies to local storages, not just cookies.
+    - Useful to know: the block also applies to local storage, not just cookies.
 - Enable _"Click to play"_ in _"Content settings"_ / _"Plug-ins"_.
 - Disable _"Predict network actions to improve page load performance"_, as this causes DNS queries to be made even for blocked network requests (see issue #232).
 
@@ -24,14 +24,14 @@ These command line switches might be of interest to privacy-minded users:
 Another powerful command line switch is:
 
 - `--host-rules="MAP *.google-analytics.com 0.0.0.0","MAP *.googleadservices.com 0.0.0.0","MAP *.doubleclick.net 0.0.0.0","MAP *.googletagservices.com 0.0.0.0"`
-    - This switch maps those hostnames (or any other ones) to the IP address 0.0.0.0 ([ref](http://peter.sh/experiments/chromium-command-line-switches/#host-rules)) and hence blocks them effectively (even on the Chrome webstore where extensions like uBlock are disabled). 
+    - This switch maps those hostnames (or any other ones) to the IP address 0.0.0.0 ([ref](http://peter.sh/experiments/chromium-command-line-switches/#host-rules)) and hence blocks them effectively (even on the Chrome webstore where extensions like uBO are disabled). 
     - _However, note that blocking those hostnames with that switch might break some websites. That's why blocking them with uMatrix is preferable since you can whitelist them as exceptions for those websites which won't work without them. Alternatively, you could use the `important` filter option mentioned below._
 
 ##### Regarding EasyPrivacy
 
 In case you were not aware, using _EasyPrivacy_ doesn't protect completely against Google Analytics. So if you were using Adblock Plus with _EasyPrivacy_ (as [recommended by the EFF](https://www.eff.org/deeplinks/2012/04/4-simple-changes-protect-your-privacy-online)), you might have thought you were protected against Google Analytics. This is not necessarily the case.
 
-If you are using uBlock, it protects you *more* against Google Analytics out of the box -- via _"Peter Lowe's Ad server"_ list. Yet, given that an exception filter may exist somewhere in one of the many lists, blocking Google Analytics (or similarly ubiquitous hostnames) is not possible with preset filter lists.
+If you are using uBO, it protects you *more* against Google Analytics out of the box -- via _"Peter Lowe's Ad server"_ list. Yet, given that an exception filter may exist somewhere in one of the many lists, blocking Google Analytics (or similarly ubiquitous hostnames) is not possible with preset filter lists.
 
 ##### Overriding exception filters
 
