@@ -6,7 +6,7 @@ There is nothing wrong with preferring ABP to uBlock Origin (uBO). There is howe
 
 This is my reference answer to such claims.
 
-uBlock Origin (uBO) is lighter on the browser because of many choices which were made regarding how the filtering engine is designed internally. A coarse enumeration of these choices are:
+uBO is lighter on the browser because of many choices which were made regarding how the filtering engine is designed internally. A coarse enumeration of these choices are:
 - lean in-memory filter representation
 - plain string comparisons instead of regular expressions wherever possible
     - a majority of network filters can be reduced to plain string comparison, and this is what uBO does internally for these filters, whereas Adblock Plus (ABP) converts _all_ network filters into regular expressions.
