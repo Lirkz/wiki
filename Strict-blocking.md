@@ -1,7 +1,7 @@
 [[Back to Wiki home|Home]]
 
 ***
-In uBlock Origin ("uBO"), _strict blocking_ is the blocking of a whole page, i.e. the _root_ document is blocked, so that not a single connection is made to the remote server hosting the web page.
+In uBlock Origin (uBO), _strict blocking_ is the blocking of a whole page, i.e. the _root_ document is blocked, so that not a single connection is made to the remote server hosting the web page.
 
 By default, strict blocking is enabled in uBO for domain-only filters (this reduces false-positive matches). To force it on any other pattern matching filter, use [`document`](./Static-filter-syntax#document) or [`all`](./Static-filter-syntax#all) static filter option.
 
