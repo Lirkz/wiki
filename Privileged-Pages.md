@@ -8,7 +8,7 @@ sb-ssl.google.com
 chrome.google.com/webstore/*
 ```
 
-- On the aformentioned domain, all Chromium/Chrome extensions will **cease** their functionality.
+- On the aforementioned domain, all Chromium/Chrome extensions will **cease** their functionality.
 
 For Firefox<sup>2</sup>:
 ```
@@ -26,7 +26,7 @@ support.mozilla.org
 sync.services.mozilla.com
 ```
 
-- Just like Chrome, Firefox's WebExtensions will also cease to work on these aformentioned domains.
+- Just like Chrome, Firefox's WebExtensions will also cease to work on these aforementioned domains.
 
 - To allow WebExtensions in Firefox to run on these pages(at your own risk), open `about:config` and modify the following <sup>3</sup> :
 
