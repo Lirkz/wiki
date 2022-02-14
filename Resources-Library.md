@@ -633,9 +633,6 @@ Disables [_`alert()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/a
 ### ~ampproject.org/v0.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/ampproject_v0.js)
 Removes animation (artificial 8s delay) added to desktop pages supporting AMP, when ampproject.org scripts are blocked.
 
-### prebid-ads.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/prebid-ads.js)
-Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
-
 ### fingerprint2.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/fingerprint2.js)
 Fingerprintjs2 shim.
 
@@ -660,6 +657,9 @@ Convenience, sets static properties (`PopAds`, `popns`)
 ### popads.js /
 ### ~popads.net.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/popads.js)
 Convenience, abort-on-property-write.js (`PopAds`, `popns`), _throws_ "`magic`"
+
+### prebid-ads.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/prebid-ads.js)
+Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
 
 ### gpt-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L700)
 Deprecated, Convenience, sets static properties (`_resetGPT`, `resetGPT`, `resetAndLoadGPTRecovery`, `_resetAndLoadGPTRecovery`, `setupGPT`, `setupGPTuo`)
