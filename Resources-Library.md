@@ -659,6 +659,8 @@ Convenience, sets static properties (`PopAds`, `popns`)
 Convenience, abort-on-property-write.js (`PopAds`, `popns`), _throws_ "`magic`"
 
 ### prebid-ads.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/prebid-ads.js)
+New in 1.41.0
+
 Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
 
 ### gpt-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L700)
