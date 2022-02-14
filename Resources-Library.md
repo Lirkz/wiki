@@ -633,10 +633,13 @@ Disables [_`alert()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/a
 ### ~ampproject.org/v0.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/ampproject_v0.js)
 Removes animation (artificial 8s delay) added to desktop pages supporting AMP, when ampproject.org scripts are blocked.
 
-### fingerprint2.js  [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/fingerprint2.js)
+### prebid-ads.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/prebid-ads.js)
+Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
+
+### fingerprint2.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/fingerprint2.js)
 Fingerprintjs2 shim.
 
-### fingerprint3.js  [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/fingerprint3.js)
+### fingerprint3.js [↪](https://github.com/gorhill/uBlock/blob/master/src/web_accessible_resources/fingerprint3.js)
 FingerprintJS v3 shim.
 
 ### nobab.js /
