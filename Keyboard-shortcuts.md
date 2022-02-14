@@ -1,4 +1,4 @@
-### Supported shortcuts
+## Supported shortcuts
 
 - Activate extension
 
@@ -33,6 +33,7 @@
 
    Can be configured in [[Advanced settings#blockingprofiles]]
 
+## Accessing shortcut configuration
 
 ### Firefox
 
