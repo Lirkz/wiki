@@ -1,3 +1,39 @@
+### Supported shortcuts
+
+- Activate extension
+
+   Will open uBO popup panel - equivalent of clicking the button on the toolbar
+
+- Enter element picker mode
+
+   Will activate [[Element picker]] that will allow creating new filters
+
+- Enter element zapper mode
+
+   Will activate [[Element zapper]] that will allow to temporarily remove elements from the page
+
+- Open the logger
+
+   Will activate [[The logger]] where you can preview network connection and applied filters
+
+- Open the dashboard
+
+   Will open [[The dashboard|Dashboard]] where you can configure uBO settings
+
+- Relax blocking mode
+
+   Advanced feature, will decrease [[blocking mode]] one step at a time.
+
+   Default sequence:
+
+     - Hard mode + No scripting
+     - Medium mode + No scripting
+     - Medium mode
+     - Default.
+
+   Can be configured in [[Advanced settings#blockingprofiles]]
+
+
 ### Firefox
 
 - Main menu (three bars) in top right corner
@@ -13,7 +49,7 @@ In Firefox versions older than 74 shortcut configuration is also available in uB
 
 ![image](https://user-images.githubusercontent.com/886325/64020978-37b6ac80-cb33-11e9-9fee-01a94175c252.png)
 
-New shortcut option to open popup panel was added in [1.24.0](https://github.com/gorhill/uBlock/commit/e2fdc1b94bee06da77fa45a59395cb7cedfa61ae)
+A new shortcut option to open popup panel was added in [1.24.0](https://github.com/gorhill/uBlock/commit/e2fdc1b94bee06da77fa45a59395cb7cedfa61ae)
 
 ### Chrome
 
