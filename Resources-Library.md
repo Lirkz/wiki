@@ -33,14 +33,14 @@
 ### abort-current-script.js /
 ### acis.js /
 ### abort-current-inline-script.js [↪](https://github.com/gorhill/uBlock/blob/784ebb09050cb6617bd857f7c6a4311ac9649ce9/assets/resources/scriptlets.js#L35)
-Aborts execution of inline script (_throws_ `ReferenceError`) when attempts to access specified _property_ when content or `src` attribute (new in [1.37.0](https://github.com/gorhill/uBlock/commit/ebc42ae21e7900fafeaf1041038b94488b1d50e5)) of `<script>` _element_ matches specified text or _regular expression_.
+Aborts execution of inline script (_throws_ `ReferenceError`) when attempts to access specified _property_ when text content or `src` attribute value (new in [1.37.0](https://github.com/gorhill/uBlock/commit/ebc42ae21e7900fafeaf1041038b94488b1d50e5)) of `<script>` _element_ matches specified text or _regular expression_.
 
 Note that `acis.js` and `abort-current-inline-script.js` aliases are deprecated and can be removed in the future.
 
 Parameters:
  - required, _property_ (chain of properties joined by `.`) attached to window object accessed inside `<script>` tag we want to break
  - optional, string/_regular expression_ matching in `<script>` _element_ content
- - optional, new in [1.37.0](https://github.com/gorhill/uBlock/commit/ebc42ae21e7900fafeaf1041038b94488b1d50e5), string/_regular expression_ matching in the `src` attribute of the `<script>` tag, when the attribute content is not a remote network address, but the actual inline script encoded for example as a `data:` URI
+ - optional, new in [1.37.0](https://github.com/gorhill/uBlock/commit/ebc42ae21e7900fafeaf1041038b94488b1d50e5), string/_regular expression_ matching in the decoded value of the `src` attribute of the `<script>` tag, when the attribute content is not a remote network address, but the actual inline script URL-encoded or base64-endcoded as a `data:` URI
 
 Examples:
  - `weristdeinfreund.de##+js(acis, Number.isNaN)`
