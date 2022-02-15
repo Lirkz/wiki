@@ -50,4 +50,4 @@ So this meant that the following duplicated filters would not have been seen as 
 
 In 0.8.9.0, since all filters are normalized into atomic filter representation, uBlock is now able to detect 100% of filters which are functional duplicates.
 
-And since uBlock's now report the number of atomic filters, expect the count to go up somewhat compared to previous versions. For instance, currently using default filter lists, 0.8.9.0 reports over 58,000 network filters, while previous versions reported around 55,000 network filters.
+And since uBlock now reports the number of atomic filters, expect the count to go up somewhat compared to previous versions. For instance, currently using default filter lists, 0.8.9.0 reports over 58,000 network filters, while previous versions reported around 55,000 network filters.
