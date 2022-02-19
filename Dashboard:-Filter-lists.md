@@ -122,4 +122,5 @@ You can subscribe to 3rd-party filter lists by clicking on a link for them on th
 `https://filterlists.com/*`  
 `https://forums.lanik.us/*`  
 `https://github.com/*`  
-`https://*.github.io/`
+`https://*.github.io/`  
+`https://*.letsblock.it/*`
