@@ -123,4 +123,4 @@ You can subscribe to 3rd-party filter lists by clicking on a link for them on th
 `https://forums.lanik.us/*`  
 `https://github.com/*`  
 `https://*.github.io/`  
-`https://*.letsblock.it/*`
+`https://*.letsblock.it/*` - New in [1.41.7b0](https://github.com/gorhill/uBlock/commit/26048a11bcd002cafc4b2b2fdcb709115a2e07e4)
