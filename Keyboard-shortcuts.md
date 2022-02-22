@@ -33,6 +33,12 @@
 
    Can be configured in [[Advanced settings#blockingprofiles]]
 
+- Toggle cosmetic filtering
+
+   New in [1.41.7b1](https://github.com/gorhill/uBlock/commit/ad1800fbcaeea30a860871f3179def5c4af1bc45).
+
+   Will toggle [["cosmetic filtering"|Per-site-switches#no-cosmetic-filtering]] (element hiding filters) on/off for current website.
+
 ## Accessing shortcut configuration
 
 ### Firefox
