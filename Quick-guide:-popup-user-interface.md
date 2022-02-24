@@ -125,7 +125,7 @@ The panel will also be expanded when you enable ["advanced user"](./Advanced-use
 
 The colored bars near the left edge will give you the general overview when network requests to particular hostnames are all blocked (reddish), all were allowed (greenish), or some were blocked some were allowed (yellowish). The more distinct, wider bar denotes the root context - the hostname for which local rules and filters are created.
 
-<span name="the-pluses-and-minuses">The pluses and minuses</span> will give you slightly more information, the number of pluses and minuses are proportional to the number of requests that were either allowed or blocked:
+<span name="the-pluses-and-minuses">The pluses and minuses</span> will give you slightly more information, their number is proportional to the number of requests that were either allowed or blocked:
 - `+`, `-`: under 10 network requests were allowed, blocked.
 - `++`, `--`: under 100 network requests were allowed, blocked.
 - `+++`, `---`: 100 or more network requests were allowed, blocked.
