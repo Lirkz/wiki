@@ -52,7 +52,7 @@ Shows the number of blocked network requests on the current page. The number of 
 
 ### The number of domains connected
 
-![cropped part of statistics secion](https://user-images.githubusercontent.com/886325/85211255-87c36180-b347-11ea-9d79-81e91b0429db.png)
+![cropped part of statistics section](https://user-images.githubusercontent.com/886325/85211255-87c36180-b347-11ea-9d79-81e91b0429db.png)
 
 The number of **distinct** domains with which a network connection was established, out of all connections (established + blocked). The domains are derived using the official [Public Suffix List](https://publicsuffix.org/).
 
@@ -97,11 +97,11 @@ New in [1.39.0](https://github.com/gorhill/uBlock/commit/eccf613edfe480d34cb225d
 
 The "chat" icon opens the ["Report a filter issue" form](./The-"Report-a-filter-issue"-form), which makes it easy to report filter issues with specific websites to the [`uBlockOrigin/uAssets` issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue).
 
-Reporting filter issues requires a [GitHub account](https://github.com/signup) since uBO does not have a home server through which reports could be sent.
+Reporting filter issues requires a [GitHub account](https://github.com/signup), since uBO does not have a home server through which reports could be sent.
 
 The report icon is available only when uBO is enabled on a given site.
 
-On mobile devices, [the "Open the logger" icon](#open-the-logger) is replaced by the "chat" icon since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in [the Dashboard](./Dashboard).
+On mobile devices, [the "Open the logger" icon](#open-the-logger) is replaced by the "chat" icon, since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in [the Dashboard](./Dashboard).
 
 #### Open the logger
 
@@ -119,7 +119,7 @@ Click the _gears_ icon to open the uBO [Dashboard](./Dashboard).
 
 Clicking on the "More" button will expand uBO popup panel to the point where it will show you a list with details about requests blocked and domains connected on the page:
 
-![Overview panel expanded](https://user-images.githubusercontent.com/886325/85211429-6794a200-b349-11ea-94cb-998ee36e6d59.gif)<br>Clicking empty space before a particular domain name or the `all` cell in the first row, will toggle on/off subdomain-level details.
+![Overview panel expanded](https://user-images.githubusercontent.com/886325/85211429-6794a200-b349-11ea-94cb-998ee36e6d59.gif) <br>Clicking the empty space before a particular domain name or the `all` cell in the first row, will toggle on/off subdomain-level details.
 
 The panel will also be expanded when you enable ["advanced user"](./Advanced-user-features) mode -- this is only for convenience -- it will not close automatically when "advanced user" will be disabled. To hide that panel, just click on the "Less" button to adjust it to show only the information you desire.
 
@@ -141,14 +141,14 @@ Unless you are in ["advanced user"](./Advanced-user-features) mode, this panel i
 
 ***
 
-In "advanced user" mode this panel is fully interactive and can be used for advanced filtering control:
+In "advanced user" mode, this panel is fully interactive and can be used for advanced filtering control:
 
 ![Overview panel advanced mode](https://user-images.githubusercontent.com/886325/85384714-b3aa3700-b541-11ea-91cd-6e0e2c1aad4c.gif)
 
 Refer to the [_Dynamic filtering_ documentation](./Dynamic-filtering) to learn more about the rules.
 
-After modifying the rules, you can quickly reload the page without leaving the popup by clicking on the reload button appearing in top-right corner. Click it with <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>Cmd</kbd> (Mac) pressed to bypass browser cache.
+After modifying the rules, you can quickly reload the page without leaving the popup by clicking on the reload button appearing in the top-right corner. Click it with <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>Cmd</kbd> (Mac) pressed to bypass browser cache.
 
-Click the `all` cell at the top with <kbd>Ctrl</kbd> and <kbd>Shift</kbd> pressed to open popup panel as a new browser tab, which may be useful for example to capture screenshots.
+Click the `all` cell at the top with <kbd>Ctrl</kbd> and <kbd>Shift</kbd> pressed to open the popup panel as a new browser tab, which may be useful for example to capture screenshots.
 
 </details>
