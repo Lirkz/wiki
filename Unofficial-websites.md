@@ -1,3 +1,4 @@
 - ~`https://getublock.com/`~ Page is down.
 - `https://ublockorigin.com/`
 - `https://ublock-origin.com/`
+- `https://twitter.com/ublockorigin_ja` https://www.reddit.com/r/uBlockOrigin/comments/t47sz1/i_have_started_an_unofficial_supportpr_twitter/
