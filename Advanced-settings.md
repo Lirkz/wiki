@@ -60,7 +60,9 @@ If no placeholder is found in `autoCommentFilterTemplate`, this will disable aut
 
 #### `autoUpdateAssetFetchPeriod`
 
-Default: `120` seconds.
+Default: `60` seconds.
+
+Before [1.39.3b0](https://github.com/gorhill/uBlock/commit/725e6931f58a81d36b18bb78663a8740c5e36231) `120` seconds.
 
 When the auto-updater kicks in and an asset in need of an update is fetched, this is the number of seconds to wait before fetching the next asset which needs to be updated. The delay helps spread the load on CPU and memory as a result of loading/parsing/compiling the filter lists which have been updated.
 
@@ -68,7 +70,9 @@ When the auto-updater kicks in and an asset in need of an update is fetched, thi
 
 #### `autoUpdateDelayAfterLaunch`
 
-Default: `180` secs.
+Default: `105` secs.
+
+Before [1.39.3b0](https://github.com/gorhill/uBlock/commit/725e6931f58a81d36b18bb78663a8740c5e36231) `180` seconds.
 
 uBO [1.20.0](https://github.com/gorhill/uBlock/commit/72d9758faa40a49f00d2a4671c9db2f519471f0d) and above.
 
@@ -472,9 +476,9 @@ A lower delay than the default one could bring back the issue it's meant to fix.
 
 #### `selfieAfter`
 
-Default: `3` minutes.
+Default: `2` minutes.
 
-uBO [1.18.6](https://github.com/gorhill/uBlock/commit/ed7e34fb07f956229b2290608e4500b35f431afe) and above. Used to be `11` minutes until [1.20.0](https://github.com/gorhill/uBlock/commit/3cf71835c4fc9c262d93a645a3af70946539bd19).
+uBO [1.18.6](https://github.com/gorhill/uBlock/commit/ed7e34fb07f956229b2290608e4500b35f431afe) and above. Used to be `3` minutes until [1.39.3b0](https://github.com/gorhill/uBlock/commit/725e6931f58a81d36b18bb78663a8740c5e36231), and `11` minutes until [1.20.0](https://github.com/gorhill/uBlock/commit/3cf71835c4fc9c262d93a645a3af70946539bd19).
 
 Number of minutes after which _selfie_ (optimized, internal representation of filters) is created.
 
