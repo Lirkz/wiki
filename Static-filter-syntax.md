@@ -137,7 +137,7 @@ Before this version, you could use negated `ext_ublock`, since this token is alw
 
 ## Extended syntax
 
-uBO extends Adblock Plus filter syntax.
+uBO extends Adblock Plus (ABP) filter syntax.
 
 ## Static network filtering
 
@@ -292,7 +292,7 @@ Essentially, the new `denyallow` option makes it easier to implement default-den
 
 [_"Entity"_](#entity) wildcard matching is not supported.
 
-[1] hg.adblockplus.org/ruadlist/rev/f362910bc9a0
+[1] https://hg.adblockplus.org/ruadlist/rev/f362910bc9a0
 
 [2] Typically filters which pattern are of the form `|http*://`
 
@@ -650,7 +650,7 @@ Static extended filters are all of the form:
     [hostname(s)]##[expression]
     [hostname(s)]#@#[expression]
 
-The most common type of static extended filters are cosmetic filters, also known as "element hiding filters" in Adblock Plus.
+The most common type of static extended filters are cosmetic filters, also known as "element hiding filters" in ABP.
 
 ***
 
