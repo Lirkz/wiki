@@ -6,7 +6,7 @@
 
 ***
 
-![Figure 1](https://user-images.githubusercontent.com/585534/92238602-92da5800-ee87-11ea-96ca-042fd9a6a7f7.png)
+![Figure 1](https://user-images.githubusercontent.com/95879668/161320322-51242d45-db55-4884-9cae-2e23c7634dfa.png)
 
 ## General
 
