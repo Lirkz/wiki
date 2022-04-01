@@ -5,7 +5,7 @@ In uBlock Origin (uBO), _strict blocking_ is the blocking of a whole page, i.e. 
 
 By default, strict blocking is enabled in uBO for domain-only filters (this reduces false-positive matches). To force it on any other pattern matching filter, use [`document`](./Static-filter-syntax#document) or [`all`](./Static-filter-syntax#all) static filter option.
 
-This feature is not supported by other blockers, like Adblock Plus (ABP), which only blocks secondary resources (see [web pages _themselves_ are **never** filtered](https://adblockplus.org/forum/viewtopic.php?t=18774#p85439)).
+This feature is not supported by other blockers, like Adblock Plus (ABP), which only blocks secondary resources (see [web pages _themselves_ are **never** filtered](https://forum.adblockplus.org/viewtopic.php?t=18774#p85439)).
 
 So if you were to create a filter such as `||example.com^`, and then navigate to <https://example.com>, ABP would not prevent you from connecting and loading the web page itself served at `https://example.com`, though all secondary resources pulled by that web page would be subject to filtering.
 
