@@ -57,7 +57,7 @@ The title is obviously an exaggeration (the tracking _can_ be blocked).
 
 The particular `addthis.com` javascript code which attempts to fingerprint your browser executes from within a 3rd-party `iframe`.
 
-Contrary to what Adblock Plus has been claiming on [its blog](https://adblockplus.org/blog/adblock-plus-and-the-canvas-fingerprinting-threat) and the [media](http://news.yahoo.com/adblock-plus-stop-canvas-fingerprinting-unstoppable-browser-tracking-191541979.html), using _EasyPrivacy_ does **not** prevent AddThis from fingerprinting your browser. This is something I verified and re-verified back then, and I just re-verified again (2014-10-09):
+Contrary to what Adblock Plus (ABP) has been claiming on [its blog](https://adblockplus.org/blog/adblock-plus-and-the-canvas-fingerprinting-threat) and the [media](http://news.yahoo.com/adblock-plus-stop-canvas-fingerprinting-unstoppable-browser-tracking-191541979.html), using _EasyPrivacy_ does **not** prevent AddThis from fingerprinting your browser. This is something I verified and re-verified back then, and I just re-verified again (2014-10-09):
 
 When you visit <http://www.ibtimes.com/>, the following `<iframe>` is dynamically created:
 
@@ -70,7 +70,7 @@ And within it, the fingerprinting will take place, and result reported to AddThi
 - **Host:** `ct1.addthis.com`
 - **Referer:** `http://www.ibtimes.com/`
 
-The above occurred with Adblock Plus with _EasyList_ + _EasyPrivacy_ enabled. Note that the cookie header which contains the fingerprinting information will be stripped if you set your browser to block 3rd-party cookies and site data (preventing 3rd-party cookies is what protects you in this particular case, not ABP + _EasyPrivacy_).
+The above occurred with ABP with _EasyList_ + _EasyPrivacy_ enabled. Note that the cookie header which contains the fingerprinting information will be stripped if you set your browser to block 3rd-party cookies and site data (preventing 3rd-party cookies is what protects you in this particular case, not ABP + _EasyPrivacy_).
 
 AddThis and many other 3rd-parties which purpose is to data-mine you will be foiled by blocking 3rd-party `<iframe>` tags (even more so if blocking 3rd-party `<script>` tags).
 
