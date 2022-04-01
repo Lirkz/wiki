@@ -5,13 +5,13 @@ In uBlock Origin (uBO), _strict blocking_ is the blocking of a whole page, i.e. 
 
 By default, strict blocking is enabled in uBO for domain-only filters (this reduces false-positive matches). To force it on any other pattern matching filter, use [`document`](./Static-filter-syntax#document) or [`all`](./Static-filter-syntax#all) static filter option.
 
-This feature is not supported by other blockers, like Adblock Plus, which only blocks secondary resources (see [web pages _themselves_ are **never** filtered](https://adblockplus.org/forum/viewtopic.php?t=18774#p85439)).
+This feature is not supported by other blockers, like Adblock Plus (ABP), which only blocks secondary resources (see [web pages _themselves_ are **never** filtered](https://adblockplus.org/forum/viewtopic.php?t=18774#p85439)).
 
-So if you were to create a filter such as `||example.com^`, and then navigate to <https://example.com>, Adblock Plus would not prevent you from connecting and loading the web page itself served at `https://example.com`, though all secondary resources pulled by that web page would be subject to filtering.
+So if you were to create a filter such as `||example.com^`, and then navigate to <https://example.com>, ABP would not prevent you from connecting and loading the web page itself served at `https://example.com`, though all secondary resources pulled by that web page would be subject to filtering.
 
 uBO respected that semantic until version 0.9.3.0. With version 0.9.3.0, uBO will subject web pages themselves to filtering.
 
-This means that using the same test case above, **uBO will block the web page** served by a server found in one of the malware list (unlike Adblock Plus):
+This means that using the same test case above, **uBO will block the web page** served by a server found in one of the malware list (unlike ABP):
 
 ![Page was fully blocked](https://cloud.githubusercontent.com/assets/585534/8160013/14466ca0-133a-11e5-8d3c-28169288f35a.png)
 
