@@ -1,3 +1,3 @@
-I will to post small, quick tips about how to best use uBlock Origin (uBO).
+I will post small, quick how-to tips about the best usages of uBlock Origin (uBO).
 
-- [How to remove "Switch your default ... to Google"](https://youtu.be/8TvCGWwQr5o)
+- [How to remove "Switch your default ... to Google"](https://www.youtube.com/watch?v=8TvCGWwQr5o)
