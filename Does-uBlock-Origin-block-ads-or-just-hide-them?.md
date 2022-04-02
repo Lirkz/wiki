@@ -1,4 +1,4 @@
-There are two kinds of [ABP-compatible filters](https://adblockplus.org/en/filters): network filters and cosmetic filters. _Cosmetic filters_ are referred to as _element hiding_ filters by Adblock Plus ("ABP").
+There are two kinds of [ABP-compatible filters](https://help.eyeo.com/en/adblockplus/how-to-write-filters): network filters and cosmetic filters. _Cosmetic filters_ are referred to as _element hiding_ filters by Adblock Plus (ABP).
 
 #### Network filters
 
