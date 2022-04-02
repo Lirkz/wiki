@@ -10,11 +10,11 @@ Administrators can force specific configurations to deployed uBlock Origin (uBO)
 
 New standalone settings are being added as per demand, see ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
-For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests#Managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_manifests#Manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
+For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
 
 For **Firefox-legacy**, the `adminSettings` entry must be added to `about:config`, the key name is `extensions.ublock0.adminSettings`, and the value is a plain string -- which must be JSON-parseable.
 
-For **Chrome**, `adminSettings` must be an entry part of the policy for the extension. See <http://www.chromium.org/administrators/configuring-policy-for-extensions>.
+For **Chrome**, `adminSettings` must be an entry part of the policy for the extension. See <https://www.chromium.org/administrators/configuring-policy-for-extensions/>.
 
 For managing **Chrome** via **Google Workspace** you can use this apps-script to generate a policy JSON that will modify Trusted Sites for all designated users.
 <https://github.com/Landsil/apps_script--GSuite_API/blob/master/uBlock_Origin_GSuite_policy.gs>
