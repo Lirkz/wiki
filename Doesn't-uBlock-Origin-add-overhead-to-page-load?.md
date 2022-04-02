@@ -27,7 +27,7 @@ Here is an example of uBO's overhead added to a [atypically large page from a ni
 |uBO fully enabled | 537.63 ms
 |uBO enabled, cosmetic filtering disabled | 488.23 ms
 |uBO disabled | 488.41 ms
-|No blocker |  474.77 ms
+|No blocker | 474.77 ms
 
 Of course, there is no point benchmarking pages from less nice sites, as these pages will always load much faster when using a blocker -- though you may want to benchmark different blockers with similar settings.
 
