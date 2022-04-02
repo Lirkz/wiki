@@ -6,13 +6,13 @@ Here is a list of those software which are known to have uninstalled uBO:
     - https://github.com/gorhill/uBlock/issues/882
     - https://github.com/gorhill/uBlock/issues/1074
 
-    Report form: https://analysis.avira.com/en/submit
+    Report form: https://www.avira.com/en/analysis/submit/
 
 - Bitdefender:
     - https://www.reddit.com/r/uBlockOrigin/comments/rdy62f/bitdefender_detects_ublock_origin_as_a_virus/
     - https://www.reddit.com/r/uBlockOrigin/comments/b0579i/bitdefender_detected_web_threat_from_ublockorigin/
 
-    Report instructions: https://www.bitdefender.com/business/support/en/77209-79766-troubleshooting.html#UUID-34db599c-8f18-3a74-2ffe-12e4aa066e09
+    Report instructions: https://www.bitdefender.com/business/support/en/77209-151121-troubleshooting.html
 
 - ClamAV (optionally with Immunet/Malware Patrol):
     - https://github.com/gorhill/uBlock/issues/2315
@@ -34,4 +34,4 @@ Here is a list of those software which are known to have uninstalled uBO:
 
 - SpyHunter 4:
     - https://github.com/gorhill/uBlock/issues/1009
-    - [Of interest](http://www.bleepingcomputer.com/forums/t/550005/spyhunter-vs-malwarebytes-vs-iobit/#entry3491488): "In _my opinion_ SpyHunter is a **dubious program** with a high rate of [false positives](https://www.mywot.com/en/scorecard/enigmasoftware.com)".
+    - ~~[Of interest](http://www.bleepingcomputer.com/forums/t/550005/spyhunter-vs-malwarebytes-vs-iobit/#entry3491488): "In _my opinion_ SpyHunter is a **dubious program** with a high rate of [false positives](https://www.mywot.com/en/scorecard/enigmasoftware.com)".~~ [URL Error: Webpage Not Found] - Updated 4/2/2022
