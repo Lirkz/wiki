@@ -13,18 +13,17 @@
 
 This is uBlock Origin (uBO)'s popup UI when you click on uBO's icon in the toolbar:
 
-![Popup UI](https://user-images.githubusercontent.com/886325/148119326-2b33327e-4e5a-4a90-a3f9-4e772adeba69.png)
+![Popup UI](https://user-images.githubusercontent.com/95879668/161406915-26970fd2-e6b6-4b74-8a34-8704a1942dee.png)
 
 The amount of visible information can be adjusted by clicking on the "More" and "Less" buttons:
 
 ![Toggling popup panels](https://user-images.githubusercontent.com/886325/85211186-fd7afd80-b346-11ea-99b6-ca304b867c09.gif)
 
-
 ***
 
 ### The large power button
 
-![large blue power button](https://user-images.githubusercontent.com/886325/85211203-1d122600-b347-11ea-8271-a60449a57c8b.png)
+![large blue power button](https://user-images.githubusercontent.com/95879668/161406975-4ad91129-e3ef-4f30-a215-26070eb74582.png)
 
 Click the large power button to turn off uBO **for the current site** (add current site to _Trusted sites_ list). This will be remembered the next time you visit the site.
 
@@ -36,7 +35,7 @@ For more advanced control, see ["How to mark a web site as trusted"](./How-to-ma
 
 ### The per-site switches
 
-![Row of per-site switch buttons](https://user-images.githubusercontent.com/585534/85226654-a73da700-b3a6-11ea-9c1b-a579981ffdfe.png)
+![Row of per-site switch buttons](https://user-images.githubusercontent.com/95879668/161407196-d2b63633-f7d6-49f6-b1d0-ddb86b46d771.png)
 
 The per-site switches allow you to control some settings on a per-site basis. See [detailed documentation about per-site switches](./Per-site-switches).
 
@@ -44,7 +43,7 @@ The per-site switches allow you to control some settings on a per-site basis. Se
 
 ### The number of requests blocked
 
-![statistics section](https://user-images.githubusercontent.com/886325/85211231-564a9600-b347-11ea-9f5b-ab926c202cb0.png)
+![statistics section](https://user-images.githubusercontent.com/95879668/161407269-52821906-3d8b-4296-bbd9-2b5e9c2a5fcb.png)
 
 Shows the number of blocked network requests on the current page. The number of network requests blocked since installation is also displayed. (This is less useful; however, users appreciate this information). The percentage indicates the number of blocked requests out of the total number of requests made.
 
@@ -52,7 +51,7 @@ Shows the number of blocked network requests on the current page. The number of 
 
 ### The number of domains connected
 
-![cropped part of statistics section](https://user-images.githubusercontent.com/886325/85211255-87c36180-b347-11ea-9d79-81e91b0429db.png)
+![cropped part of statistics section](https://user-images.githubusercontent.com/95879668/161407375-adf41ed0-2f8b-46ba-8bf5-ba6dce08021d.png)
 
 The number of **distinct** domains with which a network connection was established, out of all connections (established + blocked). The domains are derived using the official [Public Suffix List](https://publicsuffix.org/).
 
@@ -70,7 +69,7 @@ Example: the web page on <https://www.ibtimes.com/> (which can be read fine in a
 
  uBO's mode | turned off | default settings | [default-deny](./Blocking-mode:-medium-mode)
 --- | --- | --- | ---
-domains connected | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1e.png) | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1d.png) | ![](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/popup-1f.png)
+domains connected | ![](https://user-images.githubusercontent.com/95879668/161407839-7b4feb81-cc36-4a02-a9c0-bf1f4972ff28.png) | ![](https://user-images.githubusercontent.com/95879668/161407792-44d68117-f874-4a38-bd4f-6e2ba64e6f03.png) | ![](https://user-images.githubusercontent.com/95879668/161408195-d9bca8a3-036e-4768-98b6-2ac683c33cb0.png)
 privacy exposure | very high | medium | very low
 bloat | ridiculously high | medium | very low
 
@@ -81,6 +80,7 @@ And I had click-to-play enabled in all cases, so it could have been worse (excep
 ### The tools
 
 ![row of tools buttons](https://user-images.githubusercontent.com/886325/148119666-61ac0ab2-85b4-48dc-8578-2850a18932e5.png)
+
 
 #### Zap an element on the current page
 
