@@ -131,7 +131,7 @@ The colored bars near the left edge will give you the general overview when netw
 
 Starting with [1.24.3b7](https://github.com/gorhill/uBlock/commit/d0738c0835338a15683b9dfffd12b670f513c3f1) [canonical name (CNAME) hostnames](https://wikipedia.org/wiki/CNAME_record) are rendered in blue font. The uncloaked entries in the popup panel will also show the related aliases (in smaller characters underneath the canonical names):
 
-![Closeup on domains in overview panel](https://user-images.githubusercontent.com/886325/85211664-a297d500-b34b-11ea-82fd-f9fb64189091.png)
+![Closeup on domains in overview panel](https://user-images.githubusercontent.com/95879668/161408664-8ba66430-458b-47af-accf-750fdb309219.png)
 
 Unless you are in ["advanced user"](./Advanced-user-features) mode, this panel is read-only and available only for informational purposes.
 
