@@ -1,4 +1,4 @@
-[Back to _"Static filter syntax"_](./Static-filter-syntax)
+[Back to _"Static filter syntax"_ / _"Cosmetic filters"_](./Static-filter-syntax#cosmetic-filters)
 
 ***
 
