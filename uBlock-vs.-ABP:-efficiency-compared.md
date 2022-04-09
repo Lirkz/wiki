@@ -59,7 +59,7 @@ The results depend heavily on the processor: I benchmarked on an i5-3xxxK CPU @ 
 
 ### Added memory footprint to web pages
 
-Extensions have their memory footprint, but they also cause an increased memory footprint in web pages. Below you can see the added memory footprint in a simple web page like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this web page. Other screenshots show the increased memory footprint caused by each extension. The browser was idle after loading the page to allow the garbage collector to kick in.
+Extensions have their memory footprint, but they also cause an increased memory footprint in web pages. Below you can see the added memory footprint in a simple web page like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this web page. Other screenshots show the increased memory footprint caused by each one. The browser was idle after loading the page to allow the garbage collector to kick in.
 
 **No extension:**<br>
 ![No extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-alone.png)
@@ -85,7 +85,7 @@ The above picture shows how much more memory ABP consumes over uBO. It represent
 
 The vertical axis represents MB. The horizontal axis is time in seconds. Data extraction occurred from [this video](https://www.youtube.com/watch?v=DKM78oV_ftg). (Consider the video to be the raw data. [Here is the spreadsheet](https://github.com/gorhill/uBlock/blob/master/doc/benchmarks/ublock-vs-abp-timeline.ods) so people in doubt can double-check).
 
-The blue area represents how much more memory ABP consumes than uBO. The orange area represents how much more ABP causes the web pages to consume more memory. ABP systematically causes web pages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short-term memory overhead is not cheap, as it also means the CPU is working harder.
+The blue area represents how much more memory ABP consumes than uBO. The orange area depicts how much more ABP causes the web pages to consume more memory. ABP systematically causes web pages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short-term memory overhead is not cheap, as it also means the CPU is working harder.
 
 ### Added CPU overhead to web pages
 
@@ -95,9 +95,7 @@ Here is the benchmark comparing CPU usage in the background page when loading [s
 
 ![CPU benchmark](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/bgpage-cpu-si.comx10.png)
 
-I measured CPU usage for content scripts, but any information was drowned in a sea of noise because the web page used for the benchmark is quite bloated.
-
-But the fact that ABP inserts 14,000+ CSS rules caused the CPU to use much more than uBO (2-3 to 1 ratio) when comparing content script CPU usage (again, above is background page CPU usage).
+I measured CPU usage for content scripts, but any information was drowned in a sea of noise because the web page used for the benchmark is quite bloated. But the fact that ABP inserts 14,000+ CSS rules caused the CPU to use much more than uBO (2-3 to 1 ratio) when comparing content script CPU usage (again, above is background page CPU usage).
 
 Also, the amount of work uBO does in its content scripts is proportional to the complexity of a web page. Although uBO did much better CPU-wise than ABP in its content script for such a bloated website, that means it was a worst-case scenario for uBO, and yet it did its job of hiding elements between 2 and 3 times faster.
 
