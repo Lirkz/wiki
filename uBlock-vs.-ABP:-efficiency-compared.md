@@ -21,7 +21,7 @@ Both extensions had _EasyList_, _EasyPrivacy_, _Peter Lowe's Ad Server_ list, an
 
 <sup>Last updated on: 30 January 2015.</sup>
 
-ABP and uBO need to evaluate the URL of each net request against their dictionary of filters and tell the waiting browser 	 Since the browser is waiting for an answer, this is a time-critical part, and determining whether to allow the request must be done immediately.
+ABP and uBO need to evaluate the URL of each net request against their dictionary of filters and tell the waiting browser to cancel it or not. Since the browser is waiting for an answer, this is a time-critical part, and determining whether to allow the request must be done immediately.
 
 Below is the average time for each extension to handle a net request in their respective `chrome.webRequest.onBeforeRequest` handler, using the same [benchmark](./Reference-benchmark).
 
