@@ -57,9 +57,9 @@ Note that the results above are the tail end of running the [reference benchmark
 
 The results depend heavily on the processor: I benchmarked on an i5-3xxxK CPU @ 3.4 GHz x 4.
 
-### Added memory footprint to webpages
+### Added memory footprint to web pages
 
-Extensions have their memory footprint, but they also cause an increased memory footprint in webpages. Below you can see the added memory footprint in a simple webpage like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this webpage. Other screenshots show the increased memory footprint caused by each one. The browser was idle after loading the page to allow the garbage collector to kick in.
+Extensions have their memory footprint, but they also cause an increased memory footprint in web pages. Below you can see the added memory footprint in a simple webpage like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this webpage. Other screenshots show the increased memory footprint caused by each one. The browser was idle after loading the page to allow the garbage collector to kick in.
 
 **No extension:**<br>
 ![No extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-alone.png)
@@ -85,9 +85,9 @@ The above picture shows how much more memory ABP consumes over uBO. It represent
 
 The vertical axis represents MB. The horizontal axis is time in seconds. Data extraction occurred from [this video](https://www.youtube.com/watch?v=DKM78oV_ftg). (Consider the video to be the raw data. [Here is the spreadsheet](https://github.com/gorhill/uBlock/blob/master/doc/benchmarks/ublock-vs-abp-timeline.ods) so people in doubt can double-check).
 
-The blue area represents how much more memory ABP consumes than uBO. The orange area depicts how much more ABP causes the webpages to consume more memory. ABP systematically causes webpages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short-term memory overhead is not cheap, as it also means the CPU is working harder.
+The blue area represents how much more memory ABP consumes than uBO. The orange area depicts how much more ABP causes the web pages to consume more memory. ABP systematically causes web pages to consume more memory, and often quite a lot, north of 100 MB for some sites. This kind of added short-term memory overhead is not cheap, as it also means the CPU is working harder.
 
-### Added CPU overhead to webpages
+### Added CPU overhead to web pages
 
 Here is the benchmark comparing CPU usage in the background page when loading [si.com](https://www.si.com/) ten times (so you can shift one decimal to the left for per page figures). Each page load was triggered after the last completed.
 
