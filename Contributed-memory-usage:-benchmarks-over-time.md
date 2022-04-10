@@ -1,30 +1,30 @@
-Just a place for me to keep track of contributed memory to web pages over time.  I consider the contributed memory to web pages to be more important than the own memory footprint. Unfortunately it is not possible for a user to see how much memory overhead an extension contributes to a web page, without running a benchmark like the one here. Keep in mind the results here are only for **one simple web page.**
+This page is just a place for me to keep track of contributed memory to webpages over time. I consider the contributed memory to webpages to be more important than the own memory footprint. Unfortunately, a user can not see how much memory overhead an extension contributes to a webpage without running a benchmark like the one here. Keep in mind the results here are only for **a simple webpage.**
 
-Using [Acid Test 3](http://acid3.acidtests.org/), a rather simple web page, with embedded `iframes`. Web page was opened in a new tab for each extension (important), after a browser restart.
+Using [Acid Test 3](http://acid3.acidtests.org/) on a simple webpage with embedded `iframes`, the webpage opened in a new tab for each extension after a browser restart.
 
-Each extension tested alone, with no other extension enabled.  Browser left on idle for more than 1 minute to ensure web page memory was garbage collected.
+Each extension was tested alone, with no other extensions enabled. Leaving the browser idle for more than 1 minute ensured that the webpage memory was garbage collected.
 
-The following steps were added for benchmarks dated December 2014 and later:
+Added the following steps for benchmarks dated December 2014 and later:
 
-1. Click _"Stats for nerds"_ in _"Task Manager"_: _"About memory"_ opens
-1. Wait a few seconds
-1. Close the _"About memory"_ tab
-1. Wait a few seconds
-1. Repeat all above steps until the memory footprint of the Acid Test tab stops decreasing
+1. Click _"Stats for nerds"_ in _"Task Manager"_: _"About memory"_ opens.
+2. Wait a few seconds.
+3. Close the _"About memory"_ tab.
+4. Wait a few seconds.
+5. Repeat all the above steps until the memory footprint of the Acid Test tab stops decreasing.
 
-I found this was now necessary as it appears Chromium's garbage collector has become rather lazy. The above steps forces it into action.
+I found that this was now necessary as it appears the Chromium garbage collector has become rather lazy. The above steps force it into action.
 
 ### 24 December 2014
 
 - Chromium 39.0.2171.65 64-bit (Linux)
 - uBlock Origin (uBO) 0.8.2.2 (default lists: _EasyList_, _Peter Lowe’s Ad server_, _EasyPrivacy_, malware domain lists, _Fanboy’s Social Blocking List‎_)
-- Adblock Plus 1.8.8 (_EasyList_, _EasyPrivacy_, _Malware Protection List_, _"Acceptable ads"_ disabled)
+- Adblock Plus (ABP) 1.8.8 (_EasyList_, _EasyPrivacy_, _Malware Protection List_, _"Acceptable ads"_ disabled)
 
 Summary of results:
-- Reference memory usage for the web page: 23 MB
+- Reference memory usage for the webpage: 23 MB
 - uBO adds over 10 MB
-- Adblock Plus adds over 33 MB
-- Adblock Plus with same filter lists as uBO adds over 46 MB
+- ABP adds over 33 MB
+- ABP with the same filter lists as uBO adds over 46 MB
 
 No extension (reference):<br>
 ![no extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-none.png)
@@ -32,22 +32,22 @@ No extension (reference):<br>
 uBO:<br>
 ![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-ublock.png)
 
-Adblock Plus:<br>
+ABP:<br>
 ![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-abp.png)
 
-Adblock Plus with same filter lists as uBO:<br>
+ABP with same filter lists as uBO:<br>
 ![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-abp-more.png)
 
 ### 19 September 2014
 
 - Chromium 37.0.2062.94 64-bit (Linux)
 - uBO 0.6.2.1 (default filter lists)
-- Adblock Plus 1.8.5 (_EasyList_, _EasyPrivacy_, _Malware Protection List_, _"Acceptable ads"_ disabled)
+- ABP 1.8.5 (_EasyList_, _EasyPrivacy_, _Malware Protection List_, _"Acceptable ads"_ disabled)
 
 Summary of results:
-- Reference memory usage for the web page: 22 MB
+- Reference memory usage for the webpage: 22 MB
 - uBO Plus adds over 9 MB
-- Adblock Plus adds over 32 MB
+- ABP adds over 32 MB
 
 No extension (reference):<br>
 ![no extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-none.png)
@@ -55,9 +55,9 @@ No extension (reference):<br>
 uBO:<br>
 ![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-ublock.png)
 
-Adblock Plus:<br>
+ABP:<br>
 ![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-abp.png)
 
 Observations:
 
-Last time I ran this benchmark [was on Chromium 34 64-bit](./%C2%B5Block-vs.-ABP:-efficiency-compared#added-memory-footprint-to-web-pages), and it does appear that Chromium 37 is causing web pages to consume more memory -- reference result went from ~17 MB to ~22 MB.
+The last time I ran this benchmark [was on Chromium 34 64-bit](./%C2%B5Block-vs.-ABP:-efficiency-compared#added-memory-footprint-to-web-pages), and it does appear that Chromium 37 is causing webpages to consume more memory. The reference result went from ~17 MB to ~22 MB.
