@@ -59,7 +59,7 @@ The results depend heavily on the processor: I benchmarked on an i5-3xxxK CPU @ 
 
 ### Added memory footprint to web pages
 
-Extensions have their memory footprint, but they also cause an increased memory footprint in web pages. Below you can see the added memory footprint in a simple webpage like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this webpage. Other screenshots show the increased memory footprint caused by each one. The browser was idle after loading the page to allow the garbage collector to kick in.
+Extensions have their memory footprint, but they also cause an increased memory footprint in web pages. Below you can see the added memory footprint in a simple web page like [Hacker News](https://news.ycombinator.com/). The first screenshot is when there is no extension used. Therefore, consider it as the reference memory footprint for this web page. Other screenshots show the increased memory footprint caused by each one. The browser was idle after loading the page to allow the garbage collector to kick in.
 
 **No extension:**<br>
 ![No extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-alone.png)
@@ -70,7 +70,7 @@ Extensions have their memory footprint, but they also cause an increased memory 
 **uBO:**<br>
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/hn-ublock.png)
 
-Now keep in mind this is the added footprint for a simple webpage that has no embedded frames. You can multiply the added footprint on the main page by the number of frames embedded, so pages with frames can consume a _lot_ more memory than they would have otherwise. For instance, a simple webpage with a couple of `iframe` in it, [The Acid3 Test](http://acid3.acidtests.org/):
+Now keep in mind this is the added footprint for a simple web page that has no embedded frames. You can multiply the added footprint on the main page by the number of frames embedded, so pages with frames can consume a _lot_ more memory than they would have otherwise. For instance, a simple web page with a couple of `iframe` in it, [The Acid3 Test](http://acid3.acidtests.org/):
 
 ![uBO](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/acid3test-mem.png)<br>
 <sup>Added memory footprint: Left = no extension. Middle = ABP. Right = uBO.</sup>
@@ -95,9 +95,9 @@ Here is the benchmark comparing CPU usage in the background page when loading [s
 
 ![CPU benchmark](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/bgpage-cpu-si.comx10.png)
 
-Note: I measured CPU usage for content scripts, but any information was drowned in a sea of noise because the webpage used for the benchmark is quite bloated. But the fact that ABP inserts 14,000+ CSS rules caused the CPU to use much more than uBO (2-3 to 1 ratio) when comparing content script CPU usage (again, above is background page CPU usage).
+Note: I measured CPU usage for content scripts, but any information was drowned in a sea of noise because the web page used for the benchmark is quite bloated. But the fact that ABP inserts 14,000+ CSS rules caused the CPU to use much more than uBO (2-3 to 1 ratio) when comparing content script CPU usage (again, above is background page CPU usage).
 
-Also, the amount of work uBO does in its content scripts is proportional to the complexity of a webpage. Although uBO did much better CPU-wise than ABP in its content script for such a bloated website, this was a worst-case scenario for uBO, and yet it did its job of hiding elements between 2 and 3 times faster.
+Also, the amount of work uBO does in its content scripts is proportional to the complexity of a web page. Although uBO did much better CPU-wise than ABP in its content script for such a bloated website, this was a worst-case scenario for uBO, and yet it did its job of hiding elements between 2 and 3 times faster.
 
 ### Related wiki pages
 
