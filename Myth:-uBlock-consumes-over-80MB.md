@@ -1,13 +1,13 @@
 I've seen a couple of instances of people claiming uBlock Origin (uBO) is not as memory efficient as claimed. Examples:
 
-- ["I just installed it, and it uses 117MB - that's not even close"](http://www.reddit.com/r/chrome/comments/2cpogs/fast_and_light_ad_blocker_for_chrome_%C2%B5block/cjhutwz)
-- ["Simply tried, did not see where the province of memory" (Google translate...)](http://bbs.kafan.cn/thread-1762885-1-1.html#pid32323303)
+- ["I just installed it, and it uses 117MB - that's not even close"](https://www.reddit.com/r/chrome/comments/2cpogs/fast_and_light_ad_blocker_for_chrome_%C2%B5block/cjhutwz/)
+- ["Simply tried, did not see where the province of memory" (Google translate...)](https://bbs.kafan.cn/thread-1762885-1-1.html#pid32323303)
 
 When uBO launches, it loads all selected filter lists, parses the content, eliminates duplicates, then instantiates the filters using efficient internal representation. This parsing of the filter lists requires a good amount of temporary memory.
 
 So if you look at the task manager **right after** uBO has loaded and parsed the filter lists, you will still see uBO's memory footprint as a result of loading all the filter lists. Still, at this point all this temporary memory has been relinquished to the browser, but the browser hasn't yet collected the freed memory to make it available for reuse.
 
-If the browser is idle enough, before one minute has elapsed<sup>[1]</sup>, the browser should be able to [garbage collect](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) the temporary memory which was freed by uBO after it finished loading and parsing the filter lists:
+If the browser is idle enough, before one minute has elapsed<sup>[1]</sup>, the browser should be able to [garbage collect](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) the temporary memory which was freed by uBO after it finished loading and parsing the filter lists:
 
 ![uBO's memory footprint](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/mem-footprint-at-launch-time.png)
 
