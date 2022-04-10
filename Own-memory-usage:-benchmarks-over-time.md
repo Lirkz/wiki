@@ -1,4 +1,4 @@
-Just a place for me to keep track of comparative memory usage over time. Screenshot before/after [reference benchmark](./Reference-benchmark). The memory was garbage collected with great care before taking the screenshots. Forcing memory garbage collection occurred by leaving the browser idle for more than 1 minute, then the dev console of each extension opened, _Timeline_ tab, then clicked twice on the trash can icon.
+This page is just a place for me to keep track of comparative memory usage over time. Screenshot before/after [reference benchmark](./Reference-benchmark). The memory was garbage collected before taking the screenshots. Forcing memory garbage collection occurred by leaving the browser idle for more than 1 minute, then the dev console of each extension opened, _Timeline_ tab, then clicked twice on the trash can icon.
 
 ### 23 December 2014
 
