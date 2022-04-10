@@ -1,6 +1,6 @@
-This page is just a place for me to keep track of contributed memory to webpages over time. I consider the contributed memory to webpages to be more important than the own memory footprint. Unfortunately, a user can not see how much memory overhead an extension contributes to a webpage without running a benchmark like the one here. Keep in mind the results here are only for **a simple webpage.**
+This page is just a place for me to keep track of contributed memory to web pages over time. I consider the contributed memory to webpages to be more important than the own memory footprint. Unfortunately, a user can not see how much memory overhead an extension contributes to a webpage without running a benchmark like the one here. Keep in mind the results here are only for **one basic web page.**
 
-Using [Acid Test 3](http://acid3.acidtests.org/) on a simple webpage with embedded `iframes`, the webpage opened in a new tab for each extension after a browser restart.
+Using [Acid Test 3](http://acid3.acidtests.org/), a simple webpage with embedded `iframes`, the webpage opened in a new tab for each extension after a browser restart.
 
 Each extension was tested alone, with no other extensions enabled. Leaving the browser idle for more than 1 minute ensured that the webpage memory was garbage collected.
 
