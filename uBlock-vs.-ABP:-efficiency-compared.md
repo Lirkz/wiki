@@ -1,4 +1,4 @@
-Here is a quick illustrated comparison of efficiency using various angles. The extensions were tested alone as the only extension present. Benchmarks were performed on Linux Mint 64-bit using Chromium.
+Here is a quick illustrated comparison of efficiency using various angles. Each extension was tested alone, with no other extensions enabled. Benchmarks were performed on Linux Mint 64-bit using Chromium.
 
 - [Own memory footprint](#own-memory-footprint)
 - [Added CPU overhead to each net request](#added-cpu-overhead-to-each-net-request)
