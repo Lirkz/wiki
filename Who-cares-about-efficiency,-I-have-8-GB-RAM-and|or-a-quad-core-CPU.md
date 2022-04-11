@@ -1,7 +1,7 @@
 Doing more with less is a virtue in software. For users of uBlock Origin (uBO), this means:
 
 - Less CPU churn when loading a web page may translate into a noticeable faster page load.
-- Higher memory consumption correlates with higher CPU-cycle consumption. Any extra memory used is the same that needs allocated/written to/read from (at least once)/garbage collected.
+- Higher memory consumption correlates with higher CPU-cycle consumption. Any extra memory used is the same that needs to get allocated/written to/read from (at least once)/garbage collected.
 - Free to use more filter lists:
     - For instance, [ABP warns against using too many filter lists](https://adblockplus.org/en/getting_started#subscription): _"It is important to note that you should not add too many filter lists to Adblock Plus"_
 - Longer battery life. Each time unit, however small, that the CPU is idle rather than churning translates into extended battery life.
