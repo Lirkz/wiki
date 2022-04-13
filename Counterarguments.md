@@ -18,7 +18,7 @@ Many of the exception filters in [_"uBlock filters"_](https://github.com/gorhill
 
 I want the project to be committed to fully supporting the hosts files that ship with uBO. Report any issues from using these, and the appropriate exception filters will get created.
 
-I use all of these hosts files, and so far not been much breakage.
+I use all of these hosts files, and so far, not much breakage has occurred.
 
 #### uBO is a fork of Adblock Plus (ABP) code
 
