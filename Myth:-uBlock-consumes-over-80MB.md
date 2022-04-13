@@ -19,4 +19,4 @@ When reloading all filters (after changing the selection of filter lists, for ex
 
 ***
 
-[1] In the latest release of Chromium (40+), I have noticed that the garbage collector can be  "lazy" (meaning sometimes it takes a while before freed memory is garbage collected). When surveying memory usage, it is essential to **force** a garbage collection cycle using the dev console of the extension itself.
+[1] In the latest release of Chromium (40+), I have noticed that the garbage collector can be "lazy" (meaning sometimes it takes a while before freed memory is garbage collected). When surveying memory usage, it is essential to **force** a garbage collection cycle using the dev console of the extension itself.
