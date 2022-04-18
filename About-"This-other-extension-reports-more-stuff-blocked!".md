@@ -1,20 +1,20 @@
-TL;DR: Do **not** rely on the number shown over an extension badge to judge blocking power, i.e. to assess how well your privacy is protected, you could fool yourself big time.
+TL;DR: Do **not** rely on the number shown over an extension badge to judge blocking power to assess how well your privacy is protected. Doing so would fool you big time.
 
 ***
 
 For both Adblock Plus (ABP) and uBlock Origin (uBO) (and many other such extensions), the badge on the icon reports the number of net requests blocked by the extension.
 
-Sometimes, for the same page, one extension can report more stuff blocked than the other, while the reality could be the opposite.
+Sometimes one extension can report more stuff blocked than the other on the same page, while the reality could be the opposite.
 
-The less a blocker blocks, the higher the number of network requests. The higher the number of network requests, the more likely some of them will need to be blocked. So sometimes you end up with more network requests blocked as shown by the badge, while internally more network requests were actually allowed for the web page.
+The fewer the extension blocks, the higher the number of network requests. The higher the number of these, the more likely some will need to be blocked. Occasionally you end up with more network requests blocked, as shown by the badge, while internally, additional network requests were allowed for the web page.
 
-Ultimately, for me it's the [benchmarks I run](uBlock-and-others%3A-Blocking-ads%2C-trackers%2C-malwares) to report blocking power which tells the real story. The badge is really not a good way to assess blocking power of an extension, you could well end up concluding the opposite of what is really happening.
+For me, it's ultimately the [benchmarks I run](uBlock-and-others%3A-Blocking-ads%2C-trackers%2C-malwares) to report blocking power that tells the real story. The badge is not a good way to assess the blocking ability of an extension, as you could conclude the opposite of what is happening.
 
-If you don't want to run a benchmark, I have this [little online tool](http://raymondhill.net/httpsb/har-parser.html) with which you can find out the requests which were **not** prevented from leaving your browser. To use it, open the dev console for the page for which you want a report, and go to the _Network_ tab. **Edit:** since then I have created [uBO-Scope](https://github.com/gorhill/uBO-Scope), an extension which purpose is to inform you about what was not blocked.
+If you don't want to run a benchmark, I have this [little online tool](http://raymondhill.net/httpsb/har-parser.html) with which you can find out the requests which were **not** prevented from leaving your browser. Use it by opening the dev console for the page you want a report from and going to the _Network_ tab. **Edit:** since then, I have created [uBO-Scope](https://github.com/gorhill/uBO-Scope), an extension whose purpose is to inform you about what was not blocked.
 
-Clear the browser cache by right-clicking somewhere in the _Network_ tab console. Force a reload of the web page, then right-click in the _Network_ tab console, and select _"Copy all as HAR"_. Then paste the result in the text area of [this online tool](http://raymondhill.net/httpsb/har-parser.html), and click _Parse_. You will be shown the hostnames which were hit by the browser for the particular page you loaded.
+Clear the browser cache by right-clicking somewhere in the _Network_ tab console. Force a reload of the web page. Right-click in the _Network_ tab console and select _"Copy all as HAR"_. Paste the result in the text area on [this online tool](http://raymondhill.net/httpsb/har-parser.html), and click _Parse_. It will show the hostnames that were hit by the browser for the particular page you loaded.
 
-For example, for the front page of <https://www.cnet.com/>, **uBO shows 10 requests blocked**, while **ABP shows 16 requests blocked** (both with a lot of filter lists). However here is what really happened internally:
+For example, for the front page of <https://www.cnet.com/>, **uBO shows ten requests blocked**, while **ABP shows sixteen requests blocked** (both have a lot of filter lists). Here is what happened internally:
 
 Remote servers reached:
 
@@ -41,8 +41,8 @@ uBO:
 - urs.cnet.com
 - www.cnet.com
 
-So uBO caused the browser to hit many less remote servers, meaning it blocked more, and yet its badge displayed a lower number of requests blocked.
+uBO caused the browser to hit far fewer remote servers. Meaning it blocked more, yet its badge displayed a lower number of requests blocked.
 
-So the point is, do not rely on the badge to judge blocking power, i.e. to assess how well your privacy is protected, you would fool yourself big time.
+So the point is, do not rely on the badge to judge blocking power to assess how well your privacy is protected. Doing so would fool you big time.
 
-On the other hand, blocking too much may "break" some aspects of a web site, so in the end, as long as you understand what is really happening under the hood, you can make informed choices.
+On the other hand, blocking too much may "break" some aspects of a website, so in the end, as long as you understand what is happening under the hood, you can make informed choices.
