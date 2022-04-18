@@ -18,7 +18,7 @@ For example, for the front page of <https://www.cnet.com/>, **uBO shows ten requ
 
 Remote servers reached:
 
-ABP
+ABP:
 - dw.cbsi.com
 - cnet3.cbsistatic.com
 - cnet4.cbsistatic.com
