@@ -1,13 +1,13 @@
-Videos available for download here: <https://github.com/gorhill/uBlock/tree/master/doc/media>.
+Videos are available for download here: <https://github.com/gorhill/uBlock/tree/master/doc/media>.
 
-#### Sports Illustrated (www.si.com): uBlock vs. no blocker
+#### Sports Illustrated (https://www.si.com/): uBlock Origin (uBO) vs. no blocker
 
-[![uBlock vs no blocker](http://img.youtube.com/vi/1NmQvv7MGbE/0.jpg)](http://youtu.be/1NmQvv7MGbE)
+[![uBlock vs no blocker](https://img.youtube.com/vi/1NmQvv7MGbE/0.jpg)](https://www.youtube.com/watch?v=1NmQvv7MGbE)
 
-#### Sports Illustrated (www.si.com): Adblock Plus vs. uBlock
+#### Sports Illustrated (https://www.si.com/): Adblock Plus (ABP) vs. uBO
 
-[![ABP vs uBlock](http://img.youtube.com/vi/SzJr4hmPlgQ/0.jpg)](https://www.youtube.com/watch?v=SzJr4hmPlgQ)
+[![ABP vs uBlock](https://img.youtube.com/vi/SzJr4hmPlgQ/0.jpg)](https://www.youtube.com/watch?v=SzJr4hmPlgQ)
 
 #### CPU usage when running reference benchmark
 
-[![ABP vs uBlock](http://img.youtube.com/vi/X8tGAPYLGtI/0.jpg)](https://www.youtube.com/watch?v=X8tGAPYLGtI)
+[![ABP vs uBlock](https://img.youtube.com/vi/X8tGAPYLGtI/0.jpg)](https://www.youtube.com/watch?v=X8tGAPYLGtI)
