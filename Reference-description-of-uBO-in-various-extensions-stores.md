@@ -1,4 +1,4 @@
-uBlock Origin (uBO) is not an "ad blocker", it's a wide-spectrum content blocker with CPU and memory efficiency as a primary feature.
+uBlock Origin (uBO) is not an "ad blocker". It is a wide-spectrum content blocker with CPU and memory efficiency as primary features.
 
 ***
 
@@ -8,7 +8,7 @@ Out of the box, uBO blocks ads, trackers, coin miners, popups, etc. through the 
 - EasyPrivacy (tracking)
 - Peter Lowe’s Ad server list (ads and tracking)
 - Online Malicious URL Blocklist
-- uBO's own lists
+- uBO's lists
 
 More lists are available for you to select if you wish:
 
@@ -18,15 +18,15 @@ More lists are available for you to select if you wish:
 - Dan Pollock’s hosts file
 - And many others
 
-Additionally, you can point-and-click to block JavaScript locally or globally, create your own global or local rules to override entries from filter lists, and many more advanced features.
+Additionally, you can point-and-click to block JavaScript locally or globally, create your own global or local rules to override entries from filter lists and many more advanced features.
 
 ***
 
 Free.  
-Open source with public license (GPLv3)  
-For users by users.  
+Open-source with public license (GPLv3)  
+For users by users.
 
-If ever you really do want to contribute something, think about the people working hard to maintain the filter lists you are using, which were made available to use by all for free.
+If ever you do want to contribute something, think about the people working hard to maintain the filter lists you are using, which were made available to use by all for free.
 
 ***
 
