@@ -1,3 +1,3 @@
-I don't want the administrative workload coming with donations. I don't want the project to become in need of funding in any way: no dedicated home page + no forum = no cost = no need for funding. I want to be free to move onto something else if ever I get tired working on these projects (no donations = no expectations).
+I do not want the administrative workload that comes with donations. I do not want the project to become in need of funding in any way: no dedicated home page + no forum = no cost = no need for financial support. I want to be free to move on to something else if ever I get tired of working on these projects (no donations = no expectations).
 
-Have a thought for the maintainers of the various lists. These lists are everything. This can't be emphasized enough.
+Have a thought for the maintainers of the various lists. These lists are everything. I can not emphasize this enough.
