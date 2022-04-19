@@ -14,10 +14,10 @@
 * "Demystifying content-blockers: A large scale study of actual performance gains"
   * https://arxiv.org/pdf/2002.01735.pdf
 * "Energy Conservation with Open Source Ad Blockers"
-  * https://www.mdpi.com/2227-7080/8/2/18/pdf
+  * https://mdpi-res.com/d_attachment/technologies/technologies-08-00018/article_deploy/technologies-08-00018.pdf
 * "Understanding the Performance Costs and Benefits of Privacy-focused Browser Extensions"
   * https://kevin.borgolte.me/files/pdf/www2020-privacy-extensions.pdf
-* "What a Tangled Web We Weave: Understanding the Interconnectedness of the Third Party Cookie Ecosystem" 
+* "What a Tangled Web We Weave: Understanding the Interconnectedness of the Third Party Cookie Ecosystem"
   * https://nms.kcl.ac.uk/netsys/datasets/tracking-the-trackers-papers/tanged_web.pdf
 
 ### 2019
@@ -34,14 +34,14 @@
 * "Benchmark and Comparison of Tracker-blockers: Should You Trust Them?"
   * https://tma.ifip.org/wordpress/wp-content/uploads/2017/06/tma2017_paper30.pdf
 * "Block Me If You Can: A Large-Scale Study of Tracker-Blocking Tools"
-  * https://www.sba-research.org/wp-content/uploads/publications/block_me_if_you_can.pdf
+  * https://publications.sba-research.org/publications/block_me_if_you_can.pdf
 
 ### 2016
 
 * "What Ad Blockers Are (and Are Not) Doing"
   * https://web.cs.wpi.edu/~cew/papers/hotweb16.pdf
 
-## Other useful reference materials
+## Other helpful reference materials
 
 ### 2021
 
