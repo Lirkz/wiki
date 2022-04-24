@@ -22,7 +22,7 @@ This is not the case with Chromium-based browsers, i.e. tracker/advertisement pa
 
 Reliably blocking at browser launch is especially important for whoever uses default-deny mode for 3rd-party resources and/or JavaScript.
 
-There is an advanced setting available to tentatively mitigate this issue in Chromium-based browsers (disabled by default), see [`suspendTabsUntilReady`](https://github.com/gorhill/uBlock/wiki/Advanced-settings#suspendtabsuntilready) (this setting should be left untouched in Firefox-based browsers).
+There is a setting available to tentatively mitigate this issue in Chromium-based browsers (disabled by default), see [_Suspend network activity until all filter lists are loaded_](https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded).
 
 ### Pre-fetching
 
