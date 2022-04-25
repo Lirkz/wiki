@@ -24,7 +24,7 @@ These command line switches might be of interest to privacy-minded users:
 Another powerful command line switch is:
 
 - `--host-rules="MAP *.google-analytics.com 0.0.0.0","MAP *.googleadservices.com 0.0.0.0","MAP *.doubleclick.net 0.0.0.0","MAP *.googletagservices.com 0.0.0.0"`
-    - ~~This switch maps those hostnames (or any other ones) to the IP address 0.0.0.0 ([ref](https://peter.sh/experiments/chromium-command-line-switches/#host-rules)) and hence blocks them effectively (even on the Chrome Web Store where extensions like uBO are disabled).~~ [URL Error: Exact Webpage Linked Element Not Found - Link No Longer Valid] - Updated 4/2/2022
+    - ~~This switch maps those hostnames (or any other ones) to the IP address 0.0.0.0 ([ref](https://peter.sh/experiments/chromium-command-line-switches/#host-rules)) and hence blocks them effectively (even on the Chrome Web Store where extensions like uBO are disabled).~~ [URL Error: Exact Web Page Linked Element Not Found - Link No Longer Valid] - Updated 4/2/2022
     - _However, note that blocking those hostnames with that switch might break some websites. That's why blocking them with uMatrix is preferable since you can whitelist them as exceptions for those websites which won't work without them. Alternatively, you could use the `important` filter option mentioned below._
 
 ##### Regarding EasyPrivacy
@@ -56,7 +56,7 @@ It's unclear why this one is not blocked by Fanboy Annoyance, as the list alread
 
 ##### Gravatar (et al)
 
-Each time you visit a site which pull cute little avatar images aside (typically) a commenter's name, there is a corresponding request to [Gravatar](https://en.gravatar.com/)'s web site, and the HTTP `referer` header contains the site you are visiting. The tracking potential is too much for me, so I block all these requests:
+Each time you visit a site which pull cute little avatar images aside (typically) a commenter's name, there is a corresponding request to [Gravatar](https://en.gravatar.com/)'s website, and the HTTP `referer` header contains the site you are visiting. The tracking potential is too much for me, so I block all these requests:
 
 `||gravatar.com^$third-party`
 
