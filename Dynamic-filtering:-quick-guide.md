@@ -111,7 +111,7 @@ Which means: do not apply any dynamically filtering rule to `youtube.com` by def
 > In other words: **More specific dynamic filtering rules override less specific ones.** For example, dynamic filtering rules for `youtube.com` (specific) override dynamic filtering rules for `3rd-party frames` (generic).
 > ***
 
-All dynamic rules are temporary by default: Click the padlock if you want to persist the ruleset for a specific web site.
+All dynamic rules are temporary by default: Click the padlock if you want to persist the ruleset for a specific website.
 
 ![figure 12](https://user-images.githubusercontent.com/585534/87427871-702a7200-c5af-11ea-8483-2275412a891b.png)
 
