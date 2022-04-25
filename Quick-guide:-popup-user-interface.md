@@ -59,13 +59,13 @@ In general, it must be assumed that each distinct domain is managed by a distinc
 
 That said, this statistic may be seen this way: the more distinct domains your browser connects to, the greater the privacy exposure.
 
-In a best-case scenario, the number of distinct domains to which a webpage connects should be **only one**:  that of the remote server from which the webpage was fetched.
+In a best-case scenario, the number of distinct domains to which a web page connects should be **only one**:  that of the remote server from which the web page was fetched.
 
 **The higher the number, the higher you are exposing yourself privacy-wise.**
 
 There is a good correlation between the _domains connected_ count and: unneeded page bloat, high privacy exposure, increased likelihood of being the target of data mining.
 
-Example: the webpage on <https://www.ibtimes.com/> (which can be read fine in all cases, by the way):
+Example: the web page on <https://www.ibtimes.com/> (which can be read fine in all cases, by the way):
 
  uBO's mode | turned off | default settings | [default-deny](./Blocking-mode:-medium-mode)
 --- | --- | --- | ---
