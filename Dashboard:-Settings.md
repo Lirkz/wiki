@@ -108,7 +108,7 @@ Keep in mind that this feature is to prevent **leakage** of your non-internet-fa
 
 You can block network requests made as a result of your browser reporting Content Security Policy violations ("CSP reports") to a remote server (which can be 3rd-party to the site where the violation occurred).
 
-**Important:** disabling CSP reporting is not something that will break web pages, the purpose of CSP reporting is _strictly_ a development tool for web sites.
+**Important:** disabling CSP reporting is not something that will break web pages, the purpose of CSP reporting is _strictly_ a development tool for websites.
 
 Consider this excerpt from [Reporting API / Privacy Considerations](https://w3c.github.io/reporting/#privacy) (my emphasis):
 
