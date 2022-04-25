@@ -6,7 +6,7 @@
 
 ### Malware protection
 
-`iframe` tags are very often used by malware code on compromised web sites -- using 3rd-party-sourced `<iframe>` to inject exploit on a user's computer is quite a common technique: 
+`iframe` tags are very often used by malware code on compromised websites -- using 3rd-party-sourced `<iframe>` to inject exploit on a user's computer is quite a common technique: 
 
 - [_"'Expert' hackers used 11 0-days to infect Windows, iOS, and Android users"_](https://arstechnica.com/information-technology/2021/03/expert-hackers-used-11-zerodays-to-infect-windows-ios-and-android-users/)
 - [_"Malvertiser abused WebKit zero-day to redirect iOS & macOS users to shady sites"_](https://www.zdnet.com/article/malvertiser-abused-webkit-zero-day-to-redirect-ios-macos-users-to-shady-sites/)
