@@ -17,7 +17,7 @@
 ***
 
 ### Click the big power button
-It serves to turn off blocking **on the current web site** (will add current site to _Trusted sites_ list), and its state will be remembered next time you visit the web site.
+It serves to turn off blocking **on the current website** (will add current site to _Trusted sites_ list), and its state will be remembered next time you visit the website.
 
 | uBO is enabled | uBO is disabled |
 | -------------- | --------------- |
