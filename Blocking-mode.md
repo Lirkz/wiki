@@ -78,7 +78,7 @@ Notice that in medium mode, most 3rd parties are actually auxiliary domains whic
 
 **Addendum 2017-12-29:** Note that this benchmark is rather dated, and since then many enhancements have been brought to uBO. For example, `googletagservices.com` was not blocked by default in _Easy mode_ back then, while it is now blocked and replaced with a neutered local scriptlet, to minimize probability of page breakage.
 
-Hard mode will actually ensure that profiling by 3rd parties is completely foiled, though at the expense of having to fix most web sites. For privacy-minded users, _medium mode_ seems to be the optimal approach.
+Hard mode will actually ensure that profiling by 3rd parties is completely foiled, though at the expense of having to fix most websites. For privacy-minded users, _medium mode_ seems to be the optimal approach.
 
 Browser was Chromium 64-bit, click-to-play enabled, 3rd-party cookies disallowed.
 
