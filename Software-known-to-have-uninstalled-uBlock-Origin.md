@@ -34,4 +34,4 @@ Here is a list of those software which are known to have uninstalled uBO:
 
 - SpyHunter 4:
     - https://github.com/gorhill/uBlock/issues/1009
-    - ~~[Of interest](http://www.bleepingcomputer.com/forums/t/550005/spyhunter-vs-malwarebytes-vs-iobit/#entry3491488): "In _my opinion_ SpyHunter is a **dubious program** with a high rate of [false positives](https://www.mywot.com/en/scorecard/enigmasoftware.com)".~~ [URL Error: Webpage Not Found] - Updated 4/2/2022
+    - ~~[Of interest](http://www.bleepingcomputer.com/forums/t/550005/spyhunter-vs-malwarebytes-vs-iobit/#entry3491488): "In _my opinion_ SpyHunter is a **dubious program** with a high rate of [false positives](https://www.mywot.com/en/scorecard/enigmasoftware.com)".~~ [URL Error: Web Page Not Found] - Updated 4/2/2022
