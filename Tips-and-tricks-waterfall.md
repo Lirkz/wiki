@@ -2,7 +2,7 @@ Short but useful tips and tricks, randomly added.
 
 #### Why using a blocker is **very important**
 
-In response to this [ridiculously over-the-top pure propaganda](https://www.tomsguide.com/us/ad-blocking-is-stealing,news-20962.html) piece, whose purpose is to manipulate people into compliance to the one specific business model ad-driven web sites chose for themselves.
+In response to this [ridiculously over-the-top pure propaganda](https://www.tomsguide.com/us/ad-blocking-is-stealing,news-20962.html) piece, whose purpose is to manipulate people into compliance to the one specific business model ad-driven websites chose for themselves.
 
 **Left:** without a blocker: 124 domains (note that I had Flash plug-in disabled, it would have been worse if it had been enabled -- I wasn't ready to go that far to make my point).
 
