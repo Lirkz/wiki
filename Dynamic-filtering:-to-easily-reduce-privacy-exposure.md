@@ -34,7 +34,7 @@ These rules will cause Facebook to be blocked everywhere by default:
 
 ![Denied](https://user-images.githubusercontent.com/585534/37597072-9f77f39a-2b54-11e8-94b6-66c2fdf6ba01.png)
 
-This will foil the ability of Facebook to gather data about your browsing habits through the embedding of Facebook's resources on countless web sites.
+This will foil the ability of Facebook to gather data about your browsing habits through the embedding of Facebook's resources on countless websites.
 
 Blocking Facebook when visiting Facebook is not ideal though, and there is no real benefit for doing so. Thus we will create an exception to the above global rules, but just for when we visit Facebook's own site (the second column is for local rules):
 
@@ -54,7 +54,7 @@ The same sort of dynamic filtering rules can be used for whatever sites for whic
 
 This is just an example, the same can be applied to any of the ubiquitous servers out there. The dynamic filtering pane in uBO's popup UI will keep you informed about all the 3rd-party servers a web page connects (or tries to), and from there one can simply point-and-click to create global/local block/noop rules to foil the ability of 3rd parties to record your browsing history.
 
-`block` rules to ubiquitous web sites will easily reduce _significantly_ your privacy exposure.
+`block` rules to ubiquitous websites will easily reduce _significantly_ your privacy exposure.
 
 Using the above example of blocking Facebook everywhere with the [benchmark result for _Easy mode_](./Blocking-mode#easy-mode) (uBO's default mode), the count of 3rd parties would have been decreased from 512 to 437, an easy way to significantly reduce your privacy exposure with just a few clicks.
 
