@@ -65,7 +65,7 @@ Below are sites currently part of the list, or sites being candidate for the lis
 
 #### macupdate.com (candidate)
 - 2015-11-02: [Has MacUpdate fallen to the adware plague](https://blog.malwarebytes.com/cybercrime/2015/11/has-macupdate-fallen-to-the-adware-plague/)
-- ~~2014-02-12: [MacUpdate.com served bitcoin stealing malware](http://www.tripwire.com/state-of-security/latest-security-news/download-com-macupdate-com-served-bitcoin-stealing-malware/)~~ [URL Error: Webpage Not Found] - Updated 4/1/2022
+- ~~2014-02-12: [MacUpdate.com served bitcoin stealing malware](http://www.tripwire.com/state-of-security/latest-security-news/download-com-macupdate-com-served-bitcoin-stealing-malware/)~~ [URL Error: Web Page Not Found] - Updated 4/1/2022
 
 #### majorgeeks.com (candidate)
 
@@ -113,7 +113,7 @@ Below are sites currently part of the list, or sites being candidate for the lis
 - 2015-05-17: [AntiAdware Gets Rid of Bundled Crapware on Popular Download Sites](https://lifehacker.com/antiadware-gets-rid-of-bundled-crapware-on-popular-down-1702818594) (SourceForge cited as a source of crapware)
 - 2015-03-11: [Mind the PUP: Top download portals to avoid](https://blog.emsisoft.com/en/12678/mind-the-pup-top-download-portals-to-avoid/)
 - 2015-01-21: [Yes, _Every_ Freeware Download Site is Serving Crapware (Here’s the Proof)](https://www.howtogeek.com/207692/yes-every-freeware-download-site-is-serving-crapware-heres-the-proof/)
-- ~~2014-11-25: [SourceForge malware](http://blog.tedd.no/2014/11/25/sourceforge-malware/)~~ [URL Error: Webpage Not Found] - Updated 4/1/2022
+- ~~2014-11-25: [SourceForge malware](http://blog.tedd.no/2014/11/25/sourceforge-malware/)~~ [URL Error: Web Page Not Found] - Updated 4/1/2022
 
 #### tucows.com (candidate)
 
