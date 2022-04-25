@@ -2,7 +2,7 @@
 
 - Activate extension
 
-   Will open uBO popup panel - equivalent of clicking the button on the toolbar
+   Will open uBlock Origin (uBO) popup panel - equivalent of clicking the button on the toolbar
 
 - Enter element picker mode
 
@@ -52,7 +52,7 @@
 
 ***
 
-In Firefox versions older than 74 shortcut configuration is also available in uBlock Origin (uBO) Dashboard ([v1.26.1b1](https://github.com/gorhill/uBlock/commit/20332c65b4b597d2ba04993fcdcc4ea81dd64fb9)):
+In Firefox versions older than 74 shortcut configuration is also available in uBO Dashboard ([v1.26.1b1](https://github.com/gorhill/uBlock/commit/20332c65b4b597d2ba04993fcdcc4ea81dd64fb9)):
 
 ![image](https://user-images.githubusercontent.com/886325/64020978-37b6ac80-cb33-11e9-9fee-01a94175c252.png)
 
