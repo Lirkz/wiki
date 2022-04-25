@@ -1,8 +1,8 @@
-**TL;DR:** if you worry about uBO's added overhead for non-bloated sites, just [disable cosmetic filtering](./Per-site-switches#no-cosmetic-filtering) on a per-site basis, it is the optimal approach: this will keep you protected security- and privacy-wise (as far as your filters/rules allow) while minimizing the added overhead.
+**TL;DR:** if you worry about uBlock Origin (uBO)'s added overhead for non-bloated sites, just [disable cosmetic filtering](./Per-site-switches#no-cosmetic-filtering) on a per-site basis, it is the optimal approach: this will keep you protected security- and privacy-wise (as far as your filters/rules allow) while minimizing the added overhead.
 
 ***
 
-Yes, uBlock Origin (uBO) adds overhead to page load. It's impossible for a content blocker to add zero CPU cycles and/or memory overhead.
+Yes, uBO adds overhead to page load. It's impossible for a content blocker to add zero CPU cycles and/or memory overhead.
 
 **However**, for most web pages nowadays, that extra overhead is paid back many times from all the blocked resources which won't consume CPU cycles and memory.
 
