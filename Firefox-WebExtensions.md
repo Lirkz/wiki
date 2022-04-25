@@ -8,7 +8,7 @@ Stable release of uBO/webext has been available on AMO since early September 201
 
 uBO/webext works best with Firefox 57 and above, and with multi-process enabled.
 
-There are many [reports](https://forums.mozillazine.org/viewtopic.php?p=14764474#p14764474) of people experiencing issues with some web sites, or images not loading, etc. Turns out many of these are a result of using some legacy extensions along uBO/webext. For instance, Reek's AAK in [GreaseMonkey](https://www.reddit.com/r/uBlockOrigin/comments/6xl3em/image_links_suddenly_blocked_by_ublock_origin/) has been [causing](https://www.reddit.com/r/firefox/comments/6x8hbe/ublock_origin_is_a_webextension_in_amo_stable/dmf6j5k/) issues with images not loading.
+There are many [reports](https://forums.mozillazine.org/viewtopic.php?p=14764474#p14764474) of people experiencing issues with some websites, or images not loading, etc. Turns out many of these are a result of using some legacy extensions along uBO/webext. For instance, Reek's AAK in [GreaseMonkey](https://www.reddit.com/r/uBlockOrigin/comments/6xl3em/image_links_suddenly_blocked_by_ublock_origin/) has been [causing](https://www.reddit.com/r/firefox/comments/6x8hbe/ublock_origin_is_a_webextension_in_amo_stable/dmf6j5k/) issues with images not loading.
 
 If you experience such issue, you will have to disable all your legacy extensions and see if this fixes your issue. If so, then you will have to re-enable your legacy extensions one by one to find the one(s) causing the problem.
 
@@ -16,7 +16,7 @@ Those legacy extensions can cause multi-process to be disabled in your browser, 
 
 **Update (2018-06-30)**: if you experience above problems in Waterfox then this problem will probably be fixed in next Waterfox release (56.2.2-56.3?)
 
-Everything is moving to WebExtensions, so it might be just a good time to start giving up on legacy extensions, they are not going to be supported at all in a couple of weeks when Firefox 57 is released. See if there is a beta webext version of any of your legacy extensions. ~~For example, there is [beta webext version of Greasemonkey on AMO](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/versions/beta).~~ [URL Error: Beta Webpage Not Found - Link No Longer Valid] - Updated 4/2/2022
+Everything is moving to WebExtensions, so it might be just a good time to start giving up on legacy extensions, they are not going to be supported at all in a couple of weeks when Firefox 57 is released. See if there is a beta webext version of any of your legacy extensions. ~~For example, there is [beta webext version of Greasemonkey on AMO](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/versions/beta).~~ [URL Error: Beta Web Page Not Found - Link No Longer Valid] - Updated 4/2/2022
 
 There are also Firefox issues specific to webext extensions which can cause a web page to load improperly:
 
