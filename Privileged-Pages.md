@@ -1,4 +1,4 @@
-Privileged Pages are the webpages that browser-vendors consider as an entitled webpage/s where extensions are tasked to not work/have their functionality ceased entirely.
+Privileged Pages are the web pages that browser-vendors consider as an entitled web page/s where extensions are tasked to not work/have their functionality ceased entirely.
 
 For Chromium<sup>1</sup>:
 ```
