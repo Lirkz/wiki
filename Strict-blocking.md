@@ -15,7 +15,7 @@ This means that using the same test case above, **uBO will block the web page** 
 
 ![Page was fully blocked](https://cloud.githubusercontent.com/assets/585534/8160013/14466ca0-133a-11e5-8d3c-28169288f35a.png)
 
-Why the change? Because [issue #1013](https://github.com/chrisaljoudi/uBlock/issues/1013) brought forth why it is desirable sometimes to completely block a web site, as opposed to what the ABP-filtering semantic dictates.
+Why the change? Because [issue #1013](https://github.com/chrisaljoudi/uBlock/issues/1013) brought forth why it is desirable sometimes to completely block a website, as opposed to what the ABP-filtering semantic dictates.
 
 In the end, the chosen solution is to now have web page themselves subject to filtering, just like all secondary resources.
 
