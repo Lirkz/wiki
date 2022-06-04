@@ -8,35 +8,25 @@
 
 ![Figure 1](https://user-images.githubusercontent.com/95879668/161320322-51242d45-db55-4884-9cae-2e23c7634dfa.png)
 
+***
+
 ## General
+
+### Hide placeholders of blocked elements
+
+Collapse empty space left behind when some element like image or frame is blocked by network filtering.
+
+### Show the number of blocked requests on the icon
+
+Show in the badge of the extensions button how many network reqeusts have been blocked on the page.
 
 ### Make use of context menu where appropriate
 
 If checked, this gives permission for uBlock Origin (uBO) to add items in the [browser's context menu](./The-context-menu) which are meant to improve convenience.
 
-***
-
-### Color-blind friendly
-
-Currently mostly useful for users who checked _"I am an advanced user"_ (see below).
-
-***
-
 ### Enable cloud storage support
 
 See [Cloud storage](./Cloud-storage) documentation.
-
-***
-
-### I am an advanced user
-
-If you check this, this will enable uBO's [dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
-
-Unchecking this disables dynamic filtering. And the dynamic filtering pane in the popup UI will no longer be available.
-
-_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (normally hidden), and enables the ability to filter [behind-the-scene network requests](./Behind-the-scene-network-requests).
-
-You should avoid playing with advanced features and settings unless [you understand fully what you are doing](./Advanced-user-features).
 
 ***
 
@@ -62,13 +52,9 @@ On Chromium 51 and above (including browsers based on Chromium 51 and above), th
 - <https://bugs.chromium.org/p/chromium/issues/detail?id=785125>
 - Example of different behavior with Firefox: <https://github.com/uBlockOrigin/uBlock-issues/issues/435>
 
-***
-
 ### Disable hyperlink auditing
 
 Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summarized as a "phone home" feature (or more accurately "phone anywhere") meant to inform one or more servers of which links you click on (and when). The details are well explained [here](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) and the case of why such feature is harmful to users is well-argued [here](https://www.wilderssecurity.com/threads/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk.415381/#post-2822723).
-
-***
 
 ### Prevent WebRTC from leaking local IP address
 
@@ -100,8 +86,6 @@ Keep in mind that this feature is to prevent **leakage** of your non-internet-fa
 
 </details>
 
-***
-
 ### Block CSP reports
 
 **Enabled by default in Firefox** in [1.31.3rc1](https://github.com/gorhill/uBlock/commit/bc9b8a13300d7a6de93d0632369be15b05b7646e) to mitigate fingerprinting attempts described in [LiCybora/NanoDefenderFirefox#196](https://github.com/LiCybora/NanoDefenderFirefox/issues/196).
@@ -132,8 +116,6 @@ The above rule means CSP reports would not be blocked on `example.com` when CSP 
 
 The above rule means CSP reports would be blocked on `example.com` when CSP reports are not blocked globally.
 
-***
-
 ### Uncloak canonical names
 
 ![higlighted Uncloak canonical names preference](https://user-images.githubusercontent.com/886325/111153280-0a551680-8592-11eb-9d18-058e5b845bd5.png)
@@ -152,9 +134,47 @@ In some edge cases, it might be necessary to disable this setting to prevent net
 
 ***
 
+## Appearance
+
+### Theme
+
+Allows to chose between light and dark interface themes. The "auto" option will adapt to theme selected in browser.
+
+### Custom accent color
+
+Allows to chose custom leading color for user interface elements.
+
+Note that it will be automatically adjusted to keep proper contrast between interface elements.
+
+### Color-blind friendly
+
+Currently mostly useful for users who checked _"I am an advanced user"_ (see below).
+
+Makes color coding of blocked/allowed/nooped connection in overview panel and logger more friendly for people with color vision deficiency.
+
+### Disable tooltips
+
+Turns off small bubbles with text description whem hovering mouse coursor over user interface elements.
+
+***
+
 ## Default behavior
 
 Please see: ["Per site switches"](./Per-site-switches)
+
+***
+
+## Advanced
+
+### I am an advanced user
+
+If you check this, this will enable uBO's [dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
+
+Unchecking this disables dynamic filtering. And the dynamic filtering pane in the popup UI will no longer be available.
+
+_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (normally hidden), and enables the ability to filter [behind-the-scene network requests](./Behind-the-scene-network-requests).
+
+You should avoid playing with advanced features and settings unless [you understand fully what you are doing](./Advanced-user-features).
 
 ***
 
