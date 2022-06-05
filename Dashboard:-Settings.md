@@ -50,7 +50,7 @@ On Chromium 51 and above (including browsers based on Chromium 51 and above), di
 
 ### Disable hyperlink auditing
 
-Checking this will prevent hyperlink auditing. Hyperlink auditing is best summarized as a "phone home" feature (or even more accurately, "phone anywhere") meant to inform one or more servers of which links you click on (and when). [Here](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) are the well-explained details, and the case of why such a feature is harmful to users is well-argued [here](https://www.wilderssecurity.com/threads/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk.415381/#post-2822723).
+Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summarized as a "phone home" feature (or even more accurately, "phone anywhere") meant to inform one or more servers of which links you click on (and when). [Here](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) are the well-explained details, and the case of why such a feature is harmful to users is well-argued [here](https://www.wilderssecurity.com/threads/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk.415381/#post-2822723).
 
 ### Prevent WebRTC from leaking local IP address
 
@@ -72,7 +72,7 @@ Background info: [STUN IP Address requests for WebRTC](https://github.com/diafyg
 
 Test case: [Prevent WebRTC from leaking local IP address](./Prevent-WebRTC-from-leaking-local-IP-address)
 
-Keep in mind that this feature prevents leakage of your non-internet-facing IP address. The purpose of this feature is not to hide your current internet-facing IP address. Make sure you do not misinterpret the test results above. For example, if you use a VPN, your internet-facing IP address is that of the VPN, so your ISP-provided IP address should not be visible to the outside world with this setting checked. Your ISP-provided IP address will be visible regardless of this setting if you are not behind a VPN or proxy.
+Keep in mind that this feature prevents **leakage** of your non-internet-facing IP address. The purpose of this feature is not to hide your current internet-facing IP address. Make sure you do not misinterpret the test results above. For example, if you use a VPN, your internet-facing IP address is that of the VPN, so your ISP-provided IP address should not be visible to the outside world with this setting checked. Your ISP-provided IP address will be visible regardless of this setting if you are not behind a VPN or proxy.
 
 **Caveats:**
 - Chromium-based browsers:
