@@ -14,15 +14,15 @@
 
 ### Hide placeholders of blocked elements
 
-Collapse empty space left behind when some element like image or frame is blocked by network filtering.
+Collapse empty space left behind when some elements like an image or a frame get blocked by network filtering.
 
 ### Show the number of blocked requests on the icon
 
-Show in the badge of the extensions button how many network reqeusts have been blocked on the page.
+Display how many blocked network requests were on the page in the badge of the extensions button.
 
-### Make use of context menu where appropriate
+### Make use of the context menu where appropriate
 
-If checked, this gives permission for uBlock Origin (uBO) to add items in the [browser's context menu](./The-context-menu) which are meant to improve convenience.
+If checked, this permits uBlock Origin (uBO) to add items in the [browser's context menu](./The-context-menu) to improve convenience.
 
 ### Enable cloud storage support
 
@@ -32,29 +32,25 @@ See [Cloud storage](./Cloud-storage) documentation.
 
 ## Privacy
 
-### Disable pre-fetching
+### Disable prefetching
 
-Checking this will disable prefetching in your browser. When prefetching is enabled, the browser _can_ still establish connections to remote servers even if the resources from these remote servers are meant to be blocked by uBO.
+Checking this will disable prefetching in your browser. When prefetching is enabled, the browser _can_ establish connections to remote servers even if the resources from these remote servers were supposed to be blocked by uBO.
 
-This prevents the browser from bypassing uBO's filtering engine before establishing connections to remote servers.
+It prevents the browser from bypassing uBO's filtering engine before establishing a connection to remote servers.
 
-Mozilla's [_"Link prefetching FAQ"_](https://developer.mozilla.org/docs/Web/HTTP/Link_prefetching_FAQ):
+Mozilla's [_"Link prefetching FAQ"_](https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ):
 
 > **Privacy implications** Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed.
 
-Google's [_"Make webpages load faster"_](https://support.google.com/chrome/answer/1385029):
-
-> If you turn this setting on in Chrome, websites (and any of their embedded resources) that are prerendered or prefetched may set and read their own cookies as if you had visited them before -- even if you don’t visit the prerendered or prefetched pages after all.
-
 #### **IMPORTANT NOTE:**
-On Chromium 51 and above (including browsers based on Chromium 51 and above), this setting is completely unreliable, as it does not cause DNS lookups, preconnections and prefetches to be reliably blocked, because Chromium allows web pages to override that user setting. For details, see:
+On Chromium 51 and above (including browsers based on Chromium 51 and above), disabling prefetching is unreliable because it does not cause DNS lookups, preconnections and prefetches to be reliably blocked since Chromium allows web pages to override that user setting. For details, see:
 - <https://github.com/gorhill/uBlock/issues/3219>
 - <https://bugs.chromium.org/p/chromium/issues/detail?id=785125>
 - Example of different behavior with Firefox: <https://github.com/uBlockOrigin/uBlock-issues/issues/435>
 
 ### Disable hyperlink auditing
 
-Checking this will prevent hyperlink auditing. _Hyperlink auditing_ is best summarized as a "phone home" feature (or more accurately "phone anywhere") meant to inform one or more servers of which links you click on (and when). The details are well explained [here](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) and the case of why such feature is harmful to users is well-argued [here](https://www.wilderssecurity.com/threads/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk.415381/#post-2822723).
+Checking this will prevent hyperlink auditing. Hyperlink auditing is best summarized as a "phone home" feature (or even more accurately, "phone anywhere") meant to inform one or more servers of which links you click on (and when). [Here](https://www.wilderssecurity.com/threads/hyperlink-auditing-aka-a-ping-and-beacon-aka-navigator-sendbeacon.364904/) are the well-explained details, and the case of why such a feature is harmful to users is well-argued [here](https://www.wilderssecurity.com/threads/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk.415381/#post-2822723).
 
 ### Prevent WebRTC from leaking local IP address
 
@@ -65,7 +61,7 @@ Browsers now obfuscate LAN addresses by mDNS:
 - Firefox: ["Enable mDNS hostname obfuscation"](https://bugzilla.mozilla.org/show_bug.cgi?id=1588817)
 - Chromium: ["mDNS service for IP handling in WebRTC"](https://bugs.chromium.org/p/chromium/issues/detail?id=878465)
 
-The option is still available in Android Firefox because obfuscation is still not implemented there: ["Support mDNS hostname obfuscation on Android"](https://bugzilla.mozilla.org/show_bug.cgi?id=1581947)
+The option is still available in Firefox for Android because obfuscation is still not implemented. See: ["Support mDNS hostname obfuscation on Android"](https://bugzilla.mozilla.org/show_bug.cgi?id=1581947)
 
 <details>
 <summary>Details</summary>
@@ -76,23 +72,23 @@ Background info: [STUN IP Address requests for WebRTC](https://github.com/diafyg
 
 Test case: [Prevent WebRTC from leaking local IP address](./Prevent-WebRTC-from-leaking-local-IP-address)
 
-Keep in mind that this feature is to prevent **leakage** of your non-internet-facing IP address. The purpose of this feature is not to hide your current internet-facing IP address -- so be cautious to not misinterpret the results of the tests above. For example, if you use a VPN, your internet-facing IP address is that of the VPN, so your ISP-provided IP address should not be visible to the outside world with this setting checked. However, if you are not behind any VPN or proxy, your ISP-provided IP address will be visible regardless of this setting.
+Keep in mind that this feature prevents leakage of your non-internet-facing IP address. The purpose of this feature is not to hide your current internet-facing IP address. Make sure you do not misinterpret the test results above. For example, if you use a VPN, your internet-facing IP address is that of the VPN, so your ISP-provided IP address should not be visible to the outside world with this setting checked. Your ISP-provided IP address will be visible regardless of this setting if you are not behind a VPN or proxy.
 
 **Caveats:**
-- Chromium-based browsers: 
-   - the feature works only on versions 42 and above.
-- Firefox: 
-   - due to differences in the handling of network connections by different browsers, before version [1.18.12](https://github.com/gorhill/uBlock/commit/977178bef23c7711a050181be979a4668bfebcfb) WebRTC was completely disabled if Firefox was not configured to use a proxy. Related issue: [#3009](https://github.com/gorhill/uBlock/issues/3009#issuecomment-329798696)
+- Chromium-based browsers:
+   - The feature works only on versions 42 and above.
+- Firefox:
+   - Due to the different ways in different browsers of handling network connections, before version [1.18.12](https://github.com/gorhill/uBlock/commit/977178bef23c7711a050181be979a4668bfebcfb), WebRTC was disabled if not using a proxy in Firefox. Related issue: [#3009](https://github.com/gorhill/uBlock/issues/3009#issuecomment-329798696)
 
 </details>
 
 ### Block CSP reports
 
-**Enabled by default in Firefox** in [1.31.3rc1](https://github.com/gorhill/uBlock/commit/bc9b8a13300d7a6de93d0632369be15b05b7646e) to mitigate fingerprinting attempts described in [LiCybora/NanoDefenderFirefox#196](https://github.com/LiCybora/NanoDefenderFirefox/issues/196).
+In [1.31.3rc1](https://github.com/gorhill/uBlock/commit/bc9b8a13300d7a6de93d0632369be15b05b7646e), blocking CSP reports was enabled in Firefox to mitigate fingerprinting attempts described in [LiCybora/NanoDefenderFirefox#196](https://github.com/LiCybora/NanoDefenderFirefox/issues/196).
 
 You can block network requests made as a result of your browser reporting Content Security Policy violations ("CSP reports") to a remote server (which can be 3rd-party to the site where the violation occurred).
 
-**Important:** disabling CSP reporting is not something that will break web pages, the purpose of CSP reporting is _strictly_ a development tool for websites.
+**Important:** disabling CSP reporting is not something that will break web pages. The purpose of CSP reporting is _strictly_ a development tool for websites.
 
 Consider this excerpt from [Reporting API / Privacy Considerations](https://w3c.github.io/reporting/#privacy) (my emphasis):
 
@@ -102,11 +98,11 @@ Consider this excerpt from [Reporting API / Privacy Considerations](https://w3c.
 > 
 > That said, it can’t be the case that this general benefit be allowed to take priority over the ability of a user to individually opt-out of such a system. Sending reports costs bandwidth, and potentially could reveal some small amount of additional information above and beyond what a website can obtain in-band ([NETWORK-ERROR-LOGGING], for instance). **User agents MUST allow users to disable reporting with some reasonable amount of granularity in order to maintain the priority of constituencies espoused in [HTML-DESIGN-PRINCIPLES].**
 
-There is currently no way to easily toggle CSP reporting in either Chromium or Firefox. This per-site switch is to address this shortcoming.
+There is no easy way to toggle CSP reporting in either Chromium or Firefox. This per-site switch is to address this shortcoming.
 
-Note that as opposed to all other network requests, behind-the-scene network requests which are actual CSP reports will also be filtered out according to this setting. So if you globally disable CSP reporting in uBO, this will also apply to behind-the-scene network requests.
+The behind-the-scenes network requests that are actual CSP reports will get filtered out by this setting. So if you globally disable CSP reporting in uBO, this will also apply to behind-the-scenes network requests.
 
-Note that the blocking of CSP reports is implemented as a per-site switch internally in uBO, so this means that an advanced user could create rules in the _My rules_ pane in the dashboard to allow more granular control of the blocking of CSP reports. For example:
+Note that the blocking of CSP reports is implemented as a per-site switch internally in uBO so that an advanced user could create rules in the _My rules_ pane in the dashboard to allow for more granular control of the blocking of CSP reports. For example:
 
     no-csp-reports: example.com false
 
@@ -120,17 +116,17 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 
 ![higlighted Uncloak canonical names preference](https://user-images.githubusercontent.com/886325/111153280-0a551680-8592-11eb-9d18-058e5b845bd5.png)
 
-From uBO 1.34.0 and above. Before 1.34.0, this was an [advanced setting](./Advanced-settings) since [1.25.0](https://github.com/gorhill/uBlock/releases/tag/1.25.0).
+From uBO 1.34.0 and above, you can enable/disable the uncloaking of canonical names. This setting is default enabled.
 
-Enable/disable the uncloaking of canonical names -- enabled by default.
+Before 1.34.0, this was an [advanced setting](./Advanced-settings) since [1.25.0](https://github.com/gorhill/uBlock/releases/tag/1.25.0).
 
-For background information see [_"What's CNAME of your game? This DNS-based tracking defies your browser privacy defenses"_](https://www.theregister.com/2021/02/24/dns_cname_tracking/).
+See [_"What's CNAME of your game? This DNS-based tracking defies your browser privacy defenses"_](https://www.theregister.com/2021/02/24/dns_cname_tracking/) for background information.
 
-The setting will be disabled on platforms not supporting this feature. It's currently supported only on Firefox.
+The setting will be disabled on platforms not supporting this feature. It is currently supported only on Firefox.
 
-In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5), which occurred when funneling network requests through a proxy.
+In some edge cases, it might be necessary to disable this setting to prevent network-related issues. For example, [_"Pages load slowly when uBlock Origin is installed"_](https://bugzilla.mozilla.org/show_bug.cgi?id=1694404#c5) occurred when funneling network requests through a proxy.
 
-**Important note when using extension-based proxy service:** Extension-based proxy services are often done on the fly through a [browser API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest), and in such case uBO's own DNS queries to uncloak canonical names will **NOT** be caught and proxied by an extension-based proxy service. So you may want to disable this setting when using an extension-based proxy service.
+**Important note when using extension-based proxy service:** Extension-based proxy services usually are performed on the fly through a [browser API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest). In such a case, uBO's DNS queries to uncloak canonical names will **NOT** be caught and proxied by an extension-based proxy service. So you may want to disable this setting when using an extension-based proxy service.
 
 ***
 
@@ -138,23 +134,23 @@ In some edge cases, it might be necessary to disable this setting to prevent net
 
 ### Theme
 
-Allows to chose between light and dark interface themes. The "auto" option will adapt to theme selected in browser.
+Allows choosing between light and dark interface themes. The "auto" option will adapt to the theme selected in the browser.
 
 ### Custom accent color
 
-Allows to chose custom leading color for user interface elements.
+Allows choosing the custom leading color for user interface elements.
 
-Note that it will be automatically adjusted to keep proper contrast between interface elements.
+Note it will be automatically adjusted to keep proper contrast between interface elements.
 
 ### Color-blind friendly
 
-Currently mostly useful for users who checked _"I am an advanced user"_ (see below).
+Currently most useful for users who checked _"I am an advanced user"_ (see below).
 
-Makes color coding of blocked/allowed/nooped connection in overview panel and logger more friendly for people with color vision deficiency.
+Changes color coding of blocked/allowed/nooped connections in the overview panel and logger to be more accessible for people with color vision deficiency.
 
 ### Disable tooltips
 
-Turns off small bubbles with text description whem hovering mouse coursor over user interface elements.
+Turns off the popup bubbles with text descriptions when hovering the mouse cursor over user interface elements.
 
 ***
 
@@ -170,11 +166,11 @@ Please see: ["Per site switches"](./Per-site-switches)
 
 If you check this, this will enable uBO's [dynamic filtering](./Dynamic-filtering), and the dynamic filtering pane will become available from uBO's popup UI.
 
-Unchecking this disables dynamic filtering. And the dynamic filtering pane in the popup UI will no longer be available.
+Unchecking this disables dynamic filtering, and the associated pane in the popup UI will no longer be available.
 
-_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (normally hidden), and enables the ability to filter [behind-the-scene network requests](./Behind-the-scene-network-requests).
+_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (usually hidden) and enables filtering [behind-the-scenes network requests](./Behind-the-scene-network-requests).
 
-You should avoid playing with advanced features and settings unless [you understand fully what you are doing](./Advanced-user-features).
+You should avoid playing with advanced features and settings unless [you fully understand what you are doing](./Advanced-user-features).
 
 ***
 
@@ -182,8 +178,8 @@ You should avoid playing with advanced features and settings unless [you underst
 
 ![buttons](https://user-images.githubusercontent.com/585534/80806433-af3c5000-8b88-11ea-9f8c-bbd9fb3df9d7.png)
 
-The bottom-most section is for you to easily backup/restore/reset all settings in uBO.
+The bottom-most section is for you to conveniently backup/restore/reset all settings in uBO.
 
-It's done by saving a text file to the location specified by your browser.
+uBO saves a text file to the location specified by your browser for the backup.
 
-It is suggested you backup all your settings regularly.
+Recommend that you backup all your settings regularly.
