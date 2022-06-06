@@ -114,7 +114,7 @@ The above rule means CSP reports would be blocked on `example.com` when CSP repo
 
 ### Uncloak canonical names
 
-![higlighted Uncloak canonical names preference](https://user-images.githubusercontent.com/886325/111153280-0a551680-8592-11eb-9d18-058e5b845bd5.png)
+![higlighted Uncloak canonical names preference](https://user-images.githubusercontent.com/95879668/172086299-2feb30ec-4abd-4be3-bb8f-133c1ac1c75a.png)
 
 From uBO 1.34.0 and above, you can enable/disable the uncloaking of canonical names. This setting is default enabled.
 
@@ -176,7 +176,7 @@ You should avoid playing with advanced features and settings unless [you fully u
 
 ## Backup/restore section
 
-![buttons](https://user-images.githubusercontent.com/585534/80806433-af3c5000-8b88-11ea-9f8c-bbd9fb3df9d7.png)
+![buttons](https://user-images.githubusercontent.com/95879668/172087321-56d8d75d-2843-4e68-acdd-7b13151940e3.png)
 
 The bottom-most section is for you to conveniently backup/restore/reset all settings in uBO.
 
