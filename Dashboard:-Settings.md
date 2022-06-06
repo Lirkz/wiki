@@ -100,7 +100,7 @@ Consider this excerpt from [Reporting API / Privacy Considerations](https://w3c.
 
 There is no easy way to toggle CSP reporting in either Chromium or Firefox. This per-site switch is to address this shortcoming.
 
-The behind-the-scenes network requests that are actual CSP reports will get filtered out by this setting. So if you globally disable CSP reporting in uBO, this will also apply to behind-the-scenes network requests.
+The behind-the-scene network requests that are actual CSP reports will get filtered out by this setting. So if you globally disable CSP reporting in uBO, this will also apply to behind-the-scene network requests.
 
 Note that the blocking of CSP reports is implemented as a per-site switch internally in uBO so that an advanced user could create rules in the _My rules_ pane in the dashboard to allow for more granular control of the blocking of CSP reports. For example:
 
@@ -168,7 +168,7 @@ If you check this, this will enable uBO's [dynamic filtering](./Dynamic-filterin
 
 Unchecking this disables dynamic filtering, and the associated pane in the popup UI will no longer be available.
 
-_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (usually hidden) and enables filtering [behind-the-scenes network requests](./Behind-the-scene-network-requests).
+_Advanced user_ mode also gives access to the [advanced settings](./Advanced-settings) (usually hidden) and enables filtering [behind-the-scene network requests](./Behind-the-scene-network-requests).
 
 You should avoid playing with advanced features and settings unless [you fully understand what you are doing](./Advanced-user-features).
 
