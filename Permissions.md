@@ -80,7 +80,7 @@ This warning is triggered by the `dns` permission, which allows using the [`brow
 
 Note that even without this permission, uBO can see the IP address and hostname information, through the [`browser.webRequest API`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) which uBO already requires.
 
-**Important:** the statement "IP address" refers to the IP address of the servers to which your browser connects, **NOT** your specific IP address. uBO has **no access to** (and no need to know) **your specific IP address**. 
+**Important:** the statement "IP address" refers to the IP address of the servers to which your browser connects, **NOT** your specific IP address. uBO has **no access to** (and no need to know) **your specific IP address**.
 
 <sub>There is a [Firefox issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1617861) regarding the confusing wording of the permission. Firefox 74 Beta 9 no longer asks for this permission.</sub>
 
@@ -88,7 +88,7 @@ Note that even without this permission, uBO can see the IP address and hostname 
 
 ### "Store unlimited amount of client-side data"
 
-Related permission: [`unlimitedStorage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
+Related permission: [`unlimitedStorage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
 
 Since [first version](https://github.com/gorhill/uBlock/blob/b5fdac90539b19a0db8f36ea537bd150edb4d9c8/manifest.json).
 
@@ -112,15 +112,13 @@ uBO's primary purpose is to block **network connections**, not just data transfe
 
 **Privacy Badger also requires the same permissions.** I want uBO to also serve privacy-minded users first.
 
-If _prefetching_ had been disabled by default, this new permission would not be needed, but _prefetching_ is unfortunately enabled by default, and under _Privacy_ heading, which is itself hidden by default under _"advanced settings"_, and even at this point, you would still have to dig to find out the [negative side effects of prefetching](https://wikipedia.org/wiki/Link_prefetching#Issues_and_criticisms) (related: [dark patterns](https://www.darkpatterns.org/)).
+If _prefetching_ had been disabled by default, this new permission would not be needed, but _prefetching_ is unfortunately enabled by default, and under _Privacy_ heading, which is itself hidden by default under _"advanced settings"_, and even at this point, you would still have to dig to find out the [negative side effects of prefetching](https://en.wikipedia.org/wiki/Link_prefetching#Issues_and_criticisms) (related: [Deceptive Design](https://www.deceptive.design/)).
 
 ![c](https://cloud.githubusercontent.com/assets/585534/7914528/924b9314-0845-11e5-8012-f67e4b1814cd.png)
 
 Also, the benefits of _prefetching_ are probably marginal, and in the context of a blocker, the benefits could be negative, since a lot of useless connections would be made, just to be discarded after the browser find out the requests won't be made anyway. So do not fall for the _"loss of major performance boost"_ claim I read elsewhere, this is just a silly and baseless claim.
 
-**Edit:** actually, prefetching is worst than I first thought, I had tested that it was just a connection issue, but [as per Google](https://support.google.com/chrome/answer/1385029):
-
-> If you turn this setting on in Chrome, websites (and any of their embedded resources) that are prerendered or prefetched may set and read their cookies as if you had visited them before -- even if you don’t visit the prerendered or prefetched pages after all.
+**Edit:** actually, prefetching is worst than I first thought, I had tested that it was just a connection issue.
 
 See code:
 
