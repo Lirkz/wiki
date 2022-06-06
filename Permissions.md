@@ -118,7 +118,13 @@ If _prefetching_ had been disabled by default, this new permission would not be 
 
 Also, the benefits of _prefetching_ are probably marginal, and in the context of a blocker, the benefits could be negative, since a lot of useless connections would be made, just to be discarded after the browser find out the requests won't be made anyway. So do not fall for the _"loss of major performance boost"_ claim I read elsewhere, this is just a silly and baseless claim.
 
-**Edit:** actually, prefetching is worst than I first thought, I had tested that it was just a connection issue.
+**Edit:** actually, prefetching is worse than I first thought, I had tested that it was just a connection issue, but [as per Google (archive.org copy)](https://web.archive.org/web/20150905193636/https://support.google.com/chrome/answer/1385029):
+
+> If you turn this setting on in Chrome, websites (and any of their embedded resources) that are prerendered or prefetched may set and read their own cookies as if you had visited them before -- even if you don’t visit the prerendered or prefetched pages after all.
+
+or [per Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Page_prediction):
+
+>Although browser page prediction and prediction services enable faster page loads, they consume additional bandwidth. Also, pre-loaded websites and embedded content can set and read their cookies as if they were visited even if they weren't.
 
 See code:
 
