@@ -135,7 +135,7 @@ New in [1.17.0](https://github.com/gorhill/uBlock/commit/3c85c0319462ca331d53c35
 
 Wholly disable JavaScript for a given site.
 
-![Popup UI](https://user-images.githubusercontent.com/585534/87855351-a9cbe780-c8e5-11ea-87ed-ee6ea2693fad.png)
+![Popup UI](https://user-images.githubusercontent.com/95879668/172292344-054389c0-2469-48f8-97b8-870b3a51f961.png)
 <br>The badge shows the approximate number of script resources that have
 been seen on the page (the number is limited to 99 because of layout constraints)
 
