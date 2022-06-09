@@ -16,7 +16,7 @@ In uBO, cloud storage support must be explicitly enabled by the user, from the _
 
 Once you enable cloud storage support, a new UI widget will be available in the dashboard for panes that support the export/import of settings to/from cloud storage:
 
-![screenshot](https://user-images.githubusercontent.com/585534/92239074-6410b180-ee88-11ea-8bb6-b8ecb2f121d3.png)
+![screenshot](https://user-images.githubusercontent.com/95879668/172746188-6cf97718-7f8a-4b90-92a7-eb32efbadcdd.png)
 
 > ***
 > **Important:**
@@ -41,7 +41,7 @@ If you do not have a syncing account with your browser vendor, I have observed t
 > ***
 > **Important:**
 >
-> Some browsers offer the ability to use a passphrase for their sync feature, in order to enable end-to-end encryption of the data stored for sync purpose ([example](https://support.google.com/chrome/answer/1181035)). It is strongly suggested to make use of such a passphrase.
+> Some browsers offer the ability to use a passphrase for their sync feature, in order to enable end-to-end encryption of the data stored for sync purpose ([example](https://support.google.com/chrome/answer/165139)). It is strongly suggested to make use of such a passphrase.
 > ***
 
 #### Caveats
@@ -56,10 +56,10 @@ Cloud storage services offered by specific browser vendors have their own limita
 
 ##### Firefox browsers
 
-- Note that Firefox Sync is not triggered when you export uBO settings, it seems to be executed regularly however if you want to force the cloud export you have to launch Firefox Sync manually.  
+- Note that Firefox Sync is not triggered when you export uBO settings, it seems to be executed regularly however if you want to force the cloud export you have to launch Firefox Sync manually. 
 ![Sync button](https://user-images.githubusercontent.com/886325/41821498-e081fe7e-77e1-11e8-81de-03a09d826cb9.png)
 - I have observed that too large an amount of per-pane data will cause a warning in the browser console (> 8K).
-- **A new installation of uBlock Origin will cause cloud storage data to be blanked.**
+- **A new installation of uBO will cause cloud storage data to be blanked.**
     - Update: [Reportedly fixed in BZ#753289](https://bugzilla.mozilla.org/show_bug.cgi?id=753289), included in [Firefox 43.0](https://bugzilla.mozilla.org/buglist.cgi?j_top=OR&f1=target_milestone&o3=equals&v3=Firefox%2043&o1=equals&resolution=FIXED&o2=anyexact&query_format=advanced&f3=target_milestone&f2=cf_status_firefox43&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&v1=mozilla43&v2=fixed%2Cverified&limit=0)
     - See: <https://discourse.mozilla.org/t/how-to-sync-preferences-of-a-bootstrapped-extension-via-sync/3024>.
     - But since uBO won't automatically import settings from the cloud storage, this will not cause any loss of local settings. However, you will have to push again your settings to the cloud storage.
