@@ -256,7 +256,7 @@ Equivalent to `stylesheet` [option](https://help.eyeo.com/en/adblockplus/how-to-
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/c3bc2c741d61db3e99b313835c2ae34a4a008359).
 
-Option for exception filters. Bypass blocking CNAME uncloaked requests for the current (specified) document.
+When used in exception filter will bypass blocking CNAME uncloaked requests for the current (specified) document.
 
 By default, network requests which are result of resolving a [canonical name](https://en.wikipedia.org/wiki/CNAME_record) are subject to filtering. This filtering can be bypassed by creating exception filters using the `cname` option. 
 
@@ -332,7 +332,7 @@ Alias: `ehide`.
 
 Before uBO [1.23.0](https://github.com/gorhill/uBlock/commit/23c4c80136ba4974a6444488ef8162ba75b0cb84) option was translated internally to `generichide`.
 
-Option for exception filters. Turns off all cosmetic filtering on matching pages.
+When used in exception filter will turn off all cosmetic filtering on matching pages.
 
 ***
 
@@ -352,7 +352,7 @@ Equivalent to `subdocument` [option](https://help.eyeo.com/en/adblockplus/how-to
 
 Alias: `ghide`.
 
-Option for exception filters. Turns off _generic_ cosmetic filtering on matching pages.
+When used in exception filter will turn off _generic_ cosmetic filtering on matching pages.
 
 Generic cosmetic filters, are hiding filters which apply to all pages - `##.ad-class`.
 
@@ -456,7 +456,7 @@ Alias: `shide`.
 
 New in uBO [1.23.0](https://github.com/gorhill/uBlock/commit/23c4c80136ba4974a6444488ef8162ba75b0cb84)
 
-Option for exception filters. Turns off _specific_ cosmetic filtering on matching pages.
+When used in exception filter will turn off _specific_ cosmetic filtering on matching pages.
 
 Specific cosmetic filters, are filters which apply only to pages in domains specified in filter - `example.com##.ad-class`.
 
