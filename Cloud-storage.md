@@ -16,7 +16,7 @@ In uBO, cloud storage support must be explicitly enabled by the user, from the _
 
 Once you enable cloud storage support, a new UI widget will be available in the dashboard for panes that support the export/import of settings to/from cloud storage:
 
-![screenshot](https://user-images.githubusercontent.com/95879668/172746188-6cf97718-7f8a-4b90-92a7-eb32efbadcdd.png)
+![screenshot](https://user-images.githubusercontent.com/95879668/173246418-e8101bc9-1ae9-41e5-b99e-1b2b885b1b9f.png)
 
 > ***
 > **Important:**
