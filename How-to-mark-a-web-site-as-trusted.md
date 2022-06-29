@@ -9,7 +9,7 @@
     - [Single web page](#single-web-page)
     - [Section of a web site](#section-of-a-web-site)
     - [Specific pattern](#specific-pattern)
-    - [Regular expression](#regular-expression-1917)
+    - [Regular expression](#regular-expression)
  - [Disable filtering on YouTube channel](#disable-filtering-on-youtube-channel)
  - [Disabling filtering by default (blocklist mode)](#disabling-filtering-by-default)
  - [Other details](#other-details)
