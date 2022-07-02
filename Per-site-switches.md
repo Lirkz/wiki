@@ -135,11 +135,11 @@ New in [1.17.0](https://github.com/gorhill/uBlock/commit/3c85c0319462ca331d53c35
 
 Wholly disable JavaScript for a given site.
 
-![Popup UI](https://user-images.githubusercontent.com/886325/64036667-039fb380-cb54-11e9-8199-cf042837d481.png)
+![Popup UI](https://user-images.githubusercontent.com/95879668/172292344-054389c0-2469-48f8-97b8-870b3a51f961.png)
 <br>The badge shows the approximate number of script resources that have
 been seen on the page (the number is limited to 99 because of layout constraints)
 
-![purple badge](https://user-images.githubusercontent.com/95879668/172287593-4e3f0a92-553f-43c0-90a2-ed83cd084d00.png)
+![purple badge](https://user-images.githubusercontent.com/886325/64036667-039fb380-cb54-11e9-8199-cf042837d481.png)
 <br>Starting with [v1.21.7b5](https://github.com/gorhill/uBlock/commit/7ff750eaf6007bdea4e843d3314fc7275b1ce945), a purple badge on uBO toolbar button indicates activation of the "No scripting" switch.
 
 This master switch has blocking precedence over dynamic filtering rules and static filters related to script resources.
