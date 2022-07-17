@@ -530,9 +530,11 @@ History:
 
 #### `uiFlavor`
 
+Removed in favor Fenix Layout.
+
 Default: `unset`.
 
-uBO [1.25.0](https://github.com/gorhill/uBlock/commit/2b0316440e86d1d8f4ae21f8d9ff4c19ac17216f) and above.
+uBO [1.25.0](https://github.com/gorhill/uBlock/commit/2b0316440e86d1d8f4ae21f8d9ff4c19ac17216f) to [1.42.4](https://github.com/gorhill/uBlock/releases/tag/1.42.4).
 
 Possible values:
 
