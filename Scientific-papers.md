@@ -1,3 +1,8 @@
+### 2022
+
+* "Towards Understanding First-Party Cookie Tracking in the Field"
+  * https://arxiv.org/pdf/2202.01498.pdf
+
 ### 2021
 
 * "A Distributed Performance Measurement Tool for Tor Browser"
