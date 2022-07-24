@@ -2,7 +2,7 @@
 
 ***
 
-The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBlock Origin (uBO) behaves internally. Some of these settings are left undocumented, on purpose -- do not open issues about these.
+The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBlock Origin (uBO) behaves internally. There is no warranty those settings or any combination of them will work, they may change or be removed at any time. If some customizations in there are found to interfere negatively, it's for the user to address. Some of these settings are left undocumented, on purpose -- do not open issues about these.
 
 These advanced settings can be easily accessed only when the setting [_"I am an advanced user"_](./Advanced-user-features) in the _Settings_ pane in the dashboard is checked, but will persist and work even when the setting [_"I am an advanced user"_](./Advanced-user-features) is not checked:
 
