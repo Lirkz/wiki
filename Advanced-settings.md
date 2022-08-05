@@ -6,7 +6,7 @@ The _"Advanced settings"_ page contains settings that are experimental, or that 
 
 These advanced settings can be easily accessed only when the setting [_"I am an advanced user"_](./Advanced-user-features) in the _Settings_ pane in the dashboard is checked, but will persist and work even when the setting [_"I am an advanced user"_](./Advanced-user-features) is not checked:
 
-![Click on the _cogs_ icon](https://cloud.githubusercontent.com/assets/585534/20042797/2800dcd4-a44e-11e6-9bc8-a5e0c960262c.png)
+![Click on the _cogs_ icon](https://user-images.githubusercontent.com/886325/183042828-d7cfd776-87ce-42e5-9a77-e413bc3194b7.png)
 
 The advanced settings available are described below. Be aware that those settings may change or be removed in the future, or more may be added.
 
