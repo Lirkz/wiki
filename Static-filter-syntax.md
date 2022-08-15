@@ -185,7 +185,7 @@ Usually, it is far more convenient to use [dynamic filtering rules](./Dynamic-fi
 
 #### `1p`
 
-Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` [option](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) (`~third-party`). For convenience.
+Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options) (`~third-party`). For convenience.
 
 ***
 
