@@ -691,6 +691,7 @@ They purpose is to mislead page to think that real files have been served.
 	- `noop.txt` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop.txt)
  - Media files
 	- `noop-0.1s.mp3` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-0.1s.mp3)
+	- `noop-0.5s.mp3` [↪](https://github.com/gorhill/uBlock/blob/c521479ef9d9676e08fcd6751fde7330dce189e7/src/web_accessible_resources/noop-0.5s.mp3)
 	- `noop-1s.mp4` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop-1s.mp4)
  - Special purpose
     - `none`
