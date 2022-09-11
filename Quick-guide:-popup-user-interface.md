@@ -106,7 +106,7 @@ Click the _list_ icon to open the [logger](./The-logger) in a separate tab. This
 
 Tip: press the <kbd>Shift</kbd> key while clicking the icon to toggle between opening the logger in a separate window or a separate tab. uBO will remember that setting when you open the logger without the <kbd>Shift</kbd> key.
 
-On mobile devices, the "Open the logger" icon is replaced by the "chat" icon (["Report a filter issue" form](./The-"Report-a-filter-issue"-form)), since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in [the Dashboard](./Dashboard) (Link in "Filter issues/website is broken" section, in "_The logger_ is the primary tool..." sentence).
+On mobile devices, the "Open the logger" icon is replaced by the "chat" icon (["Report a filter issue" form](./The-"Report-a-filter-issue"-form)), since it is more likely to be useful on small display devices. [The logger](./The-logger) can always be opened from [the Support pane](./Dashboard:-Support) in [the Dashboard](./Dashboard) (Link in "Filter issues/website is broken" section, in "_The logger_ is the primary tool..." sentence). If you like, you can turn it back on in [advanced settings](https://github.com/gorhill/uBlock/wiki/Advanced-settings#uipopupconfig).
 
 #### Open the dashboard
 
