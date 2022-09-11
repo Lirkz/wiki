@@ -145,14 +145,6 @@ Note that if _arg_ is valid CSS selector, uBO will not consider the `:not` opera
 
 ***
 
-### `subject:nth-ancestor(n)`
-
-**Do not use.**
-
-Deprecated in favor of [`subject:upward(arg)`](#subjectupwardarg) in [1.25.3b0](https://github.com/gorhill/uBlock/commit/72bb70056843024b1a31fe1ab9c90bd4e8260ba2)
-
-***
-
 ### `subject:upward(arg)`
 
 - Description: lookup the ancestor relative to the currently selected node.
