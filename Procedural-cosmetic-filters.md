@@ -51,21 +51,6 @@ The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of w
     - `example.com##body > div:last-of-type span:has-text(/^Promoted by/i)`: starts with "Promoted by", ignore case
     - `example.com##body > div:last-of-type span:has-text(Promoted by)`: contains "Promoted by" at any position
 
-***
-
-### `subject:if(arg)`
-
-**Do not use.**
-
-Deprecated in favor of [`:has(...)`](#subjecthasarg) in uBO 1.15.0
-
-***
-
-### `subject:if-not(arg)`
-
-**Do not use.**
-
-Deprecated in favor of [`:not(:has(arg))`](#subjectnotarg) operator.
 
 ***
 
