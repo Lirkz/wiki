@@ -13,7 +13,7 @@ uBO respected that semantic until version 0.9.3.0. With version 0.9.3.0, uBO wil
 
 This means that using the same test case above, **uBO will block the web page** served by a server found in one of the malware list (unlike ABP):
 
-![Page was fully blocked](https://cloud.githubusercontent.com/assets/585534/8160013/14466ca0-133a-11e5-8d3c-28169288f35a.png)
+![Page was fully blocked](https://user-images.githubusercontent.com/585534/189539077-9e2c8e46-7de0-42c0-9e1d-34b9a31a39a5.png)
 
 Why the change? Because [issue #1013](https://github.com/chrisaljoudi/uBlock/issues/1013) brought forth why it is desirable sometimes to completely block a website, as opposed to what the ABP-filtering semantic dictates.
 
@@ -24,7 +24,7 @@ In the figure above, the user will be given the choice to go back by closing the
 - Temporarily - The site will be temporarily allowed for a limited time (60 seconds, after [1.17.4](https://github.com/gorhill/uBlock/releases/tag/1.17.4) 120 seconds - [configurable](./Advanced-settings#strictblockingbypassduration)).
 - Permanently - The site will be permanently allowed.
 
-This will prevent the web page _proper_ for the site from being blocked by uBO in the future: the filtering of the site will be done exactly as per ABP-filtering semantic, and just like with uBO pre-0.9.3.0.
+This will prevent the web page _proper_ for the site from being blocked by uBO in the future: the filtering of the site will be done exactly as per EasyList syntax-based filtering semantic, and just like with uBO pre-0.9.3.0.
 
 There are many benefits to strict blocking. For example, there is no good reason one should want to connect _at all_ to any of the sites present in any one of the malware domain lists. Strict blocking will prevent this from happening.
 
@@ -40,6 +40,6 @@ A top example of this is when a redirection URL is strict blocked, you will ofte
 
 Example:
 
-![a](https://user-images.githubusercontent.com/585534/81292329-6594af00-9039-11ea-99e5-271ae753fe0b.png)
+![a](https://user-images.githubusercontent.com/585534/189539478-5b9d454b-67aa-4e85-9a2f-e8eb3f0accc7.png)
 
 In the example above, a link to _Green Man Gaming_ site was clicked (from [here](https://www.pcgamingwiki.com/wiki/Dead_Rising_2)), but doing so caused the browser to navigate to a strict-blocked redirection link instead of navigating directly to the _Green Man Gaming_ site. By expanding the query strings into components, we can see our actual destination URL -- just click on it and you will finally reach your intended destination without having to go through the `dpbolvw.net` server which was strict-blocked by an entry in Peter Lowe's list.
