@@ -162,14 +162,6 @@ Introduced in uBO [1.25.3b0](https://github.com/gorhill/uBlock/commit/72bb700568
 
 ***
 
-### `subject:watch-attrs(arg)`
-
-**Do not use.**
-
-Deprecated in favor of [`subject:watch-attr(arg)`](#subjectwatch-attrarg) in [1.20.1b3](https://github.com/gorhill/uBlock/commit/41685f4cce084f3f89e9cdd8fc1cde5b57862958)
-
-***
-
 ### `subject:watch-attr(arg)`
 
 Experimental.
