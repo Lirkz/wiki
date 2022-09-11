@@ -33,6 +33,8 @@ Blocking popups depends on whether the proper filters are present in the selecte
 
 **Caveat:** It's not _always_ possible for uBO to determine for sure whether a new tab being opened is that of a popup, or is the result of a legitimate click on a link by the user. So if the no-popups switch is in use, you _may_ not be able to open a link in a new tab through the context menu.
 
+On mobile devices, the "No popups" icon is not available because of screen space issues. If you like, you can turn it back on in [advanced settings](https://github.com/gorhill/uBlock/wiki/Advanced-settings#uipopupconfig).
+
 ***
 
 ## No large media elements
