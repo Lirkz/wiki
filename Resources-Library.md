@@ -738,6 +738,8 @@ New in [1.27.0](https://github.com/gorhill/uBlock/commit/f842ab6d3c1cf0394f95d27
 ### google-analytics_cx_api.js /
 ### ~google-analytics.com/cx/api.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/google-analytics_cx_api.js)
 
+### google-ima.js [↪](https://github.com/gorhill/uBlock/blob/93e5133783301c0329b3ce8f9e6079badd06d62d/src/web_accessible_resources/google-ima.js)
+
 ### googletagservices_gpt.js /
 ### ~googletagservices.com/gpt.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/googletagservices_gpt.js)
 
