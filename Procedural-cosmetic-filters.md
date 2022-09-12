@@ -24,8 +24,6 @@ _Procedural_ means JavaScript code will find DOM elements that it must hide. A p
 
 ### `subject:has(arg)`
 
-<sub>Semantic changed in uBO 1.15.0 to resemble `:if(...)`</sub>
-
 - Description: Select element _subject_ if and only if evaluating _arg_ in the context of _subject_ returns one or more elements.
 - Chainable: Yes.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
@@ -127,6 +125,33 @@ Use to negate other procedural selectors. For example `:not(:has(.foo))` will ma
 
 Note that if _arg_ is valid CSS selector, uBO will not consider the `:not` operator to be a procedural one, it will rather consider the operator as being part of a CSS selector. Thus this ensures compatibility with the existing
 [CSS `:not(...)` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:not).
+
+***
+
+### `subject:others()`
+
+Experimental.
+
+- Description: Target all elements _outside_ than the currently selected set of elements.
+- Chainable: Yes.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
+- Examples:
+    - `twitter.com##:matches-path(/^/home/) [data-testid="primaryColumn"]:others()`
+    - `nature.com##:matches-path(/^/articles//) :is(.c-breadcrumbs,.c-article-main-column):others()`
+
+Introduced in uBO [1.41.1b2](https://github.com/gorhill/uBlock/commit/152120bd9ec7a2ccea907e015fb195484ef7bc8e)
+
+For any element feeding into `others()`, the resultset of the `others()` operator will include everything else except:
+
+- the descendants of a subject element
+- the ancestors of a subject element
+
+The resultset will contains the siblings of a subject element _except_ when those siblings are either a descendant or ancestor of another subject element.
+
+Though this operator is unlikely to be used in default lists, it opens the door to create specialized filter lists which purpose is some sort of "reader mode", where everything _else_ than a selected set of elements are hidden from view.
+
+Related discussion:
+- https://www.reddit.com/r/uBlockOrigin/comments/slyjzp/
 
 ***
 
