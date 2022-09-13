@@ -667,7 +667,7 @@ Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
 Deprecated, Convenience, sets static properties (`_resetGPT`, `resetGPT`, `resetAndLoadGPTRecovery`, `_resetAndLoadGPTRecovery`, `setupGPT`, `setupGPTuo`)
 
 ### adfly-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L805)
-Defuses anti adblock on adfly shortened links.
+Defuses anti-blocker on adfly shortened links.
 
 ### damoh-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L886)
 Fix for disappearing videos on chip.de
