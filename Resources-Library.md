@@ -558,7 +558,7 @@ Parameters:
 
 New in [1.39.3b10](https://github.com/gorhill/uBlock/commit/c198b9a748265c0e1ce7f5bad4528d5bf6ce8161).
 
-Closes fresh browser tabs of the specified page. Can be used to close tabs which have been opened from other applications. Can be narrowed down to specific path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
+Closes fresh browser tabs of the specified page. Can also be used to close tabs which have been opened from other applications. Can be narrowed down to specific path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
 
 Parameters:
 
@@ -567,7 +567,7 @@ Parameters:
 Example:
 
  - `acestream.com##+js(window-close-if, /plan/select?popup=noads)`
-
+ - `example.com##+js(window-close-if, /^/)` - will close all new tabs going to `example.com` on _any_ site.
 
 ***
 
