@@ -706,6 +706,8 @@ Since `:remove()` is an "action" operator, it must only be used as a trailing op
 
 AG's cosmetic filter syntax `{ remove: true; }` will be converted to uBO's `:remove()` operator internally.
 
+To remove elements from a document _before_ it is parsed by the browser, see: [`HTML filters`](#html-filters)
+
 ***
 
 #### `subject:style(arg)`
