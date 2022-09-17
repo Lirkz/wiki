@@ -15,7 +15,7 @@ uBlock filters - Unbreak |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob
 EasyList‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
 EasyPrivacy‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
 Online Malicious URL Blocklist |X||| [CC0 1.0](https://gitlab.com/malware-filter/urlhaus-filter/-/blob/main/LICENSE.md) ||
-Peter Lowe’s Ad and tracking server list‎ |X||||[McRae GPL](http://pgl.yoyo.org/license/), non-commercial|
+Peter Lowe’s Ad and tracking server list‎ |X||||[McRae GPL](https://pgl.yoyo.org/license/), non-commercial|
 AdGuard Mobile Ads | X (Mobile) | [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
 uBlock filters – Annoyances |||[CC BY 3.0](https://github.com/uBlockOrigin/uAssets/blob/master/filters/annoyances.txt#L6)|||
 Phishing URL Blocklist |||| [CC0 1.0](https://gitlab.com/malware-filter/phishing-filter/-/blob/main/LICENSE.md) ||
@@ -29,14 +29,14 @@ AdGuard Tracking Protection || [GPL3](https://github.com/AdguardTeam/AdguardFilt
 AdGuard URL Tracking Protection || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
 AdGuard Annoyances || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
 AdGuard Social Media || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
-Dan Pollock’s hosts file‎ |||||Informal license, [attribution, non-commercial](http://someonewhocares.org/hosts/hosts)|
+Dan Pollock’s hosts file‎ |||||Informal license, [attribution, non-commercial](https://someonewhocares.org/hosts/hosts)|
 ALB: Adblock List for Albania‎ ||||[Unlicense](https://github.com/AnXh3L0/blocklist/blob/master/albanian-easylist-addition/Albania.txt#L7)||
 ARA: Liste AR‎ |||[CC BY-NC-SA 3.0](https://github.com/easylist/listear/blob/master/Liste_AR.txt#L9)|||
 BGR: Bulgarian Adblock list‎ ||||||X
 CHN: AdGuard Chinese (中文) ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
 CZE, SVK: EasyList Czech and Slovak‎ |||[CC BY-SA 4.0](https://github.com/tomasko126/easylistczechandslovak/blob/master/LICENSE)|||
 DEU: EasyList Germany‎ ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
-EST: Eesti saitidele kohandatud filter‎ ||||[CC0 1.0](http://adblock.ee/list.php)||
+EST: Eesti saitidele kohandatud filter‎ ||||[CC0 1.0](https://adblock.ee/list.php)||
 FIN: Adblock List for Finland‎ ||||[Unlicense](https://github.com/finnish-easylist-addition/finnish-easylist-addition/blob/master/LICENSE)||
 FRA: AdGuard Français ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
 GRC: Greek AdBlock Filter‎ |||[CC BY-SA 4.0](https://github.com/kargig/greek-adblockplus-filter/blob/master/LICENSE.md)|||
@@ -77,11 +77,11 @@ Creative Commons - Attribution-ShareAlike 4.0 (**CC BY-SA 4.0**) - https://creat
 Creative Commons - Attribution-NonCommercial-ShareAlike 4.0  (**CC BY-NC-SA 4.0**) - https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 Creative Commons - Public Domain Dedication 1.0 (**CC0 1.0**) - https://creativecommons.org/publicdomain/zero/1.0/  
-Unlicense - http://unlicense.org/  
+Unlicense - https://unlicense.org/  
 
 Apache 2.0 - https://apache.org/licenses/LICENSE-2.0.html/
 
 MIT - https://mit-license.org/
 
-McRae GPL - http://pgl.yoyo.org/license/  
+McRae GPL - https://pgl.yoyo.org/license/  
 Dandelicence - https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
