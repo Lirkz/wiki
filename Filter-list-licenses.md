@@ -84,4 +84,4 @@ Apache 2.0 - https://apache.org/licenses/LICENSE-2.0.html/
 MIT - https://mit-license.org/
 
 McRae GPL - http://pgl.yoyo.org/license/  
-Dandelicence- https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+Dandelicence - https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
