@@ -560,14 +560,20 @@ New in [1.39.3b10](https://github.com/gorhill/uBlock/commit/c198b9a748265c0e1ce7
 
 Closes fresh browser tabs of the specified page. Can also be used to close tabs which have been opened from other applications. Can be narrowed down to specific path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
 
+Improvements:
+- [1.44.3b10](https://github.com/gorhill/uBlock/commit/65a056107210796426033ebe2eebb89a98c93a23), If the argument to the `window-close-if` scriptlet is a regex, the
+match will be against _the whole location URL_, otherwise the
+match will be against the part+query part of the location URL.
+
 Parameters:
 
- - optional, string/_regular expression_, matching in the path and query part of the web page address.
+ - optional, string, matching in the path and query part of the web page address or _regular expression_, matching in the whole location URL. 
 
 Example:
 
  - `acestream.com##+js(window-close-if, /plan/select?popup=noads)`
  - `example.com##+js(window-close-if, /^/)` - will close all new tabs going to `example.com` on _any_ site.
+ - `hostdl.com##+js(window-close-if, /^https?://(www\.)?hostdl\.com/)` - will close all new tabs matching either only base domain or www one (i.e. **not** `login.hostdl.com`).
 
 ***
 
