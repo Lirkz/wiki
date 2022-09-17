@@ -1,69 +1,87 @@
-An overview of licenses of filter lists currently found in uBlock.
+An overview of licenses of filter lists currently found in uBlock Origin.
 
 Only lists that are enabled by default in uBlock Origin are bundled with it, all others are downloaded from their respective hosts only when they have been enabled.
 
-"Some of the 3rd-party filters (simple data files) in this software are under non-free licenses. However, it is not clear that the works in question are actually subject to copyright or that the licensing terms could apply. As such, we urge you to use redistribute those filters with caution that someone may try to claim copyright on the works." - Joshua Gay, Licensing & Compliance Manager, Free Software Foundation
+"_Some of the 3rd-party filters (simple data files) in this software are under non-free licenses. However, it is not clear that the works in question are actually subject to copyright or that the licensing terms could apply. As such, we urge you to use redistribute those filters with caution that someone may try to claim copyright on the works._" - Joshua Gay, Licensing & Compliance Manager, Free Software Foundation
 
 Filter List | Default | GPL | Creative Commons | Public Domain | Other | Undetermined
 ----------- | ------- | --- | ---------------- | ------------- | ----- | ------------
 uBlock filters |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Badware risks |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Privacy |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
+uBlock filters - Quick Fixes |X| | [CC BY 3.0](https://github.com/uBlockOrigin/uAssets/blob/master/filters/quick-fixes.txt#L5) |||
 uBlock filters – Resource abuse |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Unbreak |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
-AdGuard Base ||| [CC BY-SA 3.0](https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt) |||
-AdGuard Mobile Ads | mobile || [CC BY-SA 3.0](https://filters.adtidy.org/extension/ublock/filters/11.txt) |||
-EasyList‎ |X| [GPL3](https://easylist-downloads.adblockplus.org/COPYING) | [CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING) |||
-AdGuard Tracking Protection ||| [CC BY-SA 3.0](https://filters.adtidy.org/extension/ublock/filters/3.txt) |||
-EasyPrivacy‎ |X| [GPL3](https://easylist-downloads.adblockplus.org/COPYING) | [CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING) |||
-Fanboy's Enhanced Tracking List‎ ||| [CC BY 3.0](https://fanboy.co.nz/enhancedstats.txt) |||
-Online Malicious URL Blocklist |X||| [CC0 1.0](https://gitlab.com/curben/urlhaus-filter/raw/master/urlhaus-filter-online.txt) ||
-Spam404‎ ||| [CC BY-SA 4.0](https://github.com/Spam404/lists/blob/master/LICENSE.md/LICENSE.md) |||
-AdGuard Annoyances ||| [CC BY-SA 3.0](https://filters.adtidy.org/extension/ublock/filters/14.txt) |||
-AdGuard Social Media ||| [CC BY-SA 3.0](https://filters.adtidy.org/extension/ublock/filters/4.txt) |||
-Anti-Facebook ||| [CC BY 3.0](https://fanboy.co.nz/fanboy-antifacebook.txt) |||
-EasyList Cookie ||| [CC BY 3.0](https://easylist-downloads.adblockplus.org/easylist-cookie.txt) |||
-Fanboy's Annoyance ||| [CC BY 3.0](https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt) |||
-Fanboy's Social |||[CC BY 3.0](https://easylist-downloads.adblockplus.org/fanboy-social.txt)|||
-uBlock filters – Annoyances || [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
-Dan Pollock’s hosts file‎ |||||Informal license, [attribution, non-commercial](http://someonewhocares.org/hosts/hosts)|
-MVPS HOSTS‎ |||[CC BY-NC-SA 4.0](http://winhelp2002.mvps.org/hosts.txt)|||
+EasyList‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
+EasyPrivacy‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
+Online Malicious URL Blocklist |X||| [CC0 1.0](https://gitlab.com/malware-filter/urlhaus-filter/-/blob/main/LICENSE.md) ||
 Peter Lowe's Ad server list‎ |X||||[McRae GPL](http://pgl.yoyo.org/license/), non-commercial|
-ARA: Liste AR‎ |||[CC BY-NC-SA 3.0](https://liste-ar-adblock.googlecode.com/hg/Liste_AR.txt)|||
+AdGuard Mobile Ads | X (Mobile) | [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+uBlock filters – Annoyances |||[CC BY 3.0](https://github.com/uBlockOrigin/uAssets/blob/master/filters/annoyances.txt#L6)|||
+Phishing URL Blocklist |||| [CC0 1.0](https://gitlab.com/malware-filter/phishing-filter/-/blob/main/LICENSE.md) ||
+PUP Domains Blocklist |||| [CC0 1.0](https://gitlab.com/malware-filter/pup-filter/-/blob/main/LICENSE.md) ||
+EasyList Cookie || [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
+Fanboy's Social |||[CC BY 3.0](https://easylist-downloads.adblockplus.org/fanboy-social.txt)|||
+Fanboy's Annoyance ||| [CC BY 3.0](https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt) |||
+Anti-Facebook ||| [CC BY 3.0](https://fanboy.co.nz/fanboy-antifacebook.txt) |||
+AdGuard Base || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+AdGuard Tracking Protection || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+AdGuard URL Tracking Protection || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+AdGuard Annoyances || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+AdGuard Social Media || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
+Dan Pollock’s hosts file‎ |||||Informal license, [attribution, non-commercial](http://someonewhocares.org/hosts/hosts)|
+ALB: Adblock List for Albania‎ ||||[Unlicense](https://github.com/AnXh3L0/blocklist/blob/master/albanian-easylist-addition/Albania.txt#L7)||
+ARA: Liste AR‎ |||[CC BY-NC-SA 3.0](https://github.com/easylist/listear/blob/master/Liste_AR.txt#L9)|||
 BGR: Bulgarian Adblock list‎ ||||||X
-CHN: China: cjxlist ||[GPL3](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjxlist.txt)|[CC BY-SA 3.0](https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjxlist.txt)|||
-CHN: EasyList China ||[GPL3](https://easylist-downloads.adblockplus.org/COPYING)|[CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING)|||
-CZE, SVK: EasyList Czech and Slovak‎ |||[CC BY-SA 4.0](https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt)|||
-DEU: EasyList Germany‎ ||[GPL3](https://easylist-downloads.adblockplus.org/COPYING)|[CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING)|||
+CHN: AdGuard Chinese (中文) ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
+CZE, SVK: EasyList Czech and Slovak‎ |||[CC BY-SA 4.0](https://github.com/tomasko126/easylistczechandslovak/blob/master/LICENSE)|||
+DEU: EasyList Germany‎ ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
 EST: Eesti saitidele kohandatud filter‎ ||||[CC0 1.0](http://adblock.ee/list.php)||
-FIN: Finnish Addition to Easylist‎ ||||[Unlicense](https://iadb.azurewebsites.net/Finland_adb.txt)||
-FRA: EasyList Liste FR‎ |||[CC BY-NC-SA 3.0](http://www.adblock-listefr.com/A_propos)|||
-GRC: Greek AdBlock Filter‎ |||[CC BY-SA 3.0](https://www.void.gr/kargig/void-gr-filters.txt)|||
-HUN: hufilter‎ |||[CC BY-SA 4.0](https://github.com/szpeter80/hufilter/blob/master/README.md)|||
-IDN: ABPindo‎ ||[GPL3](https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/COPYING)|[CC BY-SA 3.0](https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/COPYING)|||
+FIN: Adblock List for Finland‎ ||||[Unlicense](https://github.com/finnish-easylist-addition/finnish-easylist-addition/blob/master/LICENSE)||
+FRA: AdGuard Français ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
+GRC: Greek AdBlock Filter‎ |||[CC BY-SA 4.0](https://github.com/kargig/greek-adblockplus-filter/blob/master/LICENSE.md)|||
+HUN: hufilter‎ |||[CC BY 4.0](https://github.com/hufilter/hufilter-dev/blob/master/LICENSE)|||
+IDN, MYS: ABPindo ||[GPL3](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|[CC BY-SA 3.0](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|||
+IND: IndianList ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
+IRN: PersianBlocker ||[AGPL3](https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)||||
 ISL: Icelandic ABP List‎ ||||||X
-ISR: EasyList Hebrew‎ ||[GPL3](https://raw.github.com/AdBlockPlusIsrael/EasyListHebrew/master/EasyListHebrew.txt)|[CC BY-SA 3.0](https://raw.github.com/AdBlockPlusIsrael/EasyListHebrew/master/EasyListHebrew.txt)|||
-ITA: ABP X Files‎ |||[CC BY-NC-SA 2.5](http://noads.it/#contact)|||
-ITA: EasyList Italy‎ ||[GPL3](https://easylist-downloads.adblockplus.org/COPYING)|[CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING)|||
-KOR: Fanboy's Korean‎ |||[CC BY 3.0](https://www.fanboy.co.nz/fanboy-korean.txt)|||
-KOR: Korean Adblock List‎ ||||||X
-LTU: Adblock Plus Lithuania‎ ||[GPL3](http://margevicius.lt/easylistlithuania.txt)||||
-LVA: Latvian List‎ |||[CC BY-SA 4.0](https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt)|||
-NLD: EasyList Dutch‎ ||[GPL3](https://easylist-downloads.adblockplus.org/COPYING)|[CC BY-SA 3.0](https://easylist-downloads.adblockplus.org/COPYING)|||
-POL: polskie filtry do Adblocka i uBlocka‎ |||[CC BY-NC-SA 4.0](https://www.certyficate.it/adblock/adblock.txt)|||
-RUS: BitBlock List |||[CC BY 3.0](https://easylist-downloads.adblockplus.org/bitblock.txt)|||
+ISR: EasyList Hebrew‎ ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
+ITA: EasyList Italy‎ ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
+JPN: AdGuard Japanese ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)||||
+KOR: List-KR ||[GPL3](https://github.com/List-KR/List-KR/blob/master/LICENSE)||||
+LTU: EasyList Lithuania‎ ||[GPL3](https://github.com/EasyList-Lithuania/easylist_lithuania/blob/master/LICENSE)||||
+LVA: Latvian List‎ |||[CC BY-SA 4.0](https://github.com/Latvian-List/adblock-latvian/blob/master/lists/latvian-list.txt#L8)|||
+NLD: EasyDutch‎ ||[GPL3](https://github.com/EasyDutch-uBO/EasyDutch/blob/main/LICENSE)||||
+NOR, DNK, ISL: Dandelion Sprouts nordiske filtre‎ |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, good intent|||
+POL: Oficjalne Polskie Filtry do AdBlocka, uBlocka Origin i AdGuarda‎ |||[CC BY-NC-SA 4.0](https://github.com/MajkiIT/polish-ads-filter/blob/master/LICENSE)|||
+POL: Oficjalne polskie filtry przeciwko alertom o Adblocku‎ |||[CC BY-NC-SA 4.0](https://github.com/olegwukr/polish-privacy-filters/blob/master/adblock.txt#L9)|||
+ROU: Romanian Ad (ROad) Block List Light |||||[MIT](https://github.com/tcptomato/ROad-Block/blob/master/LICENSE)||
 RUS: RU AdList |||[CC BY 3.0](https://easylist-downloads.adblockplus.org/advblock.txt)|||
-SWE: Fanboy's Swedish‎ |||[CC BY 3.0](https://www.fanboy.co.nz/fanboy-swedish.txt)|||
-VIE: Fanboy's Vietnamese‎ |||[CC BY 3.0](https://www.fanboy.co.nz/fanboy-vietnam.txt)|||
+SPA, POR: AdGuard Spanish/Portuguese || [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) ||||
+SPA: EasyList Spanish || [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) ||||
+SVN: Slovenian List ||||[Unlicense](https://github.com/betterwebleon/slovenian-list/blob/master/LICENSE.txt)|||
+SWE: Frellwit's Swedish Filter ||[GPL3](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE)|||
+THA: EasyList Thailand |||||[Apache 2.0](https://github.com/easylist-thailand/easylist-thailand/blob/master/LICENSE)||
+TUR: AdGuard Turkish‎ ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
+VIE: ABPVN List‎ ||[GPL3](https://github.com/abpvn/abpvn/blob/master/LICENSE)|||
 
-MIT - http://choosealicense.com/licenses/mit  
-GPL3 - http://choosealicense.com/licenses/gpl-3.0/  
-CC BY 3.0 - https://creativecommons.org/licenses/by/3.0/  
-CC BY-SA 3.0 - https://creativecommons.org/licenses/by-sa/3.0/  
-CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/  
-CC BY-NC-SA 2.5 - https://creativecommons.org/licenses/by-nc-sa/2.5/  
-CC BY-NC-SA 3.0 - https://creativecommons.org/licenses/by-nc-sa/3.0/  
-CC BY-NC-SA 4.0 - https://creativecommons.org/licenses/by-nc-sa/4.0/  
-CC0 1.0 - https://creativecommons.org/publicdomain/zero/1.0/  
+GNU General Public License 3.0 (**GPL3**) - https://gnu.org/licenses/gpl-3.0.en.html  
+GNU Affero General Public License 3.0 (**AGPL3**) - https://gnu.org/licenses/agpl-3.0.en.html
+
+Creative Commons - Attribution 3.0 (**CC BY 3.0**) - https://creativecommons.org/licenses/by/3.0/  
+Creative Commons - Attribution-ShareAlike 3.0 (**CC BY-SA 3.0**) - https://creativecommons.org/licenses/by-sa/3.0/  
+Creative Commons - Attribution-NonCommercial-ShareAlike 3.0  (**CC BY-NC-SA 3.0**) - https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Creative Commons - Attribution 4.0 (**CC BY 4.0**) - https://creativecommons.org/licenses/by/4.0/  
+Creative Commons - Attribution-ShareAlike 4.0 (**CC BY-SA 4.0**) - https://creativecommons.org/licenses/by-sa/4.0/  
+Creative Commons - Attribution-NonCommercial-ShareAlike 4.0  (**CC BY-NC-SA 4.0**) - https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Creative Commons - Public Domain Dedication 1.0 (**CC0 1.0**) - https://creativecommons.org/publicdomain/zero/1.0/  
 Unlicense - http://unlicense.org/  
+
+Apache 2.0 - https://apache.org/licenses/LICENSE-2.0.html/
+
+MIT - https://mit-license.org/
+
 McRae GPL - http://pgl.yoyo.org/license/  
+Dandelicence- https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
