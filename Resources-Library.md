@@ -168,8 +168,9 @@ Parameters:
  - none
 
 Examples:
- - `there.to##+js(disable-newtab-links.js)`
+ - `there.to##+js(disable-newtab-links)`
 
+To prevent new tabs/windows by specifying the location URL, see: [`window-close-if.js`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Resources-Library#window-close-ifjs-)
 
 ***
 
@@ -246,7 +247,9 @@ Examples:
 
 ***
 
-### no-floc.js [↪](https://github.com/gorhill/uBlock/blob/bfdc81e9e400f7b78b2abc97576c3d7bf3a11a0b/assets/resources/scriptlets.js#L668)
+### ~no-floc.js~ [↪](https://github.com/gorhill/uBlock/blob/bfdc81e9e400f7b78b2abc97576c3d7bf3a11a0b/assets/resources/scriptlets.js#L668)
+
+Obsolete: [FLoC ended its experiment in July of 2021](https://github.com/uBlockOrigin/uBlock-issues/issues/1553#issuecomment-1021680848).
 
 New in [1.35.0](https://github.com/gorhill/uBlock/commit/bfdc81e9e400f7b78b2abc97576c3d7bf3a11a0b).
 
