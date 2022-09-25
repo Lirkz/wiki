@@ -317,7 +317,7 @@ Examples:
 New in [1.44.5b3](https://github.com/gorhill/uBlock/commit/bf690145c493acd86e578d7a860da238f0af72d4)
 
 Parameters:
- - required, The selector of elements which are to be removed.
+ - required, the selector of elements which are to be removed.
    Example: `Period[id*="-roll-"][id*="-ad-"]`
  - optional, a selector that must have a match in the document
    for the pruning to occur. No selector means the pruning can
