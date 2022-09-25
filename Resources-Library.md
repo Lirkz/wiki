@@ -220,6 +220,25 @@ Examples:
 
 ***
 
+### xml-prune.js [↪](https://github.com/gorhill/uBlock/blob/bf690145c493acd86e578d7a860da238f0af72d4/assets/resources/scriptlets.js#L1672)
+
+New in [1.44.5b3](https://github.com/gorhill/uBlock/commit/bf690145c493acd86e578d7a860da238f0af72d4)
+
+Parameters:
+ - required, The selector of elements which are to be removed.
+   Example: `Period[id*="-roll-"][id*="-ad-"]`
+ - optional, a selector that must have a match in the document
+   for the pruning to occur. No selector means the pruning can
+   be performed regardless.
+ - optional, a URL which must be a match for the pruning to
+   occur. If left blank, the pruning can be performed regardless.
+
+Examples:
+ - `cbs.com##+js(xml-prune, Period[id*="-roll-"][id*="-ad-"], , pubads.g.doubleclick.net/ondemand)`
+
+
+***
+
 ### noeval.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noeval.js)
 Prevent web pages from using _`eval()`_, and report attempts to console. This should not be used as a generic filter due to the fact that it breaks many websites, including those using Cloudflare's DDoS protection.
 
@@ -424,7 +443,7 @@ Parameters:
     - `stay`: This tells the scriplet to stay and act on DOM changes, while the default behavior is to act only once when the document becomes interactive.
     - `complete`: This tells the scriplet to start acting only when the document is complete, i.e. once all secondary resources have been loaded, while the default is to start acting when the document is interactive - which is earlier than when the document is complete.
 
-Example:
+Examples:
 - `danskebank.fi##+js(rc, cookie-consent-banner-open, html)` [Picture of the element](https://images2.imgbox.com/68/2b/tdWI9hBG_o.png)
 
 
@@ -564,7 +583,7 @@ New in [1.39.3b10](https://github.com/gorhill/uBlock/commit/c198b9a748265c0e1ce7
 Closes fresh browser tabs of the specified page. Can also be used to close tabs which have been opened from other applications. Can be narrowed down to specific path by parameter. Whole browser window will be closed if it's the last/only tab (depends on browser configuration).
 
 Improvements:
-- [1.44.3b10](https://github.com/gorhill/uBlock/commit/65a056107210796426033ebe2eebb89a98c93a23), If the argument to the `window-close-if` scriptlet is a regex, the
+- [1.44.3b11](https://github.com/gorhill/uBlock/commit/65a056107210796426033ebe2eebb89a98c93a23), If the argument to the `window-close-if` scriptlet is a regex, the
 match will be against _the whole location URL_, otherwise the
 match will be against the part+query part of the location URL.
 
@@ -572,7 +591,7 @@ Parameters:
 
  - optional, string, matching in the path and query part of the web page address or _regular expression_, matching in the whole location URL. 
 
-Example:
+Examples:
 
  - `acestream.com##+js(window-close-if, /plan/select?popup=noads)`
  - `example.com##+js(window-close-if, /^/)` - will close all new tabs going to `example.com` on _any_ site.
