@@ -29,6 +29,98 @@
 
 ***
 
+## Available general purpose scriptlets
+
+- [abort-current-inline-script](#abort-current-inline-scriptjs-) _(acis)_
+- [abort-on-property-read](#abort-on-property-readjs-) _(aopr)_
+- [abort-on-property-write](#abort-on-property-writejs-) _(aopw)_
+- [abort-on-stack-trace](#abort-on-stack-tracejs-) _(aost)_
+- [addEventListener-defuser](#addeventlistener-defuserjs-) _(aeld)_
+- [addEventListener-logger](#addeventlistener-loggerjs-) _(aell)_
+- [set-constant](#set-constantjs-) _(set)_
+- [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
+- [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
+- [nano-setInterval-booster](#nano-setinterval-boosterjs-) _(nano-sib)_
+- [nano-setTimeout-booster](#nano-settimeout-boosterjs-) _(nano-stb)_
+- [no-fetch-if](#no-fetch-ifjs-)
+- [no-xhr-if](#no-xhr-ifjs-)
+- [remove-attr](#remove-attrjs-) _(ra)_
+- [remove-class](#remove-classjs-) _(rc)_
+- [cookie-remover](#cookie-removerjs-)
+- [disable-newtab-links](#disable-newtab-linksjs-)
+- [window-close-if](#window-close-ifjs-)
+- [window.open-defuser](#windowopen-defuserjs-) _(nowoif)_
+- [json-prune](#json-prunejs-)
+- [xml-prune](#xml-prunejs-)
+- [noeval](#noevaljs-)
+- [noeval-silent](#noeval-silentjs-)
+- [noeval-if](#noeval-ifjs-)
+- [no-floc](#no-flocjs-)
+- [no-requestAnimationFrame-if](#no-requestanimationframe-ifjs-) _(norafif)_
+- [nowebrtc](#nowebrtcjs-)
+- [webrtc-if](#webrtc-ifjs-)
+- [window.name-defuser](#windowname-defuser-)
+- [refresh-defuser](#refresh-defuserjs-)
+- [overlay-buster](#overlay-busterjs-)
+- [alert-buster](#alert-busterjs-)
+
+***
+
+## Available defuser scriptlets
+
+- [ampproject_v0](#ampproject_v0js-)
+- [fingerprint2](#fingerprint2js-)
+- [fingerprint3](#fingerprint3js-)
+- [nobab](#nobabjs-)
+- [nobab2](#nobab2js-)
+- [nofab](#nofabjs-)
+- [popads-dummy](#popads-dummyjs-)
+- [popads](#popadsjs-)
+- [prebid-ads](#prebid-adsjs-)
+- [adfly-defuser](#adfly-defuserjs-)
+- [damoh-defuser](#damoh-defuserjs-)
+
+***
+
+## Available empty redirect resources
+
+- `1x1.gif`
+- `2x2.png`
+- `3x2.png`
+- `32x32.png`
+- `noop.html`
+- `noop.js`
+- `noop.txt`
+- `noop-0.1s.mp3`
+- `noop-0.5s.mp3`
+- `noop-1s.mp4`
+- `none`
+- `click2load.html`
+
+***
+
+## Available URL-specific sanitized redirect resources (surrogates)
+
+- [addthis_widget.js](#addthis_widgetjs-)
+- [amazon_ads.js](#amazon_adsjs-)
+- [amazon_apstag.js](#amazon_apstagjs-)
+- [monkeybroker.js](#monkeybrokerjs-)
+- [doubleclick_instream_ad_status](#doubleclick_instream_ad_statusjs-)
+- [google-analytics_ga.js](#google-analytics_gajs-)
+- [google-analytics_analytics.js](#google-analytics_analyticsjs-)
+- [google-analytics_inpage_linkid.js](#google-analytics_inpage_linkidjs-)
+- [google-analytics_cx_api.js](#google-analytics_cx_apijs-)
+- [google-ima.js](#google-imajs-)
+- [googletagservices_gpt.js](#googletagservices_gptjs-)
+- [googletagmanager_gtm.js](#googletagmanager_gtmjs-)
+- [googlesyndication_adsbygoogle.js](#googlesyndication_adsbygooglejs-)
+- [scorecardresearch_beacon.js](#scorecardresearch_beaconjs-)
+- [outbrain-widget.js](#outbrain-widgetjs-)
+- [hd-main.js](#hd-mainjs-)
+- [twitch-videoad.js](#twitch-videoadjs-)
+
+***
+
 ### acs.js /
 ### abort-current-script.js /
 ### acis.js /
@@ -691,7 +783,7 @@ New in 1.41.0
 
 Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
 
-### gpt-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L700)
+### ~gpt-defuser.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L700)
 Deprecated, Convenience, sets static properties (`_resetGPT`, `resetGPT`, `resetAndLoadGPTRecovery`, `_resetAndLoadGPTRecovery`, `setupGPT`, `setupGPTuo`)
 
 ### adfly-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L805)
