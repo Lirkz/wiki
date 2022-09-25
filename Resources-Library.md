@@ -12,23 +12,6 @@
 ***
 
 
-
-## General purpose scriptlets
- - Most scriptlet relies on `Object` _properties_ ([_methods_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods_of_the_Object_constructor)), altering them may not be the best idea (you should know what you are doing).
- - Some properties related more to browser APIs rather than JS language builtins can behave in unexpected way. For example browser can override them without scriptlet noticing this. Keep this in mind when using them in scriptlet injection filers.
- - "Optional" for "string/_regular expression_" parameter defaults to "catch all" (`/.?/`) if not specified.
- - "String" parameter means plain character(s)/word(s), quotes will be taken literally, commas [must be escaped](https://github.com/uBlockOrigin/uAssets/commit/2bec415a9bc4f81b29be3bf083ef1a20552f39db#commitcomment-29327114) in regex literals: `/foo\x2cbar\u002cbaz/`, after [1.22.0](https://github.com/gorhill/uBlock/commit/d67340f14db6ce5b446ef0ff4586b5e4d31f1086#diff-b03ba512faa0934947e57d28dc99b43bL242) commas can be escaped by backslash character (`foo\,bar`).
- - "Regular expression" parameter means JavaScript [regular expression literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Writing_a_regular_expression_pattern).
- - Mime type is `application/javascript` if not present.
- - You can use the short alias form when available for scriptlet name.
- - You should omit the `.js` from the scriptlet name in scriptlet injection filters (eventually in some future this will be the official way to do this).
-     - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
- - Crossed out resources are deprecated/removed.
- 
- 
-
-***
-
 ## Available general purpose scriptlets
 
 - [abort-current-inline-script](#abort-current-inline-scriptjs-) _(acis)_
@@ -118,6 +101,23 @@
 - [outbrain-widget.js](#outbrain-widgetjs-)
 - [hd-main.js](#hd-mainjs-)
 - [twitch-videoad.js](#twitch-videoadjs-)
+
+***
+
+
+## General purpose scriptlets
+ - Most scriptlet relies on `Object` _properties_ ([_methods_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods_of_the_Object_constructor)), altering them may not be the best idea (you should know what you are doing).
+ - Some properties related more to browser APIs rather than JS language builtins can behave in unexpected way. For example browser can override them without scriptlet noticing this. Keep this in mind when using them in scriptlet injection filers.
+ - "Optional" for "string/_regular expression_" parameter defaults to "catch all" (`/.?/`) if not specified.
+ - "String" parameter means plain character(s)/word(s), quotes will be taken literally, commas [must be escaped](https://github.com/uBlockOrigin/uAssets/commit/2bec415a9bc4f81b29be3bf083ef1a20552f39db#commitcomment-29327114) in regex literals: `/foo\x2cbar\u002cbaz/`, after [1.22.0](https://github.com/gorhill/uBlock/commit/d67340f14db6ce5b446ef0ff4586b5e4d31f1086#diff-b03ba512faa0934947e57d28dc99b43bL242) commas can be escaped by backslash character (`foo\,bar`).
+ - "Regular expression" parameter means JavaScript [regular expression literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Writing_a_regular_expression_pattern).
+ - Mime type is `application/javascript` if not present.
+ - You can use the short alias form when available for scriptlet name.
+ - You should omit the `.js` from the scriptlet name in scriptlet injection filters (eventually in some future this will be the official way to do this).
+     - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
+ - Crossed out resources are deprecated/removed.
+ 
+ 
 
 ***
 
