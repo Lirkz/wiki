@@ -54,9 +54,9 @@
 - [ampproject_v0](#ampproject_v0js-)
 - [fingerprint2](#fingerprint2js-)
 - [fingerprint3](#fingerprint3js-)
-- [nobab](#nobabjs-)
-- [nobab2](#nobab2js-)
-- [nofab](#nofabjs-)
+- [nobab](#nobabjs-) <sup>_(BlockAdblock)_</sup>
+- [nobab2](#nobab2js-) <sup>_(BlockAdblock 4.2b)_</sup>
+- [nofab](#nofabjs-) <sup>_(FuckAdblock)_</sup>
 - [popads-dummy](#popads-dummyjs-)
 - [popads](#popadsjs-)
 - [prebid-ads](#prebid-adsjs-)
