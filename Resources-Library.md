@@ -35,6 +35,7 @@
 - [window.open-defuser](#windowopen-defuserjs-) _(nowoif)_
 - [json-prune](#json-prunejs-)
 - [xml-prune](#xml-prunejs-)
+- [m3u-prune](#m3u-prunejs-)
 - [noeval](#noevaljs-)
 - [noeval-silent](#noeval-silentjs-)
 - [noeval-if](#noeval-ifjs-)
@@ -328,6 +329,12 @@ Parameters:
 Examples:
  - `cbs.com##+js(xml-prune, Period[id*="-roll-"][id*="-ad-"], , pubads.g.doubleclick.net/ondemand)`
 
+
+***
+
+### m3u-prune.js [↪](https://github.com/gorhill/uBlock/blob/115f7bb68704c4fede763cbc2d07f1caf041274f/assets/resources/scriptlets.js#L1743)
+
+New in [1.44.5b6](https://github.com/gorhill/uBlock/commit/115f7bb68704c4fede763cbc2d07f1caf041274f#diff-30b28769623e5478a0f68519eda037164484cfb444cb5a8e48518fa7bb32e658)
 
 ***
 
