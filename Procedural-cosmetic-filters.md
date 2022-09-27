@@ -20,6 +20,15 @@ _Procedural_ means JavaScript code will find DOM elements that it must hide. A p
 
 1. Concatenating multiple procedural selectors in one filter is not supported. `example.com##p:has(img),div:has-text(advert)` will not work as expected ([#453](https://github.com/uBlockOrigin/uBlock-issues/issues/453)).
 
+1. [New cosmetic filter parser using CSSTree library](https://github.com/gorhill/uBlock/commit/a71b71e4c8a2037fc68970bc8912a76732edaade). The new parser no longer uses the browser DOM to validate
+that a cosmetic filter is valid or not, this is now done
+through a JS library, CSSTree. This means filter list authors will have to be more careful
+to ensure that a cosmetic filter is really valid, as there is
+no more guarantee that a cosmetic filter which works for a
+given browser/version will still work properly on another
+browser, or different version of the same browser. The new parser introduces breaking changes, there was no way to do otherwise. Some current procedural cosmetic filters will
+be shown as invalid with this change. Read the commit message for more details.
+
 ## Cosmetic filter operators
 
 ### `subject:has(arg)`
