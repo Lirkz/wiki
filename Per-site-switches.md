@@ -107,6 +107,8 @@ To disable cosmetic filtering everywhere by default, go to the [_Settings_ pane]
 
 From then on, cosmetic filtering will be turned off everywhere by default, and to turn it on for a specific site where it is really needed, just enable it using the switch in uBO's popup panel.
 
+[Element picker](./Element-picker) will not allow to select arbitrary elements to create [cosmetic filters](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F#cosmetic-filters) when this option is enabled - it will create only [network filters](./Does-uBlock-Origin-block-ads-or-just-hide-them%3F#network-filters) (for ex. for images).
+
 ***
 
 ## No remote fonts
