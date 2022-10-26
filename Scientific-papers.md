@@ -1,5 +1,7 @@
 ### 2022
 
+* "On the Impact of Internal Webpage Selection when Evaluating Ad Blocker Performance"
+  * https://www.ida.liu.se/~nikca89/papers/mascots22.pdf
 * "Towards Understanding First-Party Cookie Tracking in the Field"
   * https://arxiv.org/pdf/2202.01498.pdf
 
