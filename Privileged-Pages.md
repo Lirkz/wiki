@@ -1,6 +1,7 @@
-Privileged Pages are the web pages that browser-vendors consider as an entitled web page/s where extensions are tasked to not work/have their functionality ceased entirely.
+Privileged Pages are the web pages that browser vendors consider as entitled where extensions will not work.
 
-For Chromium<sup>1</sup>:
+The following are Chromium<sup>1</sup> domains:
+
 ```
 clients.google.com
 clients[0-9]+.google.com
@@ -8,9 +9,8 @@ sb-ssl.google.com
 chrome.google.com/webstore/*
 ```
 
-- On the aforementioned domain, all Chromium/Chrome extensions will **cease** their functionality.
+The following are Firefox<sup>2</sup> domains:
 
-For Firefox<sup>2</sup>:
 ```
 accounts-static.cdn.mozilla.net
 accounts.firefox.com
@@ -26,14 +26,12 @@ support.mozilla.org
 sync.services.mozilla.com
 ```
 
-- Just like Chrome, Firefox's WebExtensions will also cease to work on these aforementioned domains.
-
-- To allow WebExtensions in Firefox to run on these pages(at your own risk), open `about:config` and modify the following<sup>3</sup>:
+- To allow WebExtensions in Firefox to run on these pages (at your own risk), open `about:config` and modify the following<sup>3</sup>:
 
     - Set `extensions.webextensions.restrictedDomains` to be an empty string.<sup>4</sup>
-    - Set `privacy.resistFingerprinting.block_mozAddonManager` to `true`.<sup>5</sup>
-        - **Firefox 60** - **Firefox 70**: must be manually created by right clicking and selecting _New > Boolean_<sup>3</sup>
-        - **Firefox 71** and newest<sup>6</sup>: paste preference name in search bar > in 2nd column set Boolean from single-choice list > click <kbd>➕</kbd> button in 3rd column.
+    - Set `privacy.resistFingerprinting.block_mozAddonManager` to `true`<sup>5</sup>
+        - **Firefox 60** - **Firefox 70**: must be manually created by right-clicking and selecting _New > Boolean_<sup>3</sup>
+        - **Firefox 71** and later<sup>6</sup>: paste preference name in search bar > in 2nd column set Boolean from single-choice list > click <kbd>➕</kbd> button in 3rd column.
 
 ***
 
