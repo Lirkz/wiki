@@ -1,6 +1,6 @@
-Privileged Pages are the web pages that browser vendors consider as entitled where extensions will not work.
+Browsers have a list of restricted web pages that do not grant access or permissions to extensions.
 
-The following are Chromium<sup>1</sup> domains:
+These are restricted Chromium<sup>1</sup> domains:
 
 ```
 clients.google.com
@@ -9,7 +9,7 @@ sb-ssl.google.com
 chrome.google.com/webstore/*
 ```
 
-The following are Firefox<sup>2</sup> domains:
+These are restricted Firefox<sup>2</sup> domains:
 
 ```
 accounts-static.cdn.mozilla.net
