@@ -1,4 +1,4 @@
-Some software may remove uBlock Origin (uBO), but why is unclear. It could be that uBO contains the malware filter lists as part of its package. The reason is that I want uBO to be up and running with all filters without needing to download them at install time (the update process is automatic, and the filter lists will be updated in the background eventually).
+Some software may remove uBlock Origin (uBO), but why is unclear. This removal of uBO might be due to the inclusion of anti-malware filter lists as part of its package. The reason is that I want uBO to be up and running with all filters without needing to download them at install time (the update process is automatic, and the filter lists will be updated in the background eventually).
 
 Here is a list of software that is known to have removed uBO:
 
