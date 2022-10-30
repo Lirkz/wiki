@@ -1,6 +1,6 @@
-Some software may end up removing uBlock Origin (uBO). The reason why they removed uBO is not clear, but it could be that uBO contains the malware filter lists as part of its package -- the reason is that I want uBO to be up and running with all filters without having to download them at install time (the update process is automatic, i.e. the filter lists will be updated in the background eventually).
+Some software may remove uBlock Origin (uBO), but why is unclear. It could be that uBO contains the malware filter lists as part of its package. The reason is that I want uBO to be up and running with all filters without needing to download them at install time (the update process is automatic, and the filter lists will be updated in the background eventually).
 
-Here is a list of those software which are known to have uninstalled uBO:
+Here is a list of software that is known to have removed uBO:
 
 - Avira AntiVirus:
     - https://github.com/gorhill/uBlock/issues/882
@@ -30,7 +30,7 @@ Here is a list of those software which are known to have uninstalled uBO:
 
     Support forum: https://forums.malwarebytes.com/forum/122-false-positives/
 
-    Of note: [The Junkware Removal Tool has been discontinued by it's creator](https://forums.malwarebytes.com/topic/213402-junkware-removal-tool-to-be-discontinued/) - Malwarebytes - and thus false positives will probably not be fixed
+    Update: Malwarebytes has [discontinued](https://forums.malwarebytes.com/topic/213402-junkware-removal-tool-to-be-discontinued/) the Junkware Removal Tool, and false positives will probably not get fixed.
 
 - SpyHunter 4:
     - https://github.com/gorhill/uBlock/issues/1009
