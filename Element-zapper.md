@@ -2,7 +2,7 @@ The element zapper can temporarily remove elements on a web page without creatin
 
 Useful for quick removal of nuisance elements on a web page.
 
-![uBO popup interface with "lightning" button highlighted](https://user-images.githubusercontent.com/585534/90419472-9cd91a00-e084-11ea-94ef-91be749a0fdb.png)
+![uBO popup interface with "lightning" button highlighted](https://user-images.githubusercontent.com/95879668/199074261-52ca63e3-fb36-49cb-9def-481ac4d41d30.png)
 
 We may visit a web page on a website for which we do not intend to become a regular visitor, and many sites nowadays will throw nuisance visual elements preventing us from accessing the content. Often we would prefer not to go through the process of creating filters for just that one visit. The element zapper mode is convenient in this use case. You can quickly remove the nuisance visual element without having to pollute your filter set for this single visit.
 
