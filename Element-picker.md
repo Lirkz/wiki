@@ -1,68 +1,59 @@
-[[Back to Wiki home|Home]]
+The element picker can permanently remove elements on a web page by using it to create a network or cosmetic filter. The [[element zapper]] can temporarily remove elements on a web page without creating new filters.
 
-***
-
-<sub>Note: To temporarily remove elements without creating new filters, use the [[element zapper]].</sub>
-
-The element picker's purpose is to assist the user in the creation of network or cosmetic filters.
+Open the extension's popup menu and click the small "eye-dropper" icon to enter the interactive element picker mode.
 
 ![eye dropper highlighted in row of tool buttons](https://user-images.githubusercontent.com/886325/95906120-fd8d8600-0d99-11eb-9a91-84585e4c5739.png)
 
-If there is an element on a web page you wish to remove forever, open the extension's popup menu, and click the small "eye-dropper" icon. You will enter the interactive element picker mode.
-
-![Element picker](https://user-images.githubusercontent.com/886325/99714989-9359b680-2aa6-11eb-8805-487fca0c8fef.png)
+![Element picker](https://user-images.githubusercontent.com/95879668/198896994-ea330f62-45e3-4f7a-83fe-f226abcbdfcf.png)
 
 ### Once in element-picker mode:
 
-You have to point and click on the element you wish to remove.
+Point and click on the element you wish to remove.
 
-Once you click on the element, you will be presented with a modal dialog box which allows you to select, and optionally edit and create a filter for the element(s) you wish to remove from the web page.
+After clicking on the element, a modal dialog box will appear, allowing you to select and optionally edit and create a filter to remove it.
 
+**Tip:** You can conveniently move the element picker dialog box out of the way by using the mouse to click and drag on the empty space between the _Preview_ and _Create_ buttons.
 
-> ***
-> **Tip:**
->
-> You can easily move the element picker dialog out of the way, using the mouse by clicking and dragging the empty space between the _Preview_ and _Create_ buttons.
-> ***
+![Empty Space To Move Dialog Box](https://user-images.githubusercontent.com/95879668/198899349-6eb4a1a4-e5df-404d-b60a-485113ab3ddc.png)
 
-If possible, one or more network filters will be suggested, as well as a list of cosmetic filters. When you click on one of the suggested filters, you will be shown what effect it will have on the page. You may want to ensure the selected filter will not also get rid of useful items on the page.
+If possible, one or more network filters may get suggested, as well as a list of cosmetic filters. When you click on one of the filters, you will see what effect it will have on the web page. Also, ensure the selected filter will not remove any additional elements on the page meant to stay.
 
-When you select a cosmetic filter, there will be two sliders appearing to let you further adjust the suggested cosmetic filter.
+When you select a cosmetic filter, two sliders will appear that let you further adjust the suggested filter.
 
-The slider on the left-hand side is to adjust the depth of the elements to target, i.e. filters with lower depth typically will remove larger areas in the page.
+The slider on the left-hand side is to adjust the depth of the elements to target. For example, filters with lower depth typically remove large areas of the web page.
 
-The slider on the right hand-side is to adjust the specificity of the filter to create, i.e. higher specificity tends to cause less elements to be filtered (down to a single one), while lower specificity tends to cause more elements to be filtered.
+The slider on the right-hand side is to adjust the specificity of the filter to create. For example, higher specificity tends to cause fewer elements to be filtered (down to a single one), while lower specificity tends to cause more to be filtered.
 
-Adjust as needed in order to pick the filter which best matches what you wish to accomplish (see [demo of this](https://www.youtube.com/watch?v=8TvCGWwQr5o)).
+Adjust as needed to pick the filter that best matches what you wish to accomplish. ([Demo Video](https://www.youtube.com/watch?v=8TvCGWwQr5o))
 
-You may manually edit the filter. However the result needs to be a valid filter, otherwise you won't be allowed to create a filter out of it. A valid filter in the context of the element picker is one which matches at least one element on the web page.
+You may manually edit the filter, but the result needs to be valid and match at least one element on the web page, or you will not be allowed to create a filter.
 
-You may quit the interactive element picker by clicking the _Quit_ button (or press _Esc_). You may close the modal dialog and go pick an element again by clicking the _Pick_ button.
+You may quit the interactive element picker mode by clicking the _Quit_ button (or pressing the _Esc_ key). You may close the modal dialog and pick an element again by clicking the _Pick_ button.
 
-The _Create_ button will be enabled only if a proper filter can be created from the content of the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure the filter apply **only** to the current website, will add it to your custom list of filters and save it.
+To enable the _Create_ button, you must first create a proper filter in the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure that the filter **only** applies to the current website and save it to your custom list.
 
 ### On touch screen devices:
 
-- swipe right to exit element-picker mode
-- when dialog is visible, swiping right will hide element-picker dialog (will make it dimmed and transparent)
-- when dialog is hidden, swipe right again to exit element-picker mode
-- swipe left to make dialog visible again
+- Swipe right to exit element picker mode.
+- When the dialog is visible, swiping right will hide the element picker dialog (this will make it dimmed and transparent).
+- When the dialog is hidden, swipe right again to exit element picker mode.
+- Swipe left to make the dialog visible again.
 
 ### Element picker does not work, removed element reappears when you reload the page?
 
 There may be many different reasons for this.
 
-- If this is a network filter you may need to bypass the browser cache when you reload the page -- hold down the <kbd>Shift</kbd> key when you click the reload button.
-- The URL or selector for the blocked element has variable part(s) in it, which changes each time a page is loaded.
-    - If this is a network filter you may need to manually edit the filter to make use of wildcards for the parts of the URL which are variable.
+- If this is a network filter, you may need to bypass the browser cache when you reload the page by holding down the <kbd>Shift</kbd> key when you click the reload button.
+- The URL or selector for the blocked element contains variable parts that change each time a page is loaded.
+    - If this is a network filter, you may need to manually edit the filter to use wildcards for the parts of the URL which are variable.
     - If this is a cosmetic filter, you may have to manually craft a better [CSS selector](https://www.w3.org/TR/selectors/#overview). Sometimes this requires observing the surrounding DOM data.
-- Cosmetic filtering is disabled for the site, or globally. There are many ways to disable cosmetic filtering:
+- Cosmetic filtering is disabled for the site or globally. There are many ways to disable cosmetic filtering:
     - The [per-site cosmetic filtering switch](./Per-site-switches#no-cosmetic-filtering).
-    - The option [_"Parse and enforce cosmetic filters"_](./Dashboard:-3rd-party-filters#parse-and-enforce-cosmetic-filters) is un-checked in the [_3rd-party filters_](./Dashboard:-3rd-party-filters) pane in the dashboard.
-- You un-checked _My filters_ in the _3rd-party filters_ pane in the dashboard.
-- There is a static filter in one of the 3rd-party filter lists in use which counters your filter.
+    - The option [_"Parse and enforce cosmetic filters"_](./Dashboard:-3rd-party-filters#parse-and-enforce-cosmetic-filters) is unchecked in the [_3rd-party filters_](./Dashboard:-3rd-party-filters) pane in the dashboard.
+- You unchecked _My filters_ in the _3rd-party filters_ pane in the dashboard.
+- There is a static filter in one of the 3rd-party filter lists that counters your filter.
     - Exception cosmetic filters (`#@#`) cancel cosmetic filters (`##`).
     - Exception filter with [`elemhide`](./Static-filter-syntax#elemhide-1) or [`specifichide`](./Static-filter-syntax#specifichide) option.
--  The site you're trying to use Picker or Zapper on, is unsupported:
-    - unsupported pages: [Privileged Pages](https://github.com/gorhill/uBlock/wiki/Privileged-Pages), also see [related issue](https://github.com/uBlockOrigin/uBlock-issues/issues/512)
-    - unsupported protocol: Picker and Zapper are restricted to work on protocols `http(s)://` only, which means for example it won't work on `file:///` protocol, however cosmetic filters still can be added manually to My Filters pane, related issues: [issue 1](https://github.com/gorhill/uBlock/issues/1601#issuecomment-215929108), [issue 2](https://github.com/gorhill/uBlock/issues/1721#issuecomment-225959408), related comments: [comment 1](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964243361), [comment 2](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964254310), [comment 3](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964341350)
+-  The site you are trying to use the element picker or element zapper on is unsupported:
+    - Unsupported pages: [Privileged Pages](https://github.com/gorhill/uBlock/wiki/Privileged-Pages). Also, see this [related issue](https://github.com/uBlockOrigin/uBlock-issues/issues/512).
+    - Unsupported protocol: The element picker and element zapper are restricted to work only on the `http(s)://` protocols. For example, it will not work on the `file:///` protocol, but manually adding cosmetic filters to the My Filters pane is still possible. Related issues: [Issue 1](https://github.com/gorhill/uBlock/issues/1601#issuecomment-215929108) and [Issue 2](https://github.com/gorhill/uBlock/issues/1721#issuecomment-225959408). Related comments: [Comment 1](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964243361), [Comment 2](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964254310), and [Comment 3](https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-964341350).
