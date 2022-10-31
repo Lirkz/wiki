@@ -28,7 +28,7 @@ Adjust as needed to pick the filter that best matches what you wish to accomplis
 
 You may manually edit the filter, but the result needs to be valid and match at least one element on the web page, or you will not be allowed to create a filter.
 
-You may quit the interactive element picker mode by clicking the _Quit_ button (or pressing the _Esc_ key). You may close the modal dialog and pick an element again by clicking the _Pick_ button.
+You may quit the interactive element picker mode by clicking the _Quit_ button (or pressing the <kbd>Esc</kbd> key). You may close the modal dialog and pick an element again by clicking the _Pick_ button.
 
 To enable the _Create_ button, you must first create a proper filter in the text area. Once you click the _Create_ button, the element picker will add the necessary tokens to ensure that the filter **only** applies to the current website and save it to your custom list.
 
