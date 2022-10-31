@@ -4,7 +4,7 @@ The logger is the tool of choice to see, understand, diagnose and fix the functi
 
 To access the logger, click on the _list_ icon of uBO's popup UI:
 
-![list icon](https://user-images.githubusercontent.com/886325/62736450-a8cfdc00-ba2d-11e9-8f24-9d6004371f8c.png)
+![list icon](https://user-images.githubusercontent.com/95879668/199077749-4d624b9b-271e-401c-bb43-922f3c17d1c7.png)
 
 The request logger will open in a new tab (which was moved to its own window below):
 
