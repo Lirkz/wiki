@@ -2,7 +2,7 @@ The element picker can permanently remove elements on a web page by using it to 
 
 Open the extension's popup menu and click the small "eye-dropper" icon to enter the interactive element picker mode.
 
-![eye dropper highlighted in row of tool buttons](https://user-images.githubusercontent.com/886325/95906120-fd8d8600-0d99-11eb-9a91-84585e4c5739.png)
+![eye dropper highlighted in row of tool buttons](https://user-images.githubusercontent.com/95879668/199072316-c25f97c2-b24f-4346-85e3-bd45f848bccb.png)
 
 ![Element picker](https://user-images.githubusercontent.com/95879668/198896994-ea330f62-45e3-4f7a-83fe-f226abcbdfcf.png)
 
