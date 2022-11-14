@@ -11,7 +11,7 @@ Administrators can force specific configurations to deploy uBlock Origin (uBO). 
 
 New standalone settings are getting added as per demand. See ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
-For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
+For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
 
 You must add the `adminSettings` entry in `about:config` for **Firefox-legacy**. The key name is `extensions.ublock0.adminSettings`, and the value is a plain string that must be JSON-parseable.
 
