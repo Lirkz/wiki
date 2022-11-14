@@ -17,8 +17,7 @@ You must add the `adminSettings` entry in `about:config` for **Firefox-legacy**.
 
 For **Chrome**, `adminSettings` must be an entry part of the policy for the extension. See <https://www.chromium.org/administrators/configuring-policy-for-extensions/>.
 
-For managing **Chrome** via **Google Workspace**, you can use this apps-script to generate a policy JSON that will modify Trusted Sites for all designated users.
-<https://github.com/Landsil/apps_script--GoogleWorkspace-API/blob/master/uBlock_Origin_GSuite_policy.gs>
+For managing **Chrome** via **Google Workspace**, you can use [this apps-script](https://github.com/Landsil/apps_script--GoogleWorkspace-API/blob/master/uBlock_Origin_GSuite_policy.gs) to generate a policy JSON that will modify Trusted Sites for all designated users.
 
 This effort is still a work in progress with limitations. For example, merging an admin's settings with the user's settings is impossible because the settings get overwritten. Hopefully, I will address this limitation eventually, as time permits. (See https://github.com/gorhill/uBlock/issues/832#issuecomment-248138558).
 
