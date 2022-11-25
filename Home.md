@@ -4,10 +4,10 @@
     - [Can you trust uBlock Origin?](./Can-you-trust-uBlock-Origin%3F)
 - [Privacy policy](./Privacy-policy)
 - Install from:
-    - [Mozilla Add-ons for Firefox ↪](https://addons.mozilla.org/firefox/addon/ublock-origin/),
-    - [Chrome web store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
-    - [Opera addons ↪](https://addons.opera.com/en-gb/extensions/details/ublock/),
-    - [Edge Add-ons ↪](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
+    - [Firefox Add-ons ↪](https://addons.mozilla.org/addon/ublock-origin/),
+    - [Chrome Web Store ↪](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
+    - [Opera Add-ons ↪](https://addons.opera.com/extensions/details/ublock/),
+    - [Microsoft Edge Add-ons ↪](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
     - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install),
     - [Source (for developers)](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
 - [The popup user interface](./Quick-guide:-popup-user-interface)
