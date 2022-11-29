@@ -27,16 +27,16 @@ Summary of results:
 - ABP with the same filter lists as uBO adds over 46 MB
 
 No extension (reference):<br>
-![no extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-none.png)
+![no extension](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20141224-none.png)
 
 uBO:<br>
-![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-ublock.png)
+![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20141224-ublock.png)
 
 ABP:<br>
-![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-abp.png)
+![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20141224-abp.png)
 
 ABP with same filter lists as uBO:<br>
-![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20141224-abp-more.png)
+![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20141224-abp-more.png)
 
 ### 19 September 2014
 
@@ -50,13 +50,13 @@ Summary of results:
 - ABP adds over 32 MB
 
 No extension (reference):<br>
-![no extension](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-none.png)
+![no extension](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20140919-none.png)
 
 uBO:<br>
-![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-ublock.png)
+![uBlock](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20140919-ublock.png)
 
 ABP:<br>
-![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-in-page-20140919-abp.png)
+![Adblock Plus](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-in-page-20140919-abp.png)
 
 Observations:
 
