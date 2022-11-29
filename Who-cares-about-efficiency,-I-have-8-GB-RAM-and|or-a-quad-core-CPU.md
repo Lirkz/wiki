@@ -25,7 +25,7 @@ Not convinced yet? Try using a stopwatch to compare how fast web pages load when
 If you have a multi-core CPU with plenty of spare CPU cycles, you may not notice a difference in page load. Other popular blockers will use any available CPU cycles (see below) to perform the same job as uBO.
 
 CPU overhead<br>
-![CPU overhead](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/cpu-usage-overall-chart-20141226.png)
+![CPU overhead](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/cpu-usage-overall-chart-20141226.png)
 
 Memory footprint<br>
-![Memory overhead](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-overall-chart-20141224.png)
+![Memory overhead](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-overall-chart-20141224.png)
