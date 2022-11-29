@@ -9,7 +9,7 @@ So if you look at the task manager **right after** uBO has loaded and parsed the
 
 If the browser is idle enough, before one minute has elapsed<sup>[1]</sup>, the browser should be able to [garbage collect](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) the temporary memory which was freed by uBO after it finished loading and parsing the filter lists:
 
-![uBO's memory footprint](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/img/mem-footprint-at-launch-time.png)
+![uBO's memory footprint](https://github.com/gorhill/uBlock/raw/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/img/mem-footprint-at-launch-time.png)
 
 The top image shows the memory footprint of uBO right after launch (Chrome 64-bit) (expect a similar memory footprint each time the filter lists get reloaded). The image at the bottom shows the memory footprint of uBO before one minute has elapsed while the browser is idle.
 
