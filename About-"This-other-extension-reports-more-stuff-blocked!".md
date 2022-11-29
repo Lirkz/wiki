@@ -14,7 +14,7 @@ If you don't want to run a benchmark, I have this [little online tool](http://ra
 
 Clear the browser cache by right-clicking somewhere in the _Network_ tab console. Force a reload of the web page. Right-click in the _Network_ tab console and select _"Copy all as HAR"_. Paste the result in the text area on [this online tool](http://raymondhill.net/httpsb/har-parser.html), and click _Parse_. It will show the hostnames that were hit by the browser for the particular page you loaded.
 
-For example, for the front page of <https://www.cnet.com/>, **uBO shows ten requests blocked**, while **ABP shows sixteen requests blocked** (both have a lot of filter lists). Here is what happened internally:
+For example, for the front page of `https://www.cnet.com/`, **uBO shows ten requests blocked**, while **ABP shows sixteen requests blocked** (both have a lot of filter lists). Here is what happened internally:
 
 Remote servers reached:
 
@@ -24,9 +24,9 @@ ABP:
 - cnet4.cbsistatic.com
 - fonts.cnet.com
 - urs.cnet.com
-- www.cnet.com
+- www<span>.</span>cnet.com
 - 1ab45d4854fe036a37ff-6643978b1699ef52a80b7f45a7bcfe3d.r85.cf2.rackcdn.com
-- www.googletagservices.com
+- www<span>.</span>googletagservices.com
 - zor.livefyre.com
 - platform.twitter.com
 - s.yimg.com
@@ -38,8 +38,8 @@ uBO:
 - cnet3.cbsistatic.com
 - cnet4.cbsistatic.com
 - fonts.cnet.com
-- urs.cnet.com
-- www.cnet.com
+- urs.cnet.comg
+- www<span>.</span>cnet.com
 
 uBO caused the browser to hit far fewer remote servers. Meaning it blocked more, yet its badge displayed a lower number of requests blocked.
 
