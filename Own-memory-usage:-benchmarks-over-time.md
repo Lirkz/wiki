@@ -9,10 +9,10 @@ This page is just a place for me to keep track of comparative memory usage over 
 - Adguard AdBlocker 1.0.3.8
 
 Before benchmark started:<br>
-![before](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-20141223-before.png)
+![before](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-20141223-before.png)
 
 After benchmark completed:<br>
-![after](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-20141223-after.png)
+![after](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-20141223-after.png)
 
 Observations during benchmark:
 - ABP/AdBlock/Adguard are CPU intensive. uBO consistently shows at most low single-digit CPU usage, other blockers are most often showing double-digit CPU usage, and sometimes in the high double-digit range.
@@ -39,10 +39,10 @@ Notes:
 - Disconnect 5.18.15
 
 Before benchmark started:<br>
-![before](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-20140918-before.png)
+![before](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-20140918-before.png)
 
 After benchmark completed:<br>
-![after](https://raw.githubusercontent.com/gorhill/uBlock/master/doc/benchmarks/mem-usage-20140918-after.png)
+![after](https://raw.githubusercontent.com/gorhill/uBlock/6c046ed95cd02d023453c66f766159f6410ae7f7/doc/benchmarks/mem-usage-20140918-after.png)
 
 Observations during benchmark:
 - AdBlock is *very* CPU intensive. ABP also, although to a lesser degree compared to AdBlock.
