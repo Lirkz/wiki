@@ -67,6 +67,6 @@ point-and-click per-site no-popups |     | [yes](./Per-site-switches#no-popups)
 point-and-click per site no-cosmetic-filtering |     | [yes](./Per-site-switches#no-cosmetic-filtering)
 point-and-click per site no-large-media-elements |     | [yes](./Per-site-switches#no-large-media-elements)
 point-and-click per site no-remote-fonts |     | [yes](./Per-site-switches#no-remote-fonts)
-integrated element picker | Firefox-based browsers only | [yes](./Element-picker)
+integrated element picker | yes (with excluded domains) | [yes](./Element-picker)
 element zapper | | [yes](./Element-zapper)
 easy backup/restore of all settings | Firefox only | yes
