@@ -45,7 +45,7 @@ entity-based filters |     | [yes](./Static-filter-syntax#entity-based-cosmetic-
 `:style` | [no](https://issues.adblockplus.org/ticket/756/) | yes
 `:upward` |    | yes
 **Scriptlet filtering**
-`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own syntax to ad-reinsertion,<br> limited to one list and my filters panel,<br>[snippet filters tutorial](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") | [yes](./Static-filter-syntax#scriptlet-injection), <br>from any list,<br>cover anti-adblock mechanisms 
+`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own [syntax](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") to ad-reinsertion,<br> limited to one list and my filters panel,<br> don't used to cover anti-adblock | [yes](./Static-filter-syntax#scriptlet-injection), <br>works from any list,<br>cover anti-adblock mechanisms 
 **HTML filtering**
 Ability to modify response data on the fly<br><sup>WebExtensions uBO 1.15+</sup> |     | [yes](./Static-filter-syntax#html-filters)
 **privacy**
