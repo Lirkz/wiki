@@ -15,7 +15,7 @@ The top image shows the memory footprint of uBO right after launch (Chrome 64-bi
 
 Note that uBO's baseline memory footprint won't change that much afterward. It will likely settle a few MB above the memory footprint reached after garbage collection has occurred, whenever the garbage collector is permitted to do its job.
 
-When reloading all filters (after changing the selection of filter lists, for example), I notice uBO's baseline memory footprint edges higher each time. I entered [an issue](https://github.com/gorhill/uBlock/issues/22) to remind myself to investigate whether there is anything to be done for this. Currently, I think the cause is cumulative memory fragmentation, and there might not be anything to be done. Typically I expect users will select a set of lists and stick to that afterward, so this would make this particular issue irrelevant.
+When reloading all filters (after changing the selection of filter lists, for example), I notice uBO's baseline memory footprint edges higher each time. I entered [an issue](https://github.com/uBlock-LLC/uBlock/issues/22) to remind myself to investigate whether there is anything to be done for this. Currently, I think the cause is cumulative memory fragmentation, and there might not be anything to be done. Typically I expect users will select a set of lists and stick to that afterward, so this would make this particular issue irrelevant.
 
 ***
 
