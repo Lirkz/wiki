@@ -45,7 +45,7 @@ entity-based filters |     | [yes](./Static-filter-syntax#entity-based-cosmetic-
 `:style` | [no](https://issues.adblockplus.org/ticket/756/) | yes
 `:upward` |    | yes
 **Scriptlet filtering**
-`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own syntax to ad-reinsertion,<br> limited to one list and my filters panel,<br>[snippet filters tutorial](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") | [yes](./Static-filter-syntax#scriptlet-injection)
+`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own syntax to ad-reinsertion,<br> limited to one list and my filters panel,<br>[snippet filters tutorial](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") | [yes](./Static-filter-syntax#scriptlet-injection), <br>from any list,<br>cover anti-adblock mechanisms 
 **HTML filtering**
 Ability to modify response data on the fly<br><sup>WebExtensions uBO 1.15+</sup> |     | [yes](./Static-filter-syntax#html-filters)
 **privacy**
@@ -58,7 +58,7 @@ block CSP reports |     | [yes](./Dashboard:-Settings#block-csp-reports)
 pre-compilation of filter lists for fast loading of filters |     | [yes](./Launch-and-filter-lists-load-performance)
 "acceptable ads" | yes | [no](https://github.com/gorhill/uBlock/blob/master/MANIFESTO.md)
 disable everywhere | yes |
-count filter hits | yes, [disabled by default](https://issues.adblockplus.org/ticket/5298/) | [no](https://github.com/gorhill/uBlock/issues/1353)
+count filter hits | no | [no](https://github.com/gorhill/uBlock/issues/1353)
 ability to globally ignore generic cosmetic filters<br><sup>useful for low-performance mobile devices</sup> |     | yes
 cloud storage | Firefox only | yes
 point-and-click firewall-like filtering<br><sup>allows for [relax](./Blocking-mode:-medium-mode) or [strict](./Blocking-mode:-hard-mode) default-deny approach</up> |     | yes
