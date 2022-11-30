@@ -69,4 +69,4 @@ point-and-click per site no-large-media-elements |     | [yes](./Per-site-switch
 point-and-click per site no-remote-fonts |     | [yes](./Per-site-switches#no-remote-fonts)
 integrated element picker | yes (with excluded domains) | [yes](./Element-picker)
 element zapper | | [yes](./Element-zapper)
-easy backup/restore of all settings | Firefox only | yes
+easy backup/restore of all settings | no | yes
