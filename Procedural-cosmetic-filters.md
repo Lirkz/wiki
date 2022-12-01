@@ -87,6 +87,21 @@ Same as `:matches-css(...)` except that the style will be looked-up for `:after`
 
 ***
 
+### `subject:matches-media(arg)`
+
+- Description: Allows limit cosmetic filter by media queries. If is possible will be converted to declarative stylesheet.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as last operator in a procedural cosmetic filter.
+- _arg_: any [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
+- Examples:
+   - `example.com###target-1 > .target-2:matches-media((min-width: 800px))`
+   - `example.com###target-3 > .target-4:matches-media((min-width: 1920px) and (min-height: 930px)):style(color: red !important)`
+   - `github.com##pre:matches-media(print):style(white-space:pre-line !important;)` - disable print scrollbars in PDF
+
+Introduced in uBO [1.43.1b8](https://github.com/gorhill/uBlock/commit/40c315a107257f5b1ac0c7fc92377934b23f6ed6), [feature request #2185](https://github.com/uBlockOrigin/uBlock-issues/issues/2185).
+
+
+***
+
 ### `subject:matches-path(arg)`
 
 - Description: Allows to further narrow the specificity according to the path and query of the current document location.
