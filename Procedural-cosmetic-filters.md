@@ -91,7 +91,7 @@ Same as `:matches-css(...)` except that the style will be looked-up for `:after`
 
 - Description: Allows limit cosmetic filter by media queries. If is possible will be converted to declarative stylesheet.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as last operator in a procedural cosmetic filter.
-- _arg_: any [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
+- _arg_: Sny [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
 - Examples:
    - `example.com###target-1 > .target-2:matches-media((min-width: 800px))`
    - `example.com###target-3 > .target-4:matches-media((min-width: 1920px) and (min-height: 930px)):style(color: red !important)`
