@@ -29,7 +29,7 @@ CNAME uncloaking |    | [yes](./Static-filter-syntax#cname)
 `inline-script`<br><sup>to prevent execution of inline javascript</sup> | [no](https://issues.adblockplus.org/ticket/748/) | [yes](./Static-filter-syntax#inline-script)
 `important`<br><sup>to be able to override exception filters</sup> |     | [yes](./Static-filter-syntax#important)
 `popunder` | [no](https://issues.adblockplus.org/ticket/2095/) | yes
-`redirect`<br><sup>to redirect to local resources, key to privacy and to counter anti-blockers</sup> |     | yes
+`redirect`<br><sup>to redirect to local resources, key to privacy and to counter anti-blockers</sup> |  in own syntax, <br> not used to privacy and disable anti-adblock mechanism   | yes
 `csp=`<br><sup>see [rationale](https://github.com/gorhill/uBlock/issues/1930#issuecomment-301055346)</sup> |     | yes
 `badfilter`<br><sup>to disable an existing filter</sup> |     | yes
 [strict blocking](./Strict-blocking) |     | yes
