@@ -120,4 +120,20 @@ Here is an example of how adding `example.com` and `example.org` would look like
 
 The directives will get appended to the local ones.
 
+Here is the same example for Firefox:
+
+    {
+      "name": "uBlock0@raymondhill.net",
+      "description": "_",
+      "type": "storage",
+      "data": {
+        "toAdd": {
+          "trustedSiteDirectives": [
+            "example.com",
+            "example.org"
+          ]
+        }
+      }
+    }
+
 See the documentation on how to create valid trusted-site directives: ["How to mark a web site as trusted"](./How-to-mark-a-web-site-as-trusted)
