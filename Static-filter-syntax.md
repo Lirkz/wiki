@@ -680,7 +680,7 @@ Related issue: [#803](https://github.com/uBlockOrigin/uBlock-issues/issues/803).
 
 #### Procedural cosmetic filters
 
-`:has(...)`, `:has-text(...)`, `:if(...)`, `:if-not(...)`, `:matches-css(...)`, `:matches-css-before(...)`, `:matches-css-after(...)`, `:matches-path(...)`, `:min-text-length(n)`, `:not(...)`, `:nth-ancestor(n)`, `:others(...)`, `:upward(...)`, `:watch-attr(...)`, `:xpath(...)`.
+`:has(...)`, `:has-text(...)`, `:matches-css(...)`, `:matches-css-before(...)`, `:matches-css-after(...)`, `:matches-media(...)`, `:matches-path(...)`, `:min-text-length(n)`, `:not(...)`, `:others(...)`, `:upward(...)`, `:watch-attr(...)`, `:xpath(...)`.
 
 See [detailed documentation](./Procedural-cosmetic-filters).
 
