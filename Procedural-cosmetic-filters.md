@@ -90,6 +90,7 @@ Same as `:matches-css(...)` except that the style will be looked-up for `:after`
 ### `subject:matches-media(arg)`
 
 - Description: Allows limit cosmetic filter by media queries. If is possible will be converted to declarative stylesheet.
+- Chainable: Yes.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as last operator in a procedural cosmetic filter.
 - _arg_: Sny [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
 - Examples:
