@@ -56,7 +56,7 @@
 - Troubleshooting:
     - [Privileged Pages](./Privileged-Pages)
     - [Software known to have uninstalled uBlock Origin](./Software-known-to-have-uninstalled-uBlock-Origin)
-    - [The removed element reappears when you reload the page](./Element-picker#the-removed-element-reappears-when-you-reload-the-page)
+    - [The removed element reappears when you reload the page](./Element-picker#element-picker-does-not-work-removed-element-reappears-when-you-reload-the-page)
     - [Read carefully if using uBO/webext on legacy Firefox](./Firefox-WebExtensions)
 - Good external guides:
     - [How to use uBlock Origin advanced user mode tutorial ↪](https://www.youtube.com/watch?v=2lisQQmWQkY)
