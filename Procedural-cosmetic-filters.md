@@ -53,11 +53,13 @@ The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of w
 - Chainable: Yes.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - _needle_: The literal text which must be found, or a literal regular expression. If using a literal regular expression, you can optionally use the `i` and/or `m` flags (version 1.15).
+It is possible to have `:has-text()` match the
+empty string by just quoting the empty string ([new in 1.45.3b10](https://github.com/gorhill/uBlock/commit/76d70102f069856bffac7cd27dc40500c3bb9563)):
+`##foo:has-text("")`
 - Examples:
     - `example.com##body > div:last-of-type span:has-text(/^Promoted by/)`: starts with "Promoted by"
     - `example.com##body > div:last-of-type span:has-text(/^Promoted by/i)`: starts with "Promoted by", ignore case
     - `example.com##body > div:last-of-type span:has-text(Promoted by)`: contains "Promoted by" at any position
-
 
 ***
 
@@ -214,6 +216,32 @@ Introduced in uBO [1.17.5rc3](https://github.com/gorhill/uBlock/commit/8a88e9d93
 Solves [uBlockOrigin/uBlock-issues#341 (comment)](https://github.com/uBlockOrigin/uBlock-issues/issues/341#issuecomment-449764612) (overlay dialog used for two purposes, differ only by class name in child node).
 
 By default hiding by procedural filters is reevaluated only when nodes in sub-tree are added or removed - uBO does not watch for attribute changes for performance reasons. This filter instructs uBO procedural filtering engine to watch for changes in specific attributes.
+
+***
+
+### `subject:matches-attr(arg)`
+
+- Description: Allows to select an element by its attributes, especially if they are randomized.
+- Chainable: Yes.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
+- _arg_: A declaration in the form `name="value"` or `"name"="value"`, where `name` is attribute name and `value` is attribute value (optional), `name` and `value` can be literal text or literal regular expression.
+
+Introduced in uBO [1.45.3b10](https://github.com/gorhill/uBlock/commit/76d70102f069856bffac7cd27dc40500c3bb9563) 
+
+Solves [uBlockOrigin/uBlock-issues#2329 (comment)](https://github.com/uBlockOrigin/uBlock-issues/issues/2329#issue-1412857923) (randomly generated attributes).
+
+The supported syntax is exactly as per AdGuard's documentation:
+- https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#extended-css-matches-attr
+
+Though recommended, the quotes are not mandatory in uBO if
+the argument does not cause the parser to fail and if there
+are no ambiguities.
+
+- Examples:
+    - `k-rauta.fi##button:matches-attr(class="/[\w]{7}/")`
+    - `k-rauta.fi##button:matches-attr("class"="/[\w]{7}/")`
+
+on `https://www.k-rauta.fi/tuote/valmistasoite-hole-in-1-250ml/6408070100905`
 
 ***
 
