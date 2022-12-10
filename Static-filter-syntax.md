@@ -742,6 +742,31 @@ Styling filters frequently get used to foil anti-blocker mechanisms on web pages
 
 ***
 
+#### `subject:remove-attr()`, `subject:remove-class()`
+
+- Description: _action operator_, instruct to remove attribute(s) or class(es) from DOM tree node(s) instead of just hiding them.
+- Chainable: No, _action operator_ can only apply at the end of the root chain.
+- _subject_: Can be a plain CSS selector or a procedural cosmetic filter. Use [`:watch-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Procedural-cosmetic-filters#subjectwatch-attrarg) to tell the operator to stay and act on attribute/class changes, while the default behavior is to act only when nodes in sub-tree are added or removed.
+- Examples
+    - `userscloud.com##.btn-icon-stacked:remove-attr(onclick)`
+    - `magesy.*,majesy.*##*:remove-attr(oncontextmenu)`
+    - `zerodot1.gitlab.io##*:remove-attr(/oncontextmenu|onselectstart|ondragstart/)`
+    - `zerodot1.gitlab.io##*:remove-attr(/^on[a-z]+/)`
+    - `example.com##.j-mini-player:remove-attr(class):watch-attr()`
+    - `danskebank.fi##html:remove-class(cookie-consent-banner-open)`
+
+New in uBO [1.45.3b13](https://github.com/gorhill/uBlock/commit/992255e9937f81b5dd58524caa2ceeaeb29efb14).
+
+These two new pseudo selectors are _action_ operators, and thus can only be used at the end of a selector. They both take as argument a string or regex literal.
+
+For `:remove-class()`, when the argument matches a class name, that class name is removed.
+
+For `:remove-attr()`, when the argument matches an attribute name, that attribute is removed.
+
+These operators are meant to replace `+js(remove-attr, ...)` and `+js(remove-class, ...)`, which from now on are candidate for deprecation in some future.
+
+***
+
 ### HTML filters
 
 Supported by [uBO 1.15.0](https://github.com/gorhill/uBlock/releases/tag/1.15.0)+ in Firefox 57+.
