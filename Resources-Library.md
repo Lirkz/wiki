@@ -507,8 +507,13 @@ Examples:
 
 ***
 
-### ra.js /
-### remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/0f330c7359567587df6c35e9108b75c339533a56/assets/resources/scriptlets.js#L658)
+### ~ra.js~ /
+### ~remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/0f330c7359567587df6c35e9108b75c339533a56/assets/resources/scriptlets.js#L658)~
+
+Deprecated by [`:remove-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attr-subjectremove-class)
+
+**Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
+
 Removes attribute(s) from DOM tree node(s). By default will run only once when the initial HTML document has been completely loaded and parsed but sub-resources such as scripts, images, stylesheets and frames are still loading.
 
 Parameters:
@@ -528,8 +533,12 @@ Examples:
 
 ***
 
-### rc.js /
-### remove-class.js [↪](https://github.com/gorhill/uBlock/blob/3160bc8ccdab2b7dbc906ea213b29a4c04120be1/assets/resources/scriptlets.js#L757)
+### ~rc.js~ /
+### ~remove-class.js~ [↪](https://github.com/gorhill/uBlock/blob/3160bc8ccdab2b7dbc906ea213b29a4c04120be1/assets/resources/scriptlets.js#L757)
+
+Deprecated by [`:remove-class()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attr-subjectremove-class)
+
+**Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/49d9929191461cc8534ebf5707d94a5970945bde).
 
