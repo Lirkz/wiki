@@ -29,6 +29,14 @@ given browser/version will still work properly on another
 browser, or different version of the same browser. The new parser introduces breaking changes, there was no way to do otherwise. Some current procedural cosmetic filters will
 be shown as invalid with this change. Read the commit message for more details.
 
+1. You need to use quotes when an argument is causing issue in a procedural cosmetic operators. The way quoting is interpreted now is closer to how AdGuard documentation regarding the use of quotes, except that for uBO:
+
+   * Quotes are still optional if the argument doesn't trip the parser
+   * One can use either `"` or `'`
+   * When using quotes, instances of the same quote inside the argument must be escaped, i.e. `'this is a single quote: \''`, or `"this is a double quote: \""`, and instances of `\` must be escaped (as per AdGuard's documentation.
+
+A change from the [commit message](https://github.com/gorhill/uBlock/commit/a71b71e4c8a2037fc68970bc8912a76732edaade) is that escaping without quoting no longer does anything, so `##sidebar > div.side-content:has-text(Adoring Anya\'s twitter)` does not work anymore.
+
 ## Cosmetic filter operators
 
 ### `subject:has(arg)`
