@@ -746,7 +746,7 @@ Styling filters frequently get used to foil anti-blocker mechanisms on web pages
 
 - Description: _action operator_, instruct to remove attribute(s) or class(es) from DOM tree node(s) instead of just hiding them.
 - Chainable: No, _action operator_ can only apply at the end of the root chain.
-- _subject_: Can be a plain CSS selector or a procedural cosmetic filter. Use [`:watch-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Procedural-cosmetic-filters#subjectwatch-attrarg) to tell the operator to stay and act on attribute/class changes, while the default behavior is to act only when nodes in sub-tree are added or removed.
+- _subject_: Can be a plain CSS selector or a procedural cosmetic filter. Use [`:watch-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Procedural-cosmetic-filters#subjectwatch-attrarg) to tell the operator to stay and act when attributes/classes change without layout changes, while the default behavior is to act only when nodes in sub-tree are added or removed.
 - Examples
     - `userscloud.com##.btn-icon-stacked:remove-attr(onclick)`
     - `magesy.*,majesy.*##*:remove-attr(oncontextmenu)`
