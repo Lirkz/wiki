@@ -718,7 +718,7 @@ To remove elements from a document _before_ it is parsed by the browser, see: [`
 - _arg_: one or more [CSS property declarations](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax), separated by the standard `;`. Some characters, strings, and values are forbidden. See below for a list.
 - Examples:
     - `example.com##h1:style(background-color: blue !important)`
-    - `motobanda.pl###mvideo:style(z-index: 1!important)`
+    - `motobanda.pl###mvideo:style(z-index: 1 !important)`
 
 After [1.29.3b10](https://github.com/gorhill/uBlock/commit/35aefed92616cbfb75f12f37c7ea7fb3a3cc3369) procedural selectors are also supported.
 
@@ -742,18 +742,19 @@ Styling filters frequently get used to foil anti-blocker mechanisms on web pages
 
 ***
 
-#### `subject:remove-attr()`, `subject:remove-class()`
+#### `subject:remove-attr(arg)`, `subject:remove-class(arg)`
 
 - Description: _action operator_, instruct to remove attribute(s) or class(es) from DOM tree node(s) instead of just hiding them.
 - Chainable: No, _action operator_ can only apply at the end of the root chain.
-- _subject_: Can be a plain CSS selector or a procedural cosmetic filter. Use [`:watch-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Procedural-cosmetic-filters#subjectwatch-attrarg) to tell the operator to stay and act when attributes/classes change without layout changes, while the default behavior is to act only when nodes in sub-tree are added or removed.
+- _subject_: Can be a plain CSS selector or a procedural cosmetic filter.
+- _arg_: A plain string to match exactly, or a regex literal. Wrap _arg_ in quotes if the parser is having problem parsing _arg_, this can occur when using special characters.
 - Examples
-    - `userscloud.com##.btn-icon-stacked:remove-attr(onclick)`
-    - `magesy.*,majesy.*##*:remove-attr(oncontextmenu)`
-    - `zerodot1.gitlab.io##*:remove-attr(/oncontextmenu|onselectstart|ondragstart/)`
-    - `zerodot1.gitlab.io##*:remove-attr(/^on[a-z]+/)`
-    - `example.com##.j-mini-player:remove-attr(class):watch-attr()`
-    - `danskebank.fi##html:remove-class(cookie-consent-banner-open)`
+    - `userscloud.com##.btn-icon-stacked[onclick]:remove-attr(onclick)`
+    - `magesy.*,majesy.*##[oncontextmenu]:remove-attr(oncontextmenu)`
+    - `zerodot1.gitlab.io##selector:remove-attr(/oncontextmenu|onselectstart|ondragstart/)`
+    - `zerodot1.gitlab.io##selector:remove-attr(/^on[a-z]+/)`
+    - `example.com##.j-mini-player[class]:watch-attr():remove-attr(class)`
+    - `danskebank.fi##html[cookie-consent-banner-open]:remove-class(cookie-consent-banner-open)`
 
 New in uBO [1.45.3b13](https://github.com/gorhill/uBlock/commit/992255e9937f81b5dd58524caa2ceeaeb29efb14).
 
