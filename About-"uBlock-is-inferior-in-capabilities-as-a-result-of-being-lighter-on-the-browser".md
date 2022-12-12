@@ -29,7 +29,7 @@ CNAME uncloaking |    | [yes](./Static-filter-syntax#cname)
 `inline-script`<br><sup>to prevent execution of inline javascript</sup> | [no](https://issues.adblockplus.org/ticket/748/) | [yes](./Static-filter-syntax#inline-script)
 `important`<br><sup>to be able to override exception filters</sup> |     | [yes](./Static-filter-syntax#important)
 `popunder` | [no](https://issues.adblockplus.org/ticket/2095/) | yes
-`redirect`<br><sup>to redirect to local resources, key to privacy and to counter anti-blockers</sup> |  in own [syntax](https://help.adblockplus.org/hc/en-us/articles/360062733293#rewrite "older: https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite"), <br> do not used to privacy and disable anti-adblock mechanism   | yes
+`redirect`<br><sup>to redirect to local resources, key to privacy and to counter anti-blockers</sup> |  in own [syntax](https://help.adblockplus.org/hc/en-us/articles/360062733293#rewrite "older: https://help.eyeo.com/adblockplus/how-to-write-filters#rewrite"), <br><sup>do not used to privacy and disable anti-adblock mechanism</sup> | yes
 `csp=`<br><sup>see [rationale](https://github.com/gorhill/uBlock/issues/1930#issuecomment-301055346)</sup> |     | yes
 `badfilter`<br><sup>to disable an existing filter</sup> |     | yes
 [strict blocking](./Strict-blocking) |     | yes
@@ -40,12 +40,12 @@ entity-based filters |     | [yes](./Static-filter-syntax#entity-based-cosmetic-
 `-abp-properties` | yes | [no](https://github.com/gorhill/uBlock/issues/139)
 `:has` | ~~[not yet](https://issues.adblockplus.org/ticket/2360/)~~ yes (`:-abp-has`) | yes
 `:has-text` | [yes](https://issues.adblockplus.org/ticket/5249/) (`:-abp-contains`) | yes
-`:if` `:if-not`<br>`:matches-css` `:matches-css-before` `:matches-css-after`<br>`:xpath` |     | no<br>yes<br>yes
+`:matches-css`, `:xpath` |     | yes
 `:remove` |    | yes
 `:style` | [no](https://issues.adblockplus.org/ticket/756/) | yes
 `:upward` |    | yes
 **Scriptlet filtering**
-`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own [syntax](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") to ad-reinsertion,<br> limited to one list and my filters panel,<br> don't used to cover anti-adblock | [yes](./Static-filter-syntax#scriptlet-injection), <br>works from any list,<br>cover anti-adblock mechanisms 
+`+js(...)`<br>Ability to inject scriptlets in page content<br><sup>key to counter anti-blockers</sup> |  in own [syntax](https://help.adblockplus.org/hc/en-us/articles/1500002338501 "older: https://help.eyeo.com/adblockplus/snippet-filters-tutorial") to ad-reinsertion,<br><br> <sup>limited to one list and<br> my filters panel, don't used to cover anti-adblock</sup> | [yes](./Static-filter-syntax#scriptlet-injection), <br><br><sup>works from any list,<br>cover anti-adblock mechanisms</sup>
 **HTML filtering**
 Ability to modify response data on the fly<br><sup>WebExtensions uBO 1.15+</sup> |     | [yes](./Static-filter-syntax#html-filters)
 **privacy**
