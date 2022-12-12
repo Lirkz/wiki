@@ -99,10 +99,10 @@ Same as `:matches-css(...)` except that the style will be looked-up for `:after`
 
 ### `subject:matches-media(arg)`
 
-- Description: Allows limit cosmetic filter by media queries. If is possible will be converted to declarative stylesheet.
+- Description: Allows limit cosmetic filter by media queries. If is possible will be converted to declarative stylesheet. Preferably should be used as last operator in a procedural cosmetic filter.
 - Chainable: Yes.
-- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as last operator in a procedural cosmetic filter.
-- _arg_: Sny [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
+- _arg_: Any [supported](https://github.com/uBlockOrigin/uBlock-issues/issues/2185#issuecomment-1283956342) media type by CSSTree.
 - Examples:
    - `example.com###target-1 > .target-2:matches-media((min-width: 800px))`
    - `example.com###target-3 > .target-4:matches-media((min-width: 1920px) and (min-height: 930px)):style(color: red !important)`
@@ -115,9 +115,9 @@ Introduced in uBO [1.43.1b8](https://github.com/gorhill/uBlock/commit/40c315a107
 
 ### `subject:matches-path(arg)`
 
-- Description: Allows to further narrow the specificity according to the path and query of the current document location.
+- Description: Allows to further narrow the specificity according to the path and query of the current document location. Preferably should be used as first operator in a procedural cosmetic filter.
 - Chainable: Yes.
-- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter. Preferably should be used as first operator in a procedural cosmetic filter.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - _arg_: Plain text to be found at any position in the path + query, or a literal regex against which the path + query is tested.
 - Examples:
     - `example.com##:matches-path(/shop) p`: Will hide all `p` elements when visiting `https://example.com/shop/stuff`, but not when visiting `https://example.com/` or any other page on `example.com` which has no instance of `/shop` in the path part of the URL. To only match the main page but not any of the subpages, use: `example.com##:matches-path(/^/$/) p`
