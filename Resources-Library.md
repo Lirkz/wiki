@@ -510,7 +510,7 @@ Examples:
 ### ~ra.js~ /
 ### ~remove-attr.js [↪](https://github.com/gorhill/uBlock/blob/0f330c7359567587df6c35e9108b75c339533a56/assets/resources/scriptlets.js#L658)~
 
-Deprecated by [`:remove-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attr-subjectremove-class)
+Deprecated by [`:remove-attr()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attrarg-subjectremove-classarg)
 
 **Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
 
@@ -536,7 +536,7 @@ Examples:
 ### ~rc.js~ /
 ### ~remove-class.js~ [↪](https://github.com/gorhill/uBlock/blob/3160bc8ccdab2b7dbc906ea213b29a4c04120be1/assets/resources/scriptlets.js#L757)
 
-Deprecated by [`:remove-class()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attr-subjectremove-class)
+Deprecated by [`:remove-class()`](https://github.com/uBlockOrigin/uBlock-issues/wiki/Static-filter-syntax#subjectremove-attrarg-subjectremove-classarg)
 
 **Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
 
