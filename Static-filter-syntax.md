@@ -86,15 +86,19 @@ The `!#if` directive allows filter list maintainers to create areas in a filter 
 
 For example, to compile a block of filters only if uBO is running as a Firefox extension:
 
-    !#if env_firefox
-    ...
-    !#endif
+```adb
+!#if env_firefox
+...
+!#endif
+```
 
 Another example is to compile a block of filters only if uBO is _not_ running as a Firefox extension:
 
-    !#if !env_firefox
-    ...
-    !#endif
+```adb
+!#if !env_firefox
+...
+!#endif
+```
 
 Support for preprocessor directives is the result of discussion with AG developers. See <https://github.com/AdguardTeam/AdguardBrowserExtension/issues/917>.
 
@@ -126,9 +130,11 @@ For the time being, only a single token is supported in a `!#if` directive (can 
 
 Starting from [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad918d02cc74796d5aa5e974b184), you can use the `!#if false` directive to disable a large block of your filters without having to remove them.
 
-    !#if false
-    ...
-    !#endif
+```adb
+!#if false
+...
+!#endif
+```
 
 Before this version, you could use negated `ext_ublock` since this token always equals true in uBO.
 
@@ -146,7 +152,9 @@ uBO can also parse HOSTS file-like resources. All hostname entries from a HOSTS 
 
 However, this creates an ambiguity with the ABP filter syntax, which is pattern-based. For example, consider the following filter entry:
 
-    example.com
+```adb
+example.com
+```
 
 ABP filter syntax dictates that this gets interpreted as "block network requests whose URL contains `example.com` at any position".
 
@@ -154,11 +162,15 @@ However, in uBO, the interpretation will be "block network requests to the site 
 
 So in uBO, any pattern that reads as a valid hostname will be assumed to be equivalent to a filter of the form `||example.com^`. If ever you want such a filter syntactically parsed according to ABP's interpretation, add a wildcard at the end:
 
-    example.com*
+```adb
+example.com*
+```
 
 If the filter is a filename, it is best to add a `^` at one or both ends:
 
-    ^example.js^
+```adb
+^example.js^
+```
 
 ***
 
@@ -168,7 +180,9 @@ Just a placeholder.
 
 [Implemented](https://github.com/uBlockOrigin/uBlock-issues/issues/1356#issuecomment-735280463) to resolve ambiguity in `$removeparam` filters with Regular Expression parameters detected as plain Regular Expression filters because of leading and trailing slashes:
 
-    /ad-$removeparam=/^ss$/,_
+```adb
+/ad-$removeparam=/^ss$/,_
+```
 
 ***
 
@@ -203,7 +217,9 @@ The `all` option is equivalent to specifying all network-based types + `popup`, 
 
 Example:
 
-    ||bet365.com^$all
+```adb
+||bet365.com^$all
+```
 
 Above will block all network requests, block all popups and prevent inline fonts/scripts from `bet365.com`. The EasyList-compatible syntax does not allow this when using only `||bet365.com^`.
 
@@ -213,11 +229,15 @@ Above will block all network requests, block all popups and prevent inline fonts
 
 Used to disable an existing filter. Occasionally disabling a blocking filter is better than creating an exception filter. Just for example's sake, let's say that a mind-absent filter list maintainer added the following filter to their list:
 
-    *$image
+```adb
+*$image
+```
 
 Now all images from everywhere are blocked on your side. An exception filter (`@@*$image`) is not a good solution because it would also cause images that should get blocked legitimately to no longer be blocked. In such case, the `badfilter` option is best:
 
-    *$image,badfilter
+```adb
+*$image,badfilter
+```
 
 It will cause the `*$image` filter to get discarded. Appending the `badfilter` option to any instance of static network filter will prevent the loading of that filter.
 
@@ -253,7 +273,9 @@ Network requests resulting from resolving a [canonical name](https://en.wikipedi
 
 Example:
 
-    @@*$cname
+```adb
+@@*$cname
+```
 
 The filter above tells the network filtering engine to accept network requests which fulfill all the following conditions:
 
@@ -272,7 +294,9 @@ The purpose of `denyallow` is to bring default-deny/allow-exceptionally ability 
 
 Example:
 
-    *$3p,script,denyallow=x.com|y.com,domain=a.com|b.com
+```adb
+*$3p,script,denyallow=x.com|y.com,domain=a.com|b.com
+```
 
 The above filter tells the network filtering engine when the context is `a.com` or `b.com`; it needs to block all 3rd-party scripts except those from `x.com` and `y.com`.
 
@@ -310,9 +334,11 @@ Starting with [1.28.0](https://github.com/gorhill/uBlock/commit/3c67d2b89f8ac6d6
 
 Example:
 
-    ||doubleclick.net^$script,domain=auto-motor-und-sport.de
-    ||adnxs.com^$domain=bz-berlin.de|metal-hammer.de|musikexpress.de|rollingstone.de|stylebook.de
-    /adsign.$domain=~adsign.no
+```adb
+||doubleclick.net^$script,domain=auto-motor-und-sport.de
+||adnxs.com^$domain=bz-berlin.de|metal-hammer.de|musikexpress.de|rollingstone.de|stylebook.de
+/adsign.$domain=~adsign.no
+```
 
 ***
 
@@ -359,21 +385,29 @@ Ability to filter network **responses** according to whether a specific **respon
 
 For example:
 
-    *$script,header=via:1.1 google
+```adb
+*$script,header=via:1.1 google
+```
 
 The above filter blocks network requests of type `script`, which has a response HTTP header named `via`, which value matches the string `1.1 google` literally.
 
 The header value can get set to a regex literal by bracing the header value with the usual forward slashes, `/.../`:
 
-    *$script,header=via:/1\.1\s+google/
+```adb
+*$script,header=via:/1\.1\s+google/
+```
 
 The header value can be prepended with `~` to reverse the comparison:
 
-    *$script,header=via:~1.1 google
+```adb
+*$script,header=via:~1.1 google
+```
 
 The header value is optional and may be left out to test only for the presence of a specific header:
 
-    *$script,header=via
+```adb
+*$script,header=via
+```
 
 Using generic exception filters to disable specific block `header=` filters, i.e. `@@*$script,header` will override the block `header=` filters given in the example above.
 
@@ -381,7 +415,9 @@ Using generic exception filters to disable specific block `header=` filters, i.e
 
 A potential use case is to block [Google Tag Manager scripts proxied as the first party in the subdomain of the websites](https://www.simoahava.com/analytics/server-side-tagging-google-tag-manager/):
 
-    *$1p,strict3p,script,header=via:1.1 google
+```adb
+*$1p,strict3p,script,header=via:1.1 google
+```
 
 Where connection:
 
@@ -508,16 +544,23 @@ This special filter will not block matching resources but only apply HTTP header
 
 Because of how `csp` filters get implemented, they allow for some interesting applications. For example, you can block scripts only in some specific path on the page:
 
-    ||example.com/subpage/*$csp=script-src 'none'
+```adb
+||example.com/subpage/*$csp=script-src 'none'
+```
 
 And even block them everywhere except the main page (note end anchor):
 
-    ||example.com/*$csp=script-src 'none'
-    @@||example.com^|$csp=script-src 'none'
+```adb
+||example.com/*$csp=script-src 'none'
+@@||example.com^|$csp=script-src 'none'
+```
+
 
 An exception filter for a specific `csp` blocking filter must have the same content of the `csp` option as the blocking filter. However, an exception filter with an empty `csp` option will disable all `csp` injections for the matching page:
 
-    @@||example.com^$csp
+```adb
+@@||example.com^$csp
+```
 
 CSP option syntax is unusual compared to other filters. Recommend to be used only by advanced users. It works in "allowlist" mode allowing data to be downloaded only from addresses explicitly specified in this option. However, uBO is adding its own second CSP header, which [as per specification](https://w3c.github.io/webappsec-csp/#multiple-policies) will merge into one final policy. It will enforce the most strict rules from both. For example, you can break a web page if the policy sent by the server allows `a.com` and `b.com` and your filter adds `c.com`; no request will be allowed.
 
@@ -561,17 +604,23 @@ Since multiple redirect directives can apply to a single network request, this i
 
 By default, redirect directives have an implicit priority of `0`. Filter authors can declare explicitness by appending `:[integer]` (negative values are also supported) to the `redirect=` option token. For example:
 
-    ||example.com/*.js$1p,script,redirect=noopjs:100
+```adb
+||example.com/*.js$1p,script,redirect=noopjs:100
+```
 
 The priority dictates which redirect token out of many will ultimately become used. Cases of multiple `redirect=` directives applying to a single blocked network request are unlikely. All of these directives get reported in the logger. The effective one gets stated as the last one before redirection entry. Use explicit redirect priority only when a case of redirect ambiguity needs solving.
 
 To disable a redirection, you can use an exception filter for the redirect directive (example for the filter above):
 
-    @@||example.com/*.js$1p,script,redirect-rule=noopjs
+```adb
+@@||example.com/*.js$1p,script,redirect-rule=noopjs
+```
 
 The filter above does not affect blocking filters, just matching redirect directives. You can broadly disable all redirect directives as follow:
 
-    @@||example.com/*.js$1p,script,redirect-rule
+```adb
+@@||example.com/*.js$1p,script,redirect-rule
+```
 
 <details><summary>Before 1.32.0</summary>
 
@@ -595,11 +644,15 @@ Allows creating standalone redirect directives, such as without an implicit no b
 
 For example, consider the following filter:
 
-    ||example.com/ads.js$script,redirect=noop.js
+```adb
+||example.com/ads.js$script,redirect=noop.js
+```
 
 The above filter will result in a block filter `||example.com/ads.js$script` **and** a matching redirect directive. Now consider the following filter:
 
-    ||example.com/ads.js$script,redirect-rule=noop.js
+```adb
+||example.com/ads.js$script,redirect-rule=noop.js
+```
 
 The above filter will only cause a redirect directive to be created, not a block filter. Standalone redirect directives are helpful when blocking a resource is optional, but still want it to redirect should it ever become blocked by whatever means, whether through a separate block filter, a dynamic filtering rule, etc.
 
@@ -617,13 +670,17 @@ To remove query parameters from the URL of network requests -- see also [AG's `r
 
 `removeparam` must be assigned a value. This value will determine which exact parameter from a query string will get removed:
 
-    *$removeparam=utm_source
+```adb
+*$removeparam=utm_source
+```
 
 The above filter tells uBO to remove the query parameter `utm_source` when present in a URL.
 
 The value assigned to `removeparam` can be a literal regular expression, in which case uBO will remove query parameters matching the regular expression:
 
-    *$removeparam=/^utm_/
+```adb
+*$removeparam=/^utm_/
+```
 
 The above filter will remove all query parameters whose name starts with `utm_`, regardless of their value. When using a literal regular expression, it gets tested against each query parameter name-value pair assembled into a single string as `name=value`.
 
@@ -646,7 +703,9 @@ The most common static extended filters are cosmetic filters, also known as "ele
 
 All static extended filters can apply to a specific _entity_. For example:
 
-    google.*###tads.c
+```adb
+google.*###tads.c
+```
 
 An _entity_ is defined as follows: a formal domain name with the [Public Suffix](https://publicsuffix.org/) part replaced by a wildcard.
 
@@ -662,11 +721,15 @@ New in [1.25.0](https://github.com/gorhill/uBlock/commit/3fab7bfdb4f892f3d33159f
 
 By preceding a typical generic cosmetic filter with a literal `*`, this can turn it into a specific-generic cosmetic filter that unconditionally gets injected into all web pages.
 
-    *##.selector
+```adb
+*##.selector
+```
 
 But a typical generic cosmetic filter would only inject when uBO's DOM surveyor finds at least one matching element in a web page.
 
-    ##.selector
+```adb
+##.selector
+```
 
 The new specific-generic form will also be disabled when a web page is subject to a `generichide` exception filter since the filter is essentially generic. The only difference from the usual generic form is that the filter is injected unconditionally instead of through the DOM surveyor.
 
@@ -778,8 +841,10 @@ The purpose of HTML filters is to remove elements from a document _before_ it is
 
 The syntax is similar to that of cosmetic filters, except that you must prefix your selector (CSS or procedural) with the character `^`:
 
-    example.com##^.badstuff
-    example.com##^script:has-text(7c9e3a5d51cdacfc)
+```adb
+example.com##^.badstuff
+example.com##^script:has-text(7c9e3a5d51cdacfc)
+```
 
 These HTML filters will cause the elements matching the selectors to be **removed from the streamed response data**, such that the browser will never know of their existence once it parses the modified response data. It makes this a powerful tool in uBO's arsenal.
 
@@ -795,7 +860,9 @@ New in [uBO 1.35.0](https://github.com/gorhill/uBlock/commit/f876b68171ff307f276
 
 The syntax to remove the response header is a special case of HTML filtering, whereas the response headers are targeted rather than the response body:
 
-    example.com##^responseheader(header-name)
+```adb
+example.com##^responseheader(header-name)
+```
 
 `header-name` is required to be in lowercase. It is the name of the header to remove.
 
@@ -818,7 +885,9 @@ The motivation for this new filtering ability is an instance of a website using 
 
 ### Scriptlet injection
 
-    example.com##+js(...)
+```adb
+example.com##+js(...)
+```
 
 It allows the injection of specific JavaScript code into pages. The `...` part is a token identifying a JavaScript resource from the [resource library](./Resources-Library). Keep in mind the resource library is under the control of the uBO project. Only JavaScript code vouched for by uBO is inserted into web pages through a valid resource token.
 
@@ -830,12 +899,18 @@ Starting with [1.22.0](https://github.com/gorhill/uBlock/commit/bf3c92574e5f2386
 
 The following exception filter will cause scriptlet injection to be wholly disabled for `example.com`:
 
-    example.com#@#+js()
+```adb
+example.com#@#+js()
+```
 
 Or to disable scriptlet injection everywhere:
 
-    #@#+js()
+```adb
+#@#+js()
+```
 
 The following form is meaningless and ignored:
 
-    example.com##+js()
+```adb
+example.com##+js()
+```
