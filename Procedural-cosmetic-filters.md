@@ -34,8 +34,7 @@ be shown as invalid with this change. Read the commit message for more details.
    * Quotes are still optional if the argument doesn't trip the parser
    * One can use either `"` or `'`
    * When using quotes, instances of the same quote inside the argument must be escaped, i.e. `'this is a single quote: \''`, or `"this is a double quote: \""`, and instances of `\` must be escaped (as per AdGuard's documentation.
-
-A change from the [commit message](https://github.com/gorhill/uBlock/commit/a71b71e4c8a2037fc68970bc8912a76732edaade) is that escaping without quoting no longer does anything, so `##sidebar > div.side-content:has-text(Adoring Anya\'s twitter)` does not work anymore.
+A change from the [commit message](https://github.com/gorhill/uBlock/commit/a71b71e4c8a2037fc68970bc8912a76732edaade) is that escaping without quoting no longer does anything, so `##sidebar > div.side-content:has-text(Adoring Anya\'s twitter)` does not work anymore but `###sidebar > div.side-content:has-text(/Adoring Anya\'s twitter/)` would still work.
 
 ## Cosmetic filter operators
 
