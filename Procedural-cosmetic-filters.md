@@ -70,6 +70,32 @@ empty string by just quoting the empty string ([new in 1.45.3b10](https://github
 
 ***
 
+### `subject:matches-attr(arg)`
+
+- Description: Allows to select an element by its attributes, especially if they are randomized.
+- Chainable: Yes.
+- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
+- _arg_: A declaration in the form `name="value"` or `"name"="value"`, where `name` is attribute name and `value` is attribute value (optional), `name` and `value` can be literal text or literal regular expression.
+
+Introduced in uBO [1.45.3b10](https://github.com/gorhill/uBlock/commit/76d70102f069856bffac7cd27dc40500c3bb9563) 
+
+Solves [uBlockOrigin/uBlock-issues#2329 (comment)](https://github.com/uBlockOrigin/uBlock-issues/issues/2329#issue-1412857923) (randomly generated attributes).
+
+The supported syntax is exactly as per AdGuard's documentation:
+- https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#extended-css-matches-attr
+
+Though recommended, the quotes are not mandatory in uBO if
+the argument does not cause the parser to fail and if there
+are no ambiguities.
+
+- Examples:
+    - `k-rauta.fi##button:matches-attr(class="/[\w]{7}/")`
+    - `k-rauta.fi##button:matches-attr("class"="/[\w]{7}/")`
+
+on `https://www.k-rauta.fi/tuote/valmistasoite-hole-in-1-250ml/6408070100905`
+
+***
+
 ### `subject:matches-css(arg)`
 
 - Description: Select element _subject_ if and only if the result of evaluating _arg_ is one or more elements.
@@ -223,32 +249,6 @@ Introduced in uBO [1.17.5rc3](https://github.com/gorhill/uBlock/commit/8a88e9d93
 Solves [uBlockOrigin/uBlock-issues#341 (comment)](https://github.com/uBlockOrigin/uBlock-issues/issues/341#issuecomment-449764612) (overlay dialog used for two purposes, differ only by class name in child node).
 
 By default hiding by procedural filters is reevaluated only when nodes in sub-tree are added or removed - uBO does not watch for attribute changes for performance reasons. This filter instructs uBO procedural filtering engine to watch for changes in specific attributes.
-
-***
-
-### `subject:matches-attr(arg)`
-
-- Description: Allows to select an element by its attributes, especially if they are randomized.
-- Chainable: Yes.
-- _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
-- _arg_: A declaration in the form `name="value"` or `"name"="value"`, where `name` is attribute name and `value` is attribute value (optional), `name` and `value` can be literal text or literal regular expression.
-
-Introduced in uBO [1.45.3b10](https://github.com/gorhill/uBlock/commit/76d70102f069856bffac7cd27dc40500c3bb9563) 
-
-Solves [uBlockOrigin/uBlock-issues#2329 (comment)](https://github.com/uBlockOrigin/uBlock-issues/issues/2329#issue-1412857923) (randomly generated attributes).
-
-The supported syntax is exactly as per AdGuard's documentation:
-- https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#extended-css-matches-attr
-
-Though recommended, the quotes are not mandatory in uBO if
-the argument does not cause the parser to fail and if there
-are no ambiguities.
-
-- Examples:
-    - `k-rauta.fi##button:matches-attr(class="/[\w]{7}/")`
-    - `k-rauta.fi##button:matches-attr("class"="/[\w]{7}/")`
-
-on `https://www.k-rauta.fi/tuote/valmistasoite-hole-in-1-250ml/6408070100905`
 
 ***
 
