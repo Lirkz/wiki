@@ -171,10 +171,9 @@ Examples:
 ### aost.js /
 ### abort-on-stack-trace.js [↪](https://github.com/gorhill/uBlock/blob/793e2c78963ba86c8d36b950807ce952f7199c1f/assets/resources/scriptlets.js#L194)
 
-New in [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e15bbba3b4ba6cbf43935)
+#### _Experimental, under development_
 
-<details>
-<summary>Experimental, under development</summary>
+New in [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e15bbba3b4ba6cbf43935)
 
 Aborts execution of script (_throws_ `ReferenceError`) when attempts to access specified _property_ when _stack trace_ matches specified text or _regular expression_. <sub>[Internal discussion](https://github.com/orgs/uBlockOrigin/teams/ublock-issues-volunteers/discussions/237?from_comment=59)</sub>
 
@@ -200,8 +199,6 @@ Firefox often reports `injectedScript`, attempt has been made to convert entries
 The column value is normalized to 1, however there is too much discrepancy between browser families for that value to be of any use.
 
 Filtering according to reported line numbers (`...:1234:1`), will not be reliable for inline scripts, since the line at which those inline scripts are located will vary from one page to another. It should be reliable for when the stack trace entry is for code in a JS file.
-
-</details>
 
 ***
 
