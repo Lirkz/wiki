@@ -328,11 +328,11 @@ See also: [`all`](#all)
 
 Alias: [`from`](#from)
 
-Restrict the filter to be applied only to the specified domain(s).
+Restrict the filter to be applied only on the specified domain(s).
 
 Use the `|` symbol to join multiple domains.
 
-Preceding the domain name by `~` will prevent the filter from being applied to this domain.
+Preceding the domain name by `~` will prevent the filter from being applied on this domain.
 
 Starting with [1.28.0](https://github.com/gorhill/uBlock/commit/3c67d2b89f8ac6d680e74af3e11b916889f7feed) support for [_"entity"_](#entity) matching has been added. You can now use `filter$domain=google.*` to apply a filter to pages on all top-level domains of the specified domain.
 
