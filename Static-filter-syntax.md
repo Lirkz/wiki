@@ -440,6 +440,8 @@ Where connection:
 - is of type `script`.
 - has a response HTTP header named `via` whose value matches `1.1 google`.
 
+To remove response headers, see: [`Response header filtering`](#response-header-filtering).
+
 </details>
 
 ***
@@ -475,6 +477,40 @@ New in [1.31.1b8](https://github.com/gorhill/uBlock/commit/eae7cd58fe679d6765d62
 It is only for Regular Expression filters. Using this with any other filter will cause uBO to discard the filter.
 
 Instructs uBO filtering engine to perform a case-sensitive match.
+
+***
+
+#### `method`
+
+New in [1.46.1b0](https://github.com/gorhill/uBlock/commit/b6981877ba8f9011292aee9556c4d4c08c1bfd2d).
+
+Related issue: [uBlockOrigin/uBlock-issues#2117](https://github.com/uBlockOrigin/uBlock-issues/issues/2117).
+
+Ability to filter network requests according to their HTTP method.
+
+This option supports a list of `|`-separated lowercased method names. Negated method names are allowed. 
+
+These are valid methods:
+
+- `connect`
+- `delete`
+- `get`
+- `head`
+- `options`
+- `patch`
+- `post`
+- `put`
+
+As per DNR's own documentation:
+- https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#type-RequestMethod
+
+Example:
+```
+||google.com^$method=post|get
+||example.com^$method=~get
+```
+
+The logger shows the method used for every network request. It's possible to filter the logger output for most-common methods: `get`, `head`, `post`.
 
 ***
 
@@ -546,7 +582,7 @@ For example:
 
 New in [1.46.1b0](https://github.com/gorhill/uBlock/commit/19f8b30d577ac17097b8060adfc92093866e26d8).
 
-Solves [uBlockOrigin/uBlock-issues#2412](https://github.com/uBlockOrigin/uBlock-issues/discussions/2412).
+Related issue: [uBlockOrigin/uBlock-issues#2412](https://github.com/uBlockOrigin/uBlock-issues/discussions/2412).
 
 The main motivation of this option is to give uBO's static network filtering engine an equivalent of DNR's [`requestDomains`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-requestDomains) and [`excludedRequestDomains`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-excludedRequestDomains).
 
@@ -603,7 +639,7 @@ CSP option syntax is unusual compared to other filters. Recommend to be used onl
 
 Refer to ["Content Security Policy (CSP) Quick Reference Guide"](https://content-security-policy.com/) or [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for further syntax help.
 
-See also [`denyallow`](#denyallow).
+See also [`denyallow`](#denyallow)
 
 ***
 
@@ -756,6 +792,8 @@ Since the base domain name gets used to derive the name of the "entity", `google
 
 New in [1.25.0](https://github.com/gorhill/uBlock/commit/3fab7bfdb4f892f3d33159fd53ccf1d5342a090a).
 
+Related issue: [uBlockOrigin/uBlock-issues#803](https://github.com/uBlockOrigin/uBlock-issues/issues/803).
+
 By preceding a typical generic cosmetic filter with a literal `*`, this can turn it into a specific-generic cosmetic filter that unconditionally gets injected into all web pages.
 
 ```adb
@@ -771,8 +809,6 @@ But a typical generic cosmetic filter would only inject when uBO's DOM surveyor 
 The new specific-generic form will also be disabled when a web page is subject to a `generichide` exception filter since the filter is essentially generic. The only difference from the usual generic form is that the filter is injected unconditionally instead of through the DOM surveyor.
 
 Specific-generic cosmetic filters will NOT become discarded when checking the "Ignore generic cosmetic filters" option in the "Filter lists" pane since this option is primarily to disable the DOM surveyor.
-
-Related issue: [#803](https://github.com/uBlockOrigin/uBlock-issues/issues/803).
 
 ***
 
@@ -806,7 +842,7 @@ Since `:remove()` is an "action" operator, it must only be used as a trailing op
 
 AG's cosmetic filter syntax `{ remove: true; }` will be converted to uBO's `:remove()` operator internally.
 
-To remove elements from a document _before_ it is parsed by the browser, see: [`HTML filters`](#html-filters)
+To remove elements from a document _before_ it is parsed by the browser, see: [`HTML filters`](#html-filters).
 
 ***
 
@@ -917,6 +953,8 @@ This limitation ensures that uBO never lowers the security profile of web pages,
 Given that the header removal occurs at onHeaderReceived time, this new ability works for all browsers.
 
 The motivation for this new filtering ability is an instance of a website using a `refresh` header to redirect a visitor to an undesirable destination after a few seconds.
+
+To filter network responses according to whether a **specific** response header is present and whether or not it matches a **distinct value**, see: [`header`](#header).
 
 ***
 
