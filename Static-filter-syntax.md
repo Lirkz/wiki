@@ -286,9 +286,7 @@ Filter list authors are discouraged from using exception filters of the `cname` 
 
 ***
 
-#### ~~`denyallow`~~
-
-**Superseded by [`to`](#to).**
+#### `denyallow`
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/c3bc2c741d61db3e99b313835c2ae34a4a008359).
 
