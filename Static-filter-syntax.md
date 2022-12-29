@@ -390,8 +390,7 @@ Generic cosmetic filters are hiding filters that apply to all pages - `##.ad-cla
 
 #### `header`
 
-<details>
-<summary>Work in progress, syntax still experimental and under evaluation</summary><br>
+#### _Work in progress, syntax still experimental and under evaluation_
 
 New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c). Advanced setting `filterOnHeaders` must be `true` (default to `false`) for this filter option to be valid in uBO.
 
@@ -441,8 +440,6 @@ Where connection:
 - has a response HTTP header named `via` whose value matches `1.1 google`.
 
 To remove response headers, see: [`Response header filtering`](#response-header-filtering).
-
-</details>
 
 ***
 
