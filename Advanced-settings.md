@@ -299,7 +299,7 @@ Replaying only the origin part is meant to lower undue breakage and improve perf
 
 ***
 
-#### `cnameUncloak`
+#### ~~`cnameUncloak`~~
 
 [Removed in 1.34.0](https://github.com/gorhill/uBlock/commit/1c3b45f75d0f84d68abb51b15bbdc043464ee3e0), deprecated in favor of [_"Uncloak canonical names"_](./Dashboard:-Settings#uncloak-canonical-names) preference in Dashboard/Settings pane.
 
@@ -372,29 +372,31 @@ If set to `true`, restores update behavior from before [1.22.3b ("Prevent uBO fr
 
 #### `filterAuthorMode`
 
-Under development! Do not create related issues!
+#### _Under development! Do not create related issues!_
 
 Default: `false`.
 
-uBO [1.23.0](https://github.com/gorhill/uBlock/commit/59c9a34d34a737f6bb48c4130c65f4fe0fa73806) and above.
+New in [1.23.0](https://github.com/gorhill/uBlock/commit/59c9a34d34a737f6bb48c4130c65f4fe0fa73806).
 
-Enable point-and-click feature, to create temporary exception filters for static extended filters (i.e. cosmetic, scriptlet & html filters) from within the summary pane in the logger. The button to toggle on/off temporary exception filter is labeled `#@#`:
+Enable point-and-click feature, to create temporary exception filters for static extended filters (i.e. network <sup>(after [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c))</sup>, cosmetic, scriptlet & HTML filters) from within the summary pane in the logger. The button to toggle on/off temporary exception filter is labeled `#@#`:
 
 ![filtering tools dialog](https://user-images.githubusercontent.com/886325/69076705-4fb41300-0a34-11ea-8e9a-463b9a1d29d8.png)
 
-The created exceptions are temporary and will be lost when restarting uBO or manually toggling off the exception filters.
+The created exceptions are temporary and will be lost when closing the logger (after [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c)) or manually toggling off the exception filters.
 
-After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) restores the ability to set _allow_ rules from popup panel. The ability to point-and-click to create _allow_ rules from the popup panel is no longer allowed by default. See [commit message](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) for reasoning. Tap twice on <kbd>Ctrl</kbd> if you want to access allow rules only temporarily.
+New in [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c) - When toggling on/off a temporary exception, filter lists are now fully reloaded and this means there might be a perceptible delay when adding/removing temporary exceptions. At this point this is considered to be an acceptable side-effect just to bring the ability to easily create temporary exception for network filters.
+
+The ability to point-and-click to create _allow_ rules from the popup panel is no longer allowed by default, see [commit message](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec) for reasoning. After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec), you can set `filterAuthorMode` to `true` to restore the ability to set _allow_ rules from popup panel. Tap twice on <kbd>Ctrl</kbd> if you want to access allow rules only _temporarily_.
 
 ***
 
-#### `ignoreRedirectFilters`
+#### ~~`ignoreRedirectFilters`~~
 
 Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by filter exception.
 
 ***
 
-#### `ignoreScriptInjectFilters`
+#### ~~`ignoreScriptInjectFilters`~~
 
 Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by filter exception.
 
@@ -494,7 +496,7 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 
 ***
 
-#### `suspendTabsUntilReady`
+#### ~~`suspendTabsUntilReady`~~
 <span name="suspendtabsuntilready-experimental"></span>
 
 Removed in favor of [_"Suspend network activity until all filter lists are loaded"_](./Dashboard%3A-Filter-lists#suspend-network-activity-until-all-filter-lists-are-loaded) checkbox in Dashboard -> Filter lists in version [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
@@ -528,7 +530,7 @@ History:
 
 ***
 
-#### `uiFlavor`
+#### ~~`uiFlavor`~~
 
 Removed in favor Fenix Layout.
 
