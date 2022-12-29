@@ -286,7 +286,9 @@ Filter list authors are discouraged from using exception filters of the `cname` 
 
 ***
 
-#### `denyallow`
+#### ~~`denyallow`~~
+
+**Superseded by [`to`](#to).**
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/c3bc2c741d61db3e99b313835c2ae34a4a008359).
 
@@ -323,6 +325,8 @@ See also: [`all`](#all)
 ***
 
 #### `domain`
+
+Alias: [`from`](#from)
 
 Restrict the filter to be applied only to the specified domain(s).
 
@@ -361,6 +365,16 @@ Equivalent to `~third-party` [option](https://help.eyeo.com/en/adblockplus/how-t
 #### `frame`
 
 Equivalent to `subdocument` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
+
+***
+
+#### `from`
+
+New in [1.46.1b0](https://github.com/gorhill/uBlock/commit/19f8b30d577ac17097b8060adfc92093866e26d8).
+
+It is just an alias for the `domain=` option. The logger will render `domain=` network filters using the `from=` version.
+
+See: [`domain`](#domain)
 
 ***
 
@@ -525,6 +539,29 @@ For example:
 | `www.example.org` | `www.example.org` | no | no |
 | `www.example.org` | `subdomain.example.org` | no | **yes** |
 | `www.example.org` | `www.example.com` | **yes** | **yes** |
+
+***
+
+#### `to`
+
+New in [1.46.1b0](https://github.com/gorhill/uBlock/commit/19f8b30d577ac17097b8060adfc92093866e26d8).
+
+Solves [uBlockOrigin/uBlock-issues#2412](https://github.com/uBlockOrigin/uBlock-issues/discussions/2412).
+
+The main motivation of this option is to give uBO's static network filtering engine an equivalent of DNR's [`requestDomains`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-requestDomains) and [`excludedRequestDomains`](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-excludedRequestDomains).
+
+`to=` is a superset of `denyallow=` with support for Entity-based syntax and also negated hostname.
+
+For now `denyallow=` won't be deprecated, which still does not support entity-based syntax and for which negated domains are not allowed.
+
+Examples:
+
+```
+||it^$3p,to=~example.it
+*$script,from=beforeitsnews.com,to=google.*|gstatic.com
+```
+
+See also: [`denyallow`](#denyallow), [`from`](#from)
 
 ***
 
