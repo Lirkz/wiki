@@ -310,6 +310,8 @@ Essentially, the new `denyallow` option makes it easier to implement default-den
 
 [2] Typically filters whose patterns are of the form `|http*://`
 
+See also: [`to`](#to)
+
 ***
 
 #### `document`
