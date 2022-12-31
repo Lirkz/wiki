@@ -6,7 +6,7 @@
 
 Support for cloud storage started with uBlock Origin (uBO) 1.1.0.0.
 
-uBO's cloud storage uses your browser's sync feature (Firefox Sync or Google Account) to synchronize extension settings across multiple devices.
+uBO's cloud storage uses your browser's sync feature ([Firefox Sync](https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer) or [Google Account](https://support.google.com/chrome/answer/165139)) to synchronize extension settings across multiple devices.
 
 If your browser/environment does not support cloud storage, the feature will be disabled.
 
