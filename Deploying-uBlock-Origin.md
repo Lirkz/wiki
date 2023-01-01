@@ -1,3 +1,7 @@
+- Back to ["Deploying uBlock Origin"](./Deploying-uBlock-Origin)
+
+***
+
 I do not know much about enterprise deployment, so I will let a knowledgeable person guide you:
 
 - [Managing Google Chrome with adblocking and security](https://web.archive.org/web/20220816090848/https://decentsecurity.com/ublock-for-google-chrome-deployment/) [via archive.org] by [SwiftOnSecurity](https://twitter.com/SwiftOnSecurity/status/783348579943317504)
