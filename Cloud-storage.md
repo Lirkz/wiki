@@ -12,7 +12,7 @@ If your browser/environment does not support cloud storage, the feature will be 
 
 uBO does not need a remote server due to using your browser's built-in sync ability as long as you have enabled it.
 
-The user must explicitly enable cloud storage support on uBO's Settings pane in the dashboard by checking the "Enable cloud storage support" checkbox.
+The user must explicitly enable cloud storage support on uBO's _Settings_ pane in the dashboard by checking the "Enable cloud storage support" checkbox.
 
 Once you enable cloud storage support, a new UI widget will be available in the dashboard for panes that support the export/import of settings to/from cloud storage.
 
