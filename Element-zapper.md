@@ -1,3 +1,7 @@
+- Back to [[Wiki home|Home]]
+
+***
+
 The element zapper can temporarily remove elements on a web page without creating new filters. The [[element picker]] can permanently remove elements on a web page by using it to create a network or cosmetic filter.
 
 Useful for quick removal of nuisance elements on a web page.
