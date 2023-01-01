@@ -1,3 +1,7 @@
+- Back to [[Wiki home|Home]]
+
+***
+
 The element picker can permanently remove elements on a web page by using it to create a network or cosmetic filter. The [[element zapper]] can temporarily remove elements on a web page without creating new filters.
 
 Open the extension's popup menu and click the small "eye-dropper" icon to enter the interactive element picker mode.
