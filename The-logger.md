@@ -94,7 +94,7 @@ Click it with <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>Cmd</kbd> (Mac) to bypas
 
 ***
 
-#### Dom inspector
+#### DOM inspector
 
 ![code icon](https://user-images.githubusercontent.com/886325/62740302-c4d87b00-ba37-11e9-8d11-2fe9e1fc4d5d.png)
 
