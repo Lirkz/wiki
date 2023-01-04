@@ -66,6 +66,7 @@ Hold the <kbd>Shift</kbd> key while clicking the "Open the logger" icon to toggl
 - [Creating filters](#creating-filters)
     - [Dynamic URL filtering rules](#dynamic-url-filtering-rules)
     - [Static network filters](#static-network-filters)
+    - [Temporary exception filters](#temporary-exception-filters)
 
 ***
 
@@ -258,3 +259,7 @@ See [_"Overview of uBlock's network filtering engine: details"_](./Overview-of-u
 This dialog will assist you in creating static filters compatible with [ABP filter syntax](https://adblockplus.org/filter-cheatsheet). Note that creating static filters incur a significant overhead relative to dynamic URL filtering rules. Typically, you will first use dynamic URL filtering rules to quickly diagnose which network requests need to be allowed/blocked.
 
 See [_"Overview of uBlock's network filtering engine: details"_](./Overview-of-uBlock's-network-filtering-engine:-details) for more details about where static filtering fits in the overall filtering engine.
+
+##### Temporary exception filters
+
+[Option](../Advanced-settings#filterauthormode) for advanced users.
