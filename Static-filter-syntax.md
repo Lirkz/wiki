@@ -813,7 +813,7 @@ Specific-generic cosmetic filters will NOT become discarded when checking the "I
 
 #### Procedural cosmetic filters
 
-`:has(...)`, `:has-text(...)`, `:matches-css(...)`, `:matches-css-before(...)`, `:matches-css-after(...)`, `:matches-media(...)`, `:matches-path(...)`, `:min-text-length(n)`, `:not(...)`, `:others(...)`, `:upward(...)`, `:watch-attr(...)`, `:xpath(...)`.
+`:has(...)`, `:has-text(...)`, `matches-attr(...)`, `:matches-css(...)`, `:matches-css-before(...)`, `:matches-css-after(...)`, `:matches-media(...)`, `:matches-path(...)`, `:min-text-length(n)`, `:not(...)`, `:others(...)`, `:upward(...)`, `:watch-attr(...)`, `:xpath(...)`.
 
 See [detailed documentation](./Procedural-cosmetic-filters).
 
