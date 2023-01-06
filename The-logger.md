@@ -262,4 +262,4 @@ See [_"Overview of uBlock's network filtering engine: details"_](./Overview-of-u
 
 ##### Temporary exception filters
 
-[Option](../Advanced-settings#filterauthormode) for advanced users.
+[Option](./Advanced-settings#filterauthormode) for advanced users.
