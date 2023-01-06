@@ -54,9 +54,9 @@ Cloud storage services offered by specific browser vendors have limitations and 
 
 - I have observed that too large an amount of per-pane data will cause a warning in the browser console (> 8K).
 - **A new installation of uBO will erase cloud storage data.**
-    - Update: Reportedly fixed in [Bugzilla Report #753289](https://bugzilla.mozilla.org/show_bug.cgi?id=753289) and included in [Firefox 43.0](https://bugzilla.mozilla.org/buglist.cgi?j_top=OR&f1=target_milestone&o3=equals&v3=Firefox%2043&o1=equals&resolution=FIXED&o2=anyexact&query_format=advanced&f3=target_milestone&f2=cf_status_firefox43&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&v1=mozilla43&v2=fixed%2Cverified&limit=0).
+    - Update: Reportedly fixed in [Bugzilla Report #753289](https://bugzil.la/753289) and included in [Firefox 43.0](https://bugzilla.mozilla.org/buglist.cgi?j_top=OR&f1=target_milestone&o3=equals&v3=Firefox%2043&o1=equals&resolution=FIXED&o2=anyexact&query_format=advanced&f3=target_milestone&f2=cf_status_firefox43&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&v1=mozilla43&v2=fixed%2Cverified&limit=0).
     - See <https://discourse.mozilla.org/t/how-to-sync-preferences-of-a-bootstrapped-extension-via-sync/3024>.
     - But since uBO will not automatically import settings from the cloud storage, this will not cause any loss of local ones. However, you will have to push your settings to the cloud storage again.
 - Due to [minimal documentation](https://support.mozilla.org/en-US/products/firefox/sync-and-save), there might be undocumented limitations about this in Firefox.
-- It appears Firefox for Android can not sync extension settings. This is tracked in [Bugzilla Report #1625257](https://bugzilla.mozilla.org/show_bug.cgi?id=1625257).
+- It appears Firefox for Android can not sync extension settings. This is tracked in [Bugzilla Report #1625257](https://bugzil.la/1625257).
 - It is unknown if this new feature will work for other Firefox-based browsers.
