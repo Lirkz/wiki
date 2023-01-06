@@ -62,7 +62,8 @@
     - [How to use uBlock Origin advanced user mode tutorial ↗︎](https://www.youtube.com/watch?v=2lisQQmWQkY)
     - [Firefox: uBlock Origin – Firefox-Kompendium Teil2 ↗︎](https://www.kuketz-blog.de/firefox-ublock-origin-firefox-kompendium-teil2/)
     - [Beginners Cheat Sheet - "Syntax Meanings That Are Actually Human Readable" ↗︎](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/SyntaxMeaningsThatAreActuallyHumanReadable.md)
-- Unsorted topics:
+- <details><summary>Unsorted topics:</summary>
+
     - [Privacy stuff](./Privacy-stuff)
     - [Tricks and tips waterfall](./Tips-and-tricks-waterfall)
     - [How to ...](./How-to-...)
@@ -83,3 +84,4 @@
     - [Why don't you accept donations?](./Why-don't-you-accept-donations%3F)
     - [Reference description of uBO in various extensions stores](./Reference-description-of-uBO-in-various-extensions-stores)
     - [Draft version of this wiki](https://github.com/uBlockOrigin/uBlock-issues/wiki)
+</details>
