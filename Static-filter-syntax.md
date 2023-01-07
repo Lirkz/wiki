@@ -886,7 +886,6 @@ Styling filters frequently get used to foil anti-blocker mechanisms on web pages
     - `magesy.*,majesy.*##[oncontextmenu]:remove-attr(oncontextmenu)`
     - `zerodot1.gitlab.io##selector:remove-attr(/oncontextmenu|onselectstart|ondragstart/)`
     - `zerodot1.gitlab.io##selector:remove-attr(/^on[a-z]+/)`
-    - `example.com##.j-mini-player[class]:watch-attr():remove-attr(class)`
     - `danskebank.fi##html[cookie-consent-banner-open]:remove-class(cookie-consent-banner-open)`
 
 New in uBO [1.45.3b13](https://github.com/gorhill/uBlock/commit/992255e9937f81b5dd58524caa2ceeaeb29efb14).
