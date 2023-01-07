@@ -898,7 +898,7 @@ For `:remove-attr()`, when the argument matches an attribute name, that attribut
 
 These operators are meant to replace `+js(remove-attr, ...)` and `+js(remove-class, ...)`, which from now on are candidate for deprecation in some future.
 
-See also: [`:watch-attr()`](./Procedural-cosmetic-filters#subjectwatch-attrarg)
+See also: [`:watch-attr()`](./Procedural-cosmetic-filters#subjectwatch-attrarg) usage for cases when targeted attributes are added without DOM layout changes.
 
 ***
 
