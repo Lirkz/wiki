@@ -239,10 +239,11 @@ Experimental.
 - Description: Pass-through filter used to modify behavior of the procedural cosmetic filter engine by forcing re-evaluation when one or more attribute changes on the matching elements.
 - Chainable: Yes.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
-- _arg_: comma-separate list of attribute names. No argument means watch changes of any one attribute.
+- _arg_: comma-separated list of attribute names. No argument means watch changes of any one attribute.
 
 Example:
 - [Test case](https://ameshkov.github.io/web/watchattr.html) to detect `id` changes using filter `ameshkov.github.io###testdiv:watch-attr(id):has(p)`
+- `example.com##.j-mini-player[class]:watch-attr(class):remove-attr(class)`
 
 Introduced in uBO [1.17.5rc3](https://github.com/gorhill/uBlock/commit/8a88e9d93174badd6855c0e782737158c9ccd6f8) 
 
