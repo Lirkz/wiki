@@ -8,6 +8,7 @@ I do not know much about enterprise deployment, so I will let a knowledgeable pe
 - [Deploy Firefox in the Enterprise with uBlock Origin, HTTPS Everywhere and Privacy Badger using Group Policy](https://www.winsysadminblog.com/2019/03/deploy-firefox-in-the-enterprise-with-ublock-origin-https-everywhere-and-privacy-badger-using-group-policy/) by [John](https://www.winsysadminblog.com/about-me/)
 - [How To Deploy AdBlocker for Enterprise](https://www.secjuice.com/how-to-deploy-adblocker-for-smbs/) by [Secjustice](https://twitter.com/secjuice)
 - [Tutorial: Deploying uBO configuration for Microsoft Edge Chromium and Google Chrome - older way](https://www.reddit.com/r/uBlockOrigin/comments/o7q2ou/comment/h3cplhd/) by [u/DefinitelyYou](https://www.reddit.com/user/DefinitelyYou)
+- [Add group policy templates to aid configuring in Chrome, Edge, and Firefox on Windows](https://github.com/gorhill/uBlock/pull/3865)
 
 ### Customizing the settings
 
