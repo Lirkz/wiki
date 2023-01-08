@@ -2,7 +2,7 @@ This page is just a place for me to collect my counterarguments when I spot some
 
 #### Who cares about efficiency, I have 8 GB
 
-I heard this argument from apologists of bloated software frequently. I decided to give the counterargument a [dedicated page](./Who-cares-about-efficiency,-I-have-8-GB-RAM-and|or-a-quad-core-CPU).
+I heard this argument from apologists of bloated software frequently. I decided to give this counterargument a [dedicated page](./Who-cares-about-efficiency,-I-have-8-GB-RAM-and|or-a-quad-core-CPU).
 
 #### Just use a hosts file
 
@@ -22,7 +22,7 @@ I use all of these hosts files, and so far, not much breakage has occurred.
 
 #### uBO is a fork of Adblock Plus (ABP) code
 
-No. The code is wholly original and written from scratch. There are very few places I borrowed code from elsewhere, and these have identification. For example, for the element picker, I [embedded](https://github.com/gorhill/uBlock/blob/master/js/element-picker.js#L27) [CSS.escape](https://github.com/mathiasbynens/CSS.escape) from Mathias Bynens (because Chromium does not yet support [CSS.escape](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape)).
+No. The code is wholly original and written from scratch. There are very few places I borrowed code from elsewhere, and these have identification. For example, for the element picker, I embedded [CSS.escape](https://github.com/mathiasbynens/CSS.escape) from Mathias Bynens (because Chromium did not at the time support [CSS.escape](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape)).
 
 #### Adblock Edge is as light as uBO
 
