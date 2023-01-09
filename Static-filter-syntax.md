@@ -906,7 +906,7 @@ See also: [`:watch-attr()`](./Procedural-cosmetic-filters#subjectwatch-attrarg) 
 
 Supported by [uBO 1.15.0](https://github.com/gorhill/uBlock/releases/tag/1.15.0)+ in Firefox 57+.
 
-**READ VERY CAREFULLY:** HTML filtering acts on the **response data** (before browser parsing). Do not use the browser inspector from developer tools to create HTML filters. You **must** use `view-source:[URL of page]` instead to look at the **response data** and find relevant information to create relevant HTML filters. Only UTF-8 encoding is supported natively by browsers. Custom encoders got implemented in JavaScript for the most frequently used other encodings. Because of this, HTML filtering will work only on pages with character encoding compatible with: UTF-8, ISO-8859-1, Windows-1250, Windows-1251 and Windows-1252 ([detailed mapping](https://github.com/gorhill/uBlock/blob/2a91a685ce3d2dae5d3c285cff1bc74a1982be74/src/js/text-encode.js#L32))
+**READ VERY CAREFULLY:** HTML filtering acts on the **response data** (before browser parsing). Do not use the browser inspector from developer tools to create HTML filters. You **must** use `view-source:[URL of page]` instead to look at the **response data** and find relevant information to create relevant HTML filters.
 
 The purpose of HTML filters is to remove elements from a document _before_ it is parsed by the browser.
 
@@ -919,9 +919,16 @@ example.com##^script:has-text(7c9e3a5d51cdacfc)
 
 These HTML filters will cause the elements matching the selectors to be **removed from the streamed response data**, such that the browser will never know of their existence once it parses the modified response data. It makes this a powerful tool in uBO's arsenal.
 
-With the introduction of HTML filtering, the `script:contains(...)` is now deprecated and internally converted into an equivalent `##^script:has-text(...)` HTML filter. The result is essentially the same: to prevent the execution of specific inline script tags in the main HTML document. See [_"Inline script tag filtering"_](./Inline-script-tag-filtering) for further documentation.
+HTML filtering will work only on pages with character encoding compatible with: UTF-8, ISO-8859-1, Windows-1250, Windows-1251 and Windows-1252 ([detailed mapping](https://github.com/gorhill/uBlock/blob/2a91a685ce3d2dae5d3c285cff1bc74a1982be74/src/js/text-encode.js#L32)).
 
-Support for chaining procedural operators with native CSS selector syntax (i.e. `a:has(b) + c`) was added in [1.20.1b3](https://github.com/gorhill/uBlock/commit/41685f4cce084f3f89e9cdd8fc1cde5b57862958). Only procedural operators which make sense in the context of HTML filtering are supported.
+HTML filters will apply only for document fetched successfully, i.e. when HTTP response status code is in the [200 realm](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses).
+
+<details><summary>Historical notes</summary>
+
+- With the introduction of HTML filtering, the `script:contains(...)` is now deprecated and internally converted into an equivalent `##^script:has-text(...)` HTML filter. The result is essentially the same: to prevent the execution of specific inline script tags in the main HTML document. See [_"Inline script tag filtering"_](./Inline-script-tag-filtering) for further documentation.
+- Support for chaining procedural operators with native CSS selector syntax (i.e. `a:has(b) + c`) was added in [1.20.1b3](https://github.com/gorhill/uBlock/commit/41685f4cce084f3f89e9cdd8fc1cde5b57862958). Only procedural operators which make sense in the context of HTML filtering are supported.
+
+</details>
 
 ***
 
