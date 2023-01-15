@@ -199,13 +199,17 @@ Usually, it is far more convenient to use [dynamic filtering rules](./Dynamic-fi
 
 #### `1p`
 
-Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options) (`~third-party`). For convenience.
+Equivalent to [`first-party`](#first-party) uBO option, which in turn is negated `third-party` option (`~third-party`).
+
+Filter will match on requests to currently visited domain.
 
 ***
 
 #### `3p`
 
-Equivalent to `third-party` [option](https://help.eyeo.com/en/adblockplus/how-to-write-filters#options). For convenience.
+Equivalent to `third-party` option.
+
+Filter will match on requests to other than currently visited domain.
 
 ***
 
