@@ -2,7 +2,7 @@ uBlock Origin (uBO) supports most of the EasyList filter syntax. You can refer t
 
 While uBO does not support some specific cases, it further extends the EasyList filter syntax, which also may share with AG's extended syntax. [Here](./Syntax-quirks) are the most surprising cases documented.
 
-Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c525b01aa3fb9dab94d6a9918a0a69c6d18da), [two](https://github.com/gorhill/uBlock/commit/ca80d2826bfd92a3081f20da8ba60138509a183b)), very long filters can split into multiple lines: append space and backslash character to the first line and indent continuation line by four spaces.
+Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c525b01aa3fb9dab94d6a9918a0a69c6d18da), [two](https://github.com/gorhill/uBlock/commit/ca80d2826bfd92a3081f20da8ba60138509a183b)), very long filters can split into multiple lines: append space and backslash character to the first line and indent continuation line by four spaces. Note that syntax higlighting is [currently broken](https://github.com/gorhill/uBlock/commit/01b1ed9a982965378d732ab0cb4bcd68727fe910).
 
 - [Not supported](#not-supported)
 - [Pre-parsing directives](#pre-parsing-directives)
