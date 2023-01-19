@@ -62,6 +62,7 @@
     - [How to use uBlock Origin advanced user mode tutorial ↗︎](https://www.youtube.com/watch?v=2lisQQmWQkY)
     - [Firefox: uBlock Origin – Firefox-Kompendium Teil2 ↗︎](https://www.kuketz-blog.de/firefox-ublock-origin-firefox-kompendium-teil2/)
     - [Beginners Cheat Sheet - "Syntax Meanings That Are Actually Human Readable" ↗︎](https://github.com/DandelionSprout/adfilt/blob/master/Wiki/SyntaxMeaningsThatAreActuallyHumanReadable.md)
+- [Scientific papers](./Scientific-papers)
 
 
 <details><summary>Unsorted topics:</summary>
@@ -82,7 +83,6 @@
 - [About "uBlock is inferior in capabilities as a result of being lighter on the browser"](./About-%22uBlock-is-inferior-in-capabilities-as-a-result-of-being-lighter-on-the-browser%22)
 - [About "Why uBlock Origin works so much better than Pi‑hole does?"](./About-%22Why-uBlock-Origin-works-so-much-better-than-Pi%E2%80%91hole-does%3F%22)
 - [Various videos showing side by side comparison of the load speed of complex sites](./Various-videos-showing-side-by-side-comparison-of-the-load-speed-of-complex-sites)
-- [Scientific papers](./Scientific-papers)
 - [Why don't you accept donations?](./Why-don't-you-accept-donations%3F)
 - [Reference description of uBO in various extensions stores](./Reference-description-of-uBO-in-various-extensions-stores)
 - [Draft version of this wiki](https://github.com/uBlockOrigin/uBlock-issues/wiki)
