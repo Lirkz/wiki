@@ -72,6 +72,7 @@
 - `2x2.png`
 - `3x2.png`
 - `32x32.png`
+- `noop.css`
 - `noop.html`
 - `noop.js`
 - `noop.txt`
@@ -819,6 +820,7 @@ They purpose is to mislead page to think that real files have been served.
 	- `3x2.png` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/3x2.png)
 	- `32x32.png` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/32x32.png)
  - Source code
+	- `noop.css` [↪](https://github.com/gorhill/uBlock/blob/4564e3a9b8d3cb2afb70ebd2161271f6b9b969bc/src/web_accessible_resources/noop.css)
 	- `noop.html` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop.html)
 	- `noop.js` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop.js)
 	- `noop.txt` [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noop.txt)
