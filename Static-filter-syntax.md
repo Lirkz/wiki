@@ -351,6 +351,8 @@ Example:
 Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
 `@@*$ghide,domain=/img[a-z]{3,5}\.buzz/`
 
+Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234)
+
 Regex-based domain values can be negated just like plain or entity-based values:
 `*$domain=~/regex.../`
 
@@ -609,7 +611,9 @@ Examples:
 ```
 
 Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
-`@@*$ghide,to=/img[a-z]{3,5}\.buzz/`
+`$script,to=/img[a-z]{3,5}\.buzz/`
+
+Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234)
 
 Regex-based domain values can be negated just like plain or entity-based values:
 `*$to=~/regex.../`
