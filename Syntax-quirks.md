@@ -1,3 +1,5 @@
+See also: [Filter performance](./Filter-performance)
+
 - Filters match on word boundaries unless explicitly wildcarded
     - See <https://github.com/uBlockOrigin/uBlock-issues/issues/954#issuecomment-602041890>
 - Looking-like-domain filters match only in domain part of URL
