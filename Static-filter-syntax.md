@@ -144,6 +144,50 @@ Before this version, you could use negated `ext_ublock` since this token always 
 
 uBO extends ABP filter syntax.
 
+- [_](#_-aka-noop) _(aka "noop")_
+- [*](#-aka-all-urls) _(aka "all URLs")_
+- [$1p](#1p) _([$first-party](#first-party))_
+- [$3p](#3p) _($third-party)_
+- [$all](#all) _(all network-based types + $popup + $document + $inline-font + $inline-script)_
+- [$badfilter](#badfilter)
+- [$css](#css) _($stylesheet)_
+- [$cname](#cname)
+- [$denyallow](#denyallow)
+- [$document](#document)
+- [$domain](#domain) _([$from](#from))_
+- [$elemhide](#elemhide-1) _($ehide)_
+- [$font](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$frame](#frame) _($subdocument)_
+- ~~$genericblock~~ Not supported
+- [$generichide](#generichide) _($ghide)_
+- [$header](#header)
+- [$image](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$important](#important)
+- [$inline-script](#inline-script)
+- [$inline-font](#inline-font)
+- [$match-case](#match-case)
+- [$media](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$method](#method)
+- [$object](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$other](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$ping](#ping)
+- [$popunder](#popunder)
+- [$popup](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$script](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$specifichide](#specifichide) _($shide)_
+- [$strict1p](#strict1p)
+- [$strict3p](#strict3p)
+- [$to](#to)
+- ~~$webrtc~~ `example.com##+js(nowebrtc)`
+- [$websocket](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$xhr](#xhr) _($xmlhttprequest)_
+- [$csp](#csp)
+- [$empty](#empty) _($redirect=empty)_
+- [$mp4](#mp4) _($redirect=noopmp4-1s)_
+- [$redirect](#redirect)
+- [$redirect-rule](#redirect-rule)
+- [$removeparam](#removeparam)
+
 ## Static network filtering
 
 #### HOSTS files
