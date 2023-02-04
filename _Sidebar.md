@@ -14,6 +14,7 @@
         - [Static filter syntax](./Static-filter-syntax)
             - [Procedural cosmetic filters](./Procedural-cosmetic-filters)
             - [Resources Library](./Resources-Library)
+        - [Filter performance](./Filter-performance)
     - [_My rules_](./Dashboard:-My-rules) pane
         - [Dynamic filtering](./Dynamic-filtering)
             - [Quick guide](./Dynamic-filtering:-quick-guide)
