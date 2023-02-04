@@ -400,8 +400,6 @@ Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockO
 Regex-based domain values can be negated just like plain or entity-based values:
 `*$domain=~/regex.../`
 
-This new syntax does not apply to static extended filters.
-
 See also: [`to`](#to)
 
 ***
@@ -661,8 +659,6 @@ Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockO
 
 Regex-based domain values can be negated just like plain or entity-based values:
 `*$to=~/regex.../`
-
-This new syntax does not apply to static extended filters.
 
 See also: [`denyallow`](#denyallow), [`from`](#from)
 
