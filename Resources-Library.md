@@ -118,8 +118,7 @@
  - You should omit the `.js` from the scriptlet name in scriptlet injection filters (eventually in some future this will be the official way to do this).
      - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
  - Crossed out resources are deprecated/removed.
- 
- 
+ - Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/81498474d6d440b032681aa9952d593749b39efb) support for regex-based values as target domain has been added. Use sparingly, when no other solution is practical from a maintenance point of view -- keeping in mind that uBO has to iterate through all the regex-based values, unlike plain hostname or entity-based values which are mere lookups. Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234). Example: `/img[a-z]{3,5}\.buzz/##+js(nowoif)`.
 
 ***
 
