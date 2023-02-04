@@ -692,7 +692,7 @@ See also: [`empty`](#empty), [`redirect`](#redirect)
 
 The `redirect` option means _"block and redirect"_, and causes two filters to become created internally, a block filter and a redirect directive (`redirect-rule`).
 
-A redirect directive causes a blocked network request to redirect to a local neutered resource version. The neutered resource must use a resource token. The resources are defined in [Resources Library](./Resources-Library#defuser-scriptlets). At runtime, filters with unresolvable resource tokens get discarded.
+A redirect directive causes a blocked network request to redirect to a local neutered resource version. The neutered resource must use a resource token. You can use [empty redirect resources](./Resources-Library#available-empty-redirect-resources) and [URL-specific sanitized redirect resources (surrogates)](./Resources-Library#available-url-specific-sanitized-redirect-resources-surrogates). At runtime, filters with unresolvable resource tokens get discarded.
 
 You can use the `redirect=` filters with other static filter options. You can exclude them by using `@@`, they can be `badfilter`-ed, and their priority can increase with the `important` option.
 
