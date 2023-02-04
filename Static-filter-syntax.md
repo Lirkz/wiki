@@ -348,7 +348,7 @@ Example:
 /adsign.$domain=~adsign.no
 ```
 
-Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
+Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/b1de8d3fe48755da58268ba86dccd5d76940b613) support for regex-based values has been added. Example of usage:
 `@@*$ghide,domain=/img[a-z]{3,5}\.buzz/`
 
 Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234)
@@ -610,7 +610,7 @@ Examples:
 *$script,from=beforeitsnews.com,to=google.*|gstatic.com
 ```
 
-Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
+Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/b1de8d3fe48755da58268ba86dccd5d76940b613) support for regex-based values has been added. Example of usage:
 `$script,to=/img[a-z]{3,5}\.buzz/`
 
 Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234)
