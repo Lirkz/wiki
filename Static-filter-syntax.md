@@ -348,6 +348,16 @@ Example:
 /adsign.$domain=~adsign.no
 ```
 
+Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
+`@@*$ghide,domain=/img[a-z]{3,5}\.buzz/`
+
+Regex-based domain values can be negated just like plain or entity-based values:
+`*$domain=~/regex.../`
+
+This new syntax does not apply to static extended filters.
+
+See also: [`to`](#to)
+
 ***
 
 #### `elemhide`
@@ -597,6 +607,14 @@ Examples:
 ||it^$3p,to=~example.it
 *$script,from=beforeitsnews.com,to=google.*|gstatic.com
 ```
+
+Starting with [1.46.1b17](https://github.com/gorhill/uBlock/releases/tag/1.46.1b17) support for regex-based values has been added. Example of usage:
+`@@*$ghide,to=/img[a-z]{3,5}\.buzz/`
+
+Regex-based domain values can be negated just like plain or entity-based values:
+`*$to=~/regex.../`
+
+This new syntax does not apply to static extended filters.
 
 See also: [`denyallow`](#denyallow), [`from`](#from)
 
