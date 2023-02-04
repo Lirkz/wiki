@@ -1,3 +1,5 @@
+See also: [Syntax quirks](./Syntax-quirks)
+
 1- Using `:upward()` instead of `:has()` can be more performant. `:upward()` is fast, it just lookup ancestors -- there is only one parent per element, `:has()` has to lookup descendants, there can be many children per elements.
 
 ```html
