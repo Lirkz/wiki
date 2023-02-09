@@ -1,5 +1,9 @@
 - [[Back to Wiki home|Home]]
 - [Back to Dashboard](./Dashboard)
+
+***
+
+- My filters
     - [Static filter syntax](./Static-filter-syntax)
         - [Procedural cosmetic filters](./Procedural-cosmetic-filters)
         - [Resources Library](./Resources-Library)
