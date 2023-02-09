@@ -50,7 +50,7 @@ A change from the [commit message](https://github.com/gorhill/uBlock/commit/a71b
     - `yandex.ru##.serp-item:has(:scope .organic > .organic__subtitle > .label_color_yellow)` - `:scope` forces `.organic` to match inside `.serp-item` ([why `:scope` is needed](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll#javascript), [general `:scope` doc](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope))
     - `strdef.world##div[style]:has(> a[href="https://www.streamdefence.com/index.php"])` - `>` forces `a` to be direct descendant of `div[style]`
 
-The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of writing no browser supports it. Instead of waiting for browser vendors to provide support, uBO provides support for `:has(arg)` as a procedural operator. 
+The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of writing no browser supports it (was available in stable channel of Chromium 105+ based browsers after 30 August 2022). Instead of waiting for browser vendors to provide support, uBO provides support for `:has(arg)` as a procedural operator. 
 
 ***
 
