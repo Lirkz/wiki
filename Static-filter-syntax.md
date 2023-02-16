@@ -822,6 +822,8 @@ The above filter will remove all query parameters whose name starts with `utm_`,
 
 Poorly crafted `removeparam` filters can have harmful effects on performance. Experienced filter authors need to understand how to create optimal filters.
 
+C``osmetically added params cannot be removed via `removeparam` (see related comment: [760#issuecomment-724703650](https://github.com/uBlockOrigin/uBlock-issues/issues/760#issuecomment-724703650) and invalid issues: [#1704](https://github.com/uBlockOrigin/uBlock-issues/issues/1704), [#1767](https://github.com/uBlockOrigin/uBlock-issues/issues/1767), [#1951](https://github.com/uBlockOrigin/uBlock-issues/issues/1951), [#2498](https://github.com/uBlockOrigin/uBlock-issues/issues/2498))
+
 ***
 
 ## Static extended filtering
