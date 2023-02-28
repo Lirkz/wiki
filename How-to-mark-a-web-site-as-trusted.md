@@ -91,7 +91,7 @@ Blocklist mode can be achieved by specifically crafted Regular Expression truste
 
     /^((?!example\.com|different\.example\.net|another\.example\.org).)*$/
 
-With this directive all domains put between `|` characters will be treated as _blocklisted_, and uBO will be enabled only on these pages.
+With this directive all domains separated by `|` characters will be treated as _blocklisted_, and uBO will be enabled only on these pages.
 
 ### Other details
 
