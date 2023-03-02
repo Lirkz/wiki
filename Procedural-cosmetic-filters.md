@@ -52,12 +52,14 @@ A change from the [commit message](https://github.com/gorhill/uBlock/commit/a71b
 
 The `:has(arg)` operator is actually a planned pseudo-class in CSS4, but as of writing no browser supports it (was available in stable channel of Chromium 105+ based browsers after 30 August 2022). Instead of waiting for browser vendors to provide support, uBO provides support for `:has(arg)` as a procedural operator. 
 
+See also: [`:upward()` vs `:has()`](./Filter-Performance#upward-vs-has)
+
 ***
 
 ### `subject:has-text(needle)`
 
 - Description: Select element _subject_ if the text _needle_ is found inside the element _subject_ or its children.
-- Chainable: Yes.
+- Chainable: Yes.See also: [Filter Performance](./Filter-Performance#removeparam-modifier)
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - _needle_: The literal text which must be found, or a literal regular expression. If using a literal regular expression, you can optionally use the `i` and/or `m` flags (version 1.15).
 It is possible to have `:has-text()` match the
@@ -229,6 +231,8 @@ Related discussion:
     - `gorhill.github.io###pcf #a20 b:upward(.fail)`
 
 Introduced in uBO [1.25.3b0](https://github.com/gorhill/uBlock/commit/72bb70056843024b1a31fe1ab9c90bd4e8260ba2). Evolution of [`:nth-ancestor(n)`](#subjectnth-ancestorn) selector.
+
+See also: [`:upward()` vs `:has()`](./Filter-Performance#upward-vs-has)
 
 ***
 
