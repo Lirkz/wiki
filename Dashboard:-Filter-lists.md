@@ -55,7 +55,7 @@ Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github
 If you check this option, uBO will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
 
 Filter lists are automatically updated according to:
-- the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header
+- the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header (After [1.47.3b5](https://github.com/gorhill/uBlock/commit/db118483c91da468d22b943aba07bbcfc2e37427), uBO supports an update period below 1-day). 
 - or the `updateAfter` attribute if found in the list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
 - or every 5 days by default.
 
