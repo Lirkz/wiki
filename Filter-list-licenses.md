@@ -51,6 +51,7 @@ JPN: AdGuard Japanese ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blo
 KOR: List-KR ||[GPL3](https://github.com/List-KR/List-KR/blob/master/LICENSE)||||
 LTU: EasyList Lithuania‎ ||[GPL3](https://github.com/EasyList-Lithuania/easylist_lithuania/blob/master/LICENSE)||||
 LVA: Latvian List‎ |||[CC BY-SA 4.0](https://github.com/Latvian-List/adblock-latvian/blob/master/lists/latvian-list.txt#L8)|||
+MKD: Macedonian adBlock Filters‎ |||||[MIT](https://github.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/blob/master/LICENSE)||||
 NLD: EasyDutch‎ ||[GPL3](https://github.com/EasyDutch-uBO/EasyDutch/blob/main/LICENSE)||||
 NOR, DNK, ISL: Dandelion Sprouts nordiske filtre‎ |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, good intent|||
 POL: Oficjalne Polskie Filtry do AdBlocka, uBlocka Origin i AdGuarda‎ |||[CC BY-NC-SA 4.0](https://github.com/MajkiIT/polish-ads-filter/blob/master/LICENSE)|||
