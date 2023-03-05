@@ -50,6 +50,11 @@
 
 ## Other helpful reference materials
 
+### 2022
+
+- testachats (Belgium): [Le bloqueur de publicité gratuit de Google Chrome ne bloque pratiquement aucune pub](https://www.test-achats.be/hightech/internet/news/adblocker-google-chrome)
+    - Translated excerpt: _"If you're looking for a good free adblocker, choose uBlock Origin. This adblocker achieved the best results in terms of effectiveness in blocking advertisements, privacy, functionality and time saving."_
+
 ### 2021
 
 - DebugBear Blog: ["How do Chrome extensions impact browser performance?"](https://www.debugbear.com/blog/chrome-extension-performance-2021)
