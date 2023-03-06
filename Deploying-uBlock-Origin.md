@@ -16,7 +16,7 @@ Administrators can force specific configurations to deploy uBlock Origin (uBO). 
 
 New standalone settings are getting added as per demand. See ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
-For **Firefox**, refer to Mozilla documentation about ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) (sections about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location)). You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
+For **Firefox**, the setting can be configured in ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) and [Policies](https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson). Refer to Mozilla documentation about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location) for the Native manifests approach. See Mozilla's [policy template](https://github.com/mozilla/policy-templates#3rdparty) for the Policies approch. You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
 
 You must add the `adminSettings` entry in `about:config` for **Firefox-legacy**. The key name is `extensions.ublock0.adminSettings`, and the value is a plain string that must be JSON-parseable.
 
@@ -36,7 +36,7 @@ For example, I created a backup file after having customized uBO and removed eve
       }
     }
 
-Now, the value for `adminSettings` must be a plain string which means we need to encode the above text into a string using `JSON.stringify`. Here is a small utility to help you with this step: <http://raymondhill.net/ublock/adminSetting.html>.
+Now, this json object can be used as the value for `adminSettings`.
 
 ### Modifying the list of stock assets
 
