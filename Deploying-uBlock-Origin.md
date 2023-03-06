@@ -18,13 +18,9 @@ New standalone settings are getting added as per demand. See ["Deploying uBlock 
 
 For **Firefox**, the setting can be configured in ["Native manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) and [Policies](https://support.mozilla.org/en-US/kb/customizing-firefox-using-policiesjson). Refer to Mozilla documentation about ["Managed storage manifests"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) and [its location](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location) for the Native manifests approach. See Mozilla's [policy template](https://github.com/mozilla/policy-templates#3rdparty) for the Policies approch. You can also consult [this specific comment](https://github.com/gorhill/uBlock/issues/2986#issuecomment-364035002) in uBO issue tracker.
 
-You must add the `adminSettings` entry in `about:config` for **Firefox-legacy**. The key name is `extensions.ublock0.adminSettings`, and the value is a plain string that must be JSON-parseable.
-
 For **Chrome**, `adminSettings` must be an entry part of the policy for the extension. See <https://www.chromium.org/administrators/configuring-policy-for-extensions/>.
 
 For managing **Chrome** via **Google Workspace**, you can use [this apps-script](https://github.com/Landsil/apps_script--GoogleWorkspace-API/blob/master/uBlock_Origin_GSuite_policy.gs) to generate a policy JSON that will modify Trusted Sites for all designated users.
-
-This effort is still a work in progress with limitations. For example, merging an admin's settings with the user's settings is impossible because the settings get overwritten. Hopefully, I will address this limitation eventually, as time permits. (See https://github.com/gorhill/uBlock/issues/832#issuecomment-248138558).
 
 The content of `adminSettings` is pretty straightforward: configure uBO as you wish for your users, then create a backup using the _"Backup to file"_ in the _Settings_ pane. Now open this backup file using a text editor, and remove all entries you do not want to overwrite while taking care to end up with a valid JSON file (mind trailing commas, etc.). All the entries left are the ones that will become overwritten on the user's side.
 
@@ -36,7 +32,7 @@ For example, I created a backup file after having customized uBO and removed eve
       }
     }
 
-Now, this json object can be used as the value for `adminSettings`.
+Now, this JSON object can be used as the value for `adminSettings`.
 
 ### Modifying the list of stock assets
 
