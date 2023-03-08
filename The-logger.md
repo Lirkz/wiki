@@ -239,11 +239,11 @@ You can find out from which filter list(s) a static filter originates, by simply
 
 New in [1.47.3b4](https://github.com/gorhill/uBlock/commit/33c437f99f30daa3172b097ba35ae662239f6013).
 
-The logger has the ability to open html/css/script resources from the logger, as a formatted and syntax-highligthed document.
+You can use the logger to view beautified and syntax-highlighted source code of HTML/CSS/JS/xhr resources when clicking the link in a logger entry. This should help save time when investigating solutions to filter issues.
 
 The goal is to make it easier for filter list authors to investigate filter-related issues.
 
-When on the logger, you should click on the arrow at the end of the link, it will automatically open the source code viewer
+When on the logger, you should click on the arrow at the end of the link, it will automatically open the source code viewer.
 
 ![the arrow to open the source code viewer](https://user-images.githubusercontent.com/17685483/223643864-5ae1e2c2-3aae-4e55-a252-6a08799faad7.png)
 
