@@ -5,7 +5,14 @@ See also: [Syntax quirks](./Syntax-quirks)
 - [`removeparam` modifier](#removeparam-modifier)
 
 ## `:upward()` vs `:has()`
-Using `:upward()` instead of `:has()` can be more performant. `:upward()` is fast, it just lookup ancestors -- there is only one parent per element, `:has()` has to lookup descendants, there can be many children per elements.
+
+See:
+- https://reddit.com/r/uBlockOrigin/comments/wxdyfn/comment/ilqyveu/
+- https://reddit.com/r/uBlockOrigin/comments/j4ewg7/comment/g7imasx/
+
+Keep in mind that Chromium now supports `:has()` natively (soon to be enabled by default on Firefox too), so native `:has()` should be more efficient than `:upward()` which needs to Javascript code to function.
+
+Sometimes using `:upward()` instead of `:has()` _might_ be more performant. `:upward()` is fast, it just lookup ancestors -- there is only one parent per element, `:has()` has to lookup descendants, there can be many children per elements.
 
 ```html
 <div class="widget">
@@ -18,7 +25,7 @@ Using `:upward()` instead of `:has()` can be more performant. `:upward()` is fas
     </ul>
 </div>
 ```
-In the case above, it's better to use `##.widget .h-text:has-text(Promoted Links):upward(.widget)` instead of `##.widget:has(.h-text:has-text(Promoted Links))`.
+In the case above, it might be better to use `##.widget .h-text:has-text(Promoted Links):upward(.widget)` instead of `##.widget:has(.h-text:has-text(Promoted Links))`.
 
 ## Narrowing options for network filters
 For all static network filters, ensure that they have as many primary narrowing options as possible, i.e. that they are well targeted. Pure hostname-based filters (such as `||example.com^`) are most optimized memory- and cpu-wise. For non-pure hostname, i.e. pattern-based filters (such as `||example.com/path/to/file`) , ensure they are tokenizable, narrow their target with filter options and/or `domain=` if they are meant to apply only on specific site(s).
@@ -81,41 +88,10 @@ Avoiding `removeparam` from being visited at all is best (by using [narrowing op
 When no pattern is present, uBO will try to derive a pattern from the `removeparam=` value. 
 For example, `*$doc,xhr,removeparam=utm_` will be translated to `utm_$doc,xhr,removeparam=utm_` internally, and consequently uBO will be able to use the `utm` token for that filter. The logger will always output the internally translated version.
 
-It's best to split filters with multiple `removeparam` queries in distinct filters to ensure tokenization can take place:
-
-_Bad_
-```adb
-*clid=$removeparam=/gclid|yclid|fbclid/=
-```
-
-_Good_
-```adb
-gclid=$removeparam=gclid=
-yclid=$removeparam=yclid=
-fbclid=$removeparam=fbclid=
-```
-
-Typically the query parameter of interest will be part of the filter pattern:
-
-_Bad_
-```adb
-||reddit.com^$removeparam=utm_
-
-||youtube.com^$removeparam=/fbclid|gclid/
-```
-
-_Good_
-```adb
-||reddit.com^*utm_$removeparam=utm_
-
-||youtube.com^*fbclid$removeparam=fbclid
-||youtube.com^*gclid$removeparam=gclid
-```
-
-This way uBO will scan the query parameters only when the URL is found to match the targeted query parameters. Mind performance when crafting filters. Your proposed filters forces uBO to scan every URL matching `reddit.com` and `youtube.com`.
-
+Before executing `removeparam` code, uBO does also [one quick check internally](https://github.com/gorhill/uBlock/blob/1.47.4/src/js/pagestore.js#L883) to see if there are query parameters at all, and if none the `removeparam` code is not executed.
 
 Sources:
 - https://github.com/uBlockOrigin/uBlock-issues/issues/760#issuecomment-719952467
 - https://github.com/uBlockOrigin/uBlock-issues/issues/760#issuecomment-726824559
 - https://github.com/uBlockOrigin/uBlock-issues/issues/760#issuecomment-734440655
+- https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5207364
