@@ -63,6 +63,7 @@ Hold the <kbd>Shift</kbd> key while clicking the "Open the logger" icon to toggl
 - [Export dialog](#export-dialog)
 - [Settings dialog](#settings-dialog)
 - [Finding from which list(s) a static filter originates](#finding-from-which-lists-a-static-filter-originates)
+- [Source code viewer](#source-code-viewer)
 - [Creating filters](#creating-filters)
     - [Dynamic URL filtering rules](#dynamic-url-filtering-rules)
     - [Static network filters](#static-network-filters)
@@ -231,6 +232,22 @@ You can find out from which filter list(s) a static filter originates, by simply
 
 - Clicking on filter list name will open assets viewer with content of that list.
 - Home icon next to the filter name will bring you to the support site for that list.
+
+***
+
+#### Source code viewer
+
+New in [1.47.3b4](https://github.com/gorhill/uBlock/commit/33c437f99f30daa3172b097ba35ae662239f6013).
+
+The logger has the ability to open html/css/script resources from the logger, as a formatted and syntax-highligthed document.
+
+The goal is to make it easier for filter list authors to investigate filter-related issues.
+
+When on the logger, you should click on the arrow at the end of the link, it will automatically open the source code viewer
+
+![the arrow to open the source code viewer](https://user-images.githubusercontent.com/17685483/223643864-5ae1e2c2-3aae-4e55-a252-6a08799faad7.png)
+
+![source code viewer](https://user-images.githubusercontent.com/17685483/223644130-3fdde8bc-ae36-4140-bbec-ae0e6d5d8edd.png)
 
 ***
 
