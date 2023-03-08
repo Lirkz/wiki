@@ -17,12 +17,12 @@ The default ruleset when uBO is freshly installed:
 ```
 no-large-media: behind-the-scene false
 behind-the-scene * * noop
-behind-the-scene * image noop
-behind-the-scene * 3p noop
-behind-the-scene * inline-script noop
 behind-the-scene * 1p-script noop
 behind-the-scene * 3p-script noop
 behind-the-scene * 3p-frame noop
+behind-the-scene * 3p noop
+behind-the-scene * image noop
+behind-the-scene * inline-script noop
 ```
 
 Additionally, Firefox has also the following rule:
