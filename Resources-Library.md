@@ -73,7 +73,7 @@
 - `3x2.png`
 - `32x32.png`
 - `noop.css`
-- `noop.html`
+- `noop.html` (`noopframe`)
 - `noop.js`
 - `noop.txt`
 - `noop-0.1s.mp3`
