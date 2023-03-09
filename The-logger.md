@@ -277,6 +277,17 @@ This dialog will assist you in creating static filters compatible with [ABP filt
 
 See [_"Overview of uBlock's network filtering engine: details"_](./Overview-of-uBlock's-network-filtering-engine:-details) for more details about where static filtering fits in the overall filtering engine.
 
+***
+
 ##### Temporary exception filters
 
-[Option](./Advanced-settings#filterauthormode) for advanced users.
+The button to toggle the "exceptor" on/off is labeled `#@#`:
+
+![filtering tools dialog](https://user-images.githubusercontent.com/886325/69076705-4fb41300-0a34-11ea-8e9a-463b9a1d29d8.png)
+
+Prior to [1.45.3rc2/1.46](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c), the feature worked only for static extended filters (i.e. cosmetic, scriptlet & HTML filters) and was hidden under an [[advanced setting|Advanced-settings#filterauthormode]].  
+It now works with all static filters (including network filters) and open for regular use.
+
+The temporary exceptions will be disabled when closing the logger (after 1.45.3rc2/1.46) or by manually toggling them off.
+
+**Important** - When toggling on/off a temporary exception, filter lists are now fully reloaded and this means **there might be a perceptible delay** when adding/removing temporary exceptions. At this point, this is considered to be an acceptable side-effect just to bring the ability to easily create temporary exception for network filters.
