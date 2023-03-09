@@ -29,6 +29,7 @@
 - [no-xhr-if](#no-xhr-ifjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
+- [href-from-text](#href-from-textjs-)
 - [cookie-remover](#cookie-removerjs-)
 - [disable-newtab-links](#disable-newtab-linksjs-)
 - [window-close-if](#window-close-ifjs-)
@@ -509,7 +510,7 @@ Examples:
 
 Deprecated by [`:remove-attr()`](./Static-filter-syntax#subjectremove-attrarg-subjectremove-classarg)
 
-**Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
+**Filter authors must use the new operator instead of the `+js()` counterpart.**
 
 Removes attribute(s) from DOM tree node(s). By default will run only once when the initial HTML document has been completely loaded and parsed but sub-resources such as scripts, images, stylesheets and frames are still loading.
 
@@ -535,7 +536,7 @@ Examples:
 
 Deprecated by [`:remove-class()`](./Static-filter-syntax#subjectremove-attrarg-subjectremove-classarg)
 
-**Once the next stable release is widespread, filter authors must use the new operator instead of the `+js()` counterpart.**
+**Filter authors must use the new operator instead of the `+js()` counterpart.**
 
 New in [1.26.0](https://github.com/gorhill/uBlock/commit/49d9929191461cc8534ebf5707d94a5970945bde).
 
@@ -551,6 +552,30 @@ Parameters:
 Examples:
 - `danskebank.fi##+js(rc, cookie-consent-banner-open, html)` [Picture of the element](https://images2.imgbox.com/68/2b/tdWI9hBG_o.png)
 
+
+***
+
+### href-from-text.js [↪](https://github.com/gorhill/uBlock/blob/e123256eaf64be19f81eba123970db07b45eb0ae/assets/resources/scriptlets.js#L1845)
+
+#### _Experimental_
+
+New in [1.47.5b4](https://github.com/gorhill/uBlock/commit/e123256eaf64be19f81eba123970db07b45eb0ae)
+
+Usage:
+```adb
+example.com##+js(href-from-text, a[href^="/tracker-link?to="])
+```
+
+The above scriptlet will find all elements matching the selector
+passed as 1st argument, and replace the `href` attribute with the
+text content of the element, if all the following conditions are
+met:
+
+- The element is a link (`a`) element
+- The link element has an existing `href` attribute
+- The text content of the element is a valid `https`-based URL
+
+Solves [uBlockOrigin/uBlock-issues#2531](https://github.com/uBlockOrigin/uBlock-issues/issues/2531).
 
 ***
 
