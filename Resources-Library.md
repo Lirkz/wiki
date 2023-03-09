@@ -29,7 +29,7 @@
 - [no-xhr-if](#no-xhr-ifjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
-- [href-from-text](#href-from-textjs-)
+- [href-sanitizer](#href-sanitizer-)
 - [cookie-remover](#cookie-removerjs-)
 - [disable-newtab-links](#disable-newtab-linksjs-)
 - [window-close-if](#window-close-ifjs-)
@@ -555,7 +555,7 @@ Examples:
 
 ***
 
-### href-from-text.js [↪](https://github.com/gorhill/uBlock/blob/e123256eaf64be19f81eba123970db07b45eb0ae/assets/resources/scriptlets.js#L1845)
+### href-sanitizer.js [↪](https://github.com/gorhill/uBlock/blob/d7b7dea7faaf17486d5c54454852c4a117f50fd1/assets/resources/scriptlets.js#L1845)
 
 #### _Experimental_
 
@@ -563,7 +563,7 @@ New in [1.47.5b4](https://github.com/gorhill/uBlock/commit/e123256eaf64be19f81eb
 
 Usage:
 ```adb
-example.com##+js(href-from-text, a[href^="/tracker-link?to="])
+example.com##+js(href-sanitizer, a[href^="/tracker-link?to="])
 ```
 
 The above scriptlet will find all elements matching the selector
