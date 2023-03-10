@@ -564,6 +564,8 @@ New in [1.47.5b4](https://github.com/gorhill/uBlock/commit/e123256eaf64be19f81eb
 Usage:
 ```adb
 example.com##+js(href-sanitizer, a[href^="/tracker-link?to="])
+example.com##+js(href-sanitizer, a[href^="/go?to="]:not([title]))
+example.com##+js(href-sanitizer, a[href^="/go?to="][title], [title])
 ```
 
 The above scriptlet will find all elements matching the selector
@@ -574,6 +576,8 @@ met:
 - The element is a link (`a`) element
 - The link element has an existing `href` attribute
 - The text content of the element is a valid `https`-based URL
+
+The second argument is the attribute from which to extract the text to be used for the `href` attribute of the link. If the second attribute is absent, the text content of the element will be used.
 
 Solves [uBlockOrigin/uBlock-issues#2531](https://github.com/uBlockOrigin/uBlock-issues/issues/2531).
 
