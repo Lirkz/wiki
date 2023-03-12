@@ -1,5 +1,48 @@
 [[Back to Wiki home|Home]]
 
+<details><summary>Index:</summary>
+
+- Current
+  - [allowGenericProceduralFilters](#allowGenericProceduralFilters)
+  - [assetFetchTimeout](#assetFetchTimeout)
+  - [autoCommentFilterTemplate](#autoCommentFilterTemplate)
+  - [autoUpdateAssetFetchPeriod](#autoUpdateAssetFetchPeriod)
+  - [autoUpdateDelayAfterLaunch](#autoUpdateDelayAfterLaunch)
+  - [autoUpdatePeriod](#autoUpdatePeriod)
+  - [benchmarkDatasetURL](#benchmarkDatasetURL)
+  - [blockingProfiles](#blockingProfiles)
+  - [cacheControlForFirefox1376932](#cacheControlForFirefox1376932)
+  - [cacheStorageAPI](#cacheStorageAPI)
+  - [cacheStorageCompression](#cacheStorageCompression)
+  - [cloudStorageCompression](#cloudStorageCompression)
+  - [cnameIgnore1stParty](#cnameIgnore1stParty)
+  - [cnameIgnoreExceptions](#cnameIgnoreExceptions)
+  - [cnameIgnoreList](#cnameIgnoreList)
+  - [cnameIgnoreRootDocument](#cnameIgnoreRootDocument)
+  - [cnameMaxTTL](#cnameMaxTTL)
+  - [cnameReplayFullURL](#cnameReplayFullURL)
+  - [cnameUncloakProxied](#cnameUncloakProxied)
+  - [consoleLogLevel](#consoleLogLevel)
+  - [debugScriptlets/debugScriptletInjector](#debugScriptlets)
+  - [disableWebAssembly](#disableWebAssembly)
+  - [extensionUpdateForceReload](#extensionUpdateForceReload)
+  - [filterAuthorMode](#filterAuthorMode)
+  - [loggerPopupType](#loggerPopupType)
+  - [manualUpdateAssetFetchPeriod](#manualUpdateAssetFetchPeriod)
+  - [modifyWebextFlavor](#modifyWebextFlavor)
+  - [popupFontSize](#popupFontSize)
+  - [popupPanelHeightMode](#popupPanelHeightMode)
+  - [requestJournalProcessPeriod](#requestJournalProcessPeriod)
+  - [selfieAfter](#selfieAfter)
+  - [strictBlockingBypassDuration](#strictBlockingBypassDuration)
+  - [uiPopupConfig](#uiPopupConfig)
+  - [uiStyles](#uiStyles)
+  - [updateAssetBypassBrowserCache](#updateAssetBypassBrowserCache)
+  - [userResourcesLocation](#userResourcesLocation)
+- [Removed](#removed)
+</details>
+
+
 ***
 
 The _"Advanced settings"_ page contains settings that are experimental, or that are of interest to advanced users who want more control over how uBlock Origin (uBO) behaves internally. There is no warranty those settings or any combination of them will work, they may change or be removed at any time. If some customizations in there are found to interfere negatively, it's for the user to address. Some of these settings are left undocumented, on purpose -- do not open issues about these.
@@ -299,18 +342,6 @@ Replaying only the origin part is meant to lower undue breakage and improve perf
 
 ***
 
-#### ~~`cnameUncloak`~~
-
-[Removed in 1.34.0](https://github.com/gorhill/uBlock/commit/1c3b45f75d0f84d68abb51b15bbdc043464ee3e0), deprecated in favor of [_"Uncloak canonical names"_](./Dashboard:-Settings#uncloak-canonical-names) preference in Dashboard/Settings pane.
-
-Introduced in [1.25.0](https://github.com/gorhill/uBlock/commit/91e702cebbe52137f59a94f55e46d31f95eb98b9).
-
-Firefox only.
-
-Whether to enable CNAME-uncloaking feature.
-
-***
-
 #### `cnameUncloakProxied`
 
 Default: `false`.
@@ -394,18 +425,6 @@ New in [1.47.5b7](https://github.com/gorhill/uBlock/commit/e2dd008388340a3cc18d5
 
 After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec), the ability to point-and-click to create _allow_ [rules](./Dynamic-filtering) from the [popup panel](./Quick-guide:-popup-user-interface) is now disabled by default.  
 Enabling this advanced setting restores its old functionality. Alternatively, you can tap twice on <kbd>Ctrl</kbd> to access _allow_ rules only _**temporarily**_.
-
-***
-
-#### ~~`ignoreRedirectFilters`~~
-
-Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by filter exception.
-
-***
-
-#### ~~`ignoreScriptInjectFilters`~~
-
-Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by filter exception.
 
 ***
 
@@ -503,6 +522,91 @@ Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypa
 
 ***
 
+#### `uiPopupConfig`
+
+Default: `unset`, was `undocumented` before [1.39.2](https://github.com/gorhill/uBlock/commit/395a4e36a939907982d3768c2d9eabb8aca8cbd1).
+
+Introduced in [1.27.0](https://github.com/gorhill/uBlock/commit/db9c32185538c0943cb3f52a037bd11f6f60cbf9).
+
+Override uBO popup interface configuration.
+
+The value can be one or more space-separated tokens:
+
+- `+captions`/`-captions`: enable/disable captions
+- `+no-popups`/`-no-popups`: enable/disable no-popups switch
+- `+logger`/`-logger`: new in [1.39.1b1](https://github.com/gorhill/uBlock/commit/1408422cbaa8d1efc0832b6cf09595fcc20369d7), enable/disable the logger button
+
+***
+
+#### `uiStyles`
+
+Default: `unset`.
+
+uBO [1.28.0](https://github.com/gorhill/uBlock/commit/9f7e5b621dc5e7a3e0fed0daa57d922f1ec56d80) and above.
+
+Allow bypassing uBO's default CSS styles in case they are causing issues to specific users. It is the responsibility of the user to ensure the value of `uiStyles` contains valid CSS property declarations. uBO will assign the value to `document.body.style.cssText`.
+
+For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface. Another example is [issue #1254](https://github.com/uBlockOrigin/uBlock-issues/issues/1254) wherein [uBO v1.30.0](https://github.com/gorhill/uBlock/commit/1cdffea6186af8965d722575ed8fa74b0a6e193c) will be possible to adjust width of popup panels.
+
+***
+
+#### `updateAssetBypassBrowserCache`
+
+Default: `false` 
+
+With [1.22.0](https://github.com/gorhill/uBlock/commit/048bfd251c9b8eeafce020b4f894d736044d6a6f) and above.
+
+If set to `true`, uBO will ensure the browser cache is bypassed when manually<sup>[1.27.0](https://github.com/gorhill/uBlock/commit/4687c60bf9cec5b68e5a007d740af93f4119a79e)</sup> fetching a remote resource more often than every hour.
+
+This is for the convenience of filter list maintainers who may want to test the latest version of their lists when fetched from their remote location.
+
+***
+
+#### `userResourcesLocation` 
+
+Default: `unset`.
+
+One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
+
+uBO expects valid content such as can be seen in [scriptlets.js](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js), anything else will lead to undefined results.
+
+Any duplicate as per token will result in the previous resource being replaced by the latter one. The resource files are loaded in order of URL appearance, and uBO stock resource file is always loaded first.
+
+Additional resources will be updated at the same time the built-in resource file is updated. Purging the cache of 'uBlock filters' will also purge the cache of the built-in resource file -- and hence force a reload of user-specified resources if any.
+
+The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0).
+
+***
+***
+
+##### Removed
+
+<details><summary>Removed settings:</summary>
+
+#### ~~`cnameUncloak`~~
+
+[Removed in 1.34.0](https://github.com/gorhill/uBlock/commit/1c3b45f75d0f84d68abb51b15bbdc043464ee3e0), deprecated in favor of [_"Uncloak canonical names"_](./Dashboard:-Settings#uncloak-canonical-names) preference in Dashboard/Settings pane.
+
+Introduced in [1.25.0](https://github.com/gorhill/uBlock/commit/91e702cebbe52137f59a94f55e46d31f95eb98b9).
+
+Firefox only.
+
+Whether to enable CNAME-uncloaking feature.
+
+***
+
+#### ~~`ignoreRedirectFilters`~~
+
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/f5b453fae3c77363367cdf9494e90fe276042a72). Can be disabled by filter exception.
+
+***
+
+#### ~~`ignoreScriptInjectFilters`~~
+
+Removed in [1.35](https://github.com/gorhill/uBlock/commit/bc8c1d00ad728e854b3caf35231d808515058d3f). Can be disabled by filter exception.
+
+***
+
 #### ~~`suspendTabsUntilReady`~~
 <span name="suspendtabsuntilready-experimental"></span>
 
@@ -555,39 +659,13 @@ Possible values:
 
 ***
 
-#### `uiPopupConfig`
+#### ~~`uiTheme`~~
 
-Default: `unset`, was `undocumented` before [1.39.2](https://github.com/gorhill/uBlock/commit/395a4e36a939907982d3768c2d9eabb8aca8cbd1).
-
-Introduced in [1.27.0](https://github.com/gorhill/uBlock/commit/db9c32185538c0943cb3f52a037bd11f6f60cbf9).
-
-Override uBO popup interface configuration.
-
-The value can be one or more space-separated tokens:
-
-- `+captions`/`-captions`: enable/disable captions
-- `+no-popups`/`-no-popups`: enable/disable no-popups switch
-- `+logger`/`-logger`: new in [1.39.1b1](https://github.com/gorhill/uBlock/commit/1408422cbaa8d1efc0832b6cf09595fcc20369d7), enable/disable the logger button
-
-***
-
-#### `uiStyles`
+Removed in favor of a [[regular setting|Dashboard:-Settings#theme]] in [1.40.9b8](https://github.com/gorhill/uBlock/commit/ecb73d2ff526b48679b8e62ee4ff6bf963fc0fdb).
 
 Default: `unset`.
 
-uBO [1.28.0](https://github.com/gorhill/uBlock/commit/9f7e5b621dc5e7a3e0fed0daa57d922f1ec56d80) and above.
-
-Allow bypassing uBO's default CSS styles in case they are causing issues to specific users. It is the responsibility of the user to ensure the value of `uiStyles` contains valid CSS property declarations. uBO will assign the value to `document.body.style.cssText`.
-
-For example, in the case of the [issue #1044](https://github.com/uBlockOrigin/uBlock-issues/issues/1044), one could set `uiStyles` to `font-family: sans-serif` to force uBO to the system font for its user interface. Another example is [issue #1254](https://github.com/uBlockOrigin/uBlock-issues/issues/1254) wherein [uBO v1.30.0](https://github.com/gorhill/uBlock/commit/1cdffea6186af8965d722575ed8fa74b0a6e193c) will be possible to adjust width of popup panels.
-
-***
-
-#### `uiTheme`
-
-Default: `unset`.
-
-uBO [1.30.1b3](https://github.com/gorhill/uBlock/commit/e3a6d8465f19f4ef5d84ceddb9570644cf4fc0a3) to [1.40.9b8](https://github.com/gorhill/uBlock/commit/ecb73d2ff526b48679b8e62ee4ff6bf963fc0fdb).
+uBO [1.30.1b3](https://github.com/gorhill/uBlock/commit/e3a6d8465f19f4ef5d84ceddb9570644cf4fc0a3) to 1.40.9b7.
 
 For development purposes only! DO NOT create issues about this feature!  
 Locked to dev build only in [1.31.3b5](https://github.com/gorhill/uBlock/commit/9aef41738b66b25028403d8e0f25f7fb4deafb0e).
@@ -600,30 +678,4 @@ Possible values:
 - `light`: force light theme
 - `dark`: force dark theme
 
-***
-
-#### `updateAssetBypassBrowserCache`
-
-Default: `false` 
-
-With [1.22.0](https://github.com/gorhill/uBlock/commit/048bfd251c9b8eeafce020b4f894d736044d6a6f) and above.
-
-If set to `true`, uBO will ensure the browser cache is bypassed when manually<sup>[1.27.0](https://github.com/gorhill/uBlock/commit/4687c60bf9cec5b68e5a007d740af93f4119a79e)</sup> fetching a remote resource more often than every hour.
-
-This is for the convenience of filter list maintainers who may want to test the latest version of their lists when fetched from their remote location.
-
-***
-
-#### `userResourcesLocation` 
-
-Default: `unset`.
-
-One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
-
-uBO expects valid content such as can be seen in [scriptlets.js](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js), anything else will lead to undefined results.
-
-Any duplicate as per token will result in the previous resource being replaced by the latter one. The resource files are loaded in order of URL appearance, and uBO stock resource file is always loaded first.
-
-Additional resources will be updated at the same time the built-in resource file is updated. Purging the cache of 'uBlock filters' will also purge the cache of the built-in resource file -- and hence force a reload of user-specified resources if any.
-
-The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0).
+</details>
