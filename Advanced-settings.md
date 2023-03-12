@@ -390,6 +390,8 @@ The created exceptions are temporary and will be lost when closing the logger (a
 
 New in [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c) - When toggling on/off a temporary exception, filter lists are now fully reloaded and this means there might be a perceptible delay when adding/removing temporary exceptions. At this point this is considered to be an acceptable side-effect just to bring the ability to easily create temporary exception for network filters.</details>
 
+New in [1.47.5b7](https://github.com/gorhill/uBlock/commit/e2dd008388340a3cc18d57c959ee9d3d6ace6d02) - when set to `true` opening the context menu on any link now shows a new "[View source...](https://github.com/uBlockOrigin/uBlock-issues/wiki/The-logger#source-code-viewer)" item.
+
 After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec), the ability to point-and-click to create _allow_ [rules](./Dynamic-filtering) from the [popup panel](./Quick-guide:-popup-user-interface) is now disabled by default.  
 Enabling this advanced setting restores its old functionality. Alternatively, you can tap twice on <kbd>Ctrl</kbd> to access _allow_ rules only _**temporarily**_.
 
