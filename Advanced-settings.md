@@ -405,6 +405,11 @@ If set to `true`, restores update behavior from before [1.22.3b ("Prevent uBO fr
 
 Default: `false`.
 
+New in [1.47.5b7](https://github.com/gorhill/uBlock/commit/e2dd008388340a3cc18d57c959ee9d3d6ace6d02) - when set to `true` opening the context menu now shows a "_[View source code...](https://github.com/uBlockOrigin/uBlock-issues/wiki/The-logger#source-code-viewer)_" option.
+
+After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec), the ability to point-and-click to create _allow_ [rules](./Dynamic-filtering) from the [popup panel](./Quick-guide:-popup-user-interface) is now disabled by default.  
+Enabling this advanced setting restores its old functionality. Alternatively, you can tap twice on <kbd>Ctrl</kbd> to access _allow_ rules only _**temporarily**_.
+
 <details><summary>1.23.0-1.45.3rc1.</summary>
 
 New in [1.23.0](https://github.com/gorhill/uBlock/commit/59c9a34d34a737f6bb48c4130c65f4fe0fa73806). Moved outside advanced settings in [1.45.3rc2/1.46](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c).
@@ -420,11 +425,6 @@ The button to toggle on/off temporary exception filter is labeled `#@#`:
 The created exceptions are temporary and will be lost when closing the logger (after [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c)) or manually toggling off the exception filters.
 
 New in [1.45.3rc2](https://github.com/gorhill/uBlock/commit/a91781a4959c0381c8ab3230545e4e0f579d4a2c) - When toggling on/off a temporary exception, filter lists are now fully reloaded and this means there might be a perceptible delay when adding/removing temporary exceptions. At this point this is considered to be an acceptable side-effect just to bring the ability to easily create temporary exception for network filters.</details>
-
-New in [1.47.5b7](https://github.com/gorhill/uBlock/commit/e2dd008388340a3cc18d57c959ee9d3d6ace6d02) - when set to `true` opening the context menu on any link now shows a new "[View source...](https://github.com/uBlockOrigin/uBlock-issues/wiki/The-logger#source-code-viewer)" item.
-
-After [1.28.0](https://github.com/gorhill/uBlock/commit/162e53727099ccb0a088cc1399915fb23d9b4fec), the ability to point-and-click to create _allow_ [rules](./Dynamic-filtering) from the [popup panel](./Quick-guide:-popup-user-interface) is now disabled by default.  
-Enabling this advanced setting restores its old functionality. Alternatively, you can tap twice on <kbd>Ctrl</kbd> to access _allow_ rules only _**temporarily**_.
 
 ***
 
