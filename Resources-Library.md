@@ -334,6 +334,17 @@ Examples:
 
 New in [1.44.5b6](https://github.com/gorhill/uBlock/commit/115f7bb68704c4fede763cbc2d07f1caf041274f#diff-30b28769623e5478a0f68519eda037164484cfb444cb5a8e48518fa7bb32e658)
 
+Sometimes sites serve real video content and video ads all in one place inside `.m3u8` files.
+You can use `m3u-prune` to remove those ad segments.
+
+Examples:
+  - `player.theplatform.com##+js(m3u-prune, tvessaiprod.nbcuni.com, /theplatform\.com\/.*?\.m3u8/)`
+  - `mephimtv.cc##+js(m3u-prune, /#EXT-X-DISCONTINUITY.{1\,100}#EXT-X-DISCONTINUITY/gm, mixed.m3u8)`
+
+If the first argument is a regex with multine flag set, the scriptlet will execute the regex against the whole text, and remove matching text from the whole text (New in [1.47.5b10](https://github.com/gorhill/uBlock/commit/b3821e6869d45b5697c44922ee7242e35e11a29d)).
+
+If the matching text does not contain whole lines, the text won't be removed, i.e. it is not allowed to remove only part of a line.
+
 ***
 
 ### noeval.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/noeval.js)
