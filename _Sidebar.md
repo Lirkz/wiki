@@ -25,6 +25,7 @@
     - [_Trusted sites_ pane](./Dashboard:-Trusted-sites)
         - [How to mark a web site as trusted](./How-to-mark-a-web-site-as-trusted)
     - [Keyboard shortcuts](./Keyboard-shortcuts)
+- [Code viewer](./Code-viewer)
 - [The logger](./The-logger)
     - [DOM inspector](./DOM-inspector)
 - [Element picker](./Element-picker)
