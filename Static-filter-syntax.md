@@ -108,6 +108,7 @@ For the time being, only a single token is supported in a `!#if` directive (can 
 | ----- | ----- | ------------- |
 | `ext_abp`                | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
 | `ext_ublock`             | **true**  |
+| `ext_devbuild`           | _true_ on the development build | [1.48.1b1](https://github.com/gorhill/uBlock/commit/464b54bbc6432fa07c85820b37f72b77f0855638) |
 | `env_chromium`           | _true_ on all Chromium-based browsers |
 | `env_edge`               | _true_ on Edge (legacy) |
 | `env_firefox`            | _true_ on Firefox |
