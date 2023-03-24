@@ -21,6 +21,7 @@
 - [addEventListener-defuser](#addeventlistener-defuserjs-) _(aeld)_
 - [addEventListener-logger](#addeventlistener-loggerjs-) _(aell)_
 - [set-constant](#set-constantjs-) _(set)_
+- [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
 - [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
 - [nano-setInterval-booster](#nano-setinterval-boosterjs-) _(nano-sib)_
@@ -249,6 +250,22 @@ Read more at https://www.w3.org/TR/CSP2/#delivery-html-meta-element
 Parameters:
  - required, valid Content Security Policy directive
 
+
+***
+
+### call-nothrow.js [↪](https://github.com/gorhill/uBlock/blob/e93117cbb607472a830e1c0653dfbddde4c965fc/assets/resources/scriptlets.js#L1984)
+
+New in [1.48.1b0](https://github.com/gorhill/uBlock/commit/e93117cbb607472a830e1c0653dfbddde4c965fc).
+
+Prevents a call to an existing function from throwing an exception.
+
+The exception will be caught by the scriptlet and neutralized. The first argument must be a reference to a function call. At the moment, the function call must exist at the time the scriptlet is called.
+
+Parameters:
+ - required, _a reference to a function call_
+
+Examples:
+ - `example.com##+js(call-nothrow, Object.defineProperty)`
 
 ***
 
