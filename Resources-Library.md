@@ -104,7 +104,6 @@
 - [scorecardresearch_beacon.js](#scorecardresearch_beaconjs-)
 - [outbrain-widget.js](#outbrain-widgetjs-)
 - [hd-main.js](#hd-mainjs-)
-- [twitch-videoad.js](#twitch-videoadjs-)
 
 ***
 
@@ -853,15 +852,8 @@ New in 1.41.0
 
 Prebid-ads shim. `canRunAds`/`isAdBlockActive`?
 
-### ~gpt-defuser.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L700)
-Deprecated, Convenience, sets static properties (`_resetGPT`, `resetGPT`, `resetAndLoadGPTRecovery`, `_resetAndLoadGPTRecovery`, `setupGPT`, `setupGPTuo`)
-
 ### adfly-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L805)
 Defuses anti-blocker on adfly shortened links.
-
-### damoh-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L886)
-Fix for disappearing videos on chip.de
-
 
 ***
 
@@ -953,10 +945,6 @@ New in [1.27.0](https://github.com/gorhill/uBlock/commit/f842ab6d3c1cf0394f95d27
 
 Removed in [1.29.0](https://github.com/gorhill/uBlock/commit/7c22a312945a2bff41a2b5696a7e54f1c4c01cf2).
 
-### twitch-videoad.js [↪](https://github.com/gorhill/uBlock/blob/cc0008df57459aaeae9305a03a887a3c4c55675b/assets/resources/scriptlets.js#L1562)
-Twitch stream embedded ads bypasser
-
-
 ***
 
 ## Other
@@ -968,9 +956,6 @@ Deprecated by general purpose scriptlets / outdated (please move to proper secti
 Deprecated, addEventListener-defuser
 
 ***
-
-### upmanager-defuser.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L777)
-Deprecated, sets static properties (`upManager`)
 
 ### chartbeat.js /
 ### ~static.chartbeat.com/chartbeat.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/src/web_accessible_resources/chartbeat.js)
