@@ -257,6 +257,19 @@ Parameters:
 New in [1.48.1b0](https://github.com/gorhill/uBlock/commit/e93117cbb607472a830e1c0653dfbddde4c965fc).
 
 Prevents a call to an existing function from throwing an exception.
+It encloses existing functions in this block and ignores the exception:
+```js
+try {
+ [existing function]
+}
+catch() {
+ [ignore when throws]
+}
+
+```
+
+It will return `undefined` because returning variable is never set.
+
 
 The exception will be caught by the scriptlet and neutralized. The first argument must be a reference to a function call. At the moment, the function call must exist at the time the scriptlet is called.
 
