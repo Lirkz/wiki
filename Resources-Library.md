@@ -19,7 +19,7 @@
 - [abort-on-property-write](#abort-on-property-writejs-) _(aopw)_
 - [abort-on-stack-trace](#abort-on-stack-tracejs-) _(aost)_
 - [addEventListener-defuser](#addeventlistener-defuserjs-) _(aeld)_
-- [addEventListener-logger](#addeventlistener-loggerjs-) _(aell)_
+- [~addEventListener-logger~](#addeventlistener-loggerjs-) _(~aell~)_
 - [set-constant](#set-constantjs-) _(set)_
 - [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
@@ -219,10 +219,44 @@ Examples:
 
 ***
 
-### aell.js /
-### addEventListener-logger.js [↪](https://github.com/gorhill/uBlock/blob/07d3c96261656e44f674550fbde50da8f6a15acc/assets/resources/scriptlets.js#L352)
+### ~aell.js~ /
+### ~addEventListener-logger.js~ [↪](https://github.com/gorhill/uBlock/blob/07d3c96261656e44f674550fbde50da8f6a15acc/assets/resources/scriptlets.js#L352)
+Removed in [1.48.1b3](https://github.com/gorhill/uBlock/commit/439951824af608bd445ec458f837fa39f366d75f).
+
 Logs to the console event listeners created on page.
 
+The logging of `addEventListener()` calls can now be done with the `addEventListenerDefuser` scriptlet, which now supports the following named arguments:
+
+- "type": the event type to match. Default to '', i.e. _match-all_.
+
+- "pattern": the pattern to match against the handler argument. Default to '', i.e. _match-all_.
+
+- "log": an integer value telling when to log:
+  - 1: log only when both type and pattern matches, i.e. when a call to `addEventListener()` is defused
+  - 2: log when either the type or pattern matches
+  - 3: log all calls to `addEventListener()`
+
+- "debug": an integer value telling when to break into the debugger, useful to inspect the debugger's call stack.
+  - 1: break into the debugger when both type and pattern match, so effectively when defusing is taking place.
+  - 2: break into the debugger when either type or pattern matches.
+
+The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments.
+
+Obviously, do not use "log" or "debug" in any filter list, these are investigative tools for filter list authors.
+
+Examples of usage using named arguments:
+
+ - `wikipedia.org##+js(aeld, { "type": "/mouse/", "pattern": "/.^/", "log": 2 })`
+
+Above filter will log calls to `addEventListener()` which have the pattern "mouse" in the event type (so "mouseover", "mouseout", etc.) without defusing any of them (because pattern can't match _anything_).
+
+ - `wikipedia.org##+js(aeld, { "type": "/.^/", "log": 2 })`
+
+Above filter will log all calls without defusing any of them (because type can't match _anything_)
+
+ - `wikipedia.org##+js(aeld, { "log": 1 })`
+
+Above filter will log and defuse _all_ calls to `addEventListener()`.
 
 ***
 
