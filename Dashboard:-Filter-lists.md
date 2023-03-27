@@ -87,7 +87,7 @@ If this behavior is undesirable, disable the setting to prevent uBO from suspend
 
 This setting gives the option to potentially speed up page load at launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
 
-This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers, disabling the setting will prevent the browser from reloading tabs in which there was network activity while being in a suspended state at launch.
+This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded.
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
