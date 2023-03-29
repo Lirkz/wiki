@@ -24,13 +24,13 @@ When you launch uBO, it needs to load all settings and filter lists in memory to
 
 ---
 
-A yellowish toolbar icon badge means some network requests were fired by the browser while uBO was not ready to filter properly, potentially leading to ads/trackers/etc. not being filtered in some of the already opened webpages:
+A yellowish toolbar icon badge `!` means some network requests were fired by the browser while uBO was not ready to filter properly, potentially leading to ads/trackers/etc. not being filtered in some of the already opened webpages:
 
 ![Screenshot from 2023-03-18 12-25-30](https://user-images.githubusercontent.com/585534/226121582-ce77b8ef-be4f-4214-97c9-a11497045cef.png)
 
 ---
 
-The yellowish badge will persist once uBO is ready to filter properly, to remind you that the current webpage was not properly filtered:
+The yellowish badge `!` will persist once uBO is ready to filter properly, to remind you that the current webpage was not properly filtered:
 
 ![Screenshot from 2023-03-18 11-58-36](https://user-images.githubusercontent.com/585534/226121627-27b1ae78-58a0-454a-aa74-658944197096.png)
 
