@@ -1,6 +1,8 @@
-The toolbar icon of uBlock Origin (uBO) informs you about the state of uBO and what it is doing.
+[[Back to Wiki home|Home]]
 
----
+***
+
+The toolbar icon of uBlock Origin (uBO) informs you about the state of uBO and what it is doing.
 
 The normal state of uBO is to be enabled and fully ready to filter, which is represented by the usual uBO icon:
 
