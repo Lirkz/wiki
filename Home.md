@@ -10,6 +10,7 @@
     - [Microsoft Edge Add-ons ↗︎](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
     - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install),
     - [Source (for developers)](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
+- [The toolbar icon](./Toolbar-icon)
 - [The popup user interface](./Quick-guide:-popup-user-interface)
     - [The per-site switches](./Per-site-switches)
 - [The context menu](./The-context-menu)
