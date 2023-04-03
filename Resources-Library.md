@@ -64,7 +64,6 @@
 - [popads](#popadsjs-)
 - [prebid-ads](#prebid-adsjs-)
 - [adfly-defuser](#adfly-defuserjs-)
-- [damoh-defuser](#damoh-defuserjs-)
 
 ***
 
