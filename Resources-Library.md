@@ -140,6 +140,20 @@ Examples:
  - `tichyseinblick.de##+js(acis, Math, /\}\s*\(.*?\b(self|this|window)\b.*?\)/)`
 
 
+Starting with [1.48.5b4](https://github.com/gorhill/uBlock/commit/edbe96a4010cff59a37c2aa2ec0fb89c48c913f9), you can use the logging abilites.
+
+To enable logging, use the JSON approach to pass parameters to `acs` scriptlet. Example:
+```adb
+example.com##+js(acs, { "target": "document.oncontextmenu", "log": true })
+```
+
+Whereas "target", "needle", and "context" correspond to their respective positional argument. Using JSON form to pass parameters allows to specify extra paramters to facilitate debugging of that scriptlet:
+
+- `"log": true` => output useful information at the dev console.
+- `"debug": true` => break at key locations in the scriptlet.
+
+The added logging/debugging capabilities work only in the **dev build** of uBO or if the advanced setting `filterAuthorMode` is set to `true`.
+
 ***
 
 ### aopr.js /
