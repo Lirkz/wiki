@@ -4,6 +4,8 @@ While uBO does not support some specific cases, it further extends the EasyList 
 
 Starting with 1.26.0 (commit [one](https://github.com/gorhill/uBlock/commit/703c525b01aa3fb9dab94d6a9918a0a69c6d18da), [two](https://github.com/gorhill/uBlock/commit/ca80d2826bfd92a3081f20da8ba60138509a183b)), very long filters can split into multiple lines: append space and backslash character to the first line and indent continuation line by four spaces. Note that syntax higlighting is [currently broken](https://github.com/gorhill/uBlock/commit/01b1ed9a982965378d732ab0cb4bcd68727fe910).
 
+Starting with [1.46.1b15](https://github.com/gorhill/uBlock/commit/81498474d6d440b032681aa9952d593749b39efb), you can use regex-based values as target domain for static extended filters. Example of usage: `/img[a-z]{3,5}\.buzz/##+js(nowoif)`. Use sparingly, when no other solution is practical from a maintenance point of view -- keeping in mind that uBO has to iterate through all the regex-based values, unlike plain hostname or entity-based values which are mere lookups.
+
 - [Not supported](#not-supported)
 - [Pre-parsing directives](#pre-parsing-directives)
 - [Extended syntax](#extended-syntax)
@@ -995,6 +997,11 @@ These HTML filters will cause the elements matching the selectors to be **remove
 HTML filtering will work only on pages with character encoding compatible with: UTF-8, ISO-8859-1, Windows-1250, Windows-1251 and Windows-1252 ([detailed mapping](https://github.com/gorhill/uBlock/blob/2a91a685ce3d2dae5d3c285cff1bc74a1982be74/src/js/text-encode.js#L32)).
 
 HTML filters will apply only for document fetched successfully, i.e. when HTTP response status code is in the [200 realm](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses).
+
+Starting with [1.48.5b4](https://github.com/gorhill/uBlock/commit/8507d637e5190836caec390fed3a9cff13b4e131), you can use negated hostnames in HTML filters. Example:
+```adb
+google.com,~translate.google.com##^script:has-text(consentCookiePayload)
+```
 
 <details><summary>Historical notes</summary>
 
