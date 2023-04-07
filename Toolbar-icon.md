@@ -35,3 +35,9 @@ The yellowish badge `!` will persist once uBO is ready to filter properly, to re
 ![Screenshot from 2023-03-18 11-58-36](https://user-images.githubusercontent.com/585534/226121627-27b1ae78-58a0-454a-aa74-658944197096.png)
 
 To address the improper filtering that occurred on a webpage, you can simply force a reload of that webpage, which as a result will bring back the badge to be rendered as expected.
+
+#### Important note ####
+
+The sticky yellowish badge once uBO is fully loaded affects only Chromium-based browsers because Chromium lacks the framework to ensure extensions are ready before firing network requests. This is a browser limitation, not an extension issue.
+
+Firefox does not suffer this issue. See [uBlock Origin works best on Firefox / Browser launch](./uBlock-Origin-works-best-on-Firefox#browser-launch).
