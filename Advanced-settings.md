@@ -566,7 +566,9 @@ This is for the convenience of filter list maintainers who may want to test the 
 
 Default: `unset`.
 
-One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
+One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose. Usage example:
+
+<b>`userResourcesLocation`</b> `https://example.com/my-scriptlets.js https://example.org/raw/their-scriptlets.js`
 
 uBO expects valid content such as can be seen in legacy version of [scriptlets.js](https://github.com/gorhill/uBlock/blob/56b8201196a02e4d6c31bce7c168ad1c961ed63e/assets/resources/scriptlets.js), anything else will lead to undefined results.
 
@@ -574,9 +576,7 @@ Any duplicate as per token will result in the previous resource being replaced b
 
 Additional resources will be updated at the same time the built-in resource file is updated. Purging the cache of 'uBlock filters' will also purge the cache of the built-in resource file -- and hence force a reload of user-specified resources if any.
 
-The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0). The URLs must be space-separated:
-
-<b>`userResourcesLocation`</b> `https://my-additional-arsenal.invalid/scriptlets.js https://evenmorestuff.invalid/raw/arsenal`
+The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0).
 
 ***
 ***
