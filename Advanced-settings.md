@@ -568,7 +568,7 @@ Default: `unset`.
 
 One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
 
-uBO expects valid content such as can be seen in [scriptlets.js](https://github.com/gorhill/uBlock/blob/master/assets/resources/scriptlets.js), anything else will lead to undefined results.
+uBO expects valid content such as can be seen in legacy version of [scriptlets.js](https://github.com/gorhill/uBlock/blob/56b8201196a02e4d6c31bce7c168ad1c961ed63e/assets/resources/scriptlets.js), anything else will lead to undefined results.
 
 Any duplicate as per token will result in the previous resource being replaced by the latter one. The resource files are loaded in order of URL appearance, and uBO stock resource file is always loaded first.
 
@@ -576,7 +576,7 @@ Additional resources will be updated at the same time the built-in resource file
 
 The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0). The URLs must be space-separated:
 
-**userResourcesLocation** `https://my-additional-arsenal.com/scriptlets.js` `evenmorestuff.com/raw/arsenal`
+<b>`userResourcesLocation`</b> `https://my-additional-arsenal.invalid/scriptlets.js https://evenmorestuff.invalid/raw/arsenal`
 
 ***
 ***
