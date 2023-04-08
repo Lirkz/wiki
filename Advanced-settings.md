@@ -566,9 +566,9 @@ This is for the convenience of filter list maintainers who may want to test the 
 
 Default: `unset`.
 
-One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose. Usage example:
+One or more space-separated URLs which content will be parsed as token-identified resources to be used for [`redirect`](./Static-filter-syntax#redirect) or [scriptlet-injection](./Static-filter-syntax#scriptlet-injection) (`+js(...)`) purpose.
 
-<b>`userResourcesLocation`</b> `https://example.com/my-scriptlets.js https://example.org/public/ubo-scriptlets.js`
+![Screenshot from 2023-04-08 13-25-44](https://user-images.githubusercontent.com/585534/230734887-3c1ef260-e245-4398-bf54-9f167f940dee.png)
 
 uBO expects valid content such as can be seen in legacy version of [scriptlets.js](https://github.com/gorhill/uBlock/blob/56b8201196a02e4d6c31bce7c168ad1c961ed63e/assets/resources/scriptlets.js), anything else will lead to undefined results.
 
