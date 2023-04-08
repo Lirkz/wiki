@@ -576,7 +576,7 @@ Additional resources will be updated at the same time the built-in resource file
 
 The setting was introduced in [1.12.0](https://github.com/gorhill/uBlock/releases/tag/1.12.0). Support for multiple URLs was introduced in [1.19.0](https://github.com/gorhill/uBlock/releases/tag/1.19.0). The URLs must be space-separated:
 
-`userResourcesLocation https://my-additional-arsenal.com/scriptlets.js evenmorestuff.com/raw/arsenal`
+**userResourcesLocation** `https://my-additional-arsenal.com/scriptlets.js` `evenmorestuff.com/raw/arsenal`
 
 ***
 ***
