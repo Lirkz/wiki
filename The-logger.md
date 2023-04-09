@@ -35,6 +35,7 @@ Particular columns indicate:
     - `1` for the first-party requests, from current page domain (the one you see in address bar)
     - `3` for third-party requests, from other domains
     - `0` for _tabless_ requests (behind the scene, requests not assigned to any opened page)
+1. HTTP request method
 1. Type of request
 1. Address of the resource on which filter was applied
 
