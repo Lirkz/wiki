@@ -110,7 +110,7 @@ Please read more on dedicated page: ["DOM inspector"](./DOM-inspector)
 
 ![uBO icon](https://user-images.githubusercontent.com/886325/62734523-863bc400-ba29-11e9-82ce-0bf4211ea7d3.png)
 
-By clicking this button you can access the popup UI of a specific tab.
+By clicking this button you can access the [[popup UI|Quick-guide:-popup-user-interface]] of a specific tab.
 
 ***
 
