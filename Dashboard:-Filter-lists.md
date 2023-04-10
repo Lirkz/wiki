@@ -81,13 +81,13 @@ This option can be enabled on very low-end devices, but mind that some filter li
 
 New in [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
 
-This new setting suspends network activity until uBO has loaded all filter lists into memory.
+This setting suspends<sup>*</sup> network activity until uBO has loaded all filter lists into memory.
 
 If this behavior is undesirable, disable the setting to prevent uBO from suspending network activity when the browser launches.
 
 This setting gives the option to potentially speed up page load at launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
 
-This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded.
+__*__ - This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, **in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded**.
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
