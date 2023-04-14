@@ -6,8 +6,8 @@
 - Install from:
     - [Firefox Add-ons ↗︎](https://addons.mozilla.org/addon/ublock-origin/),
     - [Chrome Web Store ↗︎](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
-    - [Opera Add-ons ↗︎](https://addons.opera.com/extensions/details/ublock/),
     - [Microsoft Edge Add-ons ↗︎](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
+    - [Opera Add-ons ↗︎](https://addons.opera.com/extensions/details/ublock/),
     - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install),
     - [Source (for developers)](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
 - [The toolbar icon](./Toolbar-icon)
