@@ -12,7 +12,7 @@ Source: [_"Characterizing CNAME Cloaking-Based Tracking on the Web"_](https://bl
 
 ### HTML filtering
 
-[HTML filtering](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) is the ability to filter the response body of HTML documents _before_before parsing them by the browser.
+[HTML filtering](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) is the ability to filter the response body of HTML documents _before_ parsing them by the browser.
 
 For example, this allows the removal of specific tags in HTML documents before they are parsed and executed by the browser, something not possible in a reliable manner in other browsers. This feature requires the [`webRequest.filterResponseData()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData) API, currently only available in Firefox.
 
