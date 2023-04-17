@@ -2,7 +2,9 @@
 
 ***
 
-Reminder: the `noop` rule action means that network requests will not be filtered through dynamic filtering, but they will still be filtered through static filtering (_EasyList_, _EasyPrivacy_, etc). You can cut and paste as is all the rules below in the _My rules_ pane in the dashboard after clicking _Edit_ (duplicate rules are removed, so you can safely append at the end of your existing rules).
+The `noop` rule action means that network requests are not filtered through dynamic filtering but are through static filtering (_EasyList_, _EasyPrivacy_, etc.).
+
+The rules below can be cut and pasted into the _My rules_ pane in the dashboard after clicking _Edit_. (Duplicate rules are removed. You can safely append them at the end of your existing list.)
 
     # the default-deny rules
     * * 3p block
