@@ -4,7 +4,7 @@
 
 The `noop` rule action means that network requests are not filtered through dynamic filtering but are through static filtering (_EasyList_, _EasyPrivacy_, etc.).
 
-The rules below can be cut and pasted into the _Temporary rules_ in _My rules_ pane in the dashboard and then _Commited_ to be permanent. (Duplicate rules are removed. You can safely append them at the end of your existing list.)
+The rules below can be cut and pasted into the _Temporary rules_ section of the _My rules_ pane in the dashboard and then _Commited_ to be permanent. (Duplicate rules are removed. You can safely append them at the end of your existing list.)
 
     # the default-deny rules
     * * 3p block
