@@ -30,7 +30,7 @@ Pre-fetching, which is disabled by default in uBO, is reliably prevented in Fire
 
 Chromium-based browsers give precedence to websites over user settings when it comes to decide whether pre-fetching is disabled or not. 
 
-See [documentation for _"Disable pre-fetching"_ ](https://github.com/gorhill/uBlock/wiki/Dashboard:-Settings#disable-pre-fetching).
+See [documentation for _"Disable pre-fetching"_ ](https://github.com/gorhill/uBlock/wiki/Dashboard:-Settings#disable-prefetching).
 
 ### WebAssembly
 
