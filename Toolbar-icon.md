@@ -36,6 +36,8 @@ The yellowish badge `!` will persist once uBO is ready to filter properly, to re
 
 To address the improper filtering that occurred on a webpage, you can simply force a reload of that webpage, which as a result will bring back the badge to be rendered as expected.
 
+If you do not force a reload of the page, the yellowish badge will time out after ~1 minute, having done its duty of warning you about the incomplete filtering.
+
 #### Important note ####
 
 The sticky yellowish badge once uBO is fully loaded affects only Chromium-based browsers because Chromium lacks the framework to ensure extensions are ready before firing network requests. This is a browser limitation, not an extension issue.
