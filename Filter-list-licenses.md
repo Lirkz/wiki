@@ -42,6 +42,7 @@ EST: Eesti saitidele kohandatud filter‎ ||||[CC0 1.0](https://adblock.ee/list.
 FIN: Adblock List for Finland‎ ||||[Unlicense](https://github.com/finnish-easylist-addition/finnish-easylist-addition/blob/master/LICENSE)||
 FRA: AdGuard Français ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
 GRC: Greek AdBlock Filter‎ |||[CC BY-SA 4.0](https://github.com/kargig/greek-adblockplus-filter/blob/master/LICENSE.md)|||
+HRV, SRB: Dandelion Sprout's Serbo-Croatian filters |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, good intent|||
 HUN: hufilter‎ |||[CC BY 4.0](https://github.com/hufilter/hufilter-dev/blob/master/LICENSE)|||
 IDN, MYS: ABPindo ||[GPL3](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|[CC BY-SA 3.0](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|||
 IND: IndianList ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
