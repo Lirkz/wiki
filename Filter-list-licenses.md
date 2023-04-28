@@ -42,7 +42,7 @@ EST: Eesti saitidele kohandatud filter‎ ||||[CC0 1.0](https://adblock.ee/list.
 FIN: Adblock List for Finland‎ ||||[Unlicense](https://github.com/finnish-easylist-addition/finnish-easylist-addition/blob/master/LICENSE)||
 FRA: AdGuard Français ||[GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE)|||
 GRC: Greek AdBlock Filter‎ |||[CC BY-SA 4.0](https://github.com/kargig/greek-adblockplus-filter/blob/master/LICENSE.md)|||
-HRV, SRB: Dandelion Sprout's Serbo-Croatian filters |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, good intent|||
+HRV, SRB: Dandelion Sprout's Serbo-Croatian filters |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, non-commercial, good intent|||
 HUN: hufilter‎ |||[CC BY 4.0](https://github.com/hufilter/hufilter-dev/blob/master/LICENSE)|||
 IDN, MYS: ABPindo ||[GPL3](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|[CC BY-SA 3.0](https://github.com/ABPindo/indonesianadblockrules/blob/master/LICENSE)|||
 IND: IndianList ||[GPL3](https://easylist.to/pages/licence.html)|[CC BY-SA 3.0](https://easylist.to/pages/licence.html)|||
@@ -56,7 +56,7 @@ LTU: EasyList Lithuania‎ ||[GPL3](https://github.com/EasyList-Lithuania/easyli
 LVA: Latvian List‎ |||[CC BY-SA 4.0](https://github.com/Latvian-List/adblock-latvian/blob/master/lists/latvian-list.txt#L8)|||
 MKD: Macedonian adBlock Filters‎ |||||[MIT](https://github.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/blob/master/LICENSE)||||
 NLD: EasyDutch‎ ||[GPL3](https://github.com/EasyDutch-uBO/EasyDutch/blob/main/LICENSE)||||
-NOR, DNK, ISL: Dandelion Sprouts nordiske filtre‎ |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, good intent|||
+NOR, DNK, ISL: Dandelion Sprouts nordiske filtre‎ |||||[Dandelicence](https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md), attribution, non-commercial, good intent|||
 POL: Oficjalne Polskie Filtry do AdBlocka, uBlocka Origin i AdGuarda‎ |||[CC BY-NC-SA 4.0](https://github.com/MajkiIT/polish-ads-filter/blob/master/LICENSE)|||
 POL: Oficjalne polskie filtry przeciwko alertom o Adblocku‎ |||[CC BY-NC-SA 4.0](https://github.com/olegwukr/polish-privacy-filters/blob/master/adblock.txt#L9)|||
 ROU: Romanian Ad (ROad) Block List Light |||||[MIT](https://github.com/tcptomato/ROad-Block/blob/master/LICENSE)||
