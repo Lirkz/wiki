@@ -12,12 +12,14 @@ uBlock filters - Privacy |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob
 uBlock filters - Quick Fixes |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters – Resource abuse |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Unbreak |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
+uBlock Lite filters |X (uBOL)| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
+uBlock filters – Annoyances ||[GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE)||||
+uBlock filters - LAN Block ||[GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 EasyList‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
 EasyPrivacy‎ |X| [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
 Online Malicious URL Blocklist |X||| [CC0 1.0](https://gitlab.com/malware-filter/urlhaus-filter/-/blob/main/LICENSE.md) ||
 Peter Lowe’s Ad and tracking server list‎ |X||||[McRae GPL](https://pgl.yoyo.org/license/), non-commercial|
 AdGuard Mobile Ads | X (Mobile) | [GPL3](https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE) |||
-uBlock filters – Annoyances ||[GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE)||||
 Phishing URL Blocklist |||| [CC0 1.0](https://gitlab.com/malware-filter/phishing-filter/-/blob/main/LICENSE.md) ||
 PUP Domains Blocklist |||| [CC0 1.0](https://gitlab.com/malware-filter/pup-filter/-/blob/main/LICENSE.md) ||
 EasyList Cookie || [GPL3](https://easylist.to/pages/licence.html) | [CC BY-SA 3.0](https://easylist.to/pages/licence.html) |||
