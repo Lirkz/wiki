@@ -11,18 +11,19 @@ The _Filter lists_ pane is where you subscribe to filter lists that feed into uB
 
 The picture below shows uBO's default selection of filter lists. You can add more or remove some filter lists already selected by default. (Most other blockers only enable EasyList.)
 
-If you remove filter lists, the _uBlock filters_ are strongly advised to be kept due to their optimization for uBO.
+If you remove filter lists, keeping the _uBlock filters_ is strongly recommended due to their optimization for uBO.
 
 The likelihood of page breakage increases with more filter lists added. When this issue occurs, you should report it to the maintainers of the corresponding filter list or create an exception filter to fix it for yourself.
 
-![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png) |
---- |
+![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png)
 
-uBO discards duplicate filters, so the number of filters used within a filter list depends on how many duplicate filters were detected within that filter list. The order in which the filter lists are loaded into memory is undefined.
+---
 
-When you hover the cursor over the clock icon of a filter list, a tooltip will tell you when the list was last updated. If you click the clock icon, uBO will mark the list as out-of-date. Lists that are out of date will be automatically updated in the background eventually when you check the option _"Auto update filter lists"_. You can force out-of-date lists to be immediately updated by clicking _"Update now"_.
+uBO discards duplicate filters, so the number of filters used within a filter list depends on how many duplicates were detected. The order in which filter lists get loaded into memory is undefined.
 
-Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-lists-load-performance).
+When you hover the cursor over the clock icon of a filter list, a tooltip will display the last updated time. If you click the clock icon, uBO will mark the list as out-of-date. Outdated lists will be automatically updated in the background when you check the _Auto update filter lists_ option. You can force update outdated lists immediately by clicking the _Update now_ button.
+
+Related: [Launch and filter lists load performance](./Launch-and-filter-lists-load-performance)
 
 ***
 
@@ -30,13 +31,13 @@ Related: [_"Launch and filter lists load performance"_](./Launch-and-filter-list
 
 ![_"Update now"_ button](https://user-images.githubusercontent.com/585534/143616552-94dd8b15-d33c-4d45-97bd-2f73f95972ba.png)
 
-This button is available for use if and only if there is at least one filter list that is deemed outdated. If this condition is fulfilled, you can force an update of all filter lists which are deemed out of date.
+This button is available only if there is at least one filter list that is out of date. You can force an update  of all filters lists that are outdated.
 
-When a filter list has been updated using a newer version from its remote location, a clock icon will be present aside the filter list. You can force an update of a single filter list by clicking the clock icon of that filter list only, which will reset the "last update" timestamp for this list, remove its content from storage, and cause the _"Update now"_ button to become available for use:
+When a filter list gets updated using a newer version from its remote location, a clock icon will appear next to it. You can force an update of a single filter list by clicking the clock icon. Clicking this icon will reset the last updated timestamp, remove its content from storage, and cause the _Update now_ button to become available.
 
 ![update by clock icon](https://user-images.githubusercontent.com/886325/148108034-73419703-10a1-4f72-af4b-5dd5231fface.gif)
 
-Note: When forcing an update of the "uBlock filters" entry itself, this will also update additional resources when possible. (Library of resources used by [Scriptlet injection](./Static-filter-syntax#scriptlet-injection) allowed to be updated on Chromium-based browsers and development builds).
+Forcing an update of the "uBlock filters" entry will also update additional resources when possible. (On Chromium-based browsers and development builds, the Resources Library used by [scriptlet injection](./Static-filter-syntax#scriptlet-injection) gets updated.)
 
 ***
 
