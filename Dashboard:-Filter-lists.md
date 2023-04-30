@@ -3,7 +3,7 @@
 
 ***
 
-- [Filter list licenses ↪](./Filter-list-licenses)
+- [Filter list licenses](./Filter-list-licenses)
 
 ***
 
@@ -55,7 +55,7 @@ Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github
 If you check this option, uBO will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
 
 Filter lists are automatically updated according to:
-- the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header (After [1.47.3b5](https://github.com/gorhill/uBlock/commit/db118483c91da468d22b943aba07bbcfc2e37427), uBO supports an update period below 1-day). 
+- the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header (After [1.47.3b5](https://github.com/gorhill/uBlock/commit/db118483c91da468d22b943aba07bbcfc2e37427), uBO supports an update period below 1-day).
 - or the `updateAfter` attribute if found in the list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
 - or every 5 days by default.
 
@@ -69,7 +69,7 @@ Note that if you disable this option, your own custom cosmetic filters in `My Fi
 
 ***
 
-### Ignore generic cosmetic filters 
+### Ignore generic cosmetic filters
 
 Generic cosmetic filters are those cosmetic filters that are meant to apply on all websites. Though handled efficiently by uBO, generic cosmetic filters may still end up contributing measurable memory and CPU overhead on some web pages, especially the large and long-lived ones.
 Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters, and also lower the memory footprint of uBO itself.
@@ -87,8 +87,6 @@ In Chromium-based browsers, this setting is disabled by default, since Chromium-
 
 <sub>__1__ New in [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).</sub><br>
 <sub>__2__ This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded.<sub>
-
-See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
 ***
 
