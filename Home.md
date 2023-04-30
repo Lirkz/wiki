@@ -4,11 +4,12 @@
     - [Can you trust uBlock Origin?](./Can-you-trust-uBlock-Origin%3F)
 - [Privacy policy](./Privacy-policy)
 - Install from:
-    - [Firefox Add-ons ↗︎](https://addons.mozilla.org/addon/ublock-origin/),
-    - [Chrome Web Store ↗︎](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm),
-    - [Microsoft Edge Add-ons ↗︎](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak),
-    - [Opera Add-ons ↗︎](https://addons.opera.com/extensions/details/ublock/),
-    - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install),
+    - [Firefox Add-ons ↗︎](https://addons.mozilla.org/addon/ublock-origin/)
+    - [Chrome Web Store ↗︎](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
+    - [Microsoft Edge Add-ons ↗︎](https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak)
+    - [Opera Add-ons ↗︎](https://addons.opera.com/extensions/details/ublock/)
+    - [Thunderbird Add-ons ↗︎](https://addons.thunderbird.net/thunderbird/addon/ublock-origin/)
+    - [Downloaded package](https://github.com/gorhill/uBlock/tree/master/dist#install)
     - [Source (for developers)](https://github.com/gorhill/uBlock/tree/master/dist#build-instructions-for-developers)
 - [The toolbar icon](./Toolbar-icon)
 - [The popup user interface](./Quick-guide:-popup-user-interface)
