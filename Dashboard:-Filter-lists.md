@@ -79,15 +79,14 @@ This option can be enabled on very low-end devices, but mind that some filter li
 
 ### Suspend network activity until all filter lists are loaded
 
-New in [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).
+This setting suspends network activity until uBO has loaded all filter lists into memory.
 
-This setting suspends<sup>*</sup> network activity until uBO has loaded all filter lists into memory.
+In Firefox-based browsers, this setting is enabled by default. Disabling it gives the option to potentially speed up page load at browser launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
 
-If this behavior is undesirable, disable the setting to prevent uBO from suspending network activity when the browser launches.
+In Chromium-based browsers, this setting is disabled by default, since Chromium-based browsers do not support natively suspending network requests.<sup>2</sup> Enabling this setting in Chromium-based browsers _may_ lead to negative side-effects at browser launch.
 
-This setting gives the option to potentially speed up page load at launch, at the cost of possibly not properly filtering network requests as per filter lists or rules.
-
-__*__ - This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, **in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded**.
+<sub>__1__ New in [1.41.0](https://github.com/gorhill/uBlock/commit/925c8d5d0c37dbc1f82e57a92e74350de2c5eab1).</sub><br>
+<sub>__2__ This setting will use any mechanism on the platform not supporting network activity suspension to mitigate the improper filtering of network requests at launch. For example, in Chromium-based browsers it's not possible to suspend network activity, in which case this setting will only force a reload of the webpage once uBO is fully loaded.<sub>
 
 See also [`suspendTabsUntilReady`](./Advanced-settings#suspendtabsuntilready).
 
