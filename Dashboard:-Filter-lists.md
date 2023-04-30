@@ -31,7 +31,7 @@ Related: [Launch and filter lists load performance](./Launch-and-filter-lists-lo
 
 ![_"Update now"_ button](https://user-images.githubusercontent.com/585534/143616552-94dd8b15-d33c-4d45-97bd-2f73f95972ba.png)
 
-This button is available only if there is at least one filter list that is out of date. You can force an update  of all filters lists that are outdated.
+This button is available only if there is at least one filter list that is out of date. You can force an update of all outdated filter lists.
 
 When a filter list gets updated using a newer version from its remote location, a clock icon will appear next to it. You can force an update of a single filter list by clicking the clock icon. Clicking this icon will reset the last updated timestamp, remove its content from storage, and cause the _Update now_ button to become available.
 
