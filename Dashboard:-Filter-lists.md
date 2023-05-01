@@ -15,7 +15,7 @@ If you remove filter lists, keeping the _uBlock filters_ is strongly recommended
 
 The likelihood of page breakage increases with more filter lists added. When this issue occurs, you should report it to the maintainers of the corresponding filter list or create an exception filter to fix it for yourself.
 
-![Filter lists pane](https://user-images.githubusercontent.com/95879668/152668651-7032a46d-8e66-4f8e-9e2b-dee79e73a972.png)
+![Filter lists pane](https://user-images.githubusercontent.com/124740436/235392297-c4fc6290-73a6-4a70-96a9-3f6a7683f21d.png)
 
 ---
 
