@@ -43,7 +43,7 @@ To enable the _Create_ button, you must first create a proper filter in the text
 - When the dialog is hidden, swipe right again to exit element picker mode.
 - Swipe left to make the dialog visible again.
 
-### Element picker does not work, removed element reappears when you reload the page?
+### Element picker does not work, removed element reappears when you reload the page
 
 There may be many different reasons for this.
 
