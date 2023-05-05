@@ -119,6 +119,7 @@
      - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
  - Crossed out resources are deprecated/removed.
  - Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/81498474d6d440b032681aa9952d593749b39efb) support for regex-based values as target domain has been added. Use sparingly, when no other solution is practical from a maintenance point of view -- keeping in mind that uBO has to iterate through all the regex-based values, unlike plain hostname or entity-based values which are mere lookups. Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234). Example: `/img[a-z]{3,5}\.buzz/##+js(nowoif)`.
+ - The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments. Obviously, do not use "log" or "debug" in any filter list, these are investigative tools for filter list authors.
 
 ***
 
@@ -220,7 +221,7 @@ Filtering according to reported line numbers (`...:1234:1`), will not be reliabl
 ### addEventListener-defuser.js [↪](https://github.com/gorhill/uBlock/blob/07d3c96261656e44f674550fbde50da8f6a15acc/assets/resources/scriptlets.js#L308)
 Prevents attaching event listeners.
 
-Parameters:
+Parameters (when using positional arguments):
  - optional, string/_regular expression_, name of the event listener to defuse
  - optional, string/_regular expression_ matching in stringified handler function, narrows down defusing to specific handler
 
@@ -230,6 +231,32 @@ Examples:
  - `vivo.sx##+js(aeld, , preventDefault)`
  - `vidto.me##+js(aeld, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)`
 
+Parameters (when using named arguments) <sup>([New in 1.48.1b3](https://github.com/gorhill/uBlock/commit/439951824af608bd445ec458f837fa39f366d75f))</sup>:
+ - "type": the event type to match (such as [`load`, `mousedown`, `contextmenu`](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing)). Default to '', i.e. _match-all_.
+ - "pattern": the pattern to match against the handler argument. Default to '', i.e. _match-all_.
+ - "runAt": when this parameter is present, uBO will take it into account to possibly defer defusing the event listener <sup>([New in 1.49.3b4](https://github.com/gorhill/uBlock/commit/3c12173dfe4eea7c4b6758c556ed2dd5fcdbdd99))</sup>:
+     - end: execute scriptlet at `DOMContentLoaded` event ("interactive")
+     - idle: execute scriptlet at `load` event ("complete")
+ - "log": an integer value telling when to log:
+     - 1: log only when both type and pattern matches, i.e. when a call to `addEventListener()` is defused
+     - 2: log when either the type or pattern matches
+     - 3: log all calls to `addEventListener()`
+ - "debug": an integer value telling when to break into the debugger, useful to inspect the debugger's call stack.
+     - 1: break into the debugger when both type and pattern match, so effectively when defusing is taking place.
+     - 2: break into the debugger when either type or pattern matches.
+
+Examples:
+ - `wikipedia.org##+js(aeld, { "type": "/mouse/", "pattern": "/.^/", "log": 2 })`
+ - `wikipedia.org##+js(aeld, { "type": "/.^/", "log": 2 })`
+ - `wikipedia.org##+js(aeld, { "log": 1 })`
+ - `jpvhub.com##+js(aeld, { "type": "click", "pattern": "popMagic", "runAt": "idle" })`
+
+The first filter will log calls to `addEventListener()` which have the pattern "mouse" in the event type (so "mouseover", "mouseout", etc.) **without defusing any of them** (because pattern can't match _anything_).
+
+The second filter will log all calls **without defusing any of them** (because type can't match _anything_).
+
+The third filter will log and defuse _all_ calls to `addEventListener()`.
+
 ***
 
 ### ~aell.js~ /
@@ -238,38 +265,7 @@ Removed in [1.48.1b3](https://github.com/gorhill/uBlock/commit/439951824af608bd4
 
 Logs to the console event listeners created on page.
 
-The logging of `addEventListener()` calls can now be done with the `addEventListenerDefuser` scriptlet, which now supports the following named arguments:
-
-- "type": the event type to match. Default to '', i.e. _match-all_.
-
-- "pattern": the pattern to match against the handler argument. Default to '', i.e. _match-all_.
-
-- "log": an integer value telling when to log:
-  - 1: log only when both type and pattern matches, i.e. when a call to `addEventListener()` is defused
-  - 2: log when either the type or pattern matches
-  - 3: log all calls to `addEventListener()`
-
-- "debug": an integer value telling when to break into the debugger, useful to inspect the debugger's call stack.
-  - 1: break into the debugger when both type and pattern match, so effectively when defusing is taking place.
-  - 2: break into the debugger when either type or pattern matches.
-
-The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments.
-
-Obviously, do not use "log" or "debug" in any filter list, these are investigative tools for filter list authors.
-
-Examples of usage using named arguments:
-
- - `wikipedia.org##+js(aeld, { "type": "/mouse/", "pattern": "/.^/", "log": 2 })`
-
-Above filter will log calls to `addEventListener()` which have the pattern "mouse" in the event type (so "mouseover", "mouseout", etc.) without defusing any of them (because pattern can't match _anything_).
-
- - `wikipedia.org##+js(aeld, { "type": "/.^/", "log": 2 })`
-
-Above filter will log all calls without defusing any of them (because type can't match _anything_)
-
- - `wikipedia.org##+js(aeld, { "log": 1 })`
-
-Above filter will log and defuse _all_ calls to `addEventListener()`.
+The logging or debugging of `addEventListener()` calls can now be done with the [`addEventListenerDefuser`](#addeventlistener-defuserjs-) scriptlet, which now supports named arguments.
 
 ***
 
@@ -464,7 +460,7 @@ Users can opt-in to FLoC by adding a generic exception filter to their custom fi
 
     example.com,shopping.example#@#+js(no-floc)
 
-Solves [#1553](https://github.com/uBlockOrigin/uBlock-issues/issues/1553).
+Solves [uBlockOrigin/uBlock-issues#1553](https://github.com/uBlockOrigin/uBlock-issues/issues/1553).
 
 ***
 
@@ -695,7 +691,7 @@ Value set by scriptlet can be overwritten by page script when:
  - new _property_ is not `undefined` or `null`<sup>[1.25.0](https://github.com/gorhill/uBlock/commit/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce)</sup> **AND**
  - type of original _property_ is different than type of new _property_ 
 
-Parameters:
+Parameters (when using positional arguments):
  - required, _property_ (chain of properties joined by `.`) attached to window object
  - required, possible values:
      - positive decimal integer, no sign, with maximum value of 0x7FFF (32767)
@@ -710,12 +706,29 @@ Parameters:
          - `''` - empty string<sup>[2019-01-06](https://github.com/uBlockOrigin/uAssets/commit/5051610f0e2374955a03c54be42bbbe9115f05c7#diff-8809d5783978a0b5b88f93d7dab99de0R2132)</sup>
          - `[]` - empty array<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
          - `{}` - empty object<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
+ - optional, to defer execution of `set-constent` (New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb), solves [uBlockOrigin/uAssets#7320](https://github.com/uBlockOrigin/uAssets/issues/7320)), possible values:
+     - _not present_: execute immediately
+     - 1: execute immediately
+     - 2: execute when document state is "end (interactive)" (at `DOMContentLoaded` event time)
+     - 3: execute when document state is "idle (complete)" (at `load` event time)
 
 Examples:
  - `kompetent.de##+js(set, Object.keys, trueFunc)`
  - `t-online.de##+js(set, abp, false)`
  - `identi.li##+js(set, t_spoiler, 0)`
+ - `joysound.com##+js(set, document.body.oncopy, null, 3)`
 
+Parameters (when using named arguments) <sup>([New in 1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb))</sup>:
+ - "prop": _property_ (chain of properties joined by `.`) attached to window object.
+ - "value": `undefined`, `false`, `true`, `null`, `noopFunc`, `trueFunc`, `falseFunc`, `''`, `[]`, `{}`
+ - "runAt":
+     - _not present_: execute immediately
+     - 1: execute immediately
+     - 2: execute when document state is "end (interactive)" (at `DOMContentLoaded` event time)
+     - 3: execute when document state is "idle (complete)" (at `load` event time)
+
+Examples:
+ - `example.com##+js(set, {"prop": "x", "value": "true", "runAt": 1})`
 
 ***
 
