@@ -411,7 +411,7 @@ You can use `m3u-prune` to remove those ad segments.
 
 Examples:
   - `player.theplatform.com##+js(m3u-prune, tvessaiprod.nbcuni.com, /theplatform\.com\/.*?\.m3u8/)`
-  - `mephimtv.cc##+js(m3u-prune, /#EXT-X-DISCONTINUITY.{1\,100}#EXT-X-DISCONTINUITY/gm, mixed.m3u8)`
+  - `mephimtv.cc##+js(m3u-prune, /#EXT-X-DISCONTINUITY(.|\n){1\,100}#EXT-X-DISCONTINUITY/gm, mixed.m3u8)`
 
 If the first argument is a regex with multine flag set, the scriptlet will execute the regex against the whole text, and remove matching text from the whole text (New in [1.47.5b10](https://github.com/gorhill/uBlock/commit/b3821e6869d45b5697c44922ee7242e35e11a29d)).
 
