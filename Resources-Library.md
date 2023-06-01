@@ -30,6 +30,8 @@
 - [no-xhr-if](#no-xhr-ifjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
+- [replace-node-text](#replace-node-textjs-) _(rpnt)_ [Trusted]
+- [remove-node-text](#remove-node-textjs-) _(rmnt)_
 - [spoof-css](#spoof-cssjs-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
@@ -123,6 +125,7 @@
  - Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/81498474d6d440b032681aa9952d593749b39efb) support for regex-based values as target domain has been added. Use sparingly, when no other solution is practical from a maintenance point of view -- keeping in mind that uBO has to iterate through all the regex-based values, unlike plain hostname or entity-based values which are mere lookups. Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234). Example: `/img[a-z]{3,5}\.buzz/##+js(nowoif)`.
  - The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments.
  - The logging/debugging capabilities work only in the **dev build** of uBO or if the advanced setting `filterAuthorMode` is set to `true`.
+- The only filter lists deemed from a "trusted source" are uBO-specific filter lists (i.e. "uBlock filters -- ..."), and the user's own filters from "My filters".
 
 ***
 
@@ -651,6 +654,76 @@ Parameters:
 Examples:
 - `danskebank.fi##+js(rc, cookie-consent-banner-open, html)` [Picture of the element](https://images2.imgbox.com/68/2b/tdWI9hBG_o.png)
 
+
+***
+
+### rpnt.js /
+### replace-node-text.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2570)
+
+#### _Trusted scriptlet_
+
+New in [1.49.3b16](https://github.com/gorhill/uBlock/commit/41876336db48292de06707adfa5e97dab74297d2)
+
+Replace text instance(s) with another text instance inside specific DOM nodes.
+
+By default, the scriptlet will bail out when the document itself has been fully loaded, i.e. when `DOMContentLoaded` event is fired.
+
+The mutation observer of this scriptlet can be a significant overhead for pages with dynamically updated DOM, and in most cases the scriptlet is useful only for DOM changes occurring before the `DOMContentLoaded` event, so the default is to quit out when that event is received ("quit out" means discarding the mutation observer and having the scriptlet garbage-collected by the JS engine).
+
+Parameters:
+ - required, the name of the node for which the text content must be substituted. Valid node names can be found at:
+https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName
+ - required, A string or regex to find in the text content of the node as the target of substitution
+ - optional, the replacement text. Can be omitted if the goal is to delete the text which
+matches the pattern. Cannot be omitted if extra pairs of parameters have to be used (see below)
+
+Optionally, extra pairs of parameters (tokens) can be used to modify the behavior of the scriptlet.
+
+Tokens:
+ - `condition, pattern`: A string or regex which must be found in the text content of the node
+in order for the substitution to occur
+ - `sedCount, n`: This will cause the scriptlet to stop after `n` instances of substitution. Since a mutation oberver is used by the scriptlet, it's advised to stop it whenever it becomes pointless. Default to zero, which means the scriptlet never stops
+ - `stay, 1`: Force the scriptlet to stay at work forever
+ - `quitAfter, ms`: This tells the scriptlet to quit `ms` milliseconds after the page has been loaded, i.e. after the `DOMContentLoaded` event has been fired
+ - `log, 1`: This will cause the scriptlet to output information at the console, useful as a debugging tool for filter authors
+
+Examples:
+ - `example.com##+js(rpnt, #text, /^Advertisement$/)`
+ - `example.com##+js(rpnt, #text, Example Domain, Changed, condition, Example, stay, 1)`
+ - `example.com##+js(rpnt, script, /devtoolsDetector\.launch\(\)\;/, , sedCount, 1)`
+
+***
+
+### rmnt.js /
+### remove-node-text.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2531)
+
+New in [1.49.3rc15](https://github.com/gorhill/uBlock/commit/2bb446797a12086f2eebc0c8635b671b8b90c477)
+
+Remove the *whole* text of a DOM node.
+
+By default, the scriptlet will bail out when the document itself has been fully loaded, i.e. when `DOMContentLoaded` event is fired.
+
+The mutation observer of this scriptlet can be a significant overhead for pages with dynamically updated DOM, and in most cases the scriptlet is useful only for DOM changes occurring before the `DOMContentLoaded` event, so the default is to quit out when that event is received ("quit out" means discarding the mutation observer and having the scriptlet garbage-collected by the JS engine).
+
+Parameters:
+ - required, the name of the node for which the text content must be removed. Valid node names can be found at:
+https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName
+ - required, A string or regex to find in the text content of the node as the target of removing
+
+Optionally, extra pairs of parameters (tokens) can be used to modify the behavior of the scriptlet.
+
+Tokens:
+ - `condition, pattern`: A string or regex which must be found in the text content of the node
+in order for the removing to occur
+ - `sedCount, n`: This will cause the scriptlet to stop after `n` instances of removing. Since a mutation oberver is used by the scriptlet, it's advised to stop it whenever it becomes pointless. Default to zero, which means the scriptlet never stops
+ - `stay, 1`: Force the scriptlet to stay at work forever
+ - `quitAfter, ms`: This tells the scriptlet to quit `ms` milliseconds after the page has been loaded, i.e. after the `DOMContentLoaded` event has been fired
+ - `log, 1`: This will cause the scriptlet to output information at the console, useful as a debugging tool for filter authors
+
+Examples:
+ - `example.com##+js(rmnt, #text, Example)`
+ - `example.com##+js(rmnt, #text, Example, condition, Exa)`
+ - `example.com##+js(rmnt, script, timeLeft)`
 
 ***
 
