@@ -59,7 +59,7 @@ See also: [`:upward()` vs `:has()`](./Filter-Performance#upward-vs-has)
 ### `subject:has-text(needle)`
 
 - Description: Select element _subject_ if the text _needle_ is found inside the element _subject_ or its children.
-- Chainable: Yes.See also: [Filter Performance](./Filter-Performance#removeparam-modifier)
+- Chainable: Yes.
 - _subject_: Can be a plain CSS selector, or a procedural cosmetic filter.
 - _needle_: The literal text which must be found, or a literal regular expression. If using a literal regular expression, you can optionally use the `i` and/or `m` flags (version 1.15).
 It is possible to have `:has-text()` match the
