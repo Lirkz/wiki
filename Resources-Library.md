@@ -30,6 +30,7 @@
 - [no-xhr-if](#no-xhr-ifjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
+- [spoof-css](#spoof-css-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
 - [disable-newtab-links](#disable-newtab-linksjs-)
@@ -772,6 +773,33 @@ Examples:
  - `platinmods.*##+js(nano-sib)`
  - `1ink.cc##+js(nano-sib, mSec, 1050)`
 
+
+***
+
+### spoof-css.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2443)
+Spoof the CSS property value when `getComputedStyle()` or `getBoundingClientRect()` are used.
+
+Parameters:
+ - required, a valid CSS selector which matches the elements for which the spoofing must apply
+ - required, a CSS property name (can be dashed- or camel-cased)
+ - required, the value to return regardless of the currently computed value
+
+Examples:
+ - `example.com##+js(spoof-css, .ad, clip-path, none)`
+
+There can be any number of selectors, all separated by escaped commas:
+
+ - `example.com##+js(spoof-css, a[href="x.com"]\, .ads\, .bottom, clip-path, none)`
+
+There can be any number of property-name/property-value pairs, all separated by commas:
+
+ - `example.com##+js(spoof-css, .ad, clip-path, none, display, block)`
+
+A special property-name/property-value pair `debug/1` can be used to force the browser to break when `getComputedStyle()` or `getBoundingClientrect()` is called, useful to help pinpoint usage of those calls in the page's source code:
+
+ - `example.com##+js(spoof-css, .ad, debug, 1)`
+
+Solves [uBlockOrigin/uBlock-issues#2618](https://github.com/uBlockOrigin/uBlock-issues/issues/2618).
 
 ***
 
