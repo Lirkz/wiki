@@ -403,21 +403,18 @@ If the site uses `eval` in lieu of `JSON.parse`, see: [evaldata-prune](#evaldata
 ***
 
 ### xml-prune.js [↪](https://github.com/gorhill/uBlock/blob/bf690145c493acd86e578d7a860da238f0af72d4/assets/resources/scriptlets.js#L1672)
+Removes an element from the specified XML.
 
 New in [1.44.5b3](https://github.com/gorhill/uBlock/commit/bf690145c493acd86e578d7a860da238f0af72d4)
 
 Parameters:
  - required, the selector of elements which are to be removed.
-   Example: `Period[id*="-roll-"][id*="-ad-"]`
- - optional, a selector that must have a match in the document
-   for the pruning to occur. No selector means the pruning can
-   be performed regardless.
- - optional, a URL which must be a match for the pruning to
-   occur. If left blank, the pruning can be performed regardless.
+ - optional, a selector or xpath <sup>(New in [1.49.3rc15](https://github.com/gorhill/uBlock/commit/8ed78cfb234d3b9c615ee1deebea0ff0439ea7f3)</sup> that must have a match in the document for the pruning to occur. No selector means the pruning can be performed regardless.
+ - optional, a URL which must be a match for the pruning to occur. If left blank, the pruning can be performed regardless.
 
 Examples:
  - `cbs.com##+js(xml-prune, Period[id*="-roll-"][id*="-ad-"], , pubads.g.doubleclick.net/ondemand)`
-
+ - `play.max.com##+js(xml-prune, xpath(//*[name()="Period"][not(.//*[name()="SegmentTimeline"])]), , .mpd)`
 
 ***
 
