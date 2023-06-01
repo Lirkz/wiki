@@ -37,6 +37,7 @@
 - [window-close-if](#window-close-ifjs-)
 - [window.open-defuser](#windowopen-defuserjs-) _(nowoif)_
 - [json-prune](#json-prunejs-)
+- [evaldata-prune](#evaldata-prunejs-)
 - [xml-prune](#xml-prunejs-)
 - [m3u-prune](#m3u-prunejs-)
 - [noeval](#noevaljs-)
@@ -338,6 +339,22 @@ To prevent new tabs/windows by specifying the location URL, see: [`window-close-
 
 ***
 
+### evaldata-prune.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L1039)
+
+New in [1.49.3rc15](https://github.com/gorhill/uBlock/commit/c8de9041917b61035171e454df886706f27fc4f3)
+
+Intercepts calls to `eval()` and will work only if what is passed to `eval` can be parsed as JSON.
+
+For parameters, see: [json-prune](#json-prunejs-)
+
+When no "prune paths" argument (first parameter) is provided, the scriptlet is used for logging purpose and the "needle paths" argument (second parameter) is used to filter logging output.
+
+Examples:
+ - `m.nivod4.tv##+js(evaldata-prune, entity.commercial)`
+
+
+***
+
 ### json-prune.js [↪](https://github.com/gorhill/uBlock/blob/d338e4c4b6caf339873a60c9d48fde58e9a495ce/assets/resources/scriptlets.js#L365)
 
 New in [1.23.0](https://github.com/gorhill/uBlock/commit/2fd86a66fcc2665e5672cc5862e24b3782ee7504)
@@ -348,7 +365,7 @@ Parameters:
  - optional, string, a list of space-separated properties to remove 
  - optional,
      - string, a list of space-separated properties which must be all present for the pruning to occur; OR
-     - string/_regular expression_, for logging purposes, matching in stringified JSON payloads (new in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a))
+     - string/_regular expression_, for logging purposes, matching in stringified JSON payloads (New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a))
 
 A property in a list of properties can be a chain of properties, example: `adpath.url.first`.
 
@@ -381,6 +398,7 @@ Examples:
  - `winfuture.de##+js(json-prune, adtagparameter, enabled)`
  - `imgsen.com##+js(json-prune, *, showTrkURL)` - will remove everything when needle matches, new in [1.35](https://github.com/gorhill/uBlock/commit/d338e4c4b6caf339873a60c9d48fde58e9a495ce)
 
+If the site uses `eval` in lieu of `JSON.parse`, see: [evaldata-prune](#evaldata-prunejs-)
 
 ***
 
