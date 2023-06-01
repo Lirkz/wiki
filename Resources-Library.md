@@ -701,7 +701,7 @@ Value set by scriptlet can be overwritten by page script when:
  - new _property_ is not `undefined` or `null`<sup>[1.25.0](https://github.com/gorhill/uBlock/commit/c7dc65fe33ed58ff2bad10ce4a8848b97c8591ce)</sup> **AND**
  - type of original _property_ is different than type of new _property_ 
 
-Parameters (when using positional arguments):
+Parameters:
  - required, _property_ (chain of properties joined by `.`) attached to window object
  - required, possible values:
      - positive decimal integer, no sign, with maximum value of 0x7FFF (32767)
@@ -716,11 +716,24 @@ Parameters (when using positional arguments):
          - `''` - empty string<sup>[2019-01-06](https://github.com/uBlockOrigin/uAssets/commit/5051610f0e2374955a03c54be42bbbe9115f05c7#diff-8809d5783978a0b5b88f93d7dab99de0R2132)</sup>
          - `[]` - empty array<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
          - `{}` - empty object<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
- - optional, to defer execution of `set-constent` (New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb), solves [uBlockOrigin/uAssets#7320](https://github.com/uBlockOrigin/uAssets/issues/7320)), possible values:
+ - optional, to defer execution of `set-constent` , possible values:
      - _not present_: execute immediately
      - 1: execute immediately
-     - 2: execute when document state is "end (interactive)" (at `DOMContentLoaded` event time)
-     - 3: execute when document state is "idle (complete)" (at `load` event time)
+     - `interactive`, `end`, `2`: set the constant when the event `DOMContentInteractive` is fired
+     - `complete`, `idle`, `3`: set the constant when the event `load` is fired
+
+
+3rd parameter and beyond are tokens which modify the behavior of `set-constant`.
+
+Tokens:
+ - New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb), solves [uBlockOrigin/uAssets#7320](https://github.com/uBlockOrigin/uAssets/issues/7320):
+     - `interactive`, `end`, `2`: set the constant when the event `DOMContentInteractive` is fired
+     - `complete`, `idle`, `3`: set the constant when the event `load` is fired
+ - New in [1.49.3b13](https://github.com/gorhill/uBlock/releases/tag/1.49.3b13), solves [uBlockOrigin/uBlock-issues#2615](https://github.com/uBlockOrigin/uBlock-issues/issues/2615):
+     - `asFunction`: the constant will be a function returning the specified value
+     - `asCallback`: the constant will be a function returning a function returning the specified value
+     - `asResolved`: the constant will be a promise resolving to the specified value
+     - `asRejected`: the constant will be a promise failing with the specified value. 
 
 Examples:
  - `kompetent.de##+js(set, Object.keys, trueFunc)`
@@ -728,17 +741,21 @@ Examples:
  - `identi.li##+js(set, t_spoiler, 0)`
  - `joysound.com##+js(set, document.body.oncopy, null, 3)`
 
-Parameters (when using named arguments) <sup>([New in 1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb))</sup>:
- - "prop": _property_ (chain of properties joined by `.`) attached to window object.
- - "value": `undefined`, `false`, `true`, `null`, `noopFunc`, `trueFunc`, `falseFunc`, `''`, `[]`, `{}`
- - "runAt":
-     - _not present_: execute immediately
-     - 1: execute immediately
-     - 2: execute when document state is "end (interactive)" (at `DOMContentLoaded` event time)
-     - 3: execute when document state is "idle (complete)" (at `load` event time)
+
+<details>
+<summary>Parameters (when using named arguments)</summary>
+
+New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb)
+
+ - "prop"
+ - "value"
+ - "runAt"
 
 Examples:
  - `example.com##+js(set, {"prop": "x", "value": "true", "runAt": 1})`
+
+</details>
+
 
 ***
 
