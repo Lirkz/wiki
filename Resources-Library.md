@@ -30,7 +30,7 @@
 - [no-xhr-if](#no-xhr-ifjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
-- [spoof-css](#spoof-css-)
+- [spoof-css](#spoof-cssjs-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
 - [disable-newtab-links](#disable-newtab-linksjs-)
@@ -645,23 +645,17 @@ Examples:
 
 New in [1.47.5b4](https://github.com/gorhill/uBlock/commit/e123256eaf64be19f81eba123970db07b45eb0ae)
 
-Usage:
-```adb
-example.com##+js(href-sanitizer, a[href^="/tracker-link?to="])
-example.com##+js(href-sanitizer, a[href^="/go?to="]:not([title]))
-example.com##+js(href-sanitizer, a[href^="/go?to="][title], [title])
-```
+Parameters:
+ - required, a CSS selector which matches the elements for which the scriptlet should replace the `href` attribute with the text content of the element, if ALL the following conditions are met:
+     - The element is a link (`<a>`) element
+     - The link element has an existing `href` attribute
+     - The text content of the element is a valid `https`-based URL
+ - optional, the attribute from which to extract the text to be used for the `href` attribute of the link, otherwise the text content of the element will be used.
+     - If the second parameter starts with `?`, the scriptlet will look up the value of the search parameter which name is what comes after the `?`. (<sup>New in [1.49.3rc15](https://github.com/gorhill/uBlock/commit/56e1d92dbd65e6168620053b1fec4c21c03d664e)</sup>)
 
-The above scriptlet will find all elements matching the selector
-passed as 1st argument, and replace the `href` attribute with the
-text content of the element, if all the following conditions are
-met:
-
-- The element is a link (`a`) element
-- The link element has an existing `href` attribute
-- The text content of the element is a valid `https`-based URL
-
-The second argument is the attribute from which to extract the text to be used for the `href` attribute of the link. If the second attribute is absent, the text content of the element will be used.
+Examples:
+ - `vk.com##+js(href-sanitizer, a[href^="/go?to="][title], [title])`
+ - `vk.com##+js(href-sanitizer, a[href^="/away.php?to="][title], ?to)`
 
 Solves [uBlockOrigin/uBlock-issues#2531](https://github.com/uBlockOrigin/uBlock-issues/issues/2531).
 
