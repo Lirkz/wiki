@@ -21,6 +21,7 @@
 - [addEventListener-defuser](#addeventlistener-defuserjs-) _(aeld)_
 - [~addEventListener-logger~](#addeventlistener-loggerjs-) _(~aell~)_
 - [set-constant](#set-constantjs-) _(set)_
+- [trusted-set-constant](#trusted-set-constantjs-) _(trusted-set)_ [Trusted]
 - [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
 - [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
@@ -692,6 +693,8 @@ Examples:
  - `example.com##+js(rpnt, #text, Example Domain, Changed, condition, Example, stay, 1)`
  - `example.com##+js(rpnt, script, /devtoolsDetector\.launch\(\)\;/, , sedCount, 1)`
 
+Also see: [remove-node-text](#remove-node-textjs-)
+
 ***
 
 ### rmnt.js /
@@ -724,6 +727,8 @@ Examples:
  - `example.com##+js(rmnt, #text, Example)`
  - `example.com##+js(rmnt, #text, Example, condition, Exa)`
  - `example.com##+js(rmnt, script, timeLeft)`
+
+Also see: [replace-node-text](#replace-node-textjs-)
 
 ***
 
@@ -829,6 +834,31 @@ Examples:
 
 </details>
 
+Also see: [trusted-set-constant](#trusted-set-constantjs-)
+
+***
+
+
+### trusted-set.js /
+### trusted-set-constant.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2605)
+
+#### _Trusted scriptlet_
+
+Behaves exactly like [set-constant](#set-constantjs-), except that any arbitrary JSON-compatible value can be set.
+
+By default the value is treated as a string, which can be anything.
+
+If the value starts with `{` and ends with `}`, the value will be JSON-parsed, and the `value` property of the resulting object will be used.
+
+Solves: https://github.com/uBlockOrigin/uAssets/discussions/18185#discussioncomment-5977456
+
+Examples:
+ - `example.com##+js(trusted-set, prop, { value: 100000 })`
+ - `example.com##+js(trusted-set, prop, { value: "yes" })`
+ - `example.com##+js(trusted-set, prop, { value: [ "one", "two", 3 ]})`
+ - `example.com##+js(trusted-set, prop, { value: { url: "about:blank" }})`
+
+Also see: [set-constant](#set-constantjs-)
 
 ***
 
