@@ -109,7 +109,7 @@
 
 ## General purpose scriptlets
  - Most scriptlet relies on `Object` _properties_ ([_methods_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods_of_the_Object_constructor)), altering them may not be the best idea (you should know what you are doing).
- - Some properties related more to browser APIs rather than JS language builtins can behave in unexpected way. For example browser can override them without scriptlet noticing this. Keep this in mind when using them in scriptlet injection filers.
+ - Some properties related more to browser APIs rather than JS language built-ins can behave in unexpected way. For example browser can override them without scriptlet noticing this. Keep this in mind when using them in scriptlet injection filers.
  - "Optional" for "string/_regular expression_" parameter defaults to "catch all" (`/.?/`) if not specified.
  - "String" parameter means plain character(s)/word(s), quotes will be taken literally, commas [must be escaped](https://github.com/uBlockOrigin/uAssets/commit/2bec415a9bc4f81b29be3bf083ef1a20552f39db#commitcomment-29327114) in regex literals: `/foo\x2cbar\u002cbaz/`, after [1.22.0](https://github.com/gorhill/uBlock/commit/d67340f14db6ce5b446ef0ff4586b5e4d31f1086#diff-b03ba512faa0934947e57d28dc99b43bL242) commas can be escaped by backslash character (`foo\,bar`).
  - "Regular expression" parameter means JavaScript [regular expression literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Writing_a_regular_expression_pattern).
@@ -119,7 +119,8 @@
      - Do **not** skip `.js` when the scriptlet is used with `redirect=`, only when used in `+js(...)`.
  - Crossed out resources are deprecated/removed.
  - Starting with [1.46.1b17](https://github.com/gorhill/uBlock/commit/81498474d6d440b032681aa9952d593749b39efb) support for regex-based values as target domain has been added. Use sparingly, when no other solution is practical from a maintenance point of view -- keeping in mind that uBO has to iterate through all the regex-based values, unlike plain hostname or entity-based values which are mere lookups. Related discussion: [uBlockOrigin/uBlock-issues#2234](https://github.com/uBlockOrigin/uBlock-issues/discussions/2234). Example: `/img[a-z]{3,5}\.buzz/##+js(nowoif)`.
- - The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments. Obviously, do not use "log" or "debug" in any filter list, these are investigative tools for filter list authors.
+ - The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments.
+ - The logging/debugging capabilities work only in the **dev build** of uBO or if the advanced setting `filterAuthorMode` is set to `true`.
 
 ***
 
@@ -153,7 +154,6 @@ Whereas "target", "needle", and "context" correspond to their respective positio
 - `"log": true` => output useful information at the dev console.
 - `"debug": true` => break at key locations in the scriptlet.
 
-The added logging/debugging capabilities work only in the **dev build** of uBO or if the advanced setting `filterAuthorMode` is set to `true`.
 
 ***
 
