@@ -749,6 +749,8 @@ Parameters:
 Examples:
  - `vk.com##+js(href-sanitizer, a[href^="/go?to="][title], [title])`
  - `vk.com##+js(href-sanitizer, a[href^="/away.php?to="][title], ?to)`
+ - `<a href="https://app.adjust.com/2uo1qc?redirect=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dorg.mozilla.firefox&amp;campaign=www.mozilla.org&amp;adgroup=mobile-android-page">Text</a>`:
+   `mozilla.org##+js(href-sanitizer, a[href^="https://app.adjust.com/"][href*="?redirect="], ?redirect)`
 
 Solves [uBlockOrigin/uBlock-issues#2531](https://github.com/uBlockOrigin/uBlock-issues/issues/2531).
 
