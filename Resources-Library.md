@@ -46,7 +46,7 @@
 - [noeval](#noevaljs-)
 - [noeval-silent](#noeval-silentjs-)
 - [noeval-if](#noeval-ifjs-)
-- [no-floc](#no-flocjs-)
+- [~no-floc~](#no-flocjs-)
 - [no-requestAnimationFrame-if](#no-requestanimationframe-ifjs-) _(norafif)_
 - [nowebrtc](#nowebrtcjs-)
 - [webrtc-if](#webrtc-ifjs-)
@@ -412,13 +412,17 @@ Removes an element from the specified XML.
 New in [1.44.5b3](https://github.com/gorhill/uBlock/commit/bf690145c493acd86e578d7a860da238f0af72d4)
 
 Parameters:
- - required, the selector of elements which are to be removed.
+ - required, a selector of elements or xpath of elements/attributes <sup>(New in [1.49.3rc16](https://github.com/gorhill/uBlock/commit/f8c4b8e52d9e93e0419eb8b0891084e59be0616b))</sup> which are to be removed.
  - optional, a selector or xpath <sup>(New in [1.49.3rc15](https://github.com/gorhill/uBlock/commit/8ed78cfb234d3b9c615ee1deebea0ff0439ea7f3)</sup> that must have a match in the document for the pruning to occur. No selector means the pruning can be performed regardless.
  - optional, a URL which must be a match for the pruning to occur. If left blank, the pruning can be performed regardless.
+
+Tokens:
+ - `log, 1`
 
 Examples:
  - `cbs.com##+js(xml-prune, Period[id*="-roll-"][id*="-ad-"], , pubads.g.doubleclick.net/ondemand)`
  - `play.max.com##+js(xml-prune, xpath(//*[name()="Period"][not(.//*[name()="SegmentTimeline"])]), , .mpd)`
+ - `example.com##+js(xml-prune, xpath(//*[name()="MPD"]/@mediaPresentationDuration), , .mpd, log, 1)`
 
 ***
 
