@@ -230,7 +230,7 @@ Just a placeholder.
 [Implemented](https://github.com/uBlockOrigin/uBlock-issues/issues/1356#issuecomment-735280463) to resolve ambiguity in `$removeparam` filters with Regular Expression parameters detected as plain Regular Expression filters because of leading and trailing slashes:
 
 ```adb
-/ad-$removeparam=/^ss$/,_
+/ad-$removeparam=/^ss=foo\d$/,_
 ```
 
 ***
