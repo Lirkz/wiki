@@ -2,11 +2,11 @@ An overview of licenses of filter lists currently found in uBlock Origin (uBO).
 
 Only lists that are enabled by default in uBO are bundled with it, all others are downloaded from their respective hosts only when they have been enabled.
 
-"_Some of the 3rd-party filters (simple data files) in this software are under non-free licenses. However, it is not clear that the works in question are actually subject to copyright or that the licensing terms could apply. As such, we urge you to use redistribute those filters with caution that someone may try to claim copyright on the works._" - Joshua Gay, Licensing & Compliance Manager, Free Software Foundation
+"[_Some of the 3rd-party filters (simple data files) in this software are under non-free licenses. However, it is not clear that the works in question are actually subject to copyright or that the licensing terms could apply. As such, we urge you to use and redistribute those filters with caution that someone may try to claim copyright on the works._](https://directory.fsf.org/wiki/UBlock_Origin#tab=Details)" - Joshua Gay, Licensing & Compliance Manager, Free Software Foundation
 
 Filter List | Default | GPL | Creative Commons | Public Domain | Other | Undetermined
 ----------- | ------- | --- | ---------------- | ------------- | ----- | ------------
-uBlock filters |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
+uBlock filters - Ads |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Badware risks |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Privacy |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
 uBlock filters - Quick Fixes |X| [GPL3](https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE) ||||
