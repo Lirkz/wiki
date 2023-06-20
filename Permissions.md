@@ -20,7 +20,7 @@ uBO's required permissions are the same as those of [Privacy Badger](https://pri
 
 The `privacy` permission is needed for uBO to be able to disable the setting "Prefetch resources to load pages more quickly". This will ensure no connection is opened at all for blocked requests: It's for your protection privacy-wise.
 
-This is Privacy Badger required permissions:
+This is Privacy Badger's required permissions:
 
     "permissions": [
         "contextMenus",
