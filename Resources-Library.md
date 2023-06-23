@@ -859,10 +859,10 @@ If the value starts with `{` and ends with `}`, the value will be JSON-parsed, a
 Solves: https://github.com/uBlockOrigin/uAssets/discussions/18185#discussioncomment-5977456
 
 Examples:
- - `example.com##+js(trusted-set, prop, { value: 100000 })`
- - `example.com##+js(trusted-set, prop, { value: "yes" })`
- - `example.com##+js(trusted-set, prop, { value: [ "one", "two", 3 ]})`
- - `example.com##+js(trusted-set, prop, { value: { url: "about:blank" }})`
+ - `example.com##+js(trusted-set, prop, { "value": 100000 })`
+ - `example.com##+js(trusted-set, prop, { "value": "yes" })`
+ - `example.com##+js(trusted-set, prop, { "value": [ "one", "two", 3 ]})`
+ - `example.com##+js(trusted-set, prop, { "value": { "url": "about:blank" }})`
 
 Also see: [set-constant](#set-constantjs-)
 
