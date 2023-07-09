@@ -173,6 +173,7 @@ uBO extends ABP filter syntax.
 - [$method](#method)
 - [$object](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
 - [$other](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
+- [$permissions](#permissions)
 - [$ping](#ping)
 - [$popunder](#popunder)
 - [$popup](https://help.adblockplus.org/hc/en-us/articles/360062733293#options)
@@ -571,6 +572,37 @@ Example:
 ```
 
 The logger shows the method used for every network request. It's possible to filter the logger output for most-common methods: `get`, `head`, `post`.
+
+***
+
+#### `permissions`
+
+New in [1.50.1b16](https://github.com/gorhill/uBlock/commit/5ebdbf3e24393560156fdcd931e31f901471f7f3).
+
+Permissions Policy provides mechanisms to explicitly declare what functionality can and cannot be used on a website. It is similar to [Content Security Policy](#csp) but controls features instead of security behavior.
+
+Examples of what you can do with Permissions Policy:
+- Change the default behavior of autoplay on mobile and third-party videos.
+- Restrict a site from using sensitive devices like the camera, microphone, or speakers.
+- Allow iframes to use the [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API).
+
+Related discussion:
+https://github.com/uBlockOrigin/uBlock-issues/discussions/2714
+
+Reference:
+- https://adguard.com/kb/general/ad-filtering/create-own-filters/#permissions-modifier
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy
+
+Example:
+```adb
+||example.com^$permissions=browsing-topics=()
+```
+
+Difference with AdGuard's syntax: use `|` to separate permissions policy directives instead of `\,` -- uBO will replace instances of `|` with `, `:
+
+```adb
+*$permissions=oversized-images=()|unsized-media=()
+```
 
 ***
 
