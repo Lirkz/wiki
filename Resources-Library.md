@@ -29,6 +29,7 @@
 - [nano-setTimeout-booster](#nano-settimeout-boosterjs-) _(nano-stb)_
 - [no-fetch-if](#no-fetch-ifjs-)
 - [no-xhr-if](#no-xhr-ifjs-)
+- [set-attr](#set-attrjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
 - [replace-node-text](#replace-node-textjs-) _(rpnt)_ [Trusted]
@@ -609,6 +610,36 @@ Examples:
  - `example.com##+js(no-xhr-if, adsbygoogle.js)`
  - `example.com##+js(no-xhr-if, adsbygoogle.js method:HEAD)`
  - `example.com##+js(no-xhr-if, /adsbygoogle.js$/ method:/HEAD|POST/)`
+
+***
+
+### set-attr.js [↪](https://github.com/gorhill/uBlock/blob/786d9b2212e9a2105f516a2ffe5d031da2bdd4b5/assets/resources/scriptlets.js#L2957)
+
+New in [1.50.1b16](https://github.com/gorhill/uBlock/commit/786d9b2212e9a2105f516a2ffe5d031da2bdd4b5).
+
+Sets the specified attribute on the specified elements. This scriptlet runs once when the page loads then afterward on DOM mutations.
+
+Reference:
+- https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-scriptlets.md#-%EF%B8%8F-set-attr
+
+Related issue:
+- https://github.com/uBlockOrigin/uBlock-issues/issues/2347
+
+Parameters:
+ - `selector`: CSS selector of DOM elements for which the attribute `attr` must be modified.
+ - `attr`: the name of the attribute to modify
+ - `value`: the value to assign to the target attribute. Possible values:
+     - `''`: empty string (default)
+     - `true`
+     - `false`
+     - positive decimal integer 0 <= value < 32768
+     - `[other]`: copy the value from attribute `other` on the same element. This allows to copy the value of one attribute to another attribute on the same element. 
+
+Examples:
+```adb
+example.com##+js(set-attr, div.class > a.class, test-attribute, 0)
+example.com##+js(set-attr, a > img, src, [data-src])
+```
 
 ***
 
