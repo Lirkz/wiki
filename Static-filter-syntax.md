@@ -587,10 +587,11 @@ Examples of what you can do with Permissions Policy:
 - Allow iframes to use the [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API).
 
 Related discussion:
-https://github.com/uBlockOrigin/uBlock-issues/discussions/2714
+- https://github.com/uBlockOrigin/uBlock-issues/discussions/2714
 
 Reference:
 - https://adguard.com/kb/general/ad-filtering/create-own-filters/#permissions-modifier
+- https://docs.w3cub.com/http/headers/feature-policy#directives
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy
 
 Example:
