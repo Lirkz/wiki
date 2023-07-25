@@ -831,7 +831,7 @@ Parameters:
          - `''` - empty string<sup>[2019-01-06](https://github.com/uBlockOrigin/uAssets/commit/5051610f0e2374955a03c54be42bbbe9115f05c7#diff-8809d5783978a0b5b88f93d7dab99de0R2132)</sup>
          - `[]` - empty array<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
          - `{}` - empty object<sup>[1.36](https://github.com/gorhill/uBlock/commit/ce801b952b5777775385efc00479405af54edbc9)</sup>
- - optional, to defer execution of `set-constent` , possible values:
+ - optional, to defer execution of `set-constant`, possible values:
      - _not present_: execute immediately
      - 1: execute immediately
      - `interactive`, `end`, `2`: set the constant when the event `DOMContentInteractive` is fired
