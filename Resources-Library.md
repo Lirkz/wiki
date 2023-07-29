@@ -378,10 +378,7 @@ Parameters:
  - optional,
      - string, a list of space-separated properties which must be all present for the pruning to occur; OR
      - string/_regular expression_, for logging purposes, matching in stringified JSON payloads (New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a))
-
-Tokens:
- - `log, 1`: enable logging capabilites
- - `stackNeedle, value`: string or regular expression that must match the current function call stack trace <sup>(New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/4649ae4d78))</sup>
+ - optional, string or regular expression that must match the current function call stack trace (New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/4649ae4d78))
 
 A property in a list of properties can be a chain of properties, example: `adpath.url.first`.
 
@@ -408,6 +405,10 @@ property to remove is an element in an array.
 
 When used without parameters, will log current hostname + json payload to the console.  
 New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a) - second parameter can be used to limit logging to JSON payloads which stringified content match specified string or _regular expression_.
+
+
+Tokens:
+ - `log, ...`: This extends logging capabilities of `json-prune` scriptlet as follows: `...##+js(json-prune, a, b, stackNeedle, log, [logneedle], logstack, 1)`. Whereas before, the only way to log `json-prune` usage was to skip providing the property chain: `...##+js(json-prune, , b)` Where `b` was the expression to filter out logging output. With the extended logging capabilities, the logging output can be filtered out with `logneedle`, which can be a regex literal. Additionally, to log the stack trace the `stackNeedle` argument must be set to non-empty string. You can use `/.^/` to log the stack trace without matching it (New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/81b2fcee5d)).
 
 Examples:
  - `youthhealthmag.com##+js(json-prune, unit_list)`
