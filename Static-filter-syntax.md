@@ -84,9 +84,9 @@ Incorrect usage:
 
 #### `!#if [condition]`
 
-The `!#if` directive allows filter list maintainers to create areas in a filter list that get parsed **only** if certain conditions get met (or not met). For example, use this to create filters specific to a particular browser.
+The `!#if` directive allows filter list maintainers to create areas in a filter list that get parsed **only** if certain conditions are met (or not met). For example, use this to create filters specific to a particular browser.
 
-For example, to compile a block of filters only if uBO is running as a Firefox extension:
+For example, to compile a block of filters only if uBO is running as a Firefox add-on:
 
 ```adb
 !#if env_firefox
@@ -94,7 +94,7 @@ For example, to compile a block of filters only if uBO is running as a Firefox e
 !#endif
 ```
 
-Another example is to compile a block of filters only if uBO is _not_ running as a Firefox extension:
+Another example is to compile a block of filters only if uBO is _not_ running as a Firefox add-on (you can negate using `!`):
 
 ```adb
 !#if !env_firefox
@@ -104,7 +104,9 @@ Another example is to compile a block of filters only if uBO is _not_ running as
 
 Support for preprocessor directives is the result of discussion with AG developers. See <https://github.com/AdguardTeam/AdguardBrowserExtension/issues/917>.
 
-For the time being, only a single token is supported in a `!#if` directive (can negate using `!`). uBO supports only the following, and anything else gets ignored:
+After [1.50.1b9](https://github.com/gorhill/uBlock/commit/194354cd5d776f99c10381102afea13e5d018756), uBO is fully compatible with the `!#if` directives found throughout AdGuard's filter lists.
+
+uBO supports only the following, and anything else gets ignored:
 
 | Token | Value | Version |
 | ----- | ----- | ------------- |
@@ -140,6 +142,16 @@ Starting from [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad91
 ```
 
 Before this version, you could use negated `ext_ublock` since this token always equals true in uBO.
+
+Starting from [1.50.1b9](https://github.com/gorhill/uBlock/commit/194354cd5d776f99c10381102afea13e5d018756), you can use the `!#else` directive:
+
+```adb
+!#if cap_html_filtering
+example.com##^script:has-text(fakeAd)
+!#else
+example.com##+js(rmnt, script, fakeAd)
+!#endif
+``` 
 
 ***
 
