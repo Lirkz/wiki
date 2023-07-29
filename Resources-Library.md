@@ -379,6 +379,10 @@ Parameters:
      - string, a list of space-separated properties which must be all present for the pruning to occur; OR
      - string/_regular expression_, for logging purposes, matching in stringified JSON payloads (New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a))
 
+Tokens:
+ - `log, 1`: enable logging capabilites
+ - `stackNeedle, value`: string or regular expression that must match the current function call stack trace <sup>(New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/4649ae4d78))</sup>
+
 A property in a list of properties can be a chain of properties, example: `adpath.url.first`.
 
 After [1.28.0](https://github.com/gorhill/uBlock/commit/f433932d8602230539d3408e9946d4d70b40306c), two special _"wildcard tokens"_ have been added:
