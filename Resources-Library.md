@@ -1013,6 +1013,7 @@ Parameters:
     - arbitrary value
     - `$now$`: keyword for setting current time in ms, corresponds to `Date.now()` and `(new Date).getTime()` calls
     - `$currentDate$`: keyword for setting string representation of the current date and time, corresponds to `Date()` and `(new Date).toString()` calls
+    - `$currentISODate$`: keyword for setting string representation of the current date and time in ISO format, corresponds to `Date()` and `(new Date).toISOString()` calls
 
 Examples:
  - `example.com##+js(trusted-set-local-storage-item, COOKIE_CONSENTS, {"preferences":3\,"flag":false})`
