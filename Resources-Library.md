@@ -22,6 +22,10 @@
 - [~addEventListener-logger~](#addeventlistener-loggerjs-) _(~aell~)_
 - [set-constant](#set-constantjs-) _(set)_
 - [trusted-set-constant](#trusted-set-constantjs-) _(trusted-set)_ [Trusted]
+- [set-cookie](#set-cookiejs-)
+- [trusted-set-cookie](#trusted-set-cookiejs-) [Trusted]
+- [set-local-storage-item](#set-local-storage-itemjs-)
+- [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-) [Trusted]
 - [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
 - [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
@@ -32,14 +36,14 @@
 - [set-attr](#set-attrjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
-- [replace-node-text](#replace-node-textjs-) _(rpnt)_ [Trusted]
 - [remove-node-text](#remove-node-textjs-) _(rmnt)_
+- [replace-node-text](#replace-node-textjs-) _(rpnt)_ [Trusted]
 - [spoof-css](#spoof-cssjs-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
 - [disable-newtab-links](#disable-newtab-linksjs-)
 - [window-close-if](#window-close-ifjs-)
-- [window.open-defuser](#windowopen-defuserjs-) _(nowoif)_
+- [no-window-open-if](#no-window-open-ifjs-) _(nowoif)_
 - [json-prune](#json-prunejs-)
 - [evaldata-prune](#evaldata-prunejs-)
 - [xml-prune](#xml-prunejs-)
@@ -128,6 +132,7 @@
  - The usage of named arguments is optional, positional arguments are still supported as documented. Named arguments is required to use "log" and/or "debug" arguments.
  - The logging/debugging capabilities work only in the **dev build** of uBO or if the advanced setting `filterAuthorMode` is set to `true`.
 - The only filter lists deemed from a "trusted source" are uBO-specific filter lists (i.e. "uBlock filters -- ..."), and the user's own filters from "My filters".
+- Tokens are parameters which modify the behavior of a scriptlet, they must be used after the required and optional parameters.
 
 ***
 
@@ -238,13 +243,11 @@ Examples:
  - `vivo.sx##+js(aeld, , preventDefault)`
  - `vidto.me##+js(aeld, /^(?:click|mousedown|mousemove|touchstart|touchend|touchmove)$/, system.popunder)`
 
-Parameters (when using named arguments) <sup>([New in 1.48.1b3](https://github.com/gorhill/uBlock/commit/439951824af608bd445ec458f837fa39f366d75f))</sup>:
- - "type": the event type to match (such as [`load`, `mousedown`, `contextmenu`](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing)). Default to '', i.e. _match-all_.
- - "pattern": the pattern to match against the handler argument. Default to '', i.e. _match-all_.
+Tokens:
  - "runAt": when this parameter is present, uBO will take it into account to possibly defer defusing the event listener <sup>([New in 1.49.3b4](https://github.com/gorhill/uBlock/commit/3c12173dfe4eea7c4b6758c556ed2dd5fcdbdd99))</sup>:
      - end: execute scriptlet at `DOMContentLoaded` event ("interactive")
      - idle: execute scriptlet at `load` event ("complete")
- - "log": an integer value telling when to log:
+ - "log": an integer value telling when to log (see [uBlockOrigin/uAssets#17907](https://github.com/uBlockOrigin/uAssets/discussions/17907)):
      - 1: log only when both type and pattern matches, i.e. when a call to `addEventListener()` is defused
      - 2: log when either the type or pattern matches
      - 3: log all calls to `addEventListener()`
@@ -253,16 +256,20 @@ Parameters (when using named arguments) <sup>([New in 1.48.1b3](https://github.c
      - 2: break into the debugger when either type or pattern matches.
 
 Examples:
- - `wikipedia.org##+js(aeld, { "type": "/mouse/", "pattern": "/.^/", "log": 2 })`
- - `wikipedia.org##+js(aeld, { "type": "/.^/", "log": 2 })`
- - `wikipedia.org##+js(aeld, { "log": 1 })`
- - `jpvhub.com##+js(aeld, { "type": "click", "pattern": "popMagic", "runAt": "idle" })`
+ - `wikipedia.org##+js(aeld, /mouse/, /.^/, log, 2)`
+ - `wikipedia.org##+js(aeld, , /.^/, log, 2)`
+ - `wikipedia.org##+js(aeld, , , log, 1)`
+ - `jpvhub.com##+js(aeld, click, popMagic, runAt, idle)`
 
 The first filter will log calls to `addEventListener()` which have the pattern "mouse" in the event type (so "mouseover", "mouseout", etc.) **without defusing any of them** (because pattern can't match _anything_).
 
 The second filter will log all calls **without defusing any of them** (because type can't match _anything_).
 
-The third filter will log and defuse _all_ calls to `addEventListener()`.
+The forth filter will log and defuse _all_ calls to `addEventListener()`.
+
+In summary, if you need to only log all event listeners, use this filter:
+
+`example.com##+js(aeld, _, , log, 3)`
 
 ***
 
@@ -408,9 +415,11 @@ If the site uses `eval` in lieu of `JSON.parse`, see: [evaldata-prune](#evaldata
 ***
 
 ### xml-prune.js [↪](https://github.com/gorhill/uBlock/blob/bf690145c493acd86e578d7a860da238f0af72d4/assets/resources/scriptlets.js#L1672)
-Removes an element from the specified XML.
+Removes an element from the specified XML retrieved using fetch, xhr support was added in [1.49.3rc6](https://github.com/gorhill/uBlock/commit/d3fae27017a1ce65fcba35ef7ca59b6a22ad2bde).
 
 New in [1.44.5b3](https://github.com/gorhill/uBlock/commit/bf690145c493acd86e578d7a860da238f0af72d4)
+
+After [1.49.3rc16](https://github.com/gorhill/uBlock/commit/f8c4b8e52d9e93e0419eb8b0891084e59be0616b), it can also remove attributes.
 
 Parameters:
  - required, a selector of elements or xpath of elements/attributes <sup>(New in [1.49.3rc16](https://github.com/gorhill/uBlock/commit/f8c4b8e52d9e93e0419eb8b0891084e59be0616b))</sup> which are to be removed.
@@ -619,20 +628,14 @@ New in [1.50.1b16](https://github.com/gorhill/uBlock/commit/786d9b2212e9a2105f51
 
 Sets the specified attribute on the specified elements. This scriptlet runs once when the page loads then afterward on DOM mutations.
 
-Reference:
-- https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-scriptlets.md#-%EF%B8%8F-set-attr
-
-Related issue:
-- https://github.com/uBlockOrigin/uBlock-issues/issues/2347
-
 Parameters:
- - `selector`: CSS selector of DOM elements for which the attribute `attr` must be modified.
- - `attr`: the name of the attribute to modify
- - `value`: the value to assign to the target attribute. Possible values:
+ - required, CSS selector of DOM elements for which the attribute `attr` must be modified.
+ - required, the name of the attribute to modify
+ - required, the value to assign to the target attribute. Possible values:
      - `''`: empty string (default)
      - `true`
      - `false`
-     - positive decimal integer 0 <= value < 32768
+     - positive decimal integer: `0 <= value < 32768`
      - `[other]`: copy the value from attribute `other` on the same element. This allows to copy the value of one attribute to another attribute on the same element. 
 
 Examples:
@@ -640,6 +643,8 @@ Examples:
 example.com##+js(set-attr, div.class > a.class, test-attribute, 0)
 example.com##+js(set-attr, a > img, src, [data-src])
 ```
+
+Solves [uBlockOrigin/uBlock-issues#2347](https://github.com/uBlockOrigin/uBlock-issues/issues/2347).
 
 ***
 
@@ -712,8 +717,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName
  - required, A string or regex to find in the text content of the node as the target of substitution
  - optional, the replacement text. Can be omitted if the goal is to delete the text which
 matches the pattern. Cannot be omitted if extra pairs of parameters have to be used (see below)
-
-Optionally, extra pairs of parameters (tokens) can be used to modify the behavior of the scriptlet.
 
 Tokens:
  - `condition, pattern`: A string or regex which must be found in the text content of the node
@@ -837,12 +840,9 @@ Parameters:
      - `interactive`, `end`, `2`: set the constant when the event `DOMContentInteractive` is fired
      - `complete`, `idle`, `3`: set the constant when the event `load` is fired
 
-
-3rd parameter and beyond are tokens which modify the behavior of `set-constant`.
-
 Tokens:
  - New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb), solves [uBlockOrigin/uAssets#7320](https://github.com/uBlockOrigin/uAssets/issues/7320):
-     - `interactive`, `end`, `2`: set the constant when the event `DOMContentInteractive` is fired
+     - `interactive`, `end`, `2`: set the constant when the event `DOMContentLoaded` is fired
      - `complete`, `idle`, `3`: set the constant when the event `load` is fired
  - New in [1.49.3b13](https://github.com/gorhill/uBlock/releases/tag/1.49.3b13), solves [uBlockOrigin/uBlock-issues#2615](https://github.com/uBlockOrigin/uBlock-issues/issues/2615):
      - `asFunction`: the constant will be a function returning the specified value
@@ -856,25 +856,9 @@ Examples:
  - `identi.li##+js(set, t_spoiler, 0)`
  - `joysound.com##+js(set, document.body.oncopy, null, 3)`
 
-
-<details>
-<summary>Parameters (when using named arguments)</summary>
-
-New in [1.49.3b4](https://github.com/gorhill/uBlock/commit/e1500ee88d2524da0c93e85b8855d0671a3c6cdb)
-
- - "prop"
- - "value"
- - "runAt"
-
-Examples:
- - `example.com##+js(set, {"prop": "x", "value": "true", "runAt": 1})`
-
-</details>
-
 Also see: [trusted-set-constant](#trusted-set-constantjs-)
 
 ***
-
 
 ### trusted-set.js /
 ### trusted-set-constant.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2605)
@@ -899,29 +883,144 @@ Also see: [set-constant](#set-constantjs-)
 
 ***
 
-### ~sil.js~ /
-### ~setInterval-logger.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L500)
+### set-cookie.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L2908)
 
-Deprecated by [`no-setInterval-if.js`](#no-setinterval-ifjs-)
+New in [1.50.1b0](https://github.com/gorhill/uBlock/commit/27a54c084556f657522b06484d2e28b21e1fac5a).
 
-Removed in [1.22.0](https://github.com/gorhill/uBlock/commit/c5536577b29cd0bcd401f7ecd143a921acdb4eb6).
+Sets a cookie with the specified name, value, and path.
 
-Logs to the console calls to _`setInterval()`_ function.
+Parameters:
+ - required, cookie name to be set
+ - required, cookie value; possible values:
+    - number: `>= 0 && <= 15`
+    - one of the predefined constants (in any case variation):
+        - `true`
+        - `false`
+        - `yes` / `y`
+        - `no` / `n`
+        - `ok`
+        - `accept`/ `reject`
+        - `allow` / `deny`    
+ - optional, cookie path, defaults to /; possible values: 
+    - `/`: root path
+    - `none`: to set no path at all
 
+The scriptlet encodes cookie names and values, e.g value "{ test: 'value'}" becomes `%7B%20test%3A%20'value'%7D`.
+
+Tokens:
+ - `reload, 1`: the scriplet will force a reload of the webpage if the cookie being set was not already set.
+
+Examples:
+ - `example.com##+js(set-cookie, CookieConsent, 1)`
+ - `example.com##+js(set-cookie, gdpr-settings-cookie, true)`
+ - `example.com##+js(set-cookie, cookie_consent, ok, none)`
+
+Also see: [trusted-set-cookie](#trusted-set-cookiejs-)
 
 ***
 
-### ~std.js~ /
-### ~setTimeout-defuser.js~ [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L515)
+### trusted-set-cookie.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L3191)
 
-Deprecated by [`no-setTimeout-if.js`](#no-settimeout-ifjs-)
+#### _Trusted scriptlet_
 
-Defuses calls to _`setTimeout()`_ function for specified matching callbacks and delays by setting callback function to noop.
+Sets a cookie with arbitrary name and value, and with optional ability to offset cookie attribute 'expires' and set path.
+
+New in [1.50.1b1](https://github.com/gorhill/uBlock/commit/eaea26b5e97e147560cefa9118134b2e40060cf6).
 
 Parameters:
- - optional, string/_regular expression_, matching in stringified callback function
- - optional, decimal integer, matching _delay_
+ - required, cookie name to be set
+ - required, cookie value. Possible values:
+    - arbitrary value
+    - empty string for no value
+    - `$now$` keyword for setting current time in ms, e.g 1667915146503
+    - `$currentDate$` keyword for setting current time as string, e.g 'Tue Nov 08 2022 13:53:19 GMT+0300'
+ - optional, offset from current time in seconds, after which cookie should expire; defaults to no offset. Possible values:
+    - positive integer in seconds
+    - `1year` keyword for setting expiration date to one year
+    - `1day` keyword for setting expiration date to one day
+ - optional, argument for setting cookie path, defaults to `/`; possible values:
+    - `/`: root path
+    - `none`: to set no path at all
 
+The scriptlet does not encode cookie names and values. As a result, if a cookie's name or value includes `;`, the scriptlet will not set the cookie since this may cause the cookie to break.
+
+Tokens:
+ - `reload, 1`: the scriplet will force a reload of the webpage if the cookie being set was not already set.
+
+Examples:
+ - `example.com##+js(trusted-set-cookie, cmpconsent, 1-accept_1)`
+ - `example.com##+js(trusted-set-cookie, cmpconsent, $now$)`
+ - `example.com##+js(trusted-set-cookie, cmpconsent, accept, 259200)`
+ - `example.com##+js(trusted-set-cookie, cmpconsent, accept, 1year)`
+ - `example.com##+js(trusted-set-cookie, cmpconsent, decline, , none)`
+
+The second filter sets a cookie with `new Date().getTime()` value.
+
+The third and forth filters set a cookie which will expire in 3 days or 1 year.
+
+The fifth filter sets a cookie with no path.
+
+Also see: [set-cookie](#set-cookiejs-)
+
+***
+
+### set-local-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L2959)
+
+### set-session-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L2959)
+
+New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3) and [1.50.1b12](https://github.com/gorhill/uBlock/commit/083a318090e38fb81c2b94ea326521d5a76f7c57).
+
+Set a local/session storage entry to a specific, allowed value. Scriptlet won't set item if storage is full.
+
+- required, key name to be set.
+- required, key value; possible values:
+    - positive decimal integer `<= 32767`
+    - one of the predefined constants:
+        - `undefined`
+        - `false`
+        - `true`
+        - `null`
+        - `{}`: empty object
+        - `[]`: empty array
+        - `''`: empty string
+        - `yes`
+        - `no`
+        - `$remove$`: remove specific item from localStorage
+
+Examples:
+ - `example.com##+js(set-local-storage-item, player.live.current.mute, false)`
+ - `example.com##+js(set-local-storage-item, exit-intent-marketing, 1)`
+ - `example.com##+js(set-local-storage-item, foo, $remove)`
+ - `example.com##+js(set-session-storage-item, player.live.current.mute, false)`
+ - `example.com##+js(set-session-storage-item, exit-intent-marketing, 1)`
+ - `example.com##+js(set-session-storage-item, foo, $remove)`
+
+Solves [uBlockOrigin/uBlock-issues#2697](https://github.com/uBlockOrigin/uBlock-issues/discussions/2697).
+
+Also see: [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-)
+
+***
+
+### trusted-set-local-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L3250)
+
+#### _Trusted scriptlet_
+
+New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3).
+
+Parameters:
+ - required, key name to be set.
+ - required, key value; possible values:
+    - arbitrary value
+    - `$now$`: keyword for setting current time in ms, corresponds to `Date.now()` and `(new Date).getTime()` calls
+    - `$currentDate$`: keyword for setting string representation of the current date and time, corresponds to `Date()` and `(new Date).toString()` calls
+
+Examples:
+ - `example.com##+js(trusted-set-local-storage-item, COOKIE_CONSENTS, {"preferences":3\,"flag":false})`
+ - `example.com##+js(trusted-set-local-storage-item, providers, [16364\,88364])`
+ - `example.com##+js(trusted-set-local-storage-item, player.live.current.play, $currentDate$)`
+ - `example.com##+js(trusted-set-local-storage-item, ppu_main_none, '')`
+
+Also see: [set-local-storage-item](#set-local-storage-itemjs-)
 
 ***
 
@@ -961,9 +1060,9 @@ There can be any number of property-name/property-value pairs, all separated by 
 
  - `example.com##+js(spoof-css, .ad, clip-path, none, display, block)`
 
-A special property-name/property-value pair `debug/1` can be used to force the browser to break when `getComputedStyle()` or `getBoundingClientrect()` is called, useful to help pinpoint usage of those calls in the page's source code:
-
- - `example.com##+js(spoof-css, .ad, debug, 1)`
+Tokens: 
+ - `debug, 1`: Force the browser to break when `getComputedStyle()` or `getBoundingClientrect()` is called, useful to help pinpoint usage of those calls in the page's source code:
+    `example.com##+js(spoof-css, .ad, debug, 1)`
 
 Solves [uBlockOrigin/uBlock-issues#2618](https://github.com/uBlockOrigin/uBlock-issues/issues/2618).
 
@@ -1028,7 +1127,7 @@ Examples:
 ***
 
 ### nowoif.js /
-### window.open-defuser.js [↪](https://github.com/gorhill/uBlock/blob/b98b2fc52becce75b858b0a6040328e291fdae29/src/web_accessible_resources/window.open-defuser.js)
+### no-window-open-if.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L1879)
 Prevent opening new windows by [_`window.open()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) when URL positively or negatively matches to specific string.
 
 Improvements:
@@ -1041,22 +1140,17 @@ if second argument is present and a valid integer value, the defuser will return
 Use third parameter (set it to `log`) to log `window.open()` parameters, and log access to attributes of returned `window` object.
 
 Parameters:
- - optional, string/_regular expression_, prefixed by `!` for negation, matching in URL parameter passed to _`window.open()`_,
+ - optional, string/_regular expression_, prefixed by `!` for negation, matching in all parameters passed to _`window.open()`_ (all the arguments are joined as a single space-spearated string, and the result is used as the target for matching the pattern, new in [1.50.1b2](https://github.com/gorhill/uBlock/commit/0bd4b600cf78a988b8ed677780ec258518822663)),
  - optional, positive decimal integer, number of seconds after returned `window` object will be invalidated.
- - optional, space-separated tokens,
-    - `log`:  
-    Cause the scriptlet to log information regarding how `window.open()` is used by the page on which the scriptlet is used. Useful only to filter creators.
-    - `obj`:  
-    Use an `object` element instead of `iframe` element (default) as a decoy to be used in place of a popup window, when the page requires a valid `window` instance to be returned.
-    - before [1.29.2](https://github.com/gorhill/uBlock/commit/d544543ab580930733c4def8817fbff251ad10ce) any value (for example `-`) was turning on logging.
+ - optional, `obj`: Use an `object` element instead of `iframe` element (default) as a decoy to be used in place of a popup window, when the page requires a valid `window` instance to be returned.
 
-Parameters syntax deprecated after 1.26.0:
- - optional - defaults to "matching", nothing or `1` for "matching", `0` for "not matching",
- - optional, string/_regular expression_, matching/not matching in URL parameter passed to _`window.open()`_
+Tokens:
+ - `log, 1`: Cause the scriptlet to log information regarding how `window.open()` is used by the page on which the scriptlet is used.
 
 Examples:
- - `file-up.org##+js(window.open-defuser)`
-
+ - `file-up.org##+js(nowoif)`
+ - `vidstream.*##+js(nowoif, !api?call=, 10, obj)`
+ - `example.com##+js(nowoif, download-link, , , log, 1)`
 
 ***
 
