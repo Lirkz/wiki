@@ -246,6 +246,13 @@ Just a placeholder.
 /ad-$removeparam=/^foo=bar\d$/,_
 ```
 
+Starting from [1.50.1b11](https://github.com/gorhill/uBlock/commit/33b409dd5baee1fd48a02bac757dc599373f1aa5), you can use the `_` option to also resolve readability issues by supporting multiple instances of the `_` option in a single filter:
+
+```adb
+||example.com$_,removeparam=/^ss\\$/,_,image
+||example.com$replace=/bad/good/,___,~third-party
+``` 
+
 ***
 
 #### `*` aka "all URLs"
