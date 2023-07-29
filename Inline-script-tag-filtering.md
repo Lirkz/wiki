@@ -1,3 +1,5 @@
+Also see: [remove-node-text](#remove-node-textjs-)
+
 Back to [Static filter syntax](./Static-filter-syntax).
 
 ***
