@@ -18,7 +18,7 @@ However, Web Protector has a home server, and it does "phone home" as opposed to
 
 For **every** web page you visit, you can see Web Protector sending behind-the-scene network requests to `webovernet.com`:
 
-![c](https://cloud.githubusercontent.com/assets/585534/8253895/fe92dd8c-1661-11e5-9134-5c2b9159a57c.png)
+![The uBlock Origin logger, showing network requests to webovernet.com every time a website is visited](https://cloud.githubusercontent.com/assets/585534/8253895/fe92dd8c-1661-11e5-9134-5c2b9159a57c.png)
 
 ***
 
@@ -28,6 +28,6 @@ This is just to demonstrate that the permissions _alone_ do not tell the whole s
 - Under which license does the code fall?
 - Is there a home server?
 - What network requests are made by an extension behind the scene?
-    - uBO's logger allows you to see all [behind-the-scene network requests](https://github.com/uBlockOrigin/uBlock-issues/wiki/Behind-the-scene-network-requests), including its own (mainly to GitHub, for updating filter lists).
+    - uBO's logger allows you to see it's own [behind-the-scene network requests](https://github.com/uBlockOrigin/uBlock-issues/wiki/Behind-the-scene-network-requests) (mainly to GitHub, for updating filter lists).
 - How is an extension monetizing itself?
     - Learning about this factor will help you best understand whether the extension's developer's interests are aligned or at odds with yours.
