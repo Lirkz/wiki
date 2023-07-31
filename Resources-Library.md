@@ -205,13 +205,15 @@ New in [1.29.3rc9](https://github.com/gorhill/uBlock/commit/b735ac6b6abab7d5f45e
 Aborts execution of script (_throws_ `ReferenceError`) when attempts to access specified _property_ when _stack trace_ matches specified text or _regular expression_. <sub>[Internal discussion](https://github.com/orgs/uBlockOrigin/teams/ublock-issues-volunteers/discussions/237?from_comment=59)</sub>
 
 Parameters:
- - required, _property_ (chain of properties joined by `.`) to trap in order to launch the stack trace matching code, ex. `Math.random`.
- - optional, string/_regular expression_, the needle to match against the stack trace. If the empty string, always match.
- - optional, whether to log, and if so how:
-     - Empty string: do not log
-     - `1`: log stack trace for all access to trapped property
-     - `2`: log stack trace for defused access to trapped property
-     - `3`: log stack trace for non-defused access to trapped property
+ - required, _property_ (chain of properties joined by `.`) to trap in order to launch the stack trace matching code, ex. `Math.random`
+ - optional, string/_regular expression_, the needle to match against the stack trace. If the empty string, always match. Prepend pattern with `!` to test for unmatched patterns in stack trace <sup>(New in [1.51.1b6](https://github.com/gorhill/uBlock/commit/84cc69aa10bc9c8045ed94b528ddc158c06ae7ab))</sup>
+
+
+Tokens:
+ - "log":
+    - `1`: log stack trace for all access to trapped property
+    - `2`: log stack trace for defused access to trapped property
+    - `3`: log stack trace for non-defused access to trapped property
 
 Stack trace is normalized, but there still can be differences (Chromium vs Firefox) because of different format of stack trace.
 
@@ -378,7 +380,7 @@ Parameters:
  - optional,
      - string, a list of space-separated properties which must be all present for the pruning to occur; OR
      - string/_regular expression_, for logging purposes, matching in stringified JSON payloads (New in [1.27.0](https://github.com/gorhill/uBlock/commit/578594bbd7c545b62f18267d640a605f8e07a53a))
- - optional, string or regular expression that must match the current function call stack trace (New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/4649ae4d78))
+ - optional, string or regular expression that must match the current function call stack trace (New in [1.51.1b5](https://github.com/gorhill/uBlock/commit/4649ae4d78)). Prepend pattern with `!` to test for unmatched patterns in stack trace <sup>(New in [1.51.1b6](https://github.com/gorhill/uBlock/commit/84cc69aa10bc9c8045ed94b528ddc158c06ae7ab))</sup>
 
 A property in a list of properties can be a chain of properties, example: `adpath.url.first`.
 
