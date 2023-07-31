@@ -624,6 +624,10 @@ Difference with AdGuard's syntax: use `|` to separate permissions policy directi
 *$permissions=oversized-images=()|unsized-media=()
 ```
 
+However, it's best to not combine permissions policy to not break exception filters for either one of them.
+
+When no type (e.g. `$doc`) is given, uBO will use `$document,subdocument` internally when the `permissions` option is used (same as with `csp`).
+
 ***
 
 #### `ping`
