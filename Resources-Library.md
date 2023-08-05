@@ -59,6 +59,7 @@
 - [refresh-defuser](#refresh-defuserjs-)
 - [overlay-buster](#overlay-busterjs-)
 - [alert-buster](#alert-busterjs-)
+- [trusted-replace-fetch-response](#trusted-replace-fetch-responsejs) [Trusted]
 
 ***
 
@@ -1180,6 +1181,17 @@ Experimental, gets rid of overlay dialogs, works for ~30s after page load. Prefe
 ### alert-buster.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L691)
 Disables [_`alert()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) dialog boxes by redirecting messages to console.
 
+
+***
+
+### trusted-replace-fetch-response.js
+Modifies the response of all fetch requests in order to replace part of the text with an arbitrary string.<sup>[[1]](https://github.com/gorhill/uBlock/commit/82a7d11f78b0b51d742040b620b99bde62b73798)</sup>
+Run without any arguments to log requests.
+Parameters:
+- pattern
+The pattern to replace. Can be a regex
+- replacement
+The string to replace _pattern_ with.
 
 ***
 
