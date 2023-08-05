@@ -1189,8 +1189,10 @@ Modifies the response of all fetch requests in order to replace part of the text
 Run without any arguments to log requests.
 Parameters:
 - pattern
+
 The pattern to replace. Can be a regex
 - replacement
+
 The string to replace _pattern_ with.
 
 ***
