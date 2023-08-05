@@ -1186,7 +1186,8 @@ Disables [_`alert()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/a
 
 ### trusted-replace-fetch-response.js
 Modifies the response of all fetch requests in order to replace part of the text with an arbitrary string.<sup>[[1]](https://github.com/gorhill/uBlock/commit/82a7d11f78b0b51d742040b620b99bde62b73798)</sup>
-Run without any arguments to log requests.
+Run without any arguments to log requests. [See the documentation on AdGuard's trusted-replace-fetch-response scriptlet for more information.](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-trusted-scriptlets.md#-%EF%B8%8F-trusted-replace-fetch-response)
+
 Parameters:
 - pattern
 
