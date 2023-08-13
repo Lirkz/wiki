@@ -143,9 +143,9 @@ uBO [1.25.2](https://github.com/gorhill/uBlock/commit/b784b7d5693751844bdb6e7ec7
 
 URL from where the _benchmark_ _dataset_ will be fetched. This allows launching the benchmark operations from within published versions of uBO, rather than from just a locally built version.
 
-_Dataset_ is the `requests_top500.json.gz` dataset of URLs released by "whotracks.me" with their [Adblockers Performance Study](https://whotracks.me/blog/adblockers_performance_study.html).
+The most recent dataset to use is found: <https://github.com/mjethani/scaling-palm-tree/>, download locally [requests.json](https://github.com/mjethani/scaling-palm-tree/blob/main/requests.json) as a raw text file.
 
-It is recommended to download the dataset, decompress it, and use a local URL to refer to the resource so as to not abuse the bandwidth of the remote server. In a Chromium-based browser, you can use a `file:///`-based URL to the local copy. On Firefox you will have to [create a simple HTTP server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) and create a URL such as `http://localhost:8000/[...]` to the local copy.
+Use a local URL to refer to the downloaded dataset. In a Chromium-based browser, you can use a `file:///`-based URL to the local copy. On Firefox you will have to [create a simple HTTP server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) and create a URL such as `http://localhost:8000/[...]` to the local copy.
 
 To launch benchmark operations, go to _Support_ pane in the dashboard, then click the _More_ button. This will open a new tab with various developer tools, one of which is _SFNE: Benchmark_, which purpose is to benchmark the static network filtering engine using the data at the URL provided above, against the currently selected filter lists.
 
