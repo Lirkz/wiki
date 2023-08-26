@@ -540,6 +540,12 @@ Parameters:
       - `name` is [init option name](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters)
       - `value` is string or regular expression for matching the value of the option passed to fetch call
 
+Tokens:
+ - "log":
+    - `match`: log only when there is a match
+    - `nomatch`: log only when there is no match
+    - `all`: log unconditionally
+
 Scriptlet does nothing if response body can't be converted to text.
 
 Solves [uBlockOrigin/uBlock-issues#2742](https://github.com/uBlockOrigin/uBlock-issues/issues/2742).
