@@ -33,7 +33,7 @@
 - [nano-setTimeout-booster](#nano-settimeout-boosterjs-) _(nano-stb)_
 - [no-xhr-if](#no-xhr-ifjs-)
 - [no-fetch-if](#no-fetch-ifjs-)
-- [trusted-replace-fetch-response](#trusted-replace-fetch-responsejs) [Trusted]
+- [trusted-replace-fetch-response](#trusted-replace-fetch-responsejs-) [Trusted]
 - [set-attr](#set-attrjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
