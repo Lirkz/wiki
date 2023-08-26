@@ -31,8 +31,9 @@
 - [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
 - [nano-setInterval-booster](#nano-setinterval-boosterjs-) _(nano-sib)_
 - [nano-setTimeout-booster](#nano-settimeout-boosterjs-) _(nano-stb)_
-- [no-fetch-if](#no-fetch-ifjs-)
 - [no-xhr-if](#no-xhr-ifjs-)
+- [no-fetch-if](#no-fetch-ifjs-)
+- [trusted-replace-fetch-response](#trusted-replace-fetch-responsejs) [Trusted]
 - [set-attr](#set-attrjs-)
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
@@ -59,7 +60,6 @@
 - [refresh-defuser](#refresh-defuserjs-)
 - [overlay-buster](#overlay-busterjs-)
 - [alert-buster](#alert-busterjs-)
-- [trusted-replace-fetch-response](#trusted-replace-fetch-responsejs) [Trusted]
 
 ***
 
@@ -517,6 +517,40 @@ Examples:
  - `example.com##+js(no-fetch-if, adsbygoogle.js)`
  - `example.com##+js(no-fetch-if, adsbygoogle.js method:HEAD)`
  - `example.com##+js(no-fetch-if, /adsbygoogle.js$/ method:/HEAD|POST/)`
+
+***
+
+### trusted-replace-fetch-response.js [↪](https://github.com/gorhill/uBlock/blob/2282215e1cb0f9fb0974fba5d16ca5fb9c5bcc57/assets/resources/scriptlets.js#L3527)
+
+#### _Trusted scriptlet_
+
+New in [1.51.1b8](https://github.com/gorhill/uBlock/commit/82a7d11f78).
+
+Replaces response text content of fetch requests if all given parameters match.
+
+Parameters:
+ - required, argument for matching contents of `responseText` that should be replaced. Possible values:
+    - `*`: match all text content
+    - non-empty string
+    - regular expression
+ - optional, should be set if first parameter is set. String to replace the response text content matched by pattern. Empty string to remove content. Defaults to empty string.
+ - optional, string of space-separated properties to match; possible props:
+    - string or regular expression for matching the URL passed to fetch call; empty string, wildcard `*` will match all fetch calls
+    - colon-separated pairs `name:value` where:
+      - `name` is [init option name](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters)
+      - `value` is string or regular expression for matching the value of the option passed to fetch call
+
+Scriptlet does nothing if response body can't be converted to text.
+
+Solves [uBlockOrigin/uBlock-issues#2742](https://github.com/uBlockOrigin/uBlock-issues/issues/2742).
+
+Examples:
+ - `example.com##+js(trusted-replace-fetch-response, adb_detect:true, adb_detect:false, example.com)`
+ - `example.com##+js(trusted-replace-fetch-response, /#EXT-X-VMAP-AD-BREAK[\s\S]*?/, #EXT-X-ENDLIST, example.com)`
+ - `example.com##+js(trusted-replace-fetch-response, *, , 'method:GET')`
+ - `example.com##+js(trusted-replace-fetch-response, /#EXT-X-VMAP-AD-BREAK[\s\S]*?/, #EXT-X-ENDLIST, '/\.m3u8/ method:/GET|HEAD/')`
+ - `example.com##+js(trusted-replace-fetch-response, *, , another_domain.com)`
+
 
 ***
 
@@ -1174,20 +1208,6 @@ Experimental, gets rid of overlay dialogs, works for ~30s after page load. Prefe
 ### alert-buster.js [↪](https://github.com/gorhill/uBlock/blob/a94df7f3b27080ae2dcb3b914ace39c0c294d2f6/assets/resources/scriptlets.js#L691)
 Disables [_`alert()`_](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) dialog boxes by redirecting messages to console.
 
-
-***
-
-### trusted-replace-fetch-response.js
-Modifies the response of all fetch requests in order to replace part of the text with an arbitrary string.<sup>[[1]](https://github.com/gorhill/uBlock/commit/82a7d11f78b0b51d742040b620b99bde62b73798)</sup>
-Run without any arguments to log requests. [See the documentation on AdGuard's trusted-replace-fetch-response scriptlet for more information.](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/about-trusted-scriptlets.md#-%EF%B8%8F-trusted-replace-fetch-response)
-
-Parameters:
-- pattern
-
-The pattern to replace. Can be a regex
-- replacement
-
-The string to replace _pattern_ with.
 
 ***
 
