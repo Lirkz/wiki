@@ -112,12 +112,14 @@ uBO supports only the following, and anything else gets ignored:
 | ----- | ----- | ------------- |
 | `ext_abp`                | **false** | [1.29.3b7](https://github.com/gorhill/uBlock/commit/00b790ce7210d7faa9b5a06d748d415bc1879056) |
 | `ext_ublock`             | **true**  |
+| `ext_ubol`               | _true_ on uBlock Origin Lite  | [1.44.3b12](https://github.com/gorhill/uBlock/commit/35f4bdd113f275d124c35962c51add7582dabf49) |
 | `ext_devbuild`           | _true_ on the development build | [1.48.1b1](https://github.com/gorhill/uBlock/commit/464b54bbc6432fa07c85820b37f72b77f0855638) |
 | `env_chromium`           | _true_ on all Chromium-based browsers |
 | `env_edge`               | _true_ on Edge (legacy) |
 | `env_firefox`            | _true_ on Firefox |
 | `env_mobile`             | _true_ on mobile devices |
 | `env_safari`             | _true_ on Safari (legacy, up to 12 / macOS Mojave) |
+| `env_mv3`                | _true_ when uBOL is assembled, and _false_ otherwise | [1.44.5b15](https://github.com/gorhill/uBlock/commit/873c2e726469f659b2e5dda504626079c2457a27)
 | `false`                  | **false** | [1.22.0](https://github.com/gorhill/uBlock/commit/1d805fb9da1aad918d02cc74796d5aa5e974b184) |
 | `cap_html_filtering`     | _true_ when browser supports [HTML filtering](#html-filters) |
 | `cap_user_stylesheet`    | _true_ on Firefox, Chromium 66+, supports style injection by [`tabs.insertCSS`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) |
