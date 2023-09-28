@@ -7,6 +7,7 @@ clients.google.com
 clients[0-9]+.google.com
 sb-ssl.google.com
 chrome.google.com/webstore/*
+chromewebstore.google.com
 ```
 
 These are restricted Firefox<sup>2</sup> domains:
