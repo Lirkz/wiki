@@ -12,7 +12,7 @@ I do not know much about enterprise deployment, so I will let a knowledgeable pe
 
 ### Customizing the settings
 
-Administrators can force specific configurations to deploy uBlock Origin (uBO). At launch time, uBO will look for a setting named `adminSettings`, and if it exists, it will parse, extract and overwrite a user's settings with the administrator-assigned ones.
+Administrators can force specific configurations to deploy uBlock Origin (uBO). At launch time, uBO will look for a setting named `adminSettings`, and if it exists, it will parse, extract and overwrite a user's settings with the administrator-assigned ones. Note that Chromium managed storage is not always ready on first browser start after change, and up to three restarts may be needed for settings to be applied to uBO, see [#1547](https://github.com/uBlockOrigin/uBlock-issues/issues/1547), [#1608](https://github.com/uBlockOrigin/uBlock-issues/issues/1608).
 
 New standalone settings are getting added as per demand. See ["Deploying uBlock Origin: configuration"](./Deploying-uBlock-Origin:-configuration).
 
