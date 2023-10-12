@@ -1,4 +1,4 @@
-See also: [Syntax quirks](./Syntax-quirks)
+See also: [Syntax quirks](./Syntax-quirks) and [uBlockOrigin/uBlock-issues#2855](https://github.com/uBlockOrigin/uBlock-issues/discussions/2855#discussioncomment-7231291)
 
 - [`:upward()` vs `:has()`](#upward-vs-has)
 - [Narrowing options for network filters](#narrowing-options-for-network-filters)
