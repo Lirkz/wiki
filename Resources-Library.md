@@ -1031,10 +1031,10 @@ Set a local/session storage entry to a specific, allowed value. Scriptlet won't 
 Examples:
  - `example.com##+js(set-local-storage-item, player.live.current.mute, false)`
  - `example.com##+js(set-local-storage-item, exit-intent-marketing, 1)`
- - `example.com##+js(set-local-storage-item, foo, $remove)`
+ - `example.com##+js(set-local-storage-item, foo, $remove$)`
  - `example.com##+js(set-session-storage-item, player.live.current.mute, false)`
  - `example.com##+js(set-session-storage-item, exit-intent-marketing, 1)`
- - `example.com##+js(set-session-storage-item, foo, $remove)`
+ - `example.com##+js(set-session-storage-item, foo, $remove$)`
 
 Solves [uBlockOrigin/uBlock-issues#2697](https://github.com/uBlockOrigin/uBlock-issues/discussions/2697).
 
