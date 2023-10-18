@@ -55,12 +55,12 @@ Clicking this button with <kbd>Shift</kbd> (version [before 1.34](https://github
 
 If you check this option, uBO will automatically update the currently selected filter lists at regular intervals. This option is checked by default (recommended).
 
-Filter lists are automatically updated according to:
+Filter lists are automatically updated according to _expiration time_ defined by:
 - the [_Expires_ directive](https://help.eyeo.com/en/adblockplus/how-to-write-filters#special-comments) if present in the filter list header (After [1.47.3b5](https://github.com/gorhill/uBlock/commit/db118483c91da468d22b943aba07bbcfc2e37427), uBO supports an update period below 1-day).
 - or the `updateAfter` attribute if found in the list entry in [`assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)
 - or every 5 days by default.
 
-Don't worry if you sometimes see that some of your lists are marked "⚠️ Out of date". uBO updates filters lists in periodic sessions. In regular browser usage, the first one begins [`autoUpdateDelayAfterLaunch`](./Advanced-settings#autoupdatedelayafterlaunch) (105) seconds after uBO (your browser) is started. Lists found to be outdated are then downloaded in [`autoUpdateAssetFetchPeriod`](./Advanced-settings#autoupdateassetfetchperiod) (60) seconds intervals. After this update session ends, uBO will wait [`autoUpdatePeriod`](./Advanced-settings#autoupdateperiod) (4) hours to start updating filters again. As you see, there can be a periods up to a few hours, where your lists are marked outdated. In irregular browser usage, when your lists expiration time is exceeded more than twice, uBO will trigger "emergency" update, which should give you all your lists updated in below one minute after start.
+Don't worry if you sometimes see that some of your lists are marked "⚠️ Out of date". uBO updates filters lists in periodic sessions. In regular browser usage, the first one begins [`autoUpdateDelayAfterLaunch`](./Advanced-settings#autoupdatedelayafterlaunch) (105) seconds after uBO (your browser) is started. Lists found to be outdated (for which _expiration time_ passed) are then downloaded in [`autoUpdateAssetFetchPeriod`](./Advanced-settings#autoupdateassetfetchperiod) (60) seconds intervals. After this update session ends, uBO will wait [`autoUpdatePeriod`](./Advanced-settings#autoupdateperiod) (4) hours to start updating filters again. As you see, there can be periods up to a few hours, where your lists are marked outdated. In irregular browser usage, when your lists expiration time is exceeded more than twice, uBO will trigger "emergency" update, which should give you all your lists updated in below one minute after start.
 
 ***
 
