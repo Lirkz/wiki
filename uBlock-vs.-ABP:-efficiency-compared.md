@@ -1,3 +1,9 @@
+**Note:** The data presented in this page were collated in 2015, so they shouldn't be considered up to date (the [section _Added memory footprint to web pages_](#added-memory-footprint-to-web-pages) is still relevant though).
+
+The code base of all content blockers have undergone significant changes since then. Still, in [recent benchmarks](https://www.debugbear.com/blog/chrome-extension-performance-2021#how-do-ad-blockers-and-privacy-tools-affect-browser-performance), uBO still comes out as the most efficient memory- and CPU-wise when compared to content blockers with similar set of features and capabilities.
+
+---
+
 Here is a quick illustrated comparison of efficiency using various angles. Each extension was tested alone, with no other extensions enabled. Benchmarks were performed on Linux Mint 64-bit using Chromium.
 
 - [Own memory footprint](#own-memory-footprint)
