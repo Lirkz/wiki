@@ -19,10 +19,10 @@ Why the change? Because [issue #1013](https://github.com/chrisaljoudi/uBlock/iss
 
 In the end, the chosen solution is to now have web page themselves subject to filtering, just like all secondary resources.
 
-In the figure above, the user will be given the choice to go back by closing the window or proceed to the web page by disabling strict blocking by selecting either:
+In the figure above, the user will be given the choice to go back to the previous webpage, or proceed to the currently blocked webpage by disabling strict blocking either:
 
-- Temporarily - The site will be temporarily allowed for a limited time (60 seconds, after [1.17.4](https://github.com/gorhill/uBlock/releases/tag/1.17.4) 120 seconds - [configurable](./Advanced-settings#strictblockingbypassduration)).
-- Permanently - The site will be permanently allowed.
+- Temporarily: Click _Proceed_ to disable strict-blocking for a limited time (60 seconds, after [1.17.4](https://github.com/gorhill/uBlock/releases/tag/1.17.4) 120 seconds - [configurable](./Advanced-settings#strictblockingbypassduration)).
+- Permanently: Check _Dont warn me again about this site_, then click _Proceed_.
 
 This will prevent the web page _proper_ for the site from being blocked by uBO in the future: the filtering of the site will be done exactly as per EasyList syntax-based filtering semantic, and just like with uBO pre-0.9.3.0.
 
