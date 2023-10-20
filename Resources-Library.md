@@ -429,6 +429,7 @@ Parameters:
 
 Tokens:
  - `log, 1`
+ - `logdoc, 1`: Dumps the whole document being worked on to the console
 
 Examples:
  - `cbs.com##+js(xml-prune, Period[id*="-roll-"][id*="-ad-"], , pubads.g.doubleclick.net/ondemand)`
