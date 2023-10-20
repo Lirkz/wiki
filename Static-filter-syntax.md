@@ -475,7 +475,7 @@ Generic cosmetic filters are hiding filters that apply to all pages - `##.ad-cla
 
 #### `header`
 
-New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c). Advanced setting `filterOnHeaders` must be `true` (default to `false`) for this filter option to be valid in uBO.
+New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c). As of [1.52.3b16](https://github.com/gorhill/uBlock/releases/tag/1.52.3b16) it is enabled by default<sup>[[1]](https://github.com/gorhill/uBlock/commit/c96a673338aed902cb9c62b5e8159ae4b4825003)</sup>
 
 Ability to filter network **responses** according to whether a specific **response header** is present and whether or not it matches a distinct value.
 
