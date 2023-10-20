@@ -475,8 +475,6 @@ Generic cosmetic filters are hiding filters that apply to all pages - `##.ad-cla
 
 #### `header`
 
-#### _Work in progress, syntax still experimental and under evaluation_
-
 New in [1.32.0](https://github.com/gorhill/uBlock/commit/bde3164eb445a4e74acca303ec9fa07f82ba1b1c). Advanced setting `filterOnHeaders` must be `true` (default to `false`) for this filter option to be valid in uBO.
 
 Ability to filter network **responses** according to whether a specific **response header** is present and whether or not it matches a distinct value.
@@ -523,6 +521,17 @@ Where connection:
 - is not strictly 1st-party to the context.
 - is of type `script`.
 - has a response HTTP header named `via` whose value matches `1.1 google`.
+
+
+Block requests whose responses have the `Set-Cookie` header with any value:
+```adb
+||example.com^$header=set-cookie 
+```
+
+Unblock requests whose responses have the `Set-Cookie `header with value matching the `foo, bar$` regular expression:
+```adb
+@@||example.com^$header=set-cookie:/foo\, bar\$/ 
+```
 
 To remove response headers, see: [`Response header filtering`](#response-header-filtering).
 
