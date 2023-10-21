@@ -24,7 +24,7 @@
 - [trusted-set-constant](#trusted-set-constantjs-) _(trusted-set)_ [Trusted]
 - [set-cookie](#set-cookiejs-)
 - [trusted-set-cookie](#trusted-set-cookiejs-) [Trusted]
-- [set-local-storage-item](#set-local-storage-itemjs-)
+- [set-local-storage-item](#set-local-storage-itemjs-) / set-session-storage-item
 - [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-) [Trusted]
 - [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
