@@ -53,7 +53,7 @@ There may be many different reasons for this.
     - If this is a cosmetic filter, you may have to manually craft a better [CSS selector](https://www.w3.org/TR/selectors/#overview). Sometimes this requires observing the surrounding DOM data.
 - Cosmetic filtering is disabled for the site or globally. There are many ways to disable cosmetic filtering:
     - The [per-site cosmetic filtering switch](./Per-site-switches#no-cosmetic-filtering).
-    - The option [_"Parse and enforce cosmetic filters"_](./Dashboard:-3rd-party-filters#parse-and-enforce-cosmetic-filters) is unchecked in the [_3rd-party filters_](./Dashboard:-3rd-party-filters) pane in the dashboard.
+    - The option [_"Parse and enforce cosmetic filters"_](./Dashboard:-3rd-party-filters#parse-and-enforce-cosmetic-filters) is unchecked in the [_Filter lists_](./Dashboard:-3rd-party-filters) pane in the dashboard.
 - You unchecked _My filters_ in the _3rd-party filters_ pane in the dashboard.
 - There is a static filter in one of the 3rd-party filter lists that counters your filter.
     - Exception cosmetic filters (`#@#`) cancel cosmetic filters (`##`).
