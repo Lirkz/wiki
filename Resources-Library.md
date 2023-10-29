@@ -942,7 +942,8 @@ Parameters:
         - `no` / `n`
         - `ok`
         - `accept`/ `reject`
-        - `allow` / `deny`    
+        - `allow` / `deny`
+        - `on` / `off` <sup>[1.52.3b17](https://github.com/gorhill/uBlock/commit/eb66129fbfcdd3e1335cc5058d3afb1a887bad76)</sup>
  - optional, cookie path, defaults to /; possible values: 
     - `/`: root path
     - `none`: to set no path at all
