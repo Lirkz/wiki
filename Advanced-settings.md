@@ -127,8 +127,9 @@ The number of seconds to wait after launch before an auto-update session<sup>[1]
 
 #### `autoUpdatePeriod`
 
-Default: `4` hours.
+Default: `2` hours.
 
+Before [1.48.1b7](https://github.com/gorhill/uBlock/commit/885b3ea6c0600b1e9d50fc1100b5cc6a3724d166): `4` hours.
 Before [1.32.5rc0](https://github.com/gorhill/uBlock/commit/174731851e5074099ac57d3b2122447cd1f60286): `7` hours.
 
 The time to wait in hours between each update session. uBO will always start an update session a few minutes after launch when auto-update is enabled. Once that first update session is completed, uBO will wait `autoUpdatePeriod` hours before starting a new update session.
