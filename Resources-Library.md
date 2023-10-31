@@ -936,17 +936,23 @@ Parameters:
  - required, cookie value; possible values:
     - number: `>= 0 && <= 15`
     - one of the predefined constants (in any case variation):
-        - `true`
-        - `false`
-        - `yes` / `y`
-        - `no` / `n`
-        - `ok`
-        - `accept`/ `reject`
-        - `allow` / `deny`
-        - `on` / `off` <sup>[1.52.3b17](https://github.com/gorhill/uBlock/commit/eb66129fbfcdd3e1335cc5058d3afb1a887bad76)</sup>
+        - `accept` / `reject`,
+        - `accepted`<sup>2</sup> / `rejected`<sup>2</sup> / `notaccepted`<sup>2</sup>,
+        - `allow` / `deny`,
+        - `allowed`<sup>2</sup> / `disallow`<sup>2</sup>,
+        - `enable`<sup>2</sup> / `disable`<sup>2</sup>,
+        - `enabled`<sup>2</sup> / `disabled`<sup>2</sup>,
+        - `ok`,
+        - `on`<sup>1</sup> / `off`<sup>1</sup>
+        - `true` / `false`,
+        - `y` / `n`,
+        - `yes` / `no`
  - optional, cookie path, defaults to /; possible values: 
     - `/`: root path
     - `none`: to set no path at all
+
+<sup>1. [1.52.3b17](https://github.com/gorhill/uBlock/commit/eb66129fbfcdd3e1335cc5058d3afb1a887bad76)</sup>  
+<sup>2. [1.52.3b17](https://github.com/gorhill/uBlock/commit/d51b393fdbdc7dec0e21086795b9ce394cf21adf)</sup>
 
 The scriptlet encodes cookie names and values, e.g value "{ test: 'value'}" becomes `%7B%20test%3A%20'value'%7D`.
 
