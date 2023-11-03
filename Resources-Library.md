@@ -1025,15 +1025,14 @@ Set a local/session storage entry to a specific, allowed value. Scriptlet won't 
 - required, key value; possible values:
     - positive decimal integer `<= 32767`
     - one of the predefined constants:
-        - `undefined`
-        - `false`
-        - `true`
-        - `null`
+        - `''`: empty string
+        - `undefined`, `null`
+        - `false`, `true`
+        - `on`, `off`
+        - `yes`, `no`
         - `{}`: empty object
         - `[]`: empty array
-        - `''`: empty string
-        - `yes`
-        - `no`
+        - `""`
         - `$remove$`: remove specific item from localStorage
 
 Examples:
