@@ -1061,8 +1061,6 @@ These HTML filters will cause the elements matching the selectors to be **remove
 
 HTML filtering will work only on pages with character encoding compatible with: UTF-8, ISO-8859-1, Windows-1250, Windows-1251 and Windows-1252 ([detailed mapping](https://github.com/gorhill/uBlock/blob/2a91a685ce3d2dae5d3c285cff1bc74a1982be74/src/js/text-encode.js#L32)).
 
-HTML filters will apply only for document fetched successfully, i.e. when HTTP response status code is in the [200 realm](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses).
-
 Starting with [1.48.5b4](https://github.com/gorhill/uBlock/commit/8507d637e5190836caec390fed3a9cff13b4e131), you can use negated hostnames in HTML filters. Example:
 ```adb
 google.com,~translate.google.com##^script:has-text(consentCookiePayload)
