@@ -103,9 +103,10 @@ If no placeholder is found in `autoCommentFilterTemplate`, this will disable aut
 
 #### `autoUpdateAssetFetchPeriod`
 
-Default: `60` seconds.
+Default: `15` seconds.
 
-Before [1.39.3b0](https://github.com/gorhill/uBlock/commit/725e6931f58a81d36b18bb78663a8740c5e36231) `120` seconds.
+Before [1.53.1b1](https://github.com/gorhill/uBlock/commit/69fce3aa6eaa2a34b7e9d2b974674d9da9d49514) `60` seconds.  
+Before [1.39.3b0](https://github.com/gorhill/uBlock/commit/725e6931f58a81d36b18bb78663a8740c5e36231) `120` seconds.  
 
 When the auto-updater kicks in and an asset in need of an update is fetched, this is the number of seconds to wait before fetching the next asset which needs to be updated. The delay helps spread the load on CPU and memory as a result of loading/parsing/compiling the filter lists which have been updated.
 
