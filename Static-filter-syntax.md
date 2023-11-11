@@ -226,10 +226,10 @@ So in uBO, any pattern that reads as a valid hostname will be assumed to be equi
 example.com*
 ```
 
-If the filter is a filename, it is best to add a `^` at one or both ends:
+If the filter is a filename, it is best to prepend with a slash to ensure it's not parsed as a hostname:
 
 ```adb
-^example.js^
+/example.js
 ```
 
 See also: [Narrowing options for network filters](./Filter-Performance#narrowing-options-for-network-filters)
