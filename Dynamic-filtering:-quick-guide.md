@@ -134,9 +134,7 @@ The only way to enable the ability to point-and-click to create _allow_ rules is
     - This won't work in Firefox when `privacy.resistFingerprinting` is set to `true`
 - Set `filterAuthorMode` to `true` in [advanced settings](./Advanced-settings)
 
-Doing so will enable the _allow_ rule creation widget in the popup panel:
-
-![figure 10](https://user-images.githubusercontent.com/585534/87429361-a963e180-c5b1-11ea-9a21-1fdff36fb4ba.png)
+Doing so will enable the _allow_ rule creation widget in the popup panel.
 
 This small obstacle to easily create _allow_ rule through point-and-click is [by design](https://github.com/gorhill/uBlock/releases/tag/1.28.0), as it has been found over the years that too many users are misusing dynamic filtering by creating _allow_ rules where _noop_ rules should have been used.
 
@@ -145,6 +143,8 @@ To reiterate, creating _allow_ rules will completely override related block filt
 Furthermore, when an _allow_ rule is set for the 1st-party domain, this will completely disable scriptlet injection and HTML filtering, again a behavior which is most useful to filter list maintainers when investigating filter issues. Scriptlet injection and HTML filtering are often used to deal with anti-blocker mechanisms.
 
 **Important:** Typically, use only narrow _allow_ dynamic filtering rules to un-break sites. As these _allow_ rules override any static filtering, this means if you use a too broad _allow_ dynamic filtering rule you could start to allow in ads/trackers/annoyances.
+
+![figure 10](https://user-images.githubusercontent.com/585534/87429361-a963e180-c5b1-11ea-9a21-1fdff36fb4ba.png)
 
 ***
 
