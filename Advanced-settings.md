@@ -35,6 +35,7 @@
   - [requestJournalProcessPeriod](#requestJournalProcessPeriod)
   - [selfieAfter](#selfieAfter)
   - [strictBlockingBypassDuration](#strictBlockingBypassDuration)
+  - [trustedListPrefixes](#trustedListPrefixes)
   - [uiPopupConfig](#uiPopupConfig)
   - [uiStyles](#uiStyles)
   - [updateAssetBypassBrowserCache](#updateAssetBypassBrowserCache)
@@ -514,6 +515,36 @@ Default: `120` seconds.
 uBO 1.17.3b4 and above.
 
 Controls duration of the [Strict blocking](./Strict-blocking) "Temporarily" bypass.
+
+***
+
+#### `trustedListPrefixes`
+
+Default: `ublock-` in stable release, `ublock- user-` in development version.
+
+uBO [1.52.3rc2](https://github.com/gorhill/uBlock/commit/64c1f8767ca42c6c0681f571ae87a20343c12b19) and above
+
+Space-separated list of tokens specifying which lists are considered trustworthy.
+
+Examples of possible values:
+
+- `ublock-`: trust only uBO lists, exclude everything else including content of _My filters_ (default value)
+- `ublock- user-`: trust uBO lists and content of _My filters_
+- `-`: trust no list, essentially disabling all filters requiring trust (admins or people who don't trust us may want to use this)
+
+One can also decide to trust lists maintained elsewhere. For example, for stock AdGuard lists add ` adguard-`. To trust stock EasyList lists, add ` easylist-`.
+
+To trust a specific regional stock list, look-up its token in assets.json and add to `trustedListPrefixes`.
+
+The matching is made with `String.startsWith()`, hence why `ublock-` matches all uBO's own filter lists.
+
+This also allows to trust imported lists, for example add ` https://filters.adtidy.org/extension/ublock/filters/ to trust all non-stock AdGuard lists.
+
+Add the complete URL of a given imported list to trust only that one list.
+
+URLs not starting with `https://` or `file:///` will be rejected, i.e. `http://example.org/` will be ignored.
+
+Invalid URLs are rejected.
 
 ***
 
