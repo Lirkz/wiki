@@ -180,6 +180,6 @@ You should avoid playing with advanced features and settings unless [you fully u
 
 The bottom-most section is for you to conveniently backup/restore/reset settings in uBO.
 
-uBO saves a text file with all setting modified from default, indentifiers of selected filters lists, adresses of custom filter lists, content of "My filters" and "My rules", to the location specified by your browser for the backup.
+uBO saves a text file with all setting modified from default, indentifiers of selected filters lists, adresses of custom filter lists, content of "My filters", "My rules" and "Trusted sites", to the location specified by your browser for the backup.
 
 Recommend that you backup all your settings regularly.
