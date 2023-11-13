@@ -178,8 +178,8 @@ You should avoid playing with advanced features and settings unless [you fully u
 
 ![buttons](https://user-images.githubusercontent.com/95879668/172087321-56d8d75d-2843-4e68-acdd-7b13151940e3.png)
 
-The bottom-most section is for you to conveniently backup/restore/reset all settings in uBO.
+The bottom-most section is for you to conveniently backup/restore/reset settings in uBO.
 
-uBO saves a text file to the location specified by your browser for the backup.
+uBO saves a text file with all setting modified from default, indentifiers of selected filters lists, adresses of custom filter lists, content of "My filters" and "My rules", to the location specified by your browser for the backup.
 
 Recommend that you backup all your settings regularly.
