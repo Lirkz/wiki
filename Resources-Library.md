@@ -1054,7 +1054,7 @@ Also see: [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-)
 
 #### _Trusted scriptlet_
 
-New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3) and [1.53.5rc7](https://github.com/gorhill/uBlock/releases/tag/1.53.5rc7)](https://github.com/gorhill/uBlock/commit/f3d6a21e7abfd0e5ad584cc9e6c15bf24d2e05a6).
+New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3) and [1.53.5rc7](https://github.com/gorhill/uBlock/commit/f3d6a21e7abfd0e5ad584cc9e6c15bf24d2e05a6).
 
 Parameters:
  - required, key name to be set.
