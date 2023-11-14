@@ -25,7 +25,7 @@
 - [set-cookie](#set-cookiejs-)
 - [trusted-set-cookie](#trusted-set-cookiejs-) [Trusted]
 - [set-local-storage-item](#set-local-storage-itemjs-) / set-session-storage-item
-- [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-) [Trusted]
+- [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-) / trusted-set-session-storage-item [Trusted]
 - [call-nothrow](#call-nothrowjs-)
 - [no-setInterval-if](#no-setinterval-ifjs-) _(nosiif)_
 - [no-setTimeout-if](#no-settimeout-ifjs-) _(nostif)_
@@ -1054,7 +1054,7 @@ Also see: [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-)
 
 #### _Trusted scriptlet_
 
-New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3).
+New in [1.50.1b4](https://github.com/gorhill/uBlock/commit/9443ba80a06c8748fc5164bb0ad6da752a8b3bf3) and [1.53.5rc7](https://github.com/gorhill/uBlock/releases/tag/1.53.5rc7)](https://github.com/gorhill/uBlock/commit/f3d6a21e7abfd0e5ad584cc9e6c15bf24d2e05a6).
 
 Parameters:
  - required, key name to be set.
@@ -1069,6 +1069,7 @@ Examples:
  - `example.com##+js(trusted-set-local-storage-item, providers, [16364\,88364])`
  - `example.com##+js(trusted-set-local-storage-item, player.live.current.play, $currentDate$)`
  - `example.com##+js(trusted-set-local-storage-item, ppu_main_none, '')`
+ - `example.com##+js(trusted-set-session-storage-item, opd, 1.4)`
 
 Also see: [set-local-storage-item](#set-local-storage-itemjs-)
 
