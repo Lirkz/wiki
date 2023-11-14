@@ -1066,7 +1066,7 @@ Starting with [1.48.5b4](https://github.com/gorhill/uBlock/commit/8507d637e51908
 google.com,~translate.google.com##^script:has-text(consentCookiePayload)
 ```
 
-Also see: [remove-node-text](#remove-node-textjs-)
+Also see: [remove-node-text](./Resources-Library#remove-node-textjs-)
 
 <details><summary>Historical notes</summary>
 
