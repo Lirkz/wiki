@@ -38,7 +38,7 @@
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
 - [remove-node-text](#remove-node-textjs-) _(rmnt)_
-- [trusted-replace-node-text](#trusted-replace-node-textjs-) _(rpnt)_ [Trusted]
+- [trusted-replace-node-text](#trusted-replace-node-textjs-) _(trusted-rpnt)_ [Trusted]
 - [spoof-css](#spoof-cssjs-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
