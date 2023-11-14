@@ -38,7 +38,7 @@
 - [remove-attr](#remove-attrjs-) _(ra)_
 - [remove-class](#remove-classjs-) _(rc)_
 - [remove-node-text](#remove-node-textjs-) _(rmnt)_
-- [replace-node-text](#replace-node-textjs-) _(rpnt)_ [Trusted]
+- [trusted-replace-node-text](#trusted-replace-node-textjs-) _(rpnt)_ [Trusted]
 - [spoof-css](#spoof-cssjs-)
 - [href-sanitizer](#href-sanitizerjs-)
 - [cookie-remover](#cookie-removerjs-)
@@ -740,8 +740,10 @@ Examples:
 
 ***
 
-### rpnt.js /
-### replace-node-text.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2570)
+### trusted-rpnt.js /
+### trusted-replace-node-text.js [↪](https://github.com/gorhill/uBlock/blob/f3b720d532c7a42a6ad5167e3b6f860004b4c2b6/assets/resources/scriptlets.js#L2570)
+<span name="rpntjs-"></span>
+<span name="replace-node-textjs-"></span>
 
 #### _Trusted scriptlet_
 
