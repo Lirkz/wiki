@@ -1052,7 +1052,9 @@ Also see: [trusted-set-local-storage-item](#trusted-set-local-storage-itemjs-)
 
 ***
 
-### trusted-set-local-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/4649ae4d78fa7d46e80d71d39d377d1b65309020/assets/resources/scriptlets.js#L3250)
+### trusted-set-local-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/c7490e8493d449f1f4ddb6f415a4d7506f0a1802/assets/resources/scriptlets.js#L3853)
+
+### trusted-set-session-storage-item.js [↪](https://github.com/gorhill/uBlock/blob/c7490e8493d449f1f4ddb6f415a4d7506f0a1802/assets/resources/scriptlets.js#L3853)
 
 #### _Trusted scriptlet_
 
