@@ -16,6 +16,10 @@ Source: [_"Characterizing CNAME Cloaking-Based Tracking on the Web"_](https://bl
 
 For example, this allows the removal of specific tags in HTML documents before they are parsed and executed by the browser, something not possible in a reliable manner in other browsers. This feature requires the [`webRequest.filterResponseData()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData) API, currently only available in Firefox.
 
+### Response body filtering
+
+See [Implement network filter option `replace=`](https://github.com/gorhill/uBlock/commit/7c3e060c01)>
+
 ### Browser launch
 
 Firefox will wait for uBO to be ready before sending network requests from already opened tab(s) at browser launch.
