@@ -87,7 +87,7 @@
 - `noop.css`
 - `noop.html` (`noopframe`)
 - `noop.js`
-- `noop.json`<sub>[1.53.5rc11](https://github.com/gorhill/uBlock/commit/bd8a91ed3ad1fd6cdb4ee25ab468c631dc637e13)</sub>
+- `noop.json`<sup>[1.53.5rc11](https://github.com/gorhill/uBlock/commit/bd8a91ed3ad1fd6cdb4ee25ab468c631dc637e13)</sup>
 - `noop.txt`
 - `noop-0.1s.mp3`
 - `noop-0.5s.mp3`
