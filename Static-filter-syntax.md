@@ -846,7 +846,7 @@ Available since [1.4.0](https://github.com/gorhill/uBlock/releases/tag/1.4.0).
 
 #### `redirect-rule`
 
-Allows creating standalone redirect directives, such as without an implicit no blocking filter.
+Allows creating standalone redirect directives, without an implicit blocking filter.
 
 For example, consider the following filter:
 
