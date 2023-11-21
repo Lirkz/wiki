@@ -22,6 +22,7 @@
 - [~addEventListener-logger~](#addeventlistener-loggerjs-) _(~aell~)_
 - [set-constant](#set-constantjs-) _(set)_
 - [trusted-set-constant](#trusted-set-constantjs-) _(trusted-set)_ [Trusted]
+- [trusted-click-element](#trusted-click-elementjs-) [Trusted]
 - [set-cookie](#set-cookiejs-)
 - [trusted-set-cookie](#trusted-set-cookiejs-) [Trusted]
 - [set-local-storage-item](#set-local-storage-itemjs-) / set-session-storage-item
@@ -847,6 +848,34 @@ Attempts to defuse reloading of a document through a [meta "refresh" tag](https:
 
 Parameters:
  - optional, number (float), number of seconds until the page will be reloaded / when defuser should run. Will be derived from source tag when not specified.
+
+***
+
+### trusted-click-element.js [↪](https://github.com/gorhill/uBlock/blob/9123563895f0499849b4d85c4f95e1ed6ace2231/assets/resources/scriptlets.js#L4009)
+
+New in [1.53.5rc13](https://github.com/gorhill/uBlock/commit/7af88b025deaf4fe23f101984cb2e181315400b1)
+
+#### _Trusted scriptlet_
+
+Clicks elements on webpages. Can target single or multiple elements in a sequence. The scriptlet will abort after 10s timeout or after all the elements have been clicked. Also hidden elements can be targeted.
+
+Parameters:
+
+* required, a list of css selector(s). Multiple selectors must be quoted.
+* optional, Extramatch (will be added later, this argument must be left empty for the time being).
+* optional, delay in ms how long the scriptlet will postphone the execution
+
+Tokens:
+
+`log, 1`: This will cause the scriptlet to output information at the console, useful as a debugging tool for filter authors
+
+Examples:
+
+example.com##+js(trusted-click-element, button.reject-all)
+example.com##+js(trusted-click-element, '[for="CookiePurposes_1_"], [for="CookiePurposes_2_"], button.js-save')
+example.com##+js(trusted-click-element, #cmp-btn-accept, , 500)
+example.com##+js(trusted-click-element, #privacy-cp-wall-accept, , , log, 1)
+
 
 ***
 
