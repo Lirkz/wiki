@@ -871,10 +871,10 @@ Tokens:
 
 Examples:
 
-example.com##+js(trusted-click-element, button.reject-all)
-example.com##+js(trusted-click-element, '[for="CookiePurposes_1_"], [for="CookiePurposes_2_"], button.js-save')
-example.com##+js(trusted-click-element, #cmp-btn-accept, , 500)
-example.com##+js(trusted-click-element, #privacy-cp-wall-accept, , , log, 1)
+`example.com##+js(trusted-click-element, button.reject-all)`
+`example.com##+js(trusted-click-element, '[for="CookiePurposes_1_"], [for="CookiePurposes_2_"], button.js-save')`
+`example.com##+js(trusted-click-element, #cmp-btn-accept, , 500)`
+`example.com##+js(trusted-click-element, #privacy-cp-wall-accept, , , log, 1)`
 
 
 ***
