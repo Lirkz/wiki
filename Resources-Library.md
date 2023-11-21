@@ -20,9 +20,9 @@
 - [abort-on-stack-trace](#abort-on-stack-tracejs-) _(aost)_
 - [addEventListener-defuser](#addeventlistener-defuserjs-) _(aeld)_
 - [~addEventListener-logger~](#addeventlistener-loggerjs-) _(~aell~)_
+- [trusted-click-element](#trusted-click-elementjs-) [Trusted]
 - [set-constant](#set-constantjs-) _(set)_
 - [trusted-set-constant](#trusted-set-constantjs-) _(trusted-set)_ [Trusted]
-- [trusted-click-element](#trusted-click-elementjs-) [Trusted]
 - [set-cookie](#set-cookiejs-)
 - [trusted-set-cookie](#trusted-set-cookiejs-) [Trusted]
 - [set-local-storage-item](#set-local-storage-itemjs-) / set-session-storage-item
@@ -872,8 +872,11 @@ Tokens:
 Examples:
 
 `example.com##+js(trusted-click-element, button.reject-all)`
+
 `example.com##+js(trusted-click-element, '[for="CookiePurposes_1_"], [for="CookiePurposes_2_"], button.js-save')`
+
 `example.com##+js(trusted-click-element, #cmp-btn-accept, , 500)`
+
 `example.com##+js(trusted-click-element, #privacy-cp-wall-accept, , , log, 1)`
 
 
