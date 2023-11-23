@@ -14,7 +14,7 @@
 
 ### Hide placeholders of blocked elements
 
-Collapse empty space left behind when some elements like an image or a frame get blocked by network filtering.
+Collapse the placeholder space left behind when some elements like an image or a frame get blocked by network filtering.
 
 ### Show the number of blocked requests on the icon
 
